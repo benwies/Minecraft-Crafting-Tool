@@ -4975,3 +4975,162 @@
 2025-10-25 18:44:04.031 [INFO] Final aggregate totals: {}
 2025-10-25 18:44:23.426 [INFO] Calculating aggregate requirements for items: {}
 2025-10-25 18:44:23.426 [INFO] Final aggregate totals: {}
+2025-10-25 18:46:04.645 [INFO] Calculating aggregate requirements for items: {}
+2025-10-25 18:46:04.646 [INFO] Final aggregate totals: {}
+2025-10-25 18:46:10.919 [INFO] Calculating aggregate requirements for items: {}
+2025-10-25 18:46:10.919 [INFO] Final aggregate totals: {}
+2025-10-25 18:46:13.291 [INFO] Calculating aggregate requirements for items: {}
+2025-10-25 18:46:13.291 [INFO] Final aggregate totals: {}
+2025-10-25 18:46:13.727 [INFO] Calculating aggregate requirements for items: {}
+2025-10-25 18:46:13.727 [INFO] Final aggregate totals: {}
+2025-10-25 18:46:14.026 [INFO] Calculating aggregate requirements for items: {}
+2025-10-25 18:46:14.027 [INFO] Final aggregate totals: {}
+2025-10-25 18:46:14.225 [INFO] Calculating aggregate requirements for items: {}
+2025-10-25 18:46:14.225 [INFO] Final aggregate totals: {}
+2025-10-25 18:46:14.368 [INFO] Calculating aggregate requirements for items: {}
+2025-10-25 18:46:14.368 [INFO] Final aggregate totals: {}
+2025-10-25 18:46:14.509 [INFO] Calculating aggregate requirements for items: {}
+2025-10-25 18:46:14.509 [INFO] Final aggregate totals: {}
+2025-10-25 18:46:14.648 [INFO] Calculating aggregate requirements for items: {}
+2025-10-25 18:46:14.648 [INFO] Final aggregate totals: {}
+2025-10-25 18:46:14.797 [INFO] Calculating aggregate requirements for items: {}
+2025-10-25 18:46:14.798 [INFO] Final aggregate totals: {}
+2025-10-25 18:46:14.954 [INFO] Calculating aggregate requirements for items: {}
+2025-10-25 18:46:14.954 [INFO] Final aggregate totals: {}
+2025-10-25 18:46:15.091 [INFO] Calculating aggregate requirements for items: {}
+2025-10-25 18:46:15.091 [INFO] Final aggregate totals: {}
+2025-10-25 18:46:15.250 [INFO] Calculating aggregate requirements for items: {}
+2025-10-25 18:46:15.250 [INFO] Final aggregate totals: {}
+2025-10-25 18:46:15.394 [INFO] Calculating aggregate requirements for items: {}
+2025-10-25 18:46:15.394 [INFO] Final aggregate totals: {}
+2025-10-25 18:46:18.133 [INFO] Calculating aggregate requirements for items: {}
+2025-10-25 18:46:18.133 [INFO] Final aggregate totals: {}
+2025-10-25 18:46:19.037 [INFO] Calculating aggregate requirements for items: {}
+2025-10-25 18:46:19.037 [INFO] Final aggregate totals: {}
+2025-10-25 18:46:21.267 [INFO] Calculating aggregate requirements for items: {}
+2025-10-25 18:46:21.267 [INFO] Final aggregate totals: {}
+2025-10-25 18:46:22.242 [INFO] Calculating aggregate requirements for items: {}
+2025-10-25 18:46:22.242 [INFO] Final aggregate totals: {}
+2025-10-25 18:46:27.253 [INFO] Adding item: acacia_planks
+2025-10-25 18:46:27.253 [INFO] Adding 1x acacia_planks
+2025-10-25 18:46:27.253 [DEBUG] Current project items before add: {}
+2025-10-25 18:46:27.253 [DEBUG] Recorded undo snapshot (add_item); undo depth=1
+2025-10-25 18:46:27.253 [DEBUG] Updated project items: {'acacia_planks': 1}
+2025-10-25 18:46:27.261 [DEBUG] STREAM b'IHDR' 16 13
+2025-10-25 18:46:27.262 [DEBUG] STREAM b'PLTE' 41 21
+2025-10-25 18:46:27.262 [DEBUG] STREAM b'IDAT' 74 112
+2025-10-25 18:46:27.267 [INFO] Calculating aggregate requirements for items: {'acacia_planks': 1}
+2025-10-25 18:46:27.267 [DEBUG] Processing requirements for 1x acacia_planks
+2025-10-25 18:46:27.267 [DEBUG] Calculating requirements for 1x acacia_planks
+2025-10-25 18:46:27.267 [DEBUG] Processing: 1x acacia_planks
+2025-10-25 18:46:27.267 [DEBUG] Current recipe stack: 
+2025-10-25 18:46:27.267 [DEBUG] Found recipe for acacia_planks: {'acacia_logs': 1}
+2025-10-25 18:46:27.268 [DEBUG] Need 1x acacia_logs for 1x acacia_planks
+2025-10-25 18:46:27.268 [DEBUG]   Processing: 1x acacia_logs
+2025-10-25 18:46:27.268 [DEBUG]   Current recipe stack: acacia_planks
+2025-10-25 18:46:27.268 [DEBUG]   Adding material: 1x acacia_logs
+2025-10-25 18:46:27.268 [DEBUG] Final totals for 1x acacia_planks: {'acacia_logs': 1}
+2025-10-25 18:46:27.268 [DEBUG] Requirements for 1x acacia_planks: {'acacia_logs': 1}
+2025-10-25 18:46:27.268 [DEBUG] Updated total for acacia_logs: 1
+2025-10-25 18:46:27.268 [INFO] Final aggregate totals: {'acacia_logs': 1}
+2025-10-25 18:46:27.268 [DEBUG] STREAM b'IHDR' 16 13
+2025-10-25 18:46:27.268 [DEBUG] STREAM b'PLTE' 41 21
+2025-10-25 18:46:27.269 [DEBUG] STREAM b'IDAT' 74 112
+2025-10-25 18:46:28.315 [INFO] Calculating aggregate requirements for items: {'acacia_planks': 1}
+2025-10-25 18:46:28.315 [DEBUG] Processing requirements for 1x acacia_planks
+2025-10-25 18:46:28.315 [DEBUG] Calculating requirements for 1x acacia_planks
+2025-10-25 18:46:28.315 [DEBUG] Processing: 1x acacia_planks
+2025-10-25 18:46:28.315 [DEBUG] Current recipe stack: 
+2025-10-25 18:46:28.316 [DEBUG] Found recipe for acacia_planks: {'acacia_logs': 1}
+2025-10-25 18:46:28.316 [DEBUG] Need 1x acacia_logs for 1x acacia_planks
+2025-10-25 18:46:28.316 [DEBUG]   Processing: 1x acacia_logs
+2025-10-25 18:46:28.316 [DEBUG]   Current recipe stack: acacia_planks
+2025-10-25 18:46:28.316 [DEBUG]   Adding material: 1x acacia_logs
+2025-10-25 18:46:28.316 [DEBUG] Final totals for 1x acacia_planks: {'acacia_logs': 1}
+2025-10-25 18:46:28.317 [DEBUG] Requirements for 1x acacia_planks: {'acacia_logs': 1}
+2025-10-25 18:46:28.317 [DEBUG] Updated total for acacia_logs: 1
+2025-10-25 18:46:28.317 [INFO] Final aggregate totals: {'acacia_logs': 1}
+2025-10-25 18:46:28.901 [INFO] Calculating aggregate requirements for items: {'acacia_planks': 1}
+2025-10-25 18:46:28.902 [DEBUG] Processing requirements for 1x acacia_planks
+2025-10-25 18:46:28.902 [DEBUG] Calculating requirements for 1x acacia_planks
+2025-10-25 18:46:28.902 [DEBUG] Processing: 1x acacia_planks
+2025-10-25 18:46:28.902 [DEBUG] Current recipe stack: 
+2025-10-25 18:46:28.902 [DEBUG] Found recipe for acacia_planks: {'acacia_logs': 1}
+2025-10-25 18:46:28.902 [DEBUG] Need 1x acacia_logs for 1x acacia_planks
+2025-10-25 18:46:28.902 [DEBUG]   Processing: 1x acacia_logs
+2025-10-25 18:46:28.902 [DEBUG]   Current recipe stack: acacia_planks
+2025-10-25 18:46:28.902 [DEBUG]   Adding material: 1x acacia_logs
+2025-10-25 18:46:28.903 [DEBUG] Final totals for 1x acacia_planks: {'acacia_logs': 1}
+2025-10-25 18:46:28.903 [DEBUG] Requirements for 1x acacia_planks: {'acacia_logs': 1}
+2025-10-25 18:46:28.903 [DEBUG] Updated total for acacia_logs: 1
+2025-10-25 18:46:28.903 [INFO] Final aggregate totals: {'acacia_logs': 1}
+2025-10-25 18:46:29.384 [INFO] Calculating aggregate requirements for items: {'acacia_planks': 1}
+2025-10-25 18:46:29.384 [DEBUG] Processing requirements for 1x acacia_planks
+2025-10-25 18:46:29.384 [DEBUG] Calculating requirements for 1x acacia_planks
+2025-10-25 18:46:29.384 [DEBUG] Processing: 1x acacia_planks
+2025-10-25 18:46:29.385 [DEBUG] Current recipe stack: 
+2025-10-25 18:46:29.385 [DEBUG] Found recipe for acacia_planks: {'acacia_logs': 1}
+2025-10-25 18:46:29.385 [DEBUG] Need 1x acacia_logs for 1x acacia_planks
+2025-10-25 18:46:29.385 [DEBUG]   Processing: 1x acacia_logs
+2025-10-25 18:46:29.385 [DEBUG]   Current recipe stack: acacia_planks
+2025-10-25 18:46:29.385 [DEBUG]   Adding material: 1x acacia_logs
+2025-10-25 18:46:29.385 [DEBUG] Final totals for 1x acacia_planks: {'acacia_logs': 1}
+2025-10-25 18:46:29.386 [DEBUG] Requirements for 1x acacia_planks: {'acacia_logs': 1}
+2025-10-25 18:46:29.386 [DEBUG] Updated total for acacia_logs: 1
+2025-10-25 18:46:29.386 [INFO] Final aggregate totals: {'acacia_logs': 1}
+2025-10-25 18:46:29.943 [INFO] Calculating aggregate requirements for items: {'acacia_planks': 1}
+2025-10-25 18:46:29.943 [DEBUG] Processing requirements for 1x acacia_planks
+2025-10-25 18:46:29.944 [DEBUG] Calculating requirements for 1x acacia_planks
+2025-10-25 18:46:29.944 [DEBUG] Processing: 1x acacia_planks
+2025-10-25 18:46:29.944 [DEBUG] Current recipe stack: 
+2025-10-25 18:46:29.944 [DEBUG] Found recipe for acacia_planks: {'acacia_logs': 1}
+2025-10-25 18:46:29.944 [DEBUG] Need 1x acacia_logs for 1x acacia_planks
+2025-10-25 18:46:29.944 [DEBUG]   Processing: 1x acacia_logs
+2025-10-25 18:46:29.944 [DEBUG]   Current recipe stack: acacia_planks
+2025-10-25 18:46:29.945 [DEBUG]   Adding material: 1x acacia_logs
+2025-10-25 18:46:29.945 [DEBUG] Final totals for 1x acacia_planks: {'acacia_logs': 1}
+2025-10-25 18:46:29.945 [DEBUG] Requirements for 1x acacia_planks: {'acacia_logs': 1}
+2025-10-25 18:46:29.945 [DEBUG] Updated total for acacia_logs: 1
+2025-10-25 18:46:29.945 [INFO] Final aggregate totals: {'acacia_logs': 1}
+2025-10-25 18:46:30.426 [INFO] Calculating aggregate requirements for items: {'acacia_planks': 1}
+2025-10-25 18:46:30.427 [DEBUG] Processing requirements for 1x acacia_planks
+2025-10-25 18:46:30.427 [DEBUG] Calculating requirements for 1x acacia_planks
+2025-10-25 18:46:30.427 [DEBUG] Processing: 1x acacia_planks
+2025-10-25 18:46:30.427 [DEBUG] Current recipe stack: 
+2025-10-25 18:46:30.427 [DEBUG] Found recipe for acacia_planks: {'acacia_logs': 1}
+2025-10-25 18:46:30.428 [DEBUG] Need 1x acacia_logs for 1x acacia_planks
+2025-10-25 18:46:30.428 [DEBUG]   Processing: 1x acacia_logs
+2025-10-25 18:46:30.428 [DEBUG]   Current recipe stack: acacia_planks
+2025-10-25 18:46:30.428 [DEBUG]   Adding material: 1x acacia_logs
+2025-10-25 18:46:30.428 [DEBUG] Final totals for 1x acacia_planks: {'acacia_logs': 1}
+2025-10-25 18:46:30.428 [DEBUG] Requirements for 1x acacia_planks: {'acacia_logs': 1}
+2025-10-25 18:46:30.428 [DEBUG] Updated total for acacia_logs: 1
+2025-10-25 18:46:30.428 [INFO] Final aggregate totals: {'acacia_logs': 1}
+2025-10-25 18:46:30.884 [INFO] Calculating aggregate requirements for items: {'acacia_planks': 1}
+2025-10-25 18:46:30.884 [DEBUG] Processing requirements for 1x acacia_planks
+2025-10-25 18:46:30.885 [DEBUG] Calculating requirements for 1x acacia_planks
+2025-10-25 18:46:30.885 [DEBUG] Processing: 1x acacia_planks
+2025-10-25 18:46:30.885 [DEBUG] Current recipe stack: 
+2025-10-25 18:46:30.885 [DEBUG] Found recipe for acacia_planks: {'acacia_logs': 1}
+2025-10-25 18:46:30.885 [DEBUG] Need 1x acacia_logs for 1x acacia_planks
+2025-10-25 18:46:30.885 [DEBUG]   Processing: 1x acacia_logs
+2025-10-25 18:46:30.885 [DEBUG]   Current recipe stack: acacia_planks
+2025-10-25 18:46:30.885 [DEBUG]   Adding material: 1x acacia_logs
+2025-10-25 18:46:30.886 [DEBUG] Final totals for 1x acacia_planks: {'acacia_logs': 1}
+2025-10-25 18:46:30.886 [DEBUG] Requirements for 1x acacia_planks: {'acacia_logs': 1}
+2025-10-25 18:46:30.886 [DEBUG] Updated total for acacia_logs: 1
+2025-10-25 18:46:30.886 [INFO] Final aggregate totals: {'acacia_logs': 1}
+2025-10-25 18:46:31.351 [INFO] Calculating aggregate requirements for items: {'acacia_planks': 1}
+2025-10-25 18:46:31.351 [DEBUG] Processing requirements for 1x acacia_planks
+2025-10-25 18:46:31.351 [DEBUG] Calculating requirements for 1x acacia_planks
+2025-10-25 18:46:31.351 [DEBUG] Processing: 1x acacia_planks
+2025-10-25 18:46:31.351 [DEBUG] Current recipe stack: 
+2025-10-25 18:46:31.351 [DEBUG] Found recipe for acacia_planks: {'acacia_logs': 1}
+2025-10-25 18:46:31.352 [DEBUG] Need 1x acacia_logs for 1x acacia_planks
+2025-10-25 18:46:31.352 [DEBUG]   Processing: 1x acacia_logs
+2025-10-25 18:46:31.352 [DEBUG]   Current recipe stack: acacia_planks
+2025-10-25 18:46:31.352 [DEBUG]   Adding material: 1x acacia_logs
+2025-10-25 18:46:31.352 [DEBUG] Final totals for 1x acacia_planks: {'acacia_logs': 1}
+2025-10-25 18:46:31.352 [DEBUG] Requirements for 1x acacia_planks: {'acacia_logs': 1}
+2025-10-25 18:46:31.352 [DEBUG] Updated total for acacia_logs: 1
+2025-10-25 18:46:31.352 [INFO] Final aggregate totals: {'acacia_logs': 1}

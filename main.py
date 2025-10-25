@@ -123,6 +123,7 @@ main.pack(fill="both", expand=True)
 
 # --- Theming: Modern light/dark styles ---
 current_theme = 'light'
+THEME_PALETTE = {}
 
 def apply_theme(name: str = 'light'):
     global current_theme
@@ -163,7 +164,9 @@ def apply_theme(name: str = 'light'):
         'tree_bg': '#111827',
         'tree_alt': '#0F172A',
     }
+    global THEME_PALETTE
     P = LIGHT if name == 'light' else DARK
+    THEME_PALETTE = P
 
     # Fonts
     try:
@@ -190,7 +193,19 @@ def apply_theme(name: str = 'light'):
 
     # Inputs
     style.configure('TEntry', fieldbackground=P['surface'], foreground=P['text'])
-    style.configure('TCombobox', fieldbackground=P['surface'])
+    style.configure('TCombobox', fieldbackground=P['surface'], foreground=P['text'], background=P['surface'])
+    # Selection and cursor colors via option database (applies to native subwidgets)
+    try:
+        root.option_clear()
+    except Exception:
+        pass
+    root.option_add('*Entry.selectBackground', P['select'])
+    root.option_add('*Entry.selectForeground', P['text'])
+    root.option_add('*Entry.insertBackground', P['text'])
+    root.option_add('*TCombobox*Listbox*background', P['surface'])
+    root.option_add('*TCombobox*Listbox*foreground', P['text'])
+    root.option_add('*TCombobox*Listbox*selectBackground', P['select'])
+    root.option_add('*TCombobox*Listbox*selectForeground', P['text'])
 
     # Treeview
     style.configure('Treeview', background=P['tree_bg'], fieldbackground=P['tree_bg'],
@@ -317,6 +332,17 @@ def _show_suggestions(suggestions):
             selectmode='browse',
             highlightthickness=0
         )
+        # Apply theme colors to suggestion list
+        try:
+            _suggestion_listbox.configure(
+                bg=THEME_PALETTE.get('surface', '#FFFFFF'),
+                fg=THEME_PALETTE.get('text', '#000000'),
+                selectbackground=THEME_PALETTE.get('select', '#DBEAFE'),
+                selectforeground=THEME_PALETTE.get('text', '#000000'),
+                relief='flat', bd=1
+            )
+        except Exception:
+            pass
         for s in suggestions:
             _suggestion_listbox.insert('end', s)
         _suggestion_listbox.pack(fill='both', expand=True)
