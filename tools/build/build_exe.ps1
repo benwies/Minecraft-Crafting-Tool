@@ -60,6 +60,11 @@ if (Test-Path "$repoRoot\tools\build\app.ico") {
   $datas += "tools\\build\\app.ico;."
 }
 
+# Ship the JPEG window icon so Tk can load it at runtime
+if (Test-Path "$repoRoot\tools\build\16x16-minecraft-icon-19.jpg") {
+  $datas += "tools\\build\\16x16-minecraft-icon-19.jpg;."
+}
+
 # Optional icon (place tools/build/app.ico to enable)
 $iconArg = ''
 if (Test-Path "$repoRoot\tools\build\app.ico") { $iconArg = "--icon tools\\build\\app.ico" }

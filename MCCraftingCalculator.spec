@@ -5,7 +5,7 @@ a = Analysis(
     ['main.py'],
     pathex=[],
     binaries=[],
-    datas=[('recepies.json', '.'), ('recepies', 'recepies'), ('pic', 'pic'), ('tools\\\\build\\\\app.ico', '.')],
+    datas=[('recepies.json', '.'), ('recepies', 'recepies'), ('pic', 'pic'), ('tools\\\\build\\\\app.ico', '.'), ('tools\\\\build\\\\16x16-minecraft-icon-19.jpg', '.')],
     hiddenimports=['tkinter', 'PIL.ImageTk'],
     hookspath=[],
     hooksconfig={},

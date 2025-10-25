@@ -44,9 +44,9 @@ jobs:
         shell: pwsh
         run: |
           Set-Location dist
-          $zipName = "MinecraftFarmCalc-Portable-v$env:VERSION.zip"
+          $zipName = "MCCraftingCalculator-Portable-v$env:VERSION.zip"
           if (Test-Path $zipName) { Remove-Item -Force $zipName }
-          Compress-Archive -Path 'MinecraftFarmCalc/*' -DestinationPath $zipName
+          Compress-Archive -Path 'MCCraftingCalculator/*' -DestinationPath $zipName
 
       - name: Install Inno Setup
         shell: pwsh
@@ -58,8 +58,8 @@ jobs:
           $iscc = 'C:\\Program Files (x86)\\Inno Setup 6\\ISCC.exe'
           if (-not (Test-Path $iscc)) { $iscc = 'C:\\Program Files\\Inno Setup 6\\ISCC.exe' }
           & $iscc /DMyAppVersion=$env:VERSION /DMyAppPublisher="Benedikt Wiesner" tools\build\installer.iss
-          $src = 'dist/installer/MinecraftFarmCalculator-Setup.exe'
-          $dst = "dist/installer/MinecraftFarmCalculator-Setup-v$env:VERSION.exe"
+          $src = 'dist/installer/MCCraftingCalculator-Setup.exe'
+          $dst = "dist/installer/MCCraftingCalculator-Setup-v$env:VERSION.exe"
           Copy-Item $src $dst -Force
 
       - name: Upload Release (tagged)
@@ -67,9 +67,9 @@ jobs:
         uses: softprops/action-gh-release@v2
         with:
           files: |
-            dist/MinecraftFarmCalc/MinecraftFarmCalc.exe
-            dist/MinecraftFarmCalc-Portable-v*.zip
-            dist/installer/MinecraftFarmCalculator-Setup-v*.exe
+            dist/MCCraftingCalculator/MCCraftingCalculator.exe
+            dist/MCCraftingCalculator-Portable-v*.zip
+            dist/installer/MCCraftingCalculator-Setup-v*.exe
           draft: false
           prerelease: false
           generate_release_notes: true
@@ -82,6 +82,6 @@ jobs:
         with:
           name: windows-build
           path: |
-            dist/MinecraftFarmCalc/**
-            dist/MinecraftFarmCalc-Portable-v*.zip
-            dist/installer/MinecraftFarmCalculator-Setup-v*.exe
+            dist/MCCraftingCalculator/**
+            dist/MCCraftingCalculator-Portable-v*.zip
+            dist/installer/MCCraftingCalculator-Setup-v*.exe
