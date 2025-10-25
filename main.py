@@ -66,7 +66,6 @@ for p in PIC_DIR.glob("*.png"):
     except Exception:
         pass
 
-# Overlay with any user-supplied images; they take precedence
 try:
     USER_PIC_DIR.mkdir(parents=True, exist_ok=True)
 except Exception:
