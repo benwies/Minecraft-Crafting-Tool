@@ -1,4 +1,5 @@
 import json
+import copy
 import logging
 import tkinter as tk
 from tkinter import ttk, messagebox, filedialog
@@ -25,6 +26,55 @@ ITEM_IMAGES = {}
 
 PROJECTS_DIR = BASE / "projects"
 PROJECTS_DIR.mkdir(exist_ok=True)
+
+# --- Undo/Redo history ---
+UNDO_STACK = []  # list of snapshots
+REDO_STACK = []
+MAX_HISTORY = 5
+
+def snapshot_state():
+    return {
+        "name": current_project.name if 'current_project' in globals() else "",
+        "items": copy.deepcopy(current_project.items) if 'current_project' in globals() else {}
+    }
+
+def apply_state(state):
+    try:
+        current_project.name = state.get("name", current_project.name)
+        current_project.items = dict(state.get("items", {}))
+        # Reflect name into entry field
+        try:
+            entry_proj.delete(0, 'end')
+            entry_proj.insert(0, current_project.name)
+        except Exception:
+            pass
+        update_views()
+    except Exception as e:
+        logging.error(f"Failed to apply state: {e}")
+
+def _update_undo_redo_buttons():
+    try:
+        btn_undo.config(state=("normal" if UNDO_STACK else "disabled"))
+        btn_redo.config(state=("normal" if REDO_STACK else "disabled"))
+    except Exception:
+        pass
+
+def record_undo(label: str = "change"):
+    """Record the current state for undo, clear redo."""
+    try:
+        UNDO_STACK.append(snapshot_state())
+        while len(UNDO_STACK) > MAX_HISTORY:
+            UNDO_STACK.pop(0)
+        REDO_STACK.clear()
+        _update_undo_redo_buttons()
+        logging.debug(f"Recorded undo snapshot ({label}); undo depth={len(UNDO_STACK)}")
+    except Exception as e:
+        logging.error(f"Failed to record undo: {e}")
+
+def clear_history():
+    UNDO_STACK.clear()
+    REDO_STACK.clear()
+    _update_undo_redo_buttons()
 
 
 def format_stacks(qty: int) -> str:
@@ -64,18 +114,25 @@ main.pack(fill="both", expand=True)
 # Top: project controls
 proj_frame = ttk.Frame(main)
 proj_frame.grid(row=0, column=0, columnspan=3, sticky="ew")
-ttk.Label(proj_frame, text="Project name:").grid(row=0, column=0)
+
+# Toolbar-like Undo/Redo on the top-left
+btn_undo = ttk.Button(proj_frame, text="Undo", state="disabled")
+btn_undo.grid(row=0, column=0, padx=4)
+btn_redo = ttk.Button(proj_frame, text="Redo", state="disabled")
+btn_redo.grid(row=0, column=1, padx=4)
+
+ttk.Label(proj_frame, text="Project name:").grid(row=1, column=0)
 entry_proj = ttk.Entry(proj_frame)
-entry_proj.grid(row=0, column=1, sticky="ew")
+entry_proj.grid(row=1, column=1, sticky="ew")
 btn_new = ttk.Button(proj_frame, text="New Project")
-btn_new.grid(row=0, column=2, padx=4)
+btn_new.grid(row=1, column=2, padx=4)
 btn_save = ttk.Button(proj_frame, text="Save Project")
-btn_save.grid(row=0, column=3, padx=4)
-ttk.Label(proj_frame, text="Open:").grid(row=0, column=4)
+btn_save.grid(row=1, column=3, padx=4)
+ttk.Label(proj_frame, text="Open:").grid(row=1, column=4)
 combo_projects = ttk.Combobox(proj_frame, values=[p.name for p in list_project_files()])
-combo_projects.grid(row=0, column=5, sticky="ew")
+combo_projects.grid(row=1, column=5, sticky="ew")
 btn_load = ttk.Button(proj_frame, text="Load")
-btn_load.grid(row=0, column=6, padx=4)
+btn_load.grid(row=1, column=6, padx=4)
 
 proj_frame.columnconfigure(1, weight=1)
 proj_frame.columnconfigure(5, weight=1)
@@ -269,23 +326,22 @@ def _mode_changed(event=None):
 mode_combo.bind('<<ComboboxSelected>>', _mode_changed)
 btn_add = ttk.Button(left, text="Add")
 btn_add.grid(row=2, column=0, sticky="ew", padx=2, pady=6)
-# Remove button for selected project item(s)
-btn_remove = ttk.Button(left, text="Remove Selected")
-btn_remove.grid(row=2, column=1, sticky="ew", padx=2, pady=6)
 
-items_tree = ttk.Treeview(left, columns=("item", "qty", "stacks"), show="tree headings", height=12)
+# Items table with per-row delete and editable qty
+items_tree = ttk.Treeview(left, columns=("item", "qty", "stacks", "del"), show="tree headings", height=12)
 items_tree.heading("#0", text="")  # Image column
 items_tree.heading("item", text="Item")
 items_tree.heading("qty", text="Qty")
 items_tree.heading("stacks", text="Stacks")
+items_tree.heading("del", text="Remove")
 items_tree.column("#0", width=40, stretch=False)  # Fixed width for images
 items_tree.column("item", width=180, anchor="w", stretch=True)
-items_tree.column("qty", width=60, anchor="center", stretch=False)
+items_tree.column("qty", width=70, anchor="center", stretch=False)
 items_tree.column("stacks", width=100, anchor="w", stretch=False)
+items_tree.column("del", width=70, anchor="center", stretch=False)
 items_tree.grid(row=4, column=0, columnspan=2, sticky="nsew")
-# Make the two button columns equally sized so Add / Remove look balanced
-left.columnconfigure(0, weight=1, uniform="btn")
-left.columnconfigure(1, weight=1, uniform="btn")
+# Balance buttons row
+left.columnconfigure(0, weight=1)
 
 
 # Right: raw materials
@@ -370,6 +426,78 @@ def load_item_image(item_name):
     return None
 
 
+_qty_edit_entry = None
+
+def _begin_qty_edit(item_id: str):
+    """Overlay an Entry over the Qty cell for inline edit."""
+    global _qty_edit_entry
+    try:
+        bbox = items_tree.bbox(item_id, '#2')  # Qty column
+        if not bbox:
+            return
+        x, y, w, h = bbox
+        # Create entry
+        _qty_edit_entry = ttk.Entry(items_tree)
+        _qty_edit_entry.place(x=x, y=y, width=w, height=h)
+        _qty_edit_entry.insert(0, str(current_project.items.get(item_id, 0)))
+        _qty_edit_entry.focus_set()
+        _qty_edit_entry.select_range(0, 'end')
+
+        def _commit(*_):
+            global _qty_edit_entry
+            try:
+                new_val = int(_qty_edit_entry.get())
+            except Exception:
+                new_val = None
+            _qty_edit_entry.destroy()
+            _qty_edit_entry = None
+            if new_val is None:
+                return
+            if new_val <= 0:
+                # Remove the item if set to 0 or negative
+                record_undo("edit_qty_remove")
+                current_project.items.pop(item_id, None)
+            else:
+                record_undo("edit_qty")
+                current_project.items[item_id] = new_val
+            update_views()
+
+        def _cancel(*_):
+            global _qty_edit_entry
+            if _qty_edit_entry:
+                _qty_edit_entry.destroy()
+                _qty_edit_entry = None
+
+        _qty_edit_entry.bind('<Return>', _commit)
+        _qty_edit_entry.bind('<FocusOut>', _commit)
+        _qty_edit_entry.bind('<Escape>', _cancel)
+    except Exception as e:
+        logging.error(f"Failed to begin qty edit for {item_id}: {e}")
+
+
+def _on_items_tree_double_click(event):
+    """Start editing qty when double-clicking the Qty cell."""
+    row_id = items_tree.identify_row(event.y)
+    col = items_tree.identify_column(event.x)
+    if not row_id:
+        return
+    if col == '#2':  # Qty column
+        _begin_qty_edit(row_id)
+
+
+def _on_items_tree_click(event):
+    """Handle delete click on X column."""
+    row_id = items_tree.identify_row(event.y)
+    col = items_tree.identify_column(event.x)
+    if not row_id:
+        return
+    if col == '#4':  # del column
+        if row_id in current_project.items:
+            record_undo("delete_item")
+            del current_project.items[row_id]
+            update_views()
+
+
 def refresh_projects_combo():
     combo_projects["values"] = [p.name for p in list_project_files()]
 
@@ -382,7 +510,7 @@ def refresh_items_view():
         items_tree.delete(r)
     for itm, q in sorted(current_project.items.items()):
         img = load_item_image(itm)
-        items_tree.insert("", "end", iid=itm, image=img if img else "", text="", values=(format_item_name(itm), q, format_stacks(q)))
+        items_tree.insert("", "end", iid=itm, image=img if img else "", text="", values=(format_item_name(itm), q, format_stacks(q), "X"))
 
 
 def format_item_name(name: str) -> str:
@@ -428,6 +556,7 @@ def on_new_project():
     logging.info(f"Creating new project: {name}")
     global current_project
     current_project = Project(name, {})
+    clear_history()
     entry_proj.delete(0, "end")
     entry_proj.insert(0, name)
     update_views()
@@ -461,6 +590,7 @@ def on_load_project():
         return
     global current_project
     current_project = Project.load(path)
+    clear_history()
     logging.info(f"Loaded project '{current_project.name}' with {len(current_project.items)} items")
     logging.debug(f"Loaded project contents: {current_project.items}")
     entry_proj.delete(0, "end")
@@ -493,6 +623,8 @@ def on_add_item():
         logging.error(f"Invalid quantity entered: {entry_qty.get()}")
         messagebox.showerror("Quantity", "Enter a positive integer quantity")
         return
+    # Record undo before mutating
+    record_undo("add_item")
     current_project.items[itm] = current_project.items.get(itm, 0) + q
     logging.debug(f"Updated project items: {current_project.items}")
     update_views()
@@ -525,7 +657,32 @@ btn_new.config(command=on_new_project)
 btn_save.config(command=on_save_project)
 btn_load.config(command=on_load_project)
 btn_add.config(command=on_add_item)
-btn_remove.config(command=on_remove_item)
+
+# Bind tree interactions for inline edit/delete
+items_tree.bind('<Double-1>', _on_items_tree_double_click)
+items_tree.bind('<Button-1>', _on_items_tree_click)
+
+# Undo/Redo handlers
+def on_undo():
+    if not UNDO_STACK:
+        return
+    # Push current to redo, restore from undo
+    REDO_STACK.append(snapshot_state())
+    state = UNDO_STACK.pop()
+    apply_state(state)
+    _update_undo_redo_buttons()
+
+
+def on_redo():
+    if not REDO_STACK:
+        return
+    UNDO_STACK.append(snapshot_state())
+    state = REDO_STACK.pop()
+    apply_state(state)
+    _update_undo_redo_buttons()
+
+btn_undo.config(command=on_undo)
+btn_redo.config(command=on_redo)
 
 # Initial population
 refresh_projects_combo()

@@ -3645,3 +3645,310 @@
 2025-10-25 17:41:41.819 [INFO] Final aggregate totals: {}
 2025-10-25 17:44:57.287 [INFO] Calculating aggregate requirements for items: {}
 2025-10-25 17:44:57.287 [INFO] Final aggregate totals: {}
+2025-10-25 17:48:05.584 [INFO] Calculating aggregate requirements for items: {}
+2025-10-25 17:48:05.584 [INFO] Final aggregate totals: {}
+2025-10-25 17:48:12.090 [INFO] Adding item: armor_stand
+2025-10-25 17:48:12.090 [INFO] Adding 1x armor_stand
+2025-10-25 17:48:12.090 [DEBUG] Current project items before add: {}
+2025-10-25 17:48:12.090 [DEBUG] Updated project items: {'armor_stand': 1}
+2025-10-25 17:48:12.100 [DEBUG] STREAM b'IHDR' 16 13
+2025-10-25 17:48:12.101 [DEBUG] STREAM b'PLTE' 41 27
+2025-10-25 17:48:12.101 [DEBUG] STREAM b'tRNS' 80 1
+2025-10-25 17:48:12.101 [DEBUG] STREAM b'IDAT' 93 75
+2025-10-25 17:48:12.106 [INFO] Calculating aggregate requirements for items: {'armor_stand': 1}
+2025-10-25 17:48:12.106 [DEBUG] Processing requirements for 1x armor_stand
+2025-10-25 17:48:12.107 [DEBUG] Calculating requirements for 1x armor_stand
+2025-10-25 17:48:12.107 [DEBUG] Processing: 1x armor_stand
+2025-10-25 17:48:12.107 [DEBUG] Current recipe stack: 
+2025-10-25 17:48:12.107 [DEBUG] Found recipe for armor_stand: {'stick': 6, 'smooth_stone_slab': 1}
+2025-10-25 17:48:12.107 [DEBUG] Need 6x stick for 1x armor_stand
+2025-10-25 17:48:12.107 [DEBUG]   Processing: 6x stick
+2025-10-25 17:48:12.107 [DEBUG]   Current recipe stack: armor_stand
+2025-10-25 17:48:12.107 [DEBUG]   Found recipe for stick: {'planks': 2}
+2025-10-25 17:48:12.108 [DEBUG]   Need 12x planks for 6x stick
+2025-10-25 17:48:12.108 [DEBUG]     Processing: 12x planks
+2025-10-25 17:48:12.108 [DEBUG]     Current recipe stack: armor_stand -> stick
+2025-10-25 17:48:12.108 [DEBUG]     Adding material: 12x planks
+2025-10-25 17:48:12.108 [DEBUG] Need 1x smooth_stone_slab for 1x armor_stand
+2025-10-25 17:48:12.108 [DEBUG]   Processing: 1x smooth_stone_slab
+2025-10-25 17:48:12.108 [DEBUG]   Current recipe stack: armor_stand
+2025-10-25 17:48:12.108 [DEBUG]   Found recipe for smooth_stone_slab: {'smooth_stone': 3}
+2025-10-25 17:48:12.108 [DEBUG]   Need 3x smooth_stone for 1x smooth_stone_slab
+2025-10-25 17:48:12.108 [DEBUG]     Processing: 3x smooth_stone
+2025-10-25 17:48:12.108 [DEBUG]     Current recipe stack: armor_stand -> smooth_stone_slab
+2025-10-25 17:48:12.108 [DEBUG]     Found recipe for smooth_stone: {'stone': 1}
+2025-10-25 17:48:12.108 [DEBUG]     Need 3x stone for 3x smooth_stone
+2025-10-25 17:48:12.108 [DEBUG]       Processing: 3x stone
+2025-10-25 17:48:12.108 [DEBUG]       Current recipe stack: armor_stand -> smooth_stone_slab -> smooth_stone
+2025-10-25 17:48:12.109 [DEBUG]       Found recipe for stone: {'cobblestone': 1}
+2025-10-25 17:48:12.109 [DEBUG]       Need 3x cobblestone for 3x stone
+2025-10-25 17:48:12.109 [DEBUG]         Processing: 3x cobblestone
+2025-10-25 17:48:12.109 [DEBUG]         Current recipe stack: armor_stand -> smooth_stone_slab -> smooth_stone -> stone
+2025-10-25 17:48:12.109 [DEBUG]         Adding material: 3x cobblestone
+2025-10-25 17:48:12.109 [DEBUG] Final totals for 1x armor_stand: {'planks': 12, 'cobblestone': 3}
+2025-10-25 17:48:12.109 [DEBUG] Requirements for 1x armor_stand: {'planks': 12, 'cobblestone': 3}
+2025-10-25 17:48:12.109 [DEBUG] Updated total for planks: 12
+2025-10-25 17:48:12.109 [DEBUG] Updated total for cobblestone: 3
+2025-10-25 17:48:12.109 [INFO] Final aggregate totals: {'planks': 12, 'cobblestone': 3}
+2025-10-25 17:48:12.109 [DEBUG] STREAM b'IHDR' 16 13
+2025-10-25 17:48:12.110 [DEBUG] STREAM b'PLTE' 41 18
+2025-10-25 17:48:12.110 [DEBUG] STREAM b'IDAT' 71 113
+2025-10-25 17:48:12.110 [DEBUG] STREAM b'IHDR' 16 13
+2025-10-25 17:48:12.110 [DEBUG] STREAM b'PLTE' 41 21
+2025-10-25 17:48:12.110 [DEBUG] STREAM b'IDAT' 74 105
+2025-10-25 17:53:42.996 [INFO] Calculating aggregate requirements for items: {}
+2025-10-25 17:53:42.996 [INFO] Final aggregate totals: {}
+2025-10-25 17:53:53.725 [INFO] Adding item: stick
+2025-10-25 17:53:53.725 [INFO] Adding 1x stick
+2025-10-25 17:53:53.725 [DEBUG] Current project items before add: {}
+2025-10-25 17:53:53.726 [DEBUG] Updated project items: {'stick': 1}
+2025-10-25 17:53:53.734 [DEBUG] STREAM b'IHDR' 16 13
+2025-10-25 17:53:53.735 [DEBUG] STREAM b'IDAT' 41 48
+2025-10-25 17:53:53.740 [INFO] Calculating aggregate requirements for items: {'stick': 1}
+2025-10-25 17:53:53.740 [DEBUG] Processing requirements for 1x stick
+2025-10-25 17:53:53.740 [DEBUG] Calculating requirements for 1x stick
+2025-10-25 17:53:53.740 [DEBUG] Processing: 1x stick
+2025-10-25 17:53:53.740 [DEBUG] Current recipe stack: 
+2025-10-25 17:53:53.741 [DEBUG] Found recipe for stick: {'planks': 2}
+2025-10-25 17:53:53.741 [DEBUG] Need 2x planks for 1x stick
+2025-10-25 17:53:53.741 [DEBUG]   Processing: 2x planks
+2025-10-25 17:53:53.741 [DEBUG]   Current recipe stack: stick
+2025-10-25 17:53:53.741 [DEBUG]   Adding material: 2x planks
+2025-10-25 17:53:53.741 [DEBUG] Final totals for 1x stick: {'planks': 2}
+2025-10-25 17:53:53.741 [DEBUG] Requirements for 1x stick: {'planks': 2}
+2025-10-25 17:53:53.741 [DEBUG] Updated total for planks: 2
+2025-10-25 17:53:53.741 [INFO] Final aggregate totals: {'planks': 2}
+2025-10-25 17:53:53.742 [DEBUG] STREAM b'IHDR' 16 13
+2025-10-25 17:53:53.742 [DEBUG] STREAM b'PLTE' 41 21
+2025-10-25 17:53:53.742 [DEBUG] STREAM b'IDAT' 74 105
+2025-10-25 18:00:40.691 [INFO] Calculating aggregate requirements for items: {}
+2025-10-25 18:00:40.691 [INFO] Final aggregate totals: {}
+2025-10-25 18:00:45.124 [INFO] Adding item: stick
+2025-10-25 18:00:45.125 [INFO] Adding 1x stick
+2025-10-25 18:00:45.125 [DEBUG] Current project items before add: {}
+2025-10-25 18:00:45.125 [DEBUG] Updated project items: {'stick': 1}
+2025-10-25 18:00:45.133 [DEBUG] STREAM b'IHDR' 16 13
+2025-10-25 18:00:45.134 [DEBUG] STREAM b'IDAT' 41 48
+2025-10-25 18:00:45.139 [INFO] Calculating aggregate requirements for items: {'stick': 1}
+2025-10-25 18:00:45.140 [DEBUG] Processing requirements for 1x stick
+2025-10-25 18:00:45.140 [DEBUG] Calculating requirements for 1x stick
+2025-10-25 18:00:45.140 [DEBUG] Processing: 1x stick
+2025-10-25 18:00:45.140 [DEBUG] Current recipe stack: 
+2025-10-25 18:00:45.140 [DEBUG] Found recipe for stick: {'planks': 2}
+2025-10-25 18:00:45.140 [DEBUG] Need 2x planks for 1x stick
+2025-10-25 18:00:45.140 [DEBUG]   Processing: 2x planks
+2025-10-25 18:00:45.140 [DEBUG]   Current recipe stack: stick
+2025-10-25 18:00:45.140 [DEBUG]   Adding material: 2x planks
+2025-10-25 18:00:45.140 [DEBUG] Final totals for 1x stick: {'planks': 2}
+2025-10-25 18:00:45.140 [DEBUG] Requirements for 1x stick: {'planks': 2}
+2025-10-25 18:00:45.140 [DEBUG] Updated total for planks: 2
+2025-10-25 18:00:45.140 [INFO] Final aggregate totals: {'planks': 2}
+2025-10-25 18:00:45.141 [DEBUG] STREAM b'IHDR' 16 13
+2025-10-25 18:00:45.141 [DEBUG] STREAM b'PLTE' 41 21
+2025-10-25 18:00:45.141 [DEBUG] STREAM b'IDAT' 74 105
+2025-10-25 18:00:47.072 [INFO] Calculating aggregate requirements for items: {}
+2025-10-25 18:00:47.072 [INFO] Final aggregate totals: {}
+2025-10-25 18:00:53.786 [INFO] Adding item: acacia_chest_boat
+2025-10-25 18:00:53.786 [INFO] Adding 12x acacia_chest_boat
+2025-10-25 18:00:53.786 [DEBUG] Current project items before add: {}
+2025-10-25 18:00:53.786 [DEBUG] Updated project items: {'acacia_chest_boat': 12}
+2025-10-25 18:00:53.787 [DEBUG] STREAM b'IHDR' 16 13
+2025-10-25 18:00:53.787 [DEBUG] STREAM b'PLTE' 41 54
+2025-10-25 18:00:53.787 [DEBUG] STREAM b'tRNS' 107 1
+2025-10-25 18:00:53.787 [DEBUG] STREAM b'IDAT' 120 124
+2025-10-25 18:00:53.789 [INFO] Calculating aggregate requirements for items: {'acacia_chest_boat': 12}
+2025-10-25 18:00:53.789 [DEBUG] Processing requirements for 12x acacia_chest_boat
+2025-10-25 18:00:53.789 [DEBUG] Calculating requirements for 12x acacia_chest_boat
+2025-10-25 18:00:53.789 [DEBUG] Processing: 12x acacia_chest_boat
+2025-10-25 18:00:53.789 [DEBUG] Current recipe stack: 
+2025-10-25 18:00:53.790 [DEBUG] Found recipe for acacia_chest_boat: {'planks': 8, 'acacia_planks': 5}
+2025-10-25 18:00:53.790 [DEBUG] Need 96x planks for 12x acacia_chest_boat
+2025-10-25 18:00:53.790 [DEBUG]   Processing: 96x planks
+2025-10-25 18:00:53.790 [DEBUG]   Current recipe stack: acacia_chest_boat
+2025-10-25 18:00:53.790 [DEBUG]   Adding material: 96x planks
+2025-10-25 18:00:53.790 [DEBUG] Need 60x acacia_planks for 12x acacia_chest_boat
+2025-10-25 18:00:53.790 [DEBUG]   Processing: 60x acacia_planks
+2025-10-25 18:00:53.790 [DEBUG]   Current recipe stack: acacia_chest_boat
+2025-10-25 18:00:53.790 [DEBUG]   Adding material: 60x acacia_planks
+2025-10-25 18:00:53.790 [DEBUG] Final totals for 12x acacia_chest_boat: {'planks': 96, 'acacia_planks': 60}
+2025-10-25 18:00:53.790 [DEBUG] Requirements for 12x acacia_chest_boat: {'planks': 96, 'acacia_planks': 60}
+2025-10-25 18:00:53.790 [DEBUG] Updated total for planks: 96
+2025-10-25 18:00:53.791 [DEBUG] Updated total for acacia_planks: 60
+2025-10-25 18:00:53.791 [INFO] Final aggregate totals: {'planks': 96, 'acacia_planks': 60}
+2025-10-25 18:00:53.791 [DEBUG] STREAM b'IHDR' 16 13
+2025-10-25 18:00:53.791 [DEBUG] STREAM b'PLTE' 41 21
+2025-10-25 18:00:53.791 [DEBUG] STREAM b'IDAT' 74 112
+2025-10-25 18:00:59.424 [INFO] Calculating aggregate requirements for items: {'acacia_chest_boat': 13}
+2025-10-25 18:00:59.424 [DEBUG] Processing requirements for 13x acacia_chest_boat
+2025-10-25 18:00:59.424 [DEBUG] Calculating requirements for 13x acacia_chest_boat
+2025-10-25 18:00:59.424 [DEBUG] Processing: 13x acacia_chest_boat
+2025-10-25 18:00:59.425 [DEBUG] Current recipe stack: 
+2025-10-25 18:00:59.425 [DEBUG] Found recipe for acacia_chest_boat: {'planks': 8, 'acacia_planks': 5}
+2025-10-25 18:00:59.425 [DEBUG] Need 104x planks for 13x acacia_chest_boat
+2025-10-25 18:00:59.425 [DEBUG]   Processing: 104x planks
+2025-10-25 18:00:59.425 [DEBUG]   Current recipe stack: acacia_chest_boat
+2025-10-25 18:00:59.425 [DEBUG]   Adding material: 104x planks
+2025-10-25 18:00:59.425 [DEBUG] Need 65x acacia_planks for 13x acacia_chest_boat
+2025-10-25 18:00:59.425 [DEBUG]   Processing: 65x acacia_planks
+2025-10-25 18:00:59.425 [DEBUG]   Current recipe stack: acacia_chest_boat
+2025-10-25 18:00:59.425 [DEBUG]   Adding material: 65x acacia_planks
+2025-10-25 18:00:59.425 [DEBUG] Final totals for 13x acacia_chest_boat: {'planks': 104, 'acacia_planks': 65}
+2025-10-25 18:00:59.425 [DEBUG] Requirements for 13x acacia_chest_boat: {'planks': 104, 'acacia_planks': 65}
+2025-10-25 18:00:59.425 [DEBUG] Updated total for planks: 104
+2025-10-25 18:00:59.425 [DEBUG] Updated total for acacia_planks: 65
+2025-10-25 18:00:59.425 [INFO] Final aggregate totals: {'planks': 104, 'acacia_planks': 65}
+2025-10-25 18:03:04.563 [INFO] Calculating aggregate requirements for items: {}
+2025-10-25 18:03:04.564 [INFO] Final aggregate totals: {}
+2025-10-25 18:03:14.473 [INFO] Adding item: amethyst_block
+2025-10-25 18:03:14.474 [INFO] Adding 20x amethyst_block
+2025-10-25 18:03:14.474 [DEBUG] Current project items before add: {}
+2025-10-25 18:03:14.474 [DEBUG] Updated project items: {'amethyst_block': 20}
+2025-10-25 18:03:14.485 [DEBUG] STREAM b'IHDR' 16 13
+2025-10-25 18:03:14.485 [DEBUG] STREAM b'PLTE' 41 21
+2025-10-25 18:03:14.485 [DEBUG] STREAM b'IDAT' 74 122
+2025-10-25 18:03:14.490 [INFO] Calculating aggregate requirements for items: {'amethyst_block': 20}
+2025-10-25 18:03:14.490 [DEBUG] Processing requirements for 20x amethyst_block
+2025-10-25 18:03:14.490 [DEBUG] Calculating requirements for 20x amethyst_block
+2025-10-25 18:03:14.490 [DEBUG] Processing: 20x amethyst_block
+2025-10-25 18:03:14.491 [DEBUG] Current recipe stack: 
+2025-10-25 18:03:14.491 [DEBUG] Found recipe for amethyst_block: {'amethyst_shard': 4}
+2025-10-25 18:03:14.491 [DEBUG] Need 80x amethyst_shard for 20x amethyst_block
+2025-10-25 18:03:14.491 [DEBUG]   Processing: 80x amethyst_shard
+2025-10-25 18:03:14.491 [DEBUG]   Current recipe stack: amethyst_block
+2025-10-25 18:03:14.491 [DEBUG]   Adding material: 80x amethyst_shard
+2025-10-25 18:03:14.491 [DEBUG] Final totals for 20x amethyst_block: {'amethyst_shard': 80}
+2025-10-25 18:03:14.491 [DEBUG] Requirements for 20x amethyst_block: {'amethyst_shard': 80}
+2025-10-25 18:03:14.491 [DEBUG] Updated total for amethyst_shard: 80
+2025-10-25 18:03:14.491 [INFO] Final aggregate totals: {'amethyst_shard': 80}
+2025-10-25 18:03:14.491 [DEBUG] STREAM b'IHDR' 16 13
+2025-10-25 18:03:14.492 [DEBUG] STREAM b'PLTE' 41 24
+2025-10-25 18:03:14.492 [DEBUG] STREAM b'tRNS' 77 1
+2025-10-25 18:03:14.492 [DEBUG] STREAM b'IDAT' 90 77
+2025-10-25 18:03:21.369 [INFO] Calculating aggregate requirements for items: {'amethyst_block': 20}
+2025-10-25 18:03:21.369 [DEBUG] Processing requirements for 20x amethyst_block
+2025-10-25 18:03:21.369 [DEBUG] Calculating requirements for 20x amethyst_block
+2025-10-25 18:03:21.369 [DEBUG] Processing: 20x amethyst_block
+2025-10-25 18:03:21.369 [DEBUG] Current recipe stack: 
+2025-10-25 18:03:21.369 [DEBUG] Found recipe for amethyst_block: {'amethyst_shard': 4}
+2025-10-25 18:03:21.369 [DEBUG] Need 80x amethyst_shard for 20x amethyst_block
+2025-10-25 18:03:21.369 [DEBUG]   Processing: 80x amethyst_shard
+2025-10-25 18:03:21.370 [DEBUG]   Current recipe stack: amethyst_block
+2025-10-25 18:03:21.370 [DEBUG]   Adding material: 80x amethyst_shard
+2025-10-25 18:03:21.370 [DEBUG] Final totals for 20x amethyst_block: {'amethyst_shard': 80}
+2025-10-25 18:03:21.370 [DEBUG] Requirements for 20x amethyst_block: {'amethyst_shard': 80}
+2025-10-25 18:03:21.370 [DEBUG] Updated total for amethyst_shard: 80
+2025-10-25 18:03:21.370 [INFO] Final aggregate totals: {'amethyst_shard': 80}
+2025-10-25 18:03:22.084 [INFO] Calculating aggregate requirements for items: {}
+2025-10-25 18:03:22.085 [INFO] Final aggregate totals: {}
+2025-10-25 18:07:50.694 [INFO] Calculating aggregate requirements for items: {}
+2025-10-25 18:07:50.694 [INFO] Final aggregate totals: {}
+2025-10-25 18:07:58.377 [INFO] Adding item: acacia_stairs
+2025-10-25 18:07:58.377 [INFO] Adding 1x acacia_stairs
+2025-10-25 18:07:58.377 [DEBUG] Current project items before add: {}
+2025-10-25 18:07:58.378 [DEBUG] Recorded undo snapshot (add_item); undo depth=1
+2025-10-25 18:07:58.378 [DEBUG] Updated project items: {'acacia_stairs': 1}
+2025-10-25 18:07:58.378 [DEBUG] No image found for acacia_stairs (lookup: acacia_stairs)
+2025-10-25 18:07:58.379 [INFO] Calculating aggregate requirements for items: {'acacia_stairs': 1}
+2025-10-25 18:07:58.379 [DEBUG] Processing requirements for 1x acacia_stairs
+2025-10-25 18:07:58.379 [DEBUG] Calculating requirements for 1x acacia_stairs
+2025-10-25 18:07:58.379 [DEBUG] Processing: 1x acacia_stairs
+2025-10-25 18:07:58.379 [DEBUG] Current recipe stack: 
+2025-10-25 18:07:58.379 [DEBUG] Found recipe for acacia_stairs: {'acacia_planks': 6}
+2025-10-25 18:07:58.379 [DEBUG] Need 6x acacia_planks for 1x acacia_stairs
+2025-10-25 18:07:58.379 [DEBUG]   Processing: 6x acacia_planks
+2025-10-25 18:07:58.379 [DEBUG]   Current recipe stack: acacia_stairs
+2025-10-25 18:07:58.380 [DEBUG]   Adding material: 6x acacia_planks
+2025-10-25 18:07:58.380 [DEBUG] Final totals for 1x acacia_stairs: {'acacia_planks': 6}
+2025-10-25 18:07:58.380 [DEBUG] Requirements for 1x acacia_stairs: {'acacia_planks': 6}
+2025-10-25 18:07:58.380 [DEBUG] Updated total for acacia_planks: 6
+2025-10-25 18:07:58.380 [INFO] Final aggregate totals: {'acacia_planks': 6}
+2025-10-25 18:07:58.388 [DEBUG] STREAM b'IHDR' 16 13
+2025-10-25 18:07:58.388 [DEBUG] STREAM b'PLTE' 41 21
+2025-10-25 18:07:58.388 [DEBUG] STREAM b'IDAT' 74 112
+2025-10-25 18:08:02.077 [DEBUG] Recorded undo snapshot (edit_qty); undo depth=2
+2025-10-25 18:08:02.078 [INFO] Calculating aggregate requirements for items: {'acacia_stairs': 30}
+2025-10-25 18:08:02.078 [DEBUG] Processing requirements for 30x acacia_stairs
+2025-10-25 18:08:02.078 [DEBUG] Calculating requirements for 30x acacia_stairs
+2025-10-25 18:08:02.078 [DEBUG] Processing: 30x acacia_stairs
+2025-10-25 18:08:02.078 [DEBUG] Current recipe stack: 
+2025-10-25 18:08:02.078 [DEBUG] Found recipe for acacia_stairs: {'acacia_planks': 6}
+2025-10-25 18:08:02.078 [DEBUG] Need 180x acacia_planks for 30x acacia_stairs
+2025-10-25 18:08:02.078 [DEBUG]   Processing: 180x acacia_planks
+2025-10-25 18:08:02.078 [DEBUG]   Current recipe stack: acacia_stairs
+2025-10-25 18:08:02.079 [DEBUG]   Adding material: 180x acacia_planks
+2025-10-25 18:08:02.079 [DEBUG] Final totals for 30x acacia_stairs: {'acacia_planks': 180}
+2025-10-25 18:08:02.079 [DEBUG] Requirements for 30x acacia_stairs: {'acacia_planks': 180}
+2025-10-25 18:08:02.079 [DEBUG] Updated total for acacia_planks: 180
+2025-10-25 18:08:02.079 [INFO] Final aggregate totals: {'acacia_planks': 180}
+2025-10-25 18:08:03.781 [INFO] Calculating aggregate requirements for items: {'acacia_stairs': 1}
+2025-10-25 18:08:03.781 [DEBUG] Processing requirements for 1x acacia_stairs
+2025-10-25 18:08:03.781 [DEBUG] Calculating requirements for 1x acacia_stairs
+2025-10-25 18:08:03.781 [DEBUG] Processing: 1x acacia_stairs
+2025-10-25 18:08:03.782 [DEBUG] Current recipe stack: 
+2025-10-25 18:08:03.782 [DEBUG] Found recipe for acacia_stairs: {'acacia_planks': 6}
+2025-10-25 18:08:03.782 [DEBUG] Need 6x acacia_planks for 1x acacia_stairs
+2025-10-25 18:08:03.782 [DEBUG]   Processing: 6x acacia_planks
+2025-10-25 18:08:03.782 [DEBUG]   Current recipe stack: acacia_stairs
+2025-10-25 18:08:03.782 [DEBUG]   Adding material: 6x acacia_planks
+2025-10-25 18:08:03.782 [DEBUG] Final totals for 1x acacia_stairs: {'acacia_planks': 6}
+2025-10-25 18:08:03.782 [DEBUG] Requirements for 1x acacia_stairs: {'acacia_planks': 6}
+2025-10-25 18:08:03.783 [DEBUG] Updated total for acacia_planks: 6
+2025-10-25 18:08:03.783 [INFO] Final aggregate totals: {'acacia_planks': 6}
+2025-10-25 18:08:04.898 [INFO] Calculating aggregate requirements for items: {'acacia_stairs': 30}
+2025-10-25 18:08:04.898 [DEBUG] Processing requirements for 30x acacia_stairs
+2025-10-25 18:08:04.899 [DEBUG] Calculating requirements for 30x acacia_stairs
+2025-10-25 18:08:04.899 [DEBUG] Processing: 30x acacia_stairs
+2025-10-25 18:08:04.899 [DEBUG] Current recipe stack: 
+2025-10-25 18:08:04.899 [DEBUG] Found recipe for acacia_stairs: {'acacia_planks': 6}
+2025-10-25 18:08:04.899 [DEBUG] Need 180x acacia_planks for 30x acacia_stairs
+2025-10-25 18:08:04.899 [DEBUG]   Processing: 180x acacia_planks
+2025-10-25 18:08:04.900 [DEBUG]   Current recipe stack: acacia_stairs
+2025-10-25 18:08:04.900 [DEBUG]   Adding material: 180x acacia_planks
+2025-10-25 18:08:04.900 [DEBUG] Final totals for 30x acacia_stairs: {'acacia_planks': 180}
+2025-10-25 18:08:04.900 [DEBUG] Requirements for 30x acacia_stairs: {'acacia_planks': 180}
+2025-10-25 18:08:04.900 [DEBUG] Updated total for acacia_planks: 180
+2025-10-25 18:08:04.900 [INFO] Final aggregate totals: {'acacia_planks': 180}
+2025-10-25 18:08:05.501 [INFO] Calculating aggregate requirements for items: {'acacia_stairs': 1}
+2025-10-25 18:08:05.502 [DEBUG] Processing requirements for 1x acacia_stairs
+2025-10-25 18:08:05.502 [DEBUG] Calculating requirements for 1x acacia_stairs
+2025-10-25 18:08:05.502 [DEBUG] Processing: 1x acacia_stairs
+2025-10-25 18:08:05.502 [DEBUG] Current recipe stack: 
+2025-10-25 18:08:05.502 [DEBUG] Found recipe for acacia_stairs: {'acacia_planks': 6}
+2025-10-25 18:08:05.502 [DEBUG] Need 6x acacia_planks for 1x acacia_stairs
+2025-10-25 18:08:05.502 [DEBUG]   Processing: 6x acacia_planks
+2025-10-25 18:08:05.503 [DEBUG]   Current recipe stack: acacia_stairs
+2025-10-25 18:08:05.503 [DEBUG]   Adding material: 6x acacia_planks
+2025-10-25 18:08:05.503 [DEBUG] Final totals for 1x acacia_stairs: {'acacia_planks': 6}
+2025-10-25 18:08:05.503 [DEBUG] Requirements for 1x acacia_stairs: {'acacia_planks': 6}
+2025-10-25 18:08:05.503 [DEBUG] Updated total for acacia_planks: 6
+2025-10-25 18:08:05.503 [INFO] Final aggregate totals: {'acacia_planks': 6}
+2025-10-25 18:08:05.989 [INFO] Calculating aggregate requirements for items: {}
+2025-10-25 18:08:05.989 [INFO] Final aggregate totals: {}
+2025-10-25 18:08:06.790 [INFO] Calculating aggregate requirements for items: {'acacia_stairs': 1}
+2025-10-25 18:08:06.791 [DEBUG] Processing requirements for 1x acacia_stairs
+2025-10-25 18:08:06.791 [DEBUG] Calculating requirements for 1x acacia_stairs
+2025-10-25 18:08:06.791 [DEBUG] Processing: 1x acacia_stairs
+2025-10-25 18:08:06.791 [DEBUG] Current recipe stack: 
+2025-10-25 18:08:06.792 [DEBUG] Found recipe for acacia_stairs: {'acacia_planks': 6}
+2025-10-25 18:08:06.792 [DEBUG] Need 6x acacia_planks for 1x acacia_stairs
+2025-10-25 18:08:06.792 [DEBUG]   Processing: 6x acacia_planks
+2025-10-25 18:08:06.792 [DEBUG]   Current recipe stack: acacia_stairs
+2025-10-25 18:08:06.792 [DEBUG]   Adding material: 6x acacia_planks
+2025-10-25 18:08:06.792 [DEBUG] Final totals for 1x acacia_stairs: {'acacia_planks': 6}
+2025-10-25 18:08:06.792 [DEBUG] Requirements for 1x acacia_stairs: {'acacia_planks': 6}
+2025-10-25 18:08:06.792 [DEBUG] Updated total for acacia_planks: 6
+2025-10-25 18:08:06.793 [INFO] Final aggregate totals: {'acacia_planks': 6}
+2025-10-25 18:08:06.966 [INFO] Calculating aggregate requirements for items: {'acacia_stairs': 30}
+2025-10-25 18:08:06.966 [DEBUG] Processing requirements for 30x acacia_stairs
+2025-10-25 18:08:06.967 [DEBUG] Calculating requirements for 30x acacia_stairs
+2025-10-25 18:08:06.967 [DEBUG] Processing: 30x acacia_stairs
+2025-10-25 18:08:06.967 [DEBUG] Current recipe stack: 
+2025-10-25 18:08:06.967 [DEBUG] Found recipe for acacia_stairs: {'acacia_planks': 6}
+2025-10-25 18:08:06.967 [DEBUG] Need 180x acacia_planks for 30x acacia_stairs
+2025-10-25 18:08:06.968 [DEBUG]   Processing: 180x acacia_planks
+2025-10-25 18:08:06.968 [DEBUG]   Current recipe stack: acacia_stairs
+2025-10-25 18:08:06.968 [DEBUG]   Adding material: 180x acacia_planks
+2025-10-25 18:08:06.968 [DEBUG] Final totals for 30x acacia_stairs: {'acacia_planks': 180}
+2025-10-25 18:08:06.968 [DEBUG] Requirements for 30x acacia_stairs: {'acacia_planks': 180}
+2025-10-25 18:08:06.968 [DEBUG] Updated total for acacia_planks: 180
+2025-10-25 18:08:06.968 [INFO] Final aggregate totals: {'acacia_planks': 180}
