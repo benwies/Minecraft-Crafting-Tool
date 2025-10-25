@@ -31,6 +31,7 @@ for p in PIC_DIR.glob("*.png"):
 ALL_MATERIAL_SUGGESTIONS = []
 PROJECTS_DIR = BASE / "projects"
 PROJECTS_DIR.mkdir(exist_ok=True)
+LAST_PROJECT_FILE = PROJECTS_DIR / ".last_project"
 DISPLAY_NORMALIZATION = {"slime_block": ("slime_ball", 9)}
 
 
@@ -59,6 +60,24 @@ _autosave_after_id = None
 # Materials table sorting state: (column_key, descending?)
 # column_key in {"default", "item", "qty", "stacks", "acq"}
 _mat_sort = ("default", False)
+
+def _sorted_by_label_text():
+    try:
+        key, desc = _mat_sort
+        arrow = "↓" if desc else "↑"
+        names = {
+            "default": "Default",
+            "item": "Item",
+            "qty": "Missing",
+            "stacks": "Stacks",
+            "acq": "Acquired",
+        }
+        base = names.get(key, "Default")
+        if key == "default":
+            return "Sorted by: Default"
+        return f"Sorted by: {base} {arrow}"
+    except Exception:
+        return "Sorted by: Default"
 
 
 def _schedule_autosave():
@@ -741,6 +760,11 @@ custom_qty_entry.insert(0, "1")
 custom_qty_entry.pack(side="left", padx=(0, 6))
 btn_custom_add = ttk.Button(custom_frame, text="Add")
 btn_custom_add.pack(side="left")
+
+# Sorted-by indicator on the right side of the custom bar
+sorted_by_var = tk.StringVar(value=_sorted_by_label_text())
+lbl_sorted_by = ttk.Label(custom_frame, textvariable=sorted_by_var)
+lbl_sorted_by.pack(side="right")
 custom_name_combo.bind("<KeyRelease>", _cust_update_suggestions)
 custom_name_combo.bind(
     "<Down>",
@@ -1047,6 +1071,11 @@ def _on_items_tree_double_click(event):
         return
     if col == "#2":
         _begin_qty_edit(row_id)
+    elif col in ("#1", "item"):
+        try:
+            _open_recipe_peek(row_id, 1)
+        except Exception:
+            pass
 
 
 def _on_items_tree_click(event):
@@ -1168,6 +1197,10 @@ def refresh_materials_view():
             if mat in DONE_MATS:
                 materials_tree.item(row, tags=(tag, "done"))
         root.after_idle(_refresh_done_buttons)
+        try:
+            sorted_by_var.set(_sorted_by_label_text())
+        except Exception:
+            pass
     except Exception as e:
         messagebox.showerror("Calculation error", f"Failed to calculate materials: {e}")
 
@@ -1210,6 +1243,11 @@ def on_save_project(silent: bool = False):
         pass
     current_project.save(path)
     refresh_projects_combo()
+    # Remember last project
+    try:
+        LAST_PROJECT_FILE.write_text(f"{name}.json", encoding="utf-8")
+    except Exception:
+        pass
 
 
 def on_load_project():
@@ -1245,6 +1283,11 @@ def on_load_project():
     entry_proj.delete(0, "end")
     entry_proj.insert(0, current_project.name)
     update_views()
+    # Remember last project
+    try:
+        LAST_PROJECT_FILE.write_text(path.name, encoding="utf-8")
+    except Exception:
+        pass
 
 
 def on_add_item():
@@ -1809,6 +1852,10 @@ def _on_mat_heading_click(col_key: str):
         else:
             _mat_sort = (col_key, False)
         refresh_materials_view()
+        try:
+            sorted_by_var.set(_sorted_by_label_text())
+        except Exception:
+            pass
     except Exception:
         pass
 
@@ -1925,7 +1972,20 @@ btn_custom_add.config(command=on_add_custom_mat)
 custom_qty_entry.bind("<Return>", on_add_custom_mat)
 apply_theme("dark")
 refresh_projects_combo()
-update_views()
+def _open_last_project_if_available():
+    try:
+        if LAST_PROJECT_FILE.exists():
+            val = LAST_PROJECT_FILE.read_text(encoding="utf-8").strip()
+            if val:
+                combo_projects.set(val)
+                on_load_project()
+                return True
+    except Exception:
+        pass
+    return False
+
+if not _open_last_project_if_available():
+    update_views()
 for i in range(3):
     main.columnconfigure(i, weight=1)
 root.mainloop()

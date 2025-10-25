@@ -6,7 +6,17 @@
   },
   "custom_mats": {},
   "acquired_mats": {},
-  "done_mats": [],
+  "done_mats": [
+    "iron_ingot",
+    "cobblestone",
+    "planks",
+    "redstone"
+  ],
   "manual_undone": [],
-  "manual_done": []
+  "manual_done": [
+    "iron_ingot",
+    "cobblestone",
+    "planks",
+    "redstone"
+  ]
 }
