@@ -1,6 +1,6 @@
 # MC Crafting Calculator
 
-A fast, friendly Windows tool to plan Minecraft builds by calculating all required raw materials for your project. Create projects, add items (by quantity or stacks), and get a clear list of everything you need — with sorting, progress tracking, and autosave.
+A fast, friendly Windows tool to plan MC builds by calculating all required raw materials for your project. Create projects, add items (by quantity or stacks), and get a clear list of everything you need with sorting, progress tracking, and autosave.
 
 ## Download and install
 
