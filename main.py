@@ -58,12 +58,6 @@ DISPLAY_NORMALIZATION = {
 
 
 def normalize_display_mats(mats: dict) -> dict:
-    """Convert some aggregate materials into more granular display units.
-    For example, convert slime_block counts to slime_ball counts.
-
-    - mats: dict[str,int] material -> qty
-    - returns: new dict with normalized keys/quantities
-    """
 
     try:
 
@@ -752,7 +746,6 @@ def _update_item_suggestions(event=None):
 
 
 def _on_item_tab(event):
-    """Handle Tab key to cycle through autocomplete suggestions"""
 
     global _suggestion_listbox, _tab_pressed
 
@@ -804,7 +797,6 @@ def _on_item_tab(event):
 
 
 def _on_item_enter(event):
-    """Handle Enter key in item field to accept suggestion or move to quantity"""
 
     global _suggestion_listbox
 
@@ -826,7 +818,6 @@ def _on_item_enter(event):
 
 
 def _on_item_escape(event):
-    """Handle Escape key to close suggestions"""
 
     _hide_suggestions()
 
@@ -834,7 +825,6 @@ def _on_item_escape(event):
 
 
 def _on_qty_enter(event):
-    """Handle Enter key in quantity field to add the item"""
 
     on_add_item()
 
@@ -883,7 +873,6 @@ entry_qty.bind("<Return>", _on_qty_enter)
 
 
 def _mode_changed(event=None):
-    """Optional: keep focus in the qty entry after changing mode."""
 
     try:
 

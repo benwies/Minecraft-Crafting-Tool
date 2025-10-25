@@ -9863,3 +9863,94 @@
 2025-10-25 21:35:33.497 [DEBUG] Updated total for string: 2
 2025-10-25 21:35:33.497 [DEBUG] Updated total for carrot: 1
 2025-10-25 21:35:33.497 [INFO] Final aggregate totals: {'planks': 6, 'string': 2, 'carrot': 1}
+2025-10-25 21:45:44.360 [INFO] Calculating aggregate requirements for items: {}
+2025-10-25 21:45:44.360 [INFO] Final aggregate totals: {}
+2025-10-25 21:45:48.262 [INFO] Adding item: stick
+2025-10-25 21:45:48.262 [INFO] Adding 1x stick
+2025-10-25 21:45:48.263 [DEBUG] Current project items before add: {}
+2025-10-25 21:45:48.263 [DEBUG] Recorded undo snapshot (add_item); undo depth=1
+2025-10-25 21:45:48.263 [DEBUG] Updated project items: {'stick': 1}
+2025-10-25 21:45:48.273 [DEBUG] STREAM b'IHDR' 16 13
+2025-10-25 21:45:48.273 [DEBUG] STREAM b'IDAT' 41 48
+2025-10-25 21:45:48.278 [INFO] Calculating aggregate requirements for items: {'stick': 1}
+2025-10-25 21:45:48.278 [DEBUG] Processing requirements for 1x stick
+2025-10-25 21:45:48.278 [DEBUG] Calculating requirements for 1x stick
+2025-10-25 21:45:48.278 [DEBUG] Processing: 1x stick
+2025-10-25 21:45:48.278 [DEBUG] Current recipe stack: 
+2025-10-25 21:45:48.278 [DEBUG] Found recipe for stick: {'planks': 2}
+2025-10-25 21:45:48.278 [DEBUG] Need 2x planks for 1x stick
+2025-10-25 21:45:48.278 [DEBUG]   Processing: 2x planks
+2025-10-25 21:45:48.278 [DEBUG]   Current recipe stack: stick
+2025-10-25 21:45:48.278 [DEBUG]   Adding material: 2x planks
+2025-10-25 21:45:48.278 [DEBUG] Final totals for 1x stick: {'planks': 2}
+2025-10-25 21:45:48.279 [DEBUG] Requirements for 1x stick: {'planks': 2}
+2025-10-25 21:45:48.279 [DEBUG] Updated total for planks: 2
+2025-10-25 21:45:48.279 [INFO] Final aggregate totals: {'planks': 2}
+2025-10-25 21:45:48.279 [DEBUG] STREAM b'IHDR' 16 13
+2025-10-25 21:45:48.279 [DEBUG] STREAM b'PLTE' 41 21
+2025-10-25 21:45:48.279 [DEBUG] STREAM b'IDAT' 74 105
+2025-10-25 21:45:52.112 [INFO] Calculating aggregate requirements for items: {'stick': 1}
+2025-10-25 21:45:52.112 [DEBUG] Processing requirements for 1x stick
+2025-10-25 21:45:52.112 [DEBUG] Calculating requirements for 1x stick
+2025-10-25 21:45:52.113 [DEBUG] Processing: 1x stick
+2025-10-25 21:45:52.113 [DEBUG] Current recipe stack: 
+2025-10-25 21:45:52.113 [DEBUG] Found recipe for stick: {'planks': 2}
+2025-10-25 21:45:52.113 [DEBUG] Need 2x planks for 1x stick
+2025-10-25 21:45:52.113 [DEBUG]   Processing: 2x planks
+2025-10-25 21:45:52.113 [DEBUG]   Current recipe stack: stick
+2025-10-25 21:45:52.114 [DEBUG]   Adding material: 2x planks
+2025-10-25 21:45:52.114 [DEBUG] Final totals for 1x stick: {'planks': 2}
+2025-10-25 21:45:52.114 [DEBUG] Requirements for 1x stick: {'planks': 2}
+2025-10-25 21:45:52.114 [DEBUG] Updated total for planks: 2
+2025-10-25 21:45:52.114 [INFO] Final aggregate totals: {'planks': 2}
+2025-10-25 21:45:55.006 [INFO] Calculating aggregate requirements for items: {'stick': 1}
+2025-10-25 21:45:55.006 [DEBUG] Processing requirements for 1x stick
+2025-10-25 21:45:55.007 [DEBUG] Calculating requirements for 1x stick
+2025-10-25 21:45:55.007 [DEBUG] Processing: 1x stick
+2025-10-25 21:45:55.007 [DEBUG] Current recipe stack: 
+2025-10-25 21:45:55.007 [DEBUG] Found recipe for stick: {'planks': 2}
+2025-10-25 21:45:55.007 [DEBUG] Need 2x planks for 1x stick
+2025-10-25 21:45:55.007 [DEBUG]   Processing: 2x planks
+2025-10-25 21:45:55.007 [DEBUG]   Current recipe stack: stick
+2025-10-25 21:45:55.008 [DEBUG]   Adding material: 2x planks
+2025-10-25 21:45:55.008 [DEBUG] Final totals for 1x stick: {'planks': 2}
+2025-10-25 21:45:55.008 [DEBUG] Requirements for 1x stick: {'planks': 2}
+2025-10-25 21:45:55.008 [DEBUG] Updated total for planks: 2
+2025-10-25 21:45:55.008 [INFO] Final aggregate totals: {'planks': 2}
+2025-10-25 21:46:03.974 [INFO] Calculating aggregate requirements for items: {'stick': 1}
+2025-10-25 21:46:03.975 [DEBUG] Processing requirements for 1x stick
+2025-10-25 21:46:03.975 [DEBUG] Calculating requirements for 1x stick
+2025-10-25 21:46:03.975 [DEBUG] Processing: 1x stick
+2025-10-25 21:46:03.975 [DEBUG] Current recipe stack: 
+2025-10-25 21:46:03.976 [DEBUG] Found recipe for stick: {'planks': 2}
+2025-10-25 21:46:03.976 [DEBUG] Need 2x planks for 1x stick
+2025-10-25 21:46:03.976 [DEBUG]   Processing: 2x planks
+2025-10-25 21:46:03.976 [DEBUG]   Current recipe stack: stick
+2025-10-25 21:46:03.976 [DEBUG]   Adding material: 2x planks
+2025-10-25 21:46:03.976 [DEBUG] Final totals for 1x stick: {'planks': 2}
+2025-10-25 21:46:03.976 [DEBUG] Requirements for 1x stick: {'planks': 2}
+2025-10-25 21:46:03.976 [DEBUG] Updated total for planks: 2
+2025-10-25 21:46:03.977 [INFO] Final aggregate totals: {'planks': 2}
+2025-10-25 21:46:04.567 [INFO] Calculating aggregate requirements for items: {'stick': 1}
+2025-10-25 21:46:04.567 [DEBUG] Processing requirements for 1x stick
+2025-10-25 21:46:04.568 [DEBUG] Calculating requirements for 1x stick
+2025-10-25 21:46:04.568 [DEBUG] Processing: 1x stick
+2025-10-25 21:46:04.568 [DEBUG] Current recipe stack: 
+2025-10-25 21:46:04.568 [DEBUG] Found recipe for stick: {'planks': 2}
+2025-10-25 21:46:04.568 [DEBUG] Need 2x planks for 1x stick
+2025-10-25 21:46:04.568 [DEBUG]   Processing: 2x planks
+2025-10-25 21:46:04.568 [DEBUG]   Current recipe stack: stick
+2025-10-25 21:46:04.568 [DEBUG]   Adding material: 2x planks
+2025-10-25 21:46:04.568 [DEBUG] Final totals for 1x stick: {'planks': 2}
+2025-10-25 21:46:04.568 [DEBUG] Requirements for 1x stick: {'planks': 2}
+2025-10-25 21:46:04.569 [DEBUG] Updated total for planks: 2
+2025-10-25 21:46:04.569 [INFO] Final aggregate totals: {'planks': 2}
+2025-10-25 21:46:07.840 [DEBUG] Recorded undo snapshot (delete_item); undo depth=2
+2025-10-25 21:46:07.841 [INFO] Calculating aggregate requirements for items: {}
+2025-10-25 21:46:07.841 [INFO] Final aggregate totals: {}
+2025-10-25 21:46:11.900 [DEBUG] Recorded undo snapshot (add_custom_material); undo depth=3
+2025-10-25 21:46:11.901 [INFO] Calculating aggregate requirements for items: {}
+2025-10-25 21:46:11.901 [INFO] Final aggregate totals: {}
+2025-10-25 21:46:13.353 [DEBUG] Recorded undo snapshot (delete_custom_material); undo depth=4
+2025-10-25 21:46:13.353 [INFO] Calculating aggregate requirements for items: {}
+2025-10-25 21:46:13.353 [INFO] Final aggregate totals: {}
