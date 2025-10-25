@@ -8188,3 +8188,653 @@
 2025-10-25 20:48:35.061 [DEBUG] Requirements for 1x stick: {'planks': 2}
 2025-10-25 20:48:35.061 [DEBUG] Updated total for planks: 2
 2025-10-25 20:48:35.062 [INFO] Final aggregate totals: {'planks': 2}
+2025-10-25 20:48:38.614 [INFO] Calculating aggregate requirements for items: {}
+2025-10-25 20:48:38.614 [INFO] Final aggregate totals: {}
+2025-10-25 20:48:41.083 [INFO] Adding item: carrot_on_a_stick
+2025-10-25 20:48:41.083 [INFO] Adding 1x carrot_on_a_stick
+2025-10-25 20:48:41.083 [DEBUG] Current project items before add: {}
+2025-10-25 20:48:41.084 [DEBUG] Recorded undo snapshot (add_item); undo depth=1
+2025-10-25 20:48:41.084 [DEBUG] Updated project items: {'carrot_on_a_stick': 1}
+2025-10-25 20:48:41.094 [DEBUG] STREAM b'IHDR' 16 13
+2025-10-25 20:48:41.095 [DEBUG] STREAM b'IDAT' 41 152
+2025-10-25 20:48:41.099 [INFO] Calculating aggregate requirements for items: {'carrot_on_a_stick': 1}
+2025-10-25 20:48:41.100 [DEBUG] Processing requirements for 1x carrot_on_a_stick
+2025-10-25 20:48:41.100 [DEBUG] Calculating requirements for 1x carrot_on_a_stick
+2025-10-25 20:48:41.100 [DEBUG] Processing: 1x carrot_on_a_stick
+2025-10-25 20:48:41.100 [DEBUG] Current recipe stack: 
+2025-10-25 20:48:41.100 [DEBUG] Found recipe for carrot_on_a_stick: {'fishing_rod': 1, 'carrot': 1}
+2025-10-25 20:48:41.100 [DEBUG] Need 1x fishing_rod for 1x carrot_on_a_stick
+2025-10-25 20:48:41.100 [DEBUG]   Processing: 1x fishing_rod
+2025-10-25 20:48:41.100 [DEBUG]   Current recipe stack: carrot_on_a_stick
+2025-10-25 20:48:41.100 [DEBUG]   Found recipe for fishing_rod: {'stick': 3, 'string': 2}
+2025-10-25 20:48:41.101 [DEBUG]   Need 3x stick for 1x fishing_rod
+2025-10-25 20:48:41.101 [DEBUG]     Processing: 3x stick
+2025-10-25 20:48:41.101 [DEBUG]     Current recipe stack: carrot_on_a_stick -> fishing_rod
+2025-10-25 20:48:41.101 [DEBUG]     Found recipe for stick: {'planks': 2}
+2025-10-25 20:48:41.101 [DEBUG]     Need 6x planks for 3x stick
+2025-10-25 20:48:41.101 [DEBUG]       Processing: 6x planks
+2025-10-25 20:48:41.101 [DEBUG]       Current recipe stack: carrot_on_a_stick -> fishing_rod -> stick
+2025-10-25 20:48:41.101 [DEBUG]       Adding material: 6x planks
+2025-10-25 20:48:41.101 [DEBUG]   Need 2x string for 1x fishing_rod
+2025-10-25 20:48:41.101 [DEBUG]     Processing: 2x string
+2025-10-25 20:48:41.101 [DEBUG]     Current recipe stack: carrot_on_a_stick -> fishing_rod
+2025-10-25 20:48:41.101 [DEBUG]     Adding material: 2x string
+2025-10-25 20:48:41.101 [DEBUG] Need 1x carrot for 1x carrot_on_a_stick
+2025-10-25 20:48:41.101 [DEBUG]   Processing: 1x carrot
+2025-10-25 20:48:41.101 [DEBUG]   Current recipe stack: carrot_on_a_stick
+2025-10-25 20:48:41.101 [DEBUG]   Adding material: 1x carrot
+2025-10-25 20:48:41.102 [DEBUG] Final totals for 1x carrot_on_a_stick: {'planks': 6, 'string': 2, 'carrot': 1}
+2025-10-25 20:48:41.102 [DEBUG] Requirements for 1x carrot_on_a_stick: {'planks': 6, 'string': 2, 'carrot': 1}
+2025-10-25 20:48:41.102 [DEBUG] Updated total for planks: 6
+2025-10-25 20:48:41.102 [DEBUG] Updated total for string: 2
+2025-10-25 20:48:41.102 [DEBUG] Updated total for carrot: 1
+2025-10-25 20:48:41.102 [INFO] Final aggregate totals: {'planks': 6, 'string': 2, 'carrot': 1}
+2025-10-25 20:48:41.102 [DEBUG] STREAM b'IHDR' 16 13
+2025-10-25 20:48:41.102 [DEBUG] STREAM b'PLTE' 41 33
+2025-10-25 20:48:41.102 [DEBUG] STREAM b'tRNS' 86 1
+2025-10-25 20:48:41.103 [DEBUG] STREAM b'IDAT' 99 86
+2025-10-25 20:48:41.103 [DEBUG] STREAM b'IHDR' 16 13
+2025-10-25 20:48:41.103 [DEBUG] STREAM b'PLTE' 41 21
+2025-10-25 20:48:41.103 [DEBUG] STREAM b'IDAT' 74 105
+2025-10-25 20:48:41.104 [DEBUG] STREAM b'IHDR' 16 13
+2025-10-25 20:48:41.104 [DEBUG] STREAM b'PLTE' 41 12
+2025-10-25 20:48:41.104 [DEBUG] STREAM b'tRNS' 65 1
+2025-10-25 20:48:41.104 [DEBUG] STREAM b'IDAT' 78 69
+2025-10-25 20:48:44.405 [INFO] Calculating aggregate requirements for items: {'carrot_on_a_stick': 1}
+2025-10-25 20:48:44.405 [DEBUG] Processing requirements for 1x carrot_on_a_stick
+2025-10-25 20:48:44.405 [DEBUG] Calculating requirements for 1x carrot_on_a_stick
+2025-10-25 20:48:44.405 [DEBUG] Processing: 1x carrot_on_a_stick
+2025-10-25 20:48:44.406 [DEBUG] Current recipe stack: 
+2025-10-25 20:48:44.406 [DEBUG] Found recipe for carrot_on_a_stick: {'fishing_rod': 1, 'carrot': 1}
+2025-10-25 20:48:44.406 [DEBUG] Need 1x fishing_rod for 1x carrot_on_a_stick
+2025-10-25 20:48:44.406 [DEBUG]   Processing: 1x fishing_rod
+2025-10-25 20:48:44.406 [DEBUG]   Current recipe stack: carrot_on_a_stick
+2025-10-25 20:48:44.406 [DEBUG]   Found recipe for fishing_rod: {'stick': 3, 'string': 2}
+2025-10-25 20:48:44.407 [DEBUG]   Need 3x stick for 1x fishing_rod
+2025-10-25 20:48:44.407 [DEBUG]     Processing: 3x stick
+2025-10-25 20:48:44.407 [DEBUG]     Current recipe stack: carrot_on_a_stick -> fishing_rod
+2025-10-25 20:48:44.407 [DEBUG]     Found recipe for stick: {'planks': 2}
+2025-10-25 20:48:44.407 [DEBUG]     Need 6x planks for 3x stick
+2025-10-25 20:48:44.407 [DEBUG]       Processing: 6x planks
+2025-10-25 20:48:44.407 [DEBUG]       Current recipe stack: carrot_on_a_stick -> fishing_rod -> stick
+2025-10-25 20:48:44.407 [DEBUG]       Adding material: 6x planks
+2025-10-25 20:48:44.407 [DEBUG]   Need 2x string for 1x fishing_rod
+2025-10-25 20:48:44.408 [DEBUG]     Processing: 2x string
+2025-10-25 20:48:44.408 [DEBUG]     Current recipe stack: carrot_on_a_stick -> fishing_rod
+2025-10-25 20:48:44.408 [DEBUG]     Adding material: 2x string
+2025-10-25 20:48:44.408 [DEBUG] Need 1x carrot for 1x carrot_on_a_stick
+2025-10-25 20:48:44.408 [DEBUG]   Processing: 1x carrot
+2025-10-25 20:48:44.408 [DEBUG]   Current recipe stack: carrot_on_a_stick
+2025-10-25 20:48:44.408 [DEBUG]   Adding material: 1x carrot
+2025-10-25 20:48:44.408 [DEBUG] Final totals for 1x carrot_on_a_stick: {'planks': 6, 'string': 2, 'carrot': 1}
+2025-10-25 20:48:44.408 [DEBUG] Requirements for 1x carrot_on_a_stick: {'planks': 6, 'string': 2, 'carrot': 1}
+2025-10-25 20:48:44.409 [DEBUG] Updated total for planks: 6
+2025-10-25 20:48:44.409 [DEBUG] Updated total for string: 2
+2025-10-25 20:48:44.409 [DEBUG] Updated total for carrot: 1
+2025-10-25 20:48:44.409 [INFO] Final aggregate totals: {'planks': 6, 'string': 2, 'carrot': 1}
+2025-10-25 20:48:55.677 [DEBUG] Recorded undo snapshot (delete_item); undo depth=2
+2025-10-25 20:48:55.677 [INFO] Calculating aggregate requirements for items: {}
+2025-10-25 20:48:55.678 [INFO] Final aggregate totals: {}
+2025-10-25 20:49:35.596 [INFO] Adding item: sticky_piston
+2025-10-25 20:49:35.597 [INFO] Adding 1x sticky_piston
+2025-10-25 20:49:35.597 [DEBUG] Current project items before add: {}
+2025-10-25 20:49:35.597 [DEBUG] Recorded undo snapshot (add_item); undo depth=3
+2025-10-25 20:49:35.597 [DEBUG] Updated project items: {'sticky_piston': 1}
+2025-10-25 20:49:35.598 [DEBUG] STREAM b'IHDR' 16 13
+2025-10-25 20:49:35.598 [DEBUG] STREAM b'PLTE' 41 39
+2025-10-25 20:49:35.598 [DEBUG] STREAM b'IDAT' 92 143
+2025-10-25 20:49:35.601 [INFO] Calculating aggregate requirements for items: {'sticky_piston': 1}
+2025-10-25 20:49:35.601 [DEBUG] Processing requirements for 1x sticky_piston
+2025-10-25 20:49:35.601 [DEBUG] Calculating requirements for 1x sticky_piston
+2025-10-25 20:49:35.601 [DEBUG] Processing: 1x sticky_piston
+2025-10-25 20:49:35.602 [DEBUG] Current recipe stack: 
+2025-10-25 20:49:35.602 [DEBUG] Found recipe for sticky_piston: {'piston': 1, 'slime_ball': 1}
+2025-10-25 20:49:35.602 [DEBUG] Need 1x piston for 1x sticky_piston
+2025-10-25 20:49:35.602 [DEBUG]   Processing: 1x piston
+2025-10-25 20:49:35.602 [DEBUG]   Current recipe stack: sticky_piston
+2025-10-25 20:49:35.602 [DEBUG]   Found recipe for piston: {'cobblestone': 4, 'redstone': 1, 'planks': 3, 'iron_ingot': 1}
+2025-10-25 20:49:35.603 [DEBUG]   Need 4x cobblestone for 1x piston
+2025-10-25 20:49:35.603 [DEBUG]     Processing: 4x cobblestone
+2025-10-25 20:49:35.603 [DEBUG]     Current recipe stack: sticky_piston -> piston
+2025-10-25 20:49:35.603 [DEBUG]     Adding material: 4x cobblestone
+2025-10-25 20:49:35.603 [DEBUG]   Need 1x redstone for 1x piston
+2025-10-25 20:49:35.603 [DEBUG]     Processing: 1x redstone
+2025-10-25 20:49:35.603 [DEBUG]     Current recipe stack: sticky_piston -> piston
+2025-10-25 20:49:35.603 [DEBUG]     Adding material: 1x redstone
+2025-10-25 20:49:35.604 [DEBUG]   Need 3x planks for 1x piston
+2025-10-25 20:49:35.604 [DEBUG]     Processing: 3x planks
+2025-10-25 20:49:35.604 [DEBUG]     Current recipe stack: sticky_piston -> piston
+2025-10-25 20:49:35.604 [DEBUG]     Adding material: 3x planks
+2025-10-25 20:49:35.604 [DEBUG]   Need 1x iron_ingot for 1x piston
+2025-10-25 20:49:35.604 [DEBUG]     Processing: 1x iron_ingot
+2025-10-25 20:49:35.604 [DEBUG]     Current recipe stack: sticky_piston -> piston
+2025-10-25 20:49:35.604 [DEBUG]     Adding material: 1x iron_ingot
+2025-10-25 20:49:35.604 [DEBUG] Need 1x slime_ball for 1x sticky_piston
+2025-10-25 20:49:35.604 [DEBUG]   Processing: 1x slime_ball
+2025-10-25 20:49:35.605 [DEBUG]   Current recipe stack: sticky_piston
+2025-10-25 20:49:35.605 [DEBUG]   Found recipe for slime_ball: {'slime_block': 1}
+2025-10-25 20:49:35.605 [DEBUG]   Need 1x slime_block for 1x slime_ball
+2025-10-25 20:49:35.605 [DEBUG]     Processing: 1x slime_block
+2025-10-25 20:49:35.605 [DEBUG]     Current recipe stack: sticky_piston -> slime_ball
+2025-10-25 20:49:35.605 [DEBUG]     Adding material: 1x slime_block
+2025-10-25 20:49:35.605 [DEBUG] Final totals for 1x sticky_piston: {'cobblestone': 4, 'redstone': 1, 'planks': 3, 'iron_ingot': 1, 'slime_block': 1}
+2025-10-25 20:49:35.606 [DEBUG] Requirements for 1x sticky_piston: {'cobblestone': 4, 'redstone': 1, 'planks': 3, 'iron_ingot': 1, 'slime_block': 1}
+2025-10-25 20:49:35.606 [DEBUG] Updated total for cobblestone: 4
+2025-10-25 20:49:35.606 [DEBUG] Updated total for redstone: 1
+2025-10-25 20:49:35.606 [DEBUG] Updated total for planks: 3
+2025-10-25 20:49:35.606 [DEBUG] Updated total for iron_ingot: 1
+2025-10-25 20:49:35.606 [DEBUG] Updated total for slime_block: 1
+2025-10-25 20:49:35.606 [INFO] Final aggregate totals: {'cobblestone': 4, 'redstone': 1, 'planks': 3, 'iron_ingot': 1, 'slime_block': 1}
+2025-10-25 20:49:35.607 [DEBUG] STREAM b'IHDR' 16 13
+2025-10-25 20:49:35.607 [DEBUG] STREAM b'PLTE' 41 18
+2025-10-25 20:49:35.607 [DEBUG] STREAM b'IDAT' 71 113
+2025-10-25 20:49:35.608 [DEBUG] STREAM b'IHDR' 16 13
+2025-10-25 20:49:35.608 [DEBUG] STREAM b'tRNS' 41 2
+2025-10-25 20:49:35.608 [DEBUG] STREAM b'IDAT' 55 86
+2025-10-25 20:49:35.608 [DEBUG] STREAM b'IHDR' 16 13
+2025-10-25 20:49:35.609 [DEBUG] STREAM b'PLTE' 41 24
+2025-10-25 20:49:35.609 [DEBUG] STREAM b'tRNS' 77 1
+2025-10-25 20:49:35.609 [DEBUG] STREAM b'IDAT' 90 73
+2025-10-25 20:49:35.609 [DEBUG] STREAM b'IHDR' 16 13
+2025-10-25 20:49:35.610 [DEBUG] STREAM b'PLTE' 41 15
+2025-10-25 20:49:35.610 [DEBUG] STREAM b'tRNS' 68 5
+2025-10-25 20:49:35.610 [DEBUG] STREAM b'IDAT' 85 94
+2025-10-25 20:49:56.487 [INFO] Calculating aggregate requirements for items: {}
+2025-10-25 20:49:56.487 [INFO] Final aggregate totals: {}
+2025-10-25 20:50:00.273 [INFO] Calculating aggregate requirements for items: {}
+2025-10-25 20:50:00.274 [INFO] Final aggregate totals: {}
+2025-10-25 20:50:06.892 [INFO] Adding item: sticky_piston
+2025-10-25 20:50:06.892 [INFO] Adding 1x sticky_piston
+2025-10-25 20:50:06.892 [DEBUG] Current project items before add: {}
+2025-10-25 20:50:06.892 [DEBUG] Recorded undo snapshot (add_item); undo depth=1
+2025-10-25 20:50:06.893 [DEBUG] Updated project items: {'sticky_piston': 1}
+2025-10-25 20:50:06.903 [DEBUG] STREAM b'IHDR' 16 13
+2025-10-25 20:50:06.903 [DEBUG] STREAM b'PLTE' 41 39
+2025-10-25 20:50:06.903 [DEBUG] STREAM b'IDAT' 92 143
+2025-10-25 20:50:06.908 [INFO] Calculating aggregate requirements for items: {'sticky_piston': 1}
+2025-10-25 20:50:06.908 [DEBUG] Processing requirements for 1x sticky_piston
+2025-10-25 20:50:06.908 [DEBUG] Calculating requirements for 1x sticky_piston
+2025-10-25 20:50:06.908 [DEBUG] Processing: 1x sticky_piston
+2025-10-25 20:50:06.909 [DEBUG] Current recipe stack: 
+2025-10-25 20:50:06.909 [DEBUG] Found recipe for sticky_piston: {'piston': 1, 'slime_ball': 1}
+2025-10-25 20:50:06.909 [DEBUG] Need 1x piston for 1x sticky_piston
+2025-10-25 20:50:06.909 [DEBUG]   Processing: 1x piston
+2025-10-25 20:50:06.909 [DEBUG]   Current recipe stack: sticky_piston
+2025-10-25 20:50:06.909 [DEBUG]   Found recipe for piston: {'cobblestone': 4, 'redstone': 1, 'planks': 3, 'iron_ingot': 1}
+2025-10-25 20:50:06.909 [DEBUG]   Need 4x cobblestone for 1x piston
+2025-10-25 20:50:06.909 [DEBUG]     Processing: 4x cobblestone
+2025-10-25 20:50:06.909 [DEBUG]     Current recipe stack: sticky_piston -> piston
+2025-10-25 20:50:06.909 [DEBUG]     Adding material: 4x cobblestone
+2025-10-25 20:50:06.909 [DEBUG]   Need 1x redstone for 1x piston
+2025-10-25 20:50:06.910 [DEBUG]     Processing: 1x redstone
+2025-10-25 20:50:06.910 [DEBUG]     Current recipe stack: sticky_piston -> piston
+2025-10-25 20:50:06.910 [DEBUG]     Adding material: 1x redstone
+2025-10-25 20:50:06.910 [DEBUG]   Need 3x planks for 1x piston
+2025-10-25 20:50:06.910 [DEBUG]     Processing: 3x planks
+2025-10-25 20:50:06.910 [DEBUG]     Current recipe stack: sticky_piston -> piston
+2025-10-25 20:50:06.910 [DEBUG]     Adding material: 3x planks
+2025-10-25 20:50:06.910 [DEBUG]   Need 1x iron_ingot for 1x piston
+2025-10-25 20:50:06.911 [DEBUG]     Processing: 1x iron_ingot
+2025-10-25 20:50:06.911 [DEBUG]     Current recipe stack: sticky_piston -> piston
+2025-10-25 20:50:06.911 [DEBUG]     Adding material: 1x iron_ingot
+2025-10-25 20:50:06.911 [DEBUG] Need 1x slime_ball for 1x sticky_piston
+2025-10-25 20:50:06.911 [DEBUG]   Processing: 1x slime_ball
+2025-10-25 20:50:06.911 [DEBUG]   Current recipe stack: sticky_piston
+2025-10-25 20:50:06.911 [DEBUG]   Found recipe for slime_ball: {'slime_block': 1}
+2025-10-25 20:50:06.911 [DEBUG]   Need 1x slime_block for 1x slime_ball
+2025-10-25 20:50:06.912 [DEBUG]     Processing: 1x slime_block
+2025-10-25 20:50:06.912 [DEBUG]     Current recipe stack: sticky_piston -> slime_ball
+2025-10-25 20:50:06.912 [DEBUG]     Adding material: 1x slime_block
+2025-10-25 20:50:06.912 [DEBUG] Final totals for 1x sticky_piston: {'cobblestone': 4, 'redstone': 1, 'planks': 3, 'iron_ingot': 1, 'slime_block': 1}
+2025-10-25 20:50:06.912 [DEBUG] Requirements for 1x sticky_piston: {'cobblestone': 4, 'redstone': 1, 'planks': 3, 'iron_ingot': 1, 'slime_block': 1}
+2025-10-25 20:50:06.912 [DEBUG] Updated total for cobblestone: 4
+2025-10-25 20:50:06.912 [DEBUG] Updated total for redstone: 1
+2025-10-25 20:50:06.912 [DEBUG] Updated total for planks: 3
+2025-10-25 20:50:06.913 [DEBUG] Updated total for iron_ingot: 1
+2025-10-25 20:50:06.913 [DEBUG] Updated total for slime_block: 1
+2025-10-25 20:50:06.913 [INFO] Final aggregate totals: {'cobblestone': 4, 'redstone': 1, 'planks': 3, 'iron_ingot': 1, 'slime_block': 1}
+2025-10-25 20:50:06.913 [DEBUG] STREAM b'IHDR' 16 13
+2025-10-25 20:50:06.913 [DEBUG] STREAM b'PLTE' 41 18
+2025-10-25 20:50:06.913 [DEBUG] STREAM b'IDAT' 71 113
+2025-10-25 20:50:06.914 [DEBUG] STREAM b'IHDR' 16 13
+2025-10-25 20:50:06.914 [DEBUG] STREAM b'tRNS' 41 2
+2025-10-25 20:50:06.914 [DEBUG] STREAM b'IDAT' 55 86
+2025-10-25 20:50:06.914 [DEBUG] STREAM b'IHDR' 16 13
+2025-10-25 20:50:06.914 [DEBUG] STREAM b'PLTE' 41 21
+2025-10-25 20:50:06.914 [DEBUG] STREAM b'IDAT' 74 105
+2025-10-25 20:50:06.915 [DEBUG] STREAM b'IHDR' 16 13
+2025-10-25 20:50:06.915 [DEBUG] STREAM b'PLTE' 41 24
+2025-10-25 20:50:06.915 [DEBUG] STREAM b'tRNS' 77 1
+2025-10-25 20:50:06.915 [DEBUG] STREAM b'IDAT' 90 73
+2025-10-25 20:50:06.916 [DEBUG] STREAM b'IHDR' 16 13
+2025-10-25 20:50:06.916 [DEBUG] STREAM b'PLTE' 41 15
+2025-10-25 20:50:06.916 [DEBUG] STREAM b'tRNS' 68 5
+2025-10-25 20:50:06.916 [DEBUG] STREAM b'IDAT' 85 94
+2025-10-25 20:52:50.244 [INFO] Calculating aggregate requirements for items: {}
+2025-10-25 20:52:50.244 [INFO] Final aggregate totals: {}
+2025-10-25 20:52:55.115 [INFO] Adding item: stick
+2025-10-25 20:52:55.116 [INFO] Adding 1x stick
+2025-10-25 20:52:55.116 [DEBUG] Current project items before add: {}
+2025-10-25 20:52:55.116 [DEBUG] Recorded undo snapshot (add_item); undo depth=1
+2025-10-25 20:52:55.116 [DEBUG] Updated project items: {'stick': 1}
+2025-10-25 20:52:55.127 [DEBUG] STREAM b'IHDR' 16 13
+2025-10-25 20:52:55.127 [DEBUG] STREAM b'IDAT' 41 48
+2025-10-25 20:52:55.132 [INFO] Calculating aggregate requirements for items: {'stick': 1}
+2025-10-25 20:52:55.133 [DEBUG] Processing requirements for 1x stick
+2025-10-25 20:52:55.133 [DEBUG] Calculating requirements for 1x stick
+2025-10-25 20:52:55.133 [DEBUG] Processing: 1x stick
+2025-10-25 20:52:55.133 [DEBUG] Current recipe stack: 
+2025-10-25 20:52:55.133 [DEBUG] Found recipe for stick: {'planks': 2}
+2025-10-25 20:52:55.133 [DEBUG] Need 2x planks for 1x stick
+2025-10-25 20:52:55.133 [DEBUG]   Processing: 2x planks
+2025-10-25 20:52:55.133 [DEBUG]   Current recipe stack: stick
+2025-10-25 20:52:55.133 [DEBUG]   Adding material: 2x planks
+2025-10-25 20:52:55.133 [DEBUG] Final totals for 1x stick: {'planks': 2}
+2025-10-25 20:52:55.133 [DEBUG] Requirements for 1x stick: {'planks': 2}
+2025-10-25 20:52:55.134 [DEBUG] Updated total for planks: 2
+2025-10-25 20:52:55.134 [INFO] Final aggregate totals: {'planks': 2}
+2025-10-25 20:52:55.134 [DEBUG] STREAM b'IHDR' 16 13
+2025-10-25 20:52:55.134 [DEBUG] STREAM b'PLTE' 41 21
+2025-10-25 20:52:55.134 [DEBUG] STREAM b'IDAT' 74 105
+2025-10-25 20:53:02.576 [INFO] Adding item: sticky_piston
+2025-10-25 20:53:02.576 [ERROR] Invalid quantity entered: 
+2025-10-25 20:53:04.499 [INFO] Adding item: sticky_piston
+2025-10-25 20:53:04.499 [INFO] Adding 3x sticky_piston
+2025-10-25 20:53:04.500 [DEBUG] Current project items before add: {'stick': 1}
+2025-10-25 20:53:04.500 [DEBUG] Recorded undo snapshot (add_item); undo depth=2
+2025-10-25 20:53:04.500 [DEBUG] Updated project items: {'stick': 1, 'sticky_piston': 3}
+2025-10-25 20:53:04.501 [DEBUG] STREAM b'IHDR' 16 13
+2025-10-25 20:53:04.501 [DEBUG] STREAM b'PLTE' 41 39
+2025-10-25 20:53:04.501 [DEBUG] STREAM b'IDAT' 92 143
+2025-10-25 20:53:04.502 [INFO] Calculating aggregate requirements for items: {'stick': 1, 'sticky_piston': 3}
+2025-10-25 20:53:04.502 [DEBUG] Processing requirements for 1x stick
+2025-10-25 20:53:04.502 [DEBUG] Calculating requirements for 1x stick
+2025-10-25 20:53:04.502 [DEBUG] Processing: 1x stick
+2025-10-25 20:53:04.502 [DEBUG] Current recipe stack: 
+2025-10-25 20:53:04.502 [DEBUG] Found recipe for stick: {'planks': 2}
+2025-10-25 20:53:04.502 [DEBUG] Need 2x planks for 1x stick
+2025-10-25 20:53:04.503 [DEBUG]   Processing: 2x planks
+2025-10-25 20:53:04.503 [DEBUG]   Current recipe stack: stick
+2025-10-25 20:53:04.503 [DEBUG]   Adding material: 2x planks
+2025-10-25 20:53:04.503 [DEBUG] Final totals for 1x stick: {'planks': 2}
+2025-10-25 20:53:04.503 [DEBUG] Requirements for 1x stick: {'planks': 2}
+2025-10-25 20:53:04.503 [DEBUG] Updated total for planks: 2
+2025-10-25 20:53:04.503 [DEBUG] Processing requirements for 3x sticky_piston
+2025-10-25 20:53:04.503 [DEBUG] Calculating requirements for 3x sticky_piston
+2025-10-25 20:53:04.504 [DEBUG] Processing: 3x sticky_piston
+2025-10-25 20:53:04.504 [DEBUG] Current recipe stack: 
+2025-10-25 20:53:04.504 [DEBUG] Found recipe for sticky_piston: {'piston': 1, 'slime_ball': 1}
+2025-10-25 20:53:04.504 [DEBUG] Need 3x piston for 3x sticky_piston
+2025-10-25 20:53:04.504 [DEBUG]   Processing: 3x piston
+2025-10-25 20:53:04.504 [DEBUG]   Current recipe stack: sticky_piston
+2025-10-25 20:53:04.504 [DEBUG]   Found recipe for piston: {'cobblestone': 4, 'redstone': 1, 'planks': 3, 'iron_ingot': 1}
+2025-10-25 20:53:04.504 [DEBUG]   Need 12x cobblestone for 3x piston
+2025-10-25 20:53:04.505 [DEBUG]     Processing: 12x cobblestone
+2025-10-25 20:53:04.505 [DEBUG]     Current recipe stack: sticky_piston -> piston
+2025-10-25 20:53:04.505 [DEBUG]     Adding material: 12x cobblestone
+2025-10-25 20:53:04.505 [DEBUG]   Need 3x redstone for 3x piston
+2025-10-25 20:53:04.505 [DEBUG]     Processing: 3x redstone
+2025-10-25 20:53:04.505 [DEBUG]     Current recipe stack: sticky_piston -> piston
+2025-10-25 20:53:04.505 [DEBUG]     Adding material: 3x redstone
+2025-10-25 20:53:04.505 [DEBUG]   Need 9x planks for 3x piston
+2025-10-25 20:53:04.506 [DEBUG]     Processing: 9x planks
+2025-10-25 20:53:04.506 [DEBUG]     Current recipe stack: sticky_piston -> piston
+2025-10-25 20:53:04.506 [DEBUG]     Adding material: 9x planks
+2025-10-25 20:53:04.506 [DEBUG]   Need 3x iron_ingot for 3x piston
+2025-10-25 20:53:04.506 [DEBUG]     Processing: 3x iron_ingot
+2025-10-25 20:53:04.506 [DEBUG]     Current recipe stack: sticky_piston -> piston
+2025-10-25 20:53:04.506 [DEBUG]     Adding material: 3x iron_ingot
+2025-10-25 20:53:04.506 [DEBUG] Need 3x slime_ball for 3x sticky_piston
+2025-10-25 20:53:04.506 [DEBUG]   Processing: 3x slime_ball
+2025-10-25 20:53:04.507 [DEBUG]   Current recipe stack: sticky_piston
+2025-10-25 20:53:04.507 [DEBUG]   Found recipe for slime_ball: {'slime_block': 1}
+2025-10-25 20:53:04.507 [DEBUG]   Need 3x slime_block for 3x slime_ball
+2025-10-25 20:53:04.507 [DEBUG]     Processing: 3x slime_block
+2025-10-25 20:53:04.507 [DEBUG]     Current recipe stack: sticky_piston -> slime_ball
+2025-10-25 20:53:04.507 [DEBUG]     Adding material: 3x slime_block
+2025-10-25 20:53:04.507 [DEBUG] Final totals for 3x sticky_piston: {'cobblestone': 12, 'redstone': 3, 'planks': 9, 'iron_ingot': 3, 'slime_block': 3}
+2025-10-25 20:53:04.507 [DEBUG] Requirements for 3x sticky_piston: {'cobblestone': 12, 'redstone': 3, 'planks': 9, 'iron_ingot': 3, 'slime_block': 3}
+2025-10-25 20:53:04.508 [DEBUG] Updated total for cobblestone: 12
+2025-10-25 20:53:04.508 [DEBUG] Updated total for redstone: 3
+2025-10-25 20:53:04.508 [DEBUG] Updated total for planks: 11
+2025-10-25 20:53:04.508 [DEBUG] Updated total for iron_ingot: 3
+2025-10-25 20:53:04.508 [DEBUG] Updated total for slime_block: 3
+2025-10-25 20:53:04.508 [INFO] Final aggregate totals: {'planks': 11, 'cobblestone': 12, 'redstone': 3, 'iron_ingot': 3, 'slime_block': 3}
+2025-10-25 20:53:04.508 [DEBUG] STREAM b'IHDR' 16 13
+2025-10-25 20:53:04.509 [DEBUG] STREAM b'PLTE' 41 18
+2025-10-25 20:53:04.509 [DEBUG] STREAM b'IDAT' 71 113
+2025-10-25 20:53:04.509 [DEBUG] STREAM b'IHDR' 16 13
+2025-10-25 20:53:04.509 [DEBUG] STREAM b'tRNS' 41 2
+2025-10-25 20:53:04.510 [DEBUG] STREAM b'IDAT' 55 86
+2025-10-25 20:53:04.510 [DEBUG] STREAM b'IHDR' 16 13
+2025-10-25 20:53:04.510 [DEBUG] STREAM b'PLTE' 41 24
+2025-10-25 20:53:04.510 [DEBUG] STREAM b'tRNS' 77 1
+2025-10-25 20:53:04.510 [DEBUG] STREAM b'IDAT' 90 73
+2025-10-25 20:53:04.511 [DEBUG] STREAM b'IHDR' 16 13
+2025-10-25 20:53:04.511 [DEBUG] STREAM b'PLTE' 41 30
+2025-10-25 20:53:04.511 [DEBUG] STREAM b'tRNS' 83 1
+2025-10-25 20:53:04.511 [DEBUG] STREAM b'IDAT' 96 85
+2025-10-25 20:53:23.844 [INFO] Calculating aggregate requirements for items: {'stick': 1, 'sticky_piston': 3}
+2025-10-25 20:53:23.845 [DEBUG] Processing requirements for 1x stick
+2025-10-25 20:53:23.845 [DEBUG] Calculating requirements for 1x stick
+2025-10-25 20:53:23.845 [DEBUG] Processing: 1x stick
+2025-10-25 20:53:23.846 [DEBUG] Current recipe stack: 
+2025-10-25 20:53:23.846 [DEBUG] Found recipe for stick: {'planks': 2}
+2025-10-25 20:53:23.846 [DEBUG] Need 2x planks for 1x stick
+2025-10-25 20:53:23.846 [DEBUG]   Processing: 2x planks
+2025-10-25 20:53:23.846 [DEBUG]   Current recipe stack: stick
+2025-10-25 20:53:23.846 [DEBUG]   Adding material: 2x planks
+2025-10-25 20:53:23.846 [DEBUG] Final totals for 1x stick: {'planks': 2}
+2025-10-25 20:53:23.847 [DEBUG] Requirements for 1x stick: {'planks': 2}
+2025-10-25 20:53:23.847 [DEBUG] Updated total for planks: 2
+2025-10-25 20:53:23.847 [DEBUG] Processing requirements for 3x sticky_piston
+2025-10-25 20:53:23.847 [DEBUG] Calculating requirements for 3x sticky_piston
+2025-10-25 20:53:23.847 [DEBUG] Processing: 3x sticky_piston
+2025-10-25 20:53:23.847 [DEBUG] Current recipe stack: 
+2025-10-25 20:53:23.847 [DEBUG] Found recipe for sticky_piston: {'piston': 1, 'slime_ball': 1}
+2025-10-25 20:53:23.847 [DEBUG] Need 3x piston for 3x sticky_piston
+2025-10-25 20:53:23.847 [DEBUG]   Processing: 3x piston
+2025-10-25 20:53:23.848 [DEBUG]   Current recipe stack: sticky_piston
+2025-10-25 20:53:23.848 [DEBUG]   Found recipe for piston: {'cobblestone': 4, 'redstone': 1, 'planks': 3, 'iron_ingot': 1}
+2025-10-25 20:53:23.848 [DEBUG]   Need 12x cobblestone for 3x piston
+2025-10-25 20:53:23.848 [DEBUG]     Processing: 12x cobblestone
+2025-10-25 20:53:23.848 [DEBUG]     Current recipe stack: sticky_piston -> piston
+2025-10-25 20:53:23.848 [DEBUG]     Adding material: 12x cobblestone
+2025-10-25 20:53:23.848 [DEBUG]   Need 3x redstone for 3x piston
+2025-10-25 20:53:23.848 [DEBUG]     Processing: 3x redstone
+2025-10-25 20:53:23.849 [DEBUG]     Current recipe stack: sticky_piston -> piston
+2025-10-25 20:53:23.849 [DEBUG]     Adding material: 3x redstone
+2025-10-25 20:53:23.849 [DEBUG]   Need 9x planks for 3x piston
+2025-10-25 20:53:23.849 [DEBUG]     Processing: 9x planks
+2025-10-25 20:53:23.849 [DEBUG]     Current recipe stack: sticky_piston -> piston
+2025-10-25 20:53:23.849 [DEBUG]     Adding material: 9x planks
+2025-10-25 20:53:23.849 [DEBUG]   Need 3x iron_ingot for 3x piston
+2025-10-25 20:53:23.849 [DEBUG]     Processing: 3x iron_ingot
+2025-10-25 20:53:23.849 [DEBUG]     Current recipe stack: sticky_piston -> piston
+2025-10-25 20:53:23.849 [DEBUG]     Adding material: 3x iron_ingot
+2025-10-25 20:53:23.850 [DEBUG] Need 3x slime_ball for 3x sticky_piston
+2025-10-25 20:53:23.850 [DEBUG]   Processing: 3x slime_ball
+2025-10-25 20:53:23.850 [DEBUG]   Current recipe stack: sticky_piston
+2025-10-25 20:53:23.850 [DEBUG]   Found recipe for slime_ball: {'slime_block': 1}
+2025-10-25 20:53:23.850 [DEBUG]   Need 3x slime_block for 3x slime_ball
+2025-10-25 20:53:23.851 [DEBUG]     Processing: 3x slime_block
+2025-10-25 20:53:23.851 [DEBUG]     Current recipe stack: sticky_piston -> slime_ball
+2025-10-25 20:53:23.851 [DEBUG]     Adding material: 3x slime_block
+2025-10-25 20:53:23.851 [DEBUG] Final totals for 3x sticky_piston: {'cobblestone': 12, 'redstone': 3, 'planks': 9, 'iron_ingot': 3, 'slime_block': 3}
+2025-10-25 20:53:23.851 [DEBUG] Requirements for 3x sticky_piston: {'cobblestone': 12, 'redstone': 3, 'planks': 9, 'iron_ingot': 3, 'slime_block': 3}
+2025-10-25 20:53:23.851 [DEBUG] Updated total for cobblestone: 12
+2025-10-25 20:53:23.852 [DEBUG] Updated total for redstone: 3
+2025-10-25 20:53:23.852 [DEBUG] Updated total for planks: 11
+2025-10-25 20:53:23.852 [DEBUG] Updated total for iron_ingot: 3
+2025-10-25 20:53:23.852 [DEBUG] Updated total for slime_block: 3
+2025-10-25 20:53:23.852 [INFO] Final aggregate totals: {'planks': 11, 'cobblestone': 12, 'redstone': 3, 'iron_ingot': 3, 'slime_block': 3}
+2025-10-25 20:53:24.467 [INFO] Calculating aggregate requirements for items: {'stick': 1, 'sticky_piston': 3}
+2025-10-25 20:53:24.467 [DEBUG] Processing requirements for 1x stick
+2025-10-25 20:53:24.468 [DEBUG] Calculating requirements for 1x stick
+2025-10-25 20:53:24.468 [DEBUG] Processing: 1x stick
+2025-10-25 20:53:24.468 [DEBUG] Current recipe stack: 
+2025-10-25 20:53:24.468 [DEBUG] Found recipe for stick: {'planks': 2}
+2025-10-25 20:53:24.468 [DEBUG] Need 2x planks for 1x stick
+2025-10-25 20:53:24.468 [DEBUG]   Processing: 2x planks
+2025-10-25 20:53:24.468 [DEBUG]   Current recipe stack: stick
+2025-10-25 20:53:24.469 [DEBUG]   Adding material: 2x planks
+2025-10-25 20:53:24.469 [DEBUG] Final totals for 1x stick: {'planks': 2}
+2025-10-25 20:53:24.469 [DEBUG] Requirements for 1x stick: {'planks': 2}
+2025-10-25 20:53:24.469 [DEBUG] Updated total for planks: 2
+2025-10-25 20:53:24.469 [DEBUG] Processing requirements for 3x sticky_piston
+2025-10-25 20:53:24.470 [DEBUG] Calculating requirements for 3x sticky_piston
+2025-10-25 20:53:24.470 [DEBUG] Processing: 3x sticky_piston
+2025-10-25 20:53:24.470 [DEBUG] Current recipe stack: 
+2025-10-25 20:53:24.470 [DEBUG] Found recipe for sticky_piston: {'piston': 1, 'slime_ball': 1}
+2025-10-25 20:53:24.470 [DEBUG] Need 3x piston for 3x sticky_piston
+2025-10-25 20:53:24.471 [DEBUG]   Processing: 3x piston
+2025-10-25 20:53:24.471 [DEBUG]   Current recipe stack: sticky_piston
+2025-10-25 20:53:24.471 [DEBUG]   Found recipe for piston: {'cobblestone': 4, 'redstone': 1, 'planks': 3, 'iron_ingot': 1}
+2025-10-25 20:53:24.471 [DEBUG]   Need 12x cobblestone for 3x piston
+2025-10-25 20:53:24.471 [DEBUG]     Processing: 12x cobblestone
+2025-10-25 20:53:24.471 [DEBUG]     Current recipe stack: sticky_piston -> piston
+2025-10-25 20:53:24.471 [DEBUG]     Adding material: 12x cobblestone
+2025-10-25 20:53:24.472 [DEBUG]   Need 3x redstone for 3x piston
+2025-10-25 20:53:24.472 [DEBUG]     Processing: 3x redstone
+2025-10-25 20:53:24.472 [DEBUG]     Current recipe stack: sticky_piston -> piston
+2025-10-25 20:53:24.472 [DEBUG]     Adding material: 3x redstone
+2025-10-25 20:53:24.472 [DEBUG]   Need 9x planks for 3x piston
+2025-10-25 20:53:24.472 [DEBUG]     Processing: 9x planks
+2025-10-25 20:53:24.472 [DEBUG]     Current recipe stack: sticky_piston -> piston
+2025-10-25 20:53:24.472 [DEBUG]     Adding material: 9x planks
+2025-10-25 20:53:24.473 [DEBUG]   Need 3x iron_ingot for 3x piston
+2025-10-25 20:53:24.473 [DEBUG]     Processing: 3x iron_ingot
+2025-10-25 20:53:24.473 [DEBUG]     Current recipe stack: sticky_piston -> piston
+2025-10-25 20:53:24.473 [DEBUG]     Adding material: 3x iron_ingot
+2025-10-25 20:53:24.473 [DEBUG] Need 3x slime_ball for 3x sticky_piston
+2025-10-25 20:53:24.473 [DEBUG]   Processing: 3x slime_ball
+2025-10-25 20:53:24.473 [DEBUG]   Current recipe stack: sticky_piston
+2025-10-25 20:53:24.473 [DEBUG]   Found recipe for slime_ball: {'slime_block': 1}
+2025-10-25 20:53:24.474 [DEBUG]   Need 3x slime_block for 3x slime_ball
+2025-10-25 20:53:24.474 [DEBUG]     Processing: 3x slime_block
+2025-10-25 20:53:24.474 [DEBUG]     Current recipe stack: sticky_piston -> slime_ball
+2025-10-25 20:53:24.474 [DEBUG]     Adding material: 3x slime_block
+2025-10-25 20:53:24.474 [DEBUG] Final totals for 3x sticky_piston: {'cobblestone': 12, 'redstone': 3, 'planks': 9, 'iron_ingot': 3, 'slime_block': 3}
+2025-10-25 20:53:24.474 [DEBUG] Requirements for 3x sticky_piston: {'cobblestone': 12, 'redstone': 3, 'planks': 9, 'iron_ingot': 3, 'slime_block': 3}
+2025-10-25 20:53:24.474 [DEBUG] Updated total for cobblestone: 12
+2025-10-25 20:53:24.474 [DEBUG] Updated total for redstone: 3
+2025-10-25 20:53:24.474 [DEBUG] Updated total for planks: 11
+2025-10-25 20:53:24.474 [DEBUG] Updated total for iron_ingot: 3
+2025-10-25 20:53:24.475 [DEBUG] Updated total for slime_block: 3
+2025-10-25 20:53:24.475 [INFO] Final aggregate totals: {'planks': 11, 'cobblestone': 12, 'redstone': 3, 'iron_ingot': 3, 'slime_block': 3}
+2025-10-25 20:53:27.830 [INFO] Calculating aggregate requirements for items: {'stick': 1, 'sticky_piston': 3}
+2025-10-25 20:53:27.830 [DEBUG] Processing requirements for 1x stick
+2025-10-25 20:53:27.830 [DEBUG] Calculating requirements for 1x stick
+2025-10-25 20:53:27.830 [DEBUG] Processing: 1x stick
+2025-10-25 20:53:27.830 [DEBUG] Current recipe stack: 
+2025-10-25 20:53:27.831 [DEBUG] Found recipe for stick: {'planks': 2}
+2025-10-25 20:53:27.831 [DEBUG] Need 2x planks for 1x stick
+2025-10-25 20:53:27.831 [DEBUG]   Processing: 2x planks
+2025-10-25 20:53:27.831 [DEBUG]   Current recipe stack: stick
+2025-10-25 20:53:27.831 [DEBUG]   Adding material: 2x planks
+2025-10-25 20:53:27.832 [DEBUG] Final totals for 1x stick: {'planks': 2}
+2025-10-25 20:53:27.832 [DEBUG] Requirements for 1x stick: {'planks': 2}
+2025-10-25 20:53:27.832 [DEBUG] Updated total for planks: 2
+2025-10-25 20:53:27.832 [DEBUG] Processing requirements for 3x sticky_piston
+2025-10-25 20:53:27.832 [DEBUG] Calculating requirements for 3x sticky_piston
+2025-10-25 20:53:27.833 [DEBUG] Processing: 3x sticky_piston
+2025-10-25 20:53:27.833 [DEBUG] Current recipe stack: 
+2025-10-25 20:53:27.833 [DEBUG] Found recipe for sticky_piston: {'piston': 1, 'slime_ball': 1}
+2025-10-25 20:53:27.833 [DEBUG] Need 3x piston for 3x sticky_piston
+2025-10-25 20:53:27.833 [DEBUG]   Processing: 3x piston
+2025-10-25 20:53:27.834 [DEBUG]   Current recipe stack: sticky_piston
+2025-10-25 20:53:27.834 [DEBUG]   Found recipe for piston: {'cobblestone': 4, 'redstone': 1, 'planks': 3, 'iron_ingot': 1}
+2025-10-25 20:53:27.834 [DEBUG]   Need 12x cobblestone for 3x piston
+2025-10-25 20:53:27.834 [DEBUG]     Processing: 12x cobblestone
+2025-10-25 20:53:27.834 [DEBUG]     Current recipe stack: sticky_piston -> piston
+2025-10-25 20:53:27.834 [DEBUG]     Adding material: 12x cobblestone
+2025-10-25 20:53:27.834 [DEBUG]   Need 3x redstone for 3x piston
+2025-10-25 20:53:27.834 [DEBUG]     Processing: 3x redstone
+2025-10-25 20:53:27.834 [DEBUG]     Current recipe stack: sticky_piston -> piston
+2025-10-25 20:53:27.834 [DEBUG]     Adding material: 3x redstone
+2025-10-25 20:53:27.835 [DEBUG]   Need 9x planks for 3x piston
+2025-10-25 20:53:27.835 [DEBUG]     Processing: 9x planks
+2025-10-25 20:53:27.835 [DEBUG]     Current recipe stack: sticky_piston -> piston
+2025-10-25 20:53:27.835 [DEBUG]     Adding material: 9x planks
+2025-10-25 20:53:27.835 [DEBUG]   Need 3x iron_ingot for 3x piston
+2025-10-25 20:53:27.835 [DEBUG]     Processing: 3x iron_ingot
+2025-10-25 20:53:27.835 [DEBUG]     Current recipe stack: sticky_piston -> piston
+2025-10-25 20:53:27.836 [DEBUG]     Adding material: 3x iron_ingot
+2025-10-25 20:53:27.836 [DEBUG] Need 3x slime_ball for 3x sticky_piston
+2025-10-25 20:53:27.836 [DEBUG]   Processing: 3x slime_ball
+2025-10-25 20:53:27.836 [DEBUG]   Current recipe stack: sticky_piston
+2025-10-25 20:53:27.836 [DEBUG]   Found recipe for slime_ball: {'slime_block': 1}
+2025-10-25 20:53:27.836 [DEBUG]   Need 3x slime_block for 3x slime_ball
+2025-10-25 20:53:27.836 [DEBUG]     Processing: 3x slime_block
+2025-10-25 20:53:27.836 [DEBUG]     Current recipe stack: sticky_piston -> slime_ball
+2025-10-25 20:53:27.837 [DEBUG]     Adding material: 3x slime_block
+2025-10-25 20:53:27.837 [DEBUG] Final totals for 3x sticky_piston: {'cobblestone': 12, 'redstone': 3, 'planks': 9, 'iron_ingot': 3, 'slime_block': 3}
+2025-10-25 20:53:27.837 [DEBUG] Requirements for 3x sticky_piston: {'cobblestone': 12, 'redstone': 3, 'planks': 9, 'iron_ingot': 3, 'slime_block': 3}
+2025-10-25 20:53:27.837 [DEBUG] Updated total for cobblestone: 12
+2025-10-25 20:53:27.837 [DEBUG] Updated total for redstone: 3
+2025-10-25 20:53:27.837 [DEBUG] Updated total for planks: 11
+2025-10-25 20:53:27.837 [DEBUG] Updated total for iron_ingot: 3
+2025-10-25 20:53:27.837 [DEBUG] Updated total for slime_block: 3
+2025-10-25 20:53:27.837 [INFO] Final aggregate totals: {'planks': 11, 'cobblestone': 12, 'redstone': 3, 'iron_ingot': 3, 'slime_block': 3}
+2025-10-25 20:53:29.286 [INFO] Calculating aggregate requirements for items: {'stick': 1, 'sticky_piston': 3}
+2025-10-25 20:53:29.286 [DEBUG] Processing requirements for 1x stick
+2025-10-25 20:53:29.287 [DEBUG] Calculating requirements for 1x stick
+2025-10-25 20:53:29.287 [DEBUG] Processing: 1x stick
+2025-10-25 20:53:29.287 [DEBUG] Current recipe stack: 
+2025-10-25 20:53:29.287 [DEBUG] Found recipe for stick: {'planks': 2}
+2025-10-25 20:53:29.287 [DEBUG] Need 2x planks for 1x stick
+2025-10-25 20:53:29.287 [DEBUG]   Processing: 2x planks
+2025-10-25 20:53:29.287 [DEBUG]   Current recipe stack: stick
+2025-10-25 20:53:29.288 [DEBUG]   Adding material: 2x planks
+2025-10-25 20:53:29.288 [DEBUG] Final totals for 1x stick: {'planks': 2}
+2025-10-25 20:53:29.288 [DEBUG] Requirements for 1x stick: {'planks': 2}
+2025-10-25 20:53:29.288 [DEBUG] Updated total for planks: 2
+2025-10-25 20:53:29.288 [DEBUG] Processing requirements for 3x sticky_piston
+2025-10-25 20:53:29.288 [DEBUG] Calculating requirements for 3x sticky_piston
+2025-10-25 20:53:29.288 [DEBUG] Processing: 3x sticky_piston
+2025-10-25 20:53:29.288 [DEBUG] Current recipe stack: 
+2025-10-25 20:53:29.288 [DEBUG] Found recipe for sticky_piston: {'piston': 1, 'slime_ball': 1}
+2025-10-25 20:53:29.288 [DEBUG] Need 3x piston for 3x sticky_piston
+2025-10-25 20:53:29.288 [DEBUG]   Processing: 3x piston
+2025-10-25 20:53:29.288 [DEBUG]   Current recipe stack: sticky_piston
+2025-10-25 20:53:29.288 [DEBUG]   Found recipe for piston: {'cobblestone': 4, 'redstone': 1, 'planks': 3, 'iron_ingot': 1}
+2025-10-25 20:53:29.289 [DEBUG]   Need 12x cobblestone for 3x piston
+2025-10-25 20:53:29.289 [DEBUG]     Processing: 12x cobblestone
+2025-10-25 20:53:29.289 [DEBUG]     Current recipe stack: sticky_piston -> piston
+2025-10-25 20:53:29.289 [DEBUG]     Adding material: 12x cobblestone
+2025-10-25 20:53:29.289 [DEBUG]   Need 3x redstone for 3x piston
+2025-10-25 20:53:29.289 [DEBUG]     Processing: 3x redstone
+2025-10-25 20:53:29.289 [DEBUG]     Current recipe stack: sticky_piston -> piston
+2025-10-25 20:53:29.289 [DEBUG]     Adding material: 3x redstone
+2025-10-25 20:53:29.289 [DEBUG]   Need 9x planks for 3x piston
+2025-10-25 20:53:29.289 [DEBUG]     Processing: 9x planks
+2025-10-25 20:53:29.289 [DEBUG]     Current recipe stack: sticky_piston -> piston
+2025-10-25 20:53:29.289 [DEBUG]     Adding material: 9x planks
+2025-10-25 20:53:29.289 [DEBUG]   Need 3x iron_ingot for 3x piston
+2025-10-25 20:53:29.289 [DEBUG]     Processing: 3x iron_ingot
+2025-10-25 20:53:29.289 [DEBUG]     Current recipe stack: sticky_piston -> piston
+2025-10-25 20:53:29.289 [DEBUG]     Adding material: 3x iron_ingot
+2025-10-25 20:53:29.289 [DEBUG] Need 3x slime_ball for 3x sticky_piston
+2025-10-25 20:53:29.289 [DEBUG]   Processing: 3x slime_ball
+2025-10-25 20:53:29.290 [DEBUG]   Current recipe stack: sticky_piston
+2025-10-25 20:53:29.290 [DEBUG]   Found recipe for slime_ball: {'slime_block': 1}
+2025-10-25 20:53:29.290 [DEBUG]   Need 3x slime_block for 3x slime_ball
+2025-10-25 20:53:29.290 [DEBUG]     Processing: 3x slime_block
+2025-10-25 20:53:29.290 [DEBUG]     Current recipe stack: sticky_piston -> slime_ball
+2025-10-25 20:53:29.290 [DEBUG]     Adding material: 3x slime_block
+2025-10-25 20:53:29.290 [DEBUG] Final totals for 3x sticky_piston: {'cobblestone': 12, 'redstone': 3, 'planks': 9, 'iron_ingot': 3, 'slime_block': 3}
+2025-10-25 20:53:29.290 [DEBUG] Requirements for 3x sticky_piston: {'cobblestone': 12, 'redstone': 3, 'planks': 9, 'iron_ingot': 3, 'slime_block': 3}
+2025-10-25 20:53:29.290 [DEBUG] Updated total for cobblestone: 12
+2025-10-25 20:53:29.290 [DEBUG] Updated total for redstone: 3
+2025-10-25 20:53:29.290 [DEBUG] Updated total for planks: 11
+2025-10-25 20:53:29.290 [DEBUG] Updated total for iron_ingot: 3
+2025-10-25 20:53:29.290 [DEBUG] Updated total for slime_block: 3
+2025-10-25 20:53:29.290 [INFO] Final aggregate totals: {'planks': 11, 'cobblestone': 12, 'redstone': 3, 'iron_ingot': 3, 'slime_block': 3}
+2025-10-25 20:53:29.852 [INFO] Calculating aggregate requirements for items: {'stick': 1, 'sticky_piston': 3}
+2025-10-25 20:53:29.852 [DEBUG] Processing requirements for 1x stick
+2025-10-25 20:53:29.852 [DEBUG] Calculating requirements for 1x stick
+2025-10-25 20:53:29.852 [DEBUG] Processing: 1x stick
+2025-10-25 20:53:29.852 [DEBUG] Current recipe stack: 
+2025-10-25 20:53:29.852 [DEBUG] Found recipe for stick: {'planks': 2}
+2025-10-25 20:53:29.852 [DEBUG] Need 2x planks for 1x stick
+2025-10-25 20:53:29.853 [DEBUG]   Processing: 2x planks
+2025-10-25 20:53:29.853 [DEBUG]   Current recipe stack: stick
+2025-10-25 20:53:29.853 [DEBUG]   Adding material: 2x planks
+2025-10-25 20:53:29.853 [DEBUG] Final totals for 1x stick: {'planks': 2}
+2025-10-25 20:53:29.853 [DEBUG] Requirements for 1x stick: {'planks': 2}
+2025-10-25 20:53:29.853 [DEBUG] Updated total for planks: 2
+2025-10-25 20:53:29.853 [DEBUG] Processing requirements for 3x sticky_piston
+2025-10-25 20:53:29.853 [DEBUG] Calculating requirements for 3x sticky_piston
+2025-10-25 20:53:29.854 [DEBUG] Processing: 3x sticky_piston
+2025-10-25 20:53:29.854 [DEBUG] Current recipe stack: 
+2025-10-25 20:53:29.854 [DEBUG] Found recipe for sticky_piston: {'piston': 1, 'slime_ball': 1}
+2025-10-25 20:53:29.854 [DEBUG] Need 3x piston for 3x sticky_piston
+2025-10-25 20:53:29.854 [DEBUG]   Processing: 3x piston
+2025-10-25 20:53:29.854 [DEBUG]   Current recipe stack: sticky_piston
+2025-10-25 20:53:29.854 [DEBUG]   Found recipe for piston: {'cobblestone': 4, 'redstone': 1, 'planks': 3, 'iron_ingot': 1}
+2025-10-25 20:53:29.854 [DEBUG]   Need 12x cobblestone for 3x piston
+2025-10-25 20:53:29.854 [DEBUG]     Processing: 12x cobblestone
+2025-10-25 20:53:29.854 [DEBUG]     Current recipe stack: sticky_piston -> piston
+2025-10-25 20:53:29.854 [DEBUG]     Adding material: 12x cobblestone
+2025-10-25 20:53:29.854 [DEBUG]   Need 3x redstone for 3x piston
+2025-10-25 20:53:29.855 [DEBUG]     Processing: 3x redstone
+2025-10-25 20:53:29.855 [DEBUG]     Current recipe stack: sticky_piston -> piston
+2025-10-25 20:53:29.855 [DEBUG]     Adding material: 3x redstone
+2025-10-25 20:53:29.855 [DEBUG]   Need 9x planks for 3x piston
+2025-10-25 20:53:29.855 [DEBUG]     Processing: 9x planks
+2025-10-25 20:53:29.855 [DEBUG]     Current recipe stack: sticky_piston -> piston
+2025-10-25 20:53:29.855 [DEBUG]     Adding material: 9x planks
+2025-10-25 20:53:29.855 [DEBUG]   Need 3x iron_ingot for 3x piston
+2025-10-25 20:53:29.855 [DEBUG]     Processing: 3x iron_ingot
+2025-10-25 20:53:29.856 [DEBUG]     Current recipe stack: sticky_piston -> piston
+2025-10-25 20:53:29.856 [DEBUG]     Adding material: 3x iron_ingot
+2025-10-25 20:53:29.856 [DEBUG] Need 3x slime_ball for 3x sticky_piston
+2025-10-25 20:53:29.856 [DEBUG]   Processing: 3x slime_ball
+2025-10-25 20:53:29.856 [DEBUG]   Current recipe stack: sticky_piston
+2025-10-25 20:53:29.856 [DEBUG]   Found recipe for slime_ball: {'slime_block': 1}
+2025-10-25 20:53:29.856 [DEBUG]   Need 3x slime_block for 3x slime_ball
+2025-10-25 20:53:29.856 [DEBUG]     Processing: 3x slime_block
+2025-10-25 20:53:29.857 [DEBUG]     Current recipe stack: sticky_piston -> slime_ball
+2025-10-25 20:53:29.857 [DEBUG]     Adding material: 3x slime_block
+2025-10-25 20:53:29.857 [DEBUG] Final totals for 3x sticky_piston: {'cobblestone': 12, 'redstone': 3, 'planks': 9, 'iron_ingot': 3, 'slime_block': 3}
+2025-10-25 20:53:29.857 [DEBUG] Requirements for 3x sticky_piston: {'cobblestone': 12, 'redstone': 3, 'planks': 9, 'iron_ingot': 3, 'slime_block': 3}
+2025-10-25 20:53:29.857 [DEBUG] Updated total for cobblestone: 12
+2025-10-25 20:53:29.857 [DEBUG] Updated total for redstone: 3
+2025-10-25 20:53:29.857 [DEBUG] Updated total for planks: 11
+2025-10-25 20:53:29.857 [DEBUG] Updated total for iron_ingot: 3
+2025-10-25 20:53:29.857 [DEBUG] Updated total for slime_block: 3
+2025-10-25 20:53:29.857 [INFO] Final aggregate totals: {'planks': 11, 'cobblestone': 12, 'redstone': 3, 'iron_ingot': 3, 'slime_block': 3}
+2025-10-25 20:53:30.368 [INFO] Calculating aggregate requirements for items: {'stick': 1, 'sticky_piston': 3}
+2025-10-25 20:53:30.368 [DEBUG] Processing requirements for 1x stick
+2025-10-25 20:53:30.368 [DEBUG] Calculating requirements for 1x stick
+2025-10-25 20:53:30.368 [DEBUG] Processing: 1x stick
+2025-10-25 20:53:30.369 [DEBUG] Current recipe stack: 
+2025-10-25 20:53:30.369 [DEBUG] Found recipe for stick: {'planks': 2}
+2025-10-25 20:53:30.369 [DEBUG] Need 2x planks for 1x stick
+2025-10-25 20:53:30.369 [DEBUG]   Processing: 2x planks
+2025-10-25 20:53:30.369 [DEBUG]   Current recipe stack: stick
+2025-10-25 20:53:30.369 [DEBUG]   Adding material: 2x planks
+2025-10-25 20:53:30.369 [DEBUG] Final totals for 1x stick: {'planks': 2}
+2025-10-25 20:53:30.370 [DEBUG] Requirements for 1x stick: {'planks': 2}
+2025-10-25 20:53:30.370 [DEBUG] Updated total for planks: 2
+2025-10-25 20:53:30.370 [DEBUG] Processing requirements for 3x sticky_piston
+2025-10-25 20:53:30.370 [DEBUG] Calculating requirements for 3x sticky_piston
+2025-10-25 20:53:30.370 [DEBUG] Processing: 3x sticky_piston
+2025-10-25 20:53:30.370 [DEBUG] Current recipe stack: 
+2025-10-25 20:53:30.370 [DEBUG] Found recipe for sticky_piston: {'piston': 1, 'slime_ball': 1}
+2025-10-25 20:53:30.370 [DEBUG] Need 3x piston for 3x sticky_piston
+2025-10-25 20:53:30.371 [DEBUG]   Processing: 3x piston
+2025-10-25 20:53:30.371 [DEBUG]   Current recipe stack: sticky_piston
+2025-10-25 20:53:30.371 [DEBUG]   Found recipe for piston: {'cobblestone': 4, 'redstone': 1, 'planks': 3, 'iron_ingot': 1}
+2025-10-25 20:53:30.371 [DEBUG]   Need 12x cobblestone for 3x piston
+2025-10-25 20:53:30.371 [DEBUG]     Processing: 12x cobblestone
+2025-10-25 20:53:30.371 [DEBUG]     Current recipe stack: sticky_piston -> piston
+2025-10-25 20:53:30.371 [DEBUG]     Adding material: 12x cobblestone
+2025-10-25 20:53:30.372 [DEBUG]   Need 3x redstone for 3x piston
+2025-10-25 20:53:30.372 [DEBUG]     Processing: 3x redstone
+2025-10-25 20:53:30.372 [DEBUG]     Current recipe stack: sticky_piston -> piston
+2025-10-25 20:53:30.372 [DEBUG]     Adding material: 3x redstone
+2025-10-25 20:53:30.372 [DEBUG]   Need 9x planks for 3x piston
+2025-10-25 20:53:30.372 [DEBUG]     Processing: 9x planks
+2025-10-25 20:53:30.372 [DEBUG]     Current recipe stack: sticky_piston -> piston
+2025-10-25 20:53:30.372 [DEBUG]     Adding material: 9x planks
+2025-10-25 20:53:30.373 [DEBUG]   Need 3x iron_ingot for 3x piston
+2025-10-25 20:53:30.373 [DEBUG]     Processing: 3x iron_ingot
+2025-10-25 20:53:30.373 [DEBUG]     Current recipe stack: sticky_piston -> piston
+2025-10-25 20:53:30.373 [DEBUG]     Adding material: 3x iron_ingot
+2025-10-25 20:53:30.373 [DEBUG] Need 3x slime_ball for 3x sticky_piston
+2025-10-25 20:53:30.373 [DEBUG]   Processing: 3x slime_ball
+2025-10-25 20:53:30.373 [DEBUG]   Current recipe stack: sticky_piston
+2025-10-25 20:53:30.373 [DEBUG]   Found recipe for slime_ball: {'slime_block': 1}
+2025-10-25 20:53:30.373 [DEBUG]   Need 3x slime_block for 3x slime_ball
+2025-10-25 20:53:30.374 [DEBUG]     Processing: 3x slime_block
+2025-10-25 20:53:30.374 [DEBUG]     Current recipe stack: sticky_piston -> slime_ball
+2025-10-25 20:53:30.374 [DEBUG]     Adding material: 3x slime_block
+2025-10-25 20:53:30.374 [DEBUG] Final totals for 3x sticky_piston: {'cobblestone': 12, 'redstone': 3, 'planks': 9, 'iron_ingot': 3, 'slime_block': 3}
+2025-10-25 20:53:30.374 [DEBUG] Requirements for 3x sticky_piston: {'cobblestone': 12, 'redstone': 3, 'planks': 9, 'iron_ingot': 3, 'slime_block': 3}
+2025-10-25 20:53:30.374 [DEBUG] Updated total for cobblestone: 12
+2025-10-25 20:53:30.374 [DEBUG] Updated total for redstone: 3
+2025-10-25 20:53:30.374 [DEBUG] Updated total for planks: 11
+2025-10-25 20:53:30.374 [DEBUG] Updated total for iron_ingot: 3
+2025-10-25 20:53:30.375 [DEBUG] Updated total for slime_block: 3
+2025-10-25 20:53:30.375 [INFO] Final aggregate totals: {'planks': 11, 'cobblestone': 12, 'redstone': 3, 'iron_ingot': 3, 'slime_block': 3}

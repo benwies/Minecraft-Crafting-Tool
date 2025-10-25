@@ -37,6 +37,32 @@ for p in PIC_DIR.glob("*.png"):
 PROJECTS_DIR = BASE / "projects"
 PROJECTS_DIR.mkdir(exist_ok=True)
 
+# Normalize certain materials for display/acquisition purposes.
+# Example: Always track slime as slime balls, not slime blocks.
+DISPLAY_NORMALIZATION = {
+    'slime_block': ('slime_ball', 9),
+}
+
+def normalize_display_mats(mats: dict) -> dict:
+    """Convert some aggregate materials into more granular display units.
+    For example, convert slime_block counts to slime_ball counts.
+
+    - mats: dict[str,int] material -> qty
+    - returns: new dict with normalized keys/quantities
+    """
+    try:
+        out = {}
+        for k, v in mats.items():
+            if k in DISPLAY_NORMALIZATION:
+                target, factor = DISPLAY_NORMALIZATION[k]
+                out[target] = out.get(target, 0) + int(v) * int(factor)
+            else:
+                out[k] = out.get(k, 0) + int(v)
+        return out
+    except Exception:
+        # On any issue, fall back to original mats
+        return mats
+
 # --- Undo/Redo history ---
 UNDO_STACK = []  # list of snapshots
 REDO_STACK = []
@@ -803,6 +829,8 @@ def refresh_materials_view():
         style.configure('Treeview', rowheight=26)  # Increase row height to fit images
         
         mats = aggregate_requirements(RECIPES, current_project.items)
+        # Normalize certain materials for display (e.g., slime_block -> slime_ball x9)
+        mats = normalize_display_mats(mats)
         for r in materials_tree.get_children():
             materials_tree.delete(r)
         for idx, (mat, q) in enumerate(sorted(mats.items())):
