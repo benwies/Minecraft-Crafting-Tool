@@ -19,7 +19,8 @@ OutputDir={#SourcePath}\..\..\dist\installer
 OutputBaseFilename=MCCraftingCalculator-Setup
 Compression=lzma
 SolidCompression=yes
-ArchitecturesInstallIn64BitMode=x64
+; Use recommended architecture identifier to avoid deprecation warnings
+ArchitecturesInstallIn64BitMode=x64compatible
 ; Show license during install
 LicenseFile={#SourcePath}\..\..\LICENSE
 #ifdef MyAppIcon
