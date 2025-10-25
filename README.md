@@ -76,6 +76,8 @@ This produces:
 
 ## License
 
-This project’s license (if any) is provided in the repository. If no license is present, all rights are reserved by the author.
+- Code: MIT License — see [`LICENSE`](./LICENSE).
+- Third‑party assets (Minecraft textures/icons/recipe data): NOT covered by the MIT license — see [`NOTICE.md`](./NOTICE.md).
+- Trademarks: “Minecraft” and related names are trademarks of Mojang Studios / Microsoft. This project is not affiliated with, endorsed by, or sponsored by Mojang Studios or Microsoft.
 
 
