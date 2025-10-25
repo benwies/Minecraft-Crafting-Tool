@@ -85,8 +85,88 @@ proj_frame.columnconfigure(5, weight=1)
 left = ttk.LabelFrame(main, text="Project Items", padding=8)
 left.grid(row=1, column=0, sticky="nsew", padx=6, pady=6)
 ttk.Label(left, text="Item:").grid(row=0, column=0, sticky="w")
-entry_item = ttk.Combobox(left, values=sorted(list(RECIPES.keys())))
+# Autocomplete: keep an all-items list and use a StringVar to track typing
+ALL_ITEMS = sorted(list(RECIPES.keys()))
+item_var = tk.StringVar()
+entry_item = ttk.Combobox(left, textvariable=item_var, values=ALL_ITEMS)
 entry_item.grid(row=0, column=1, sticky="ew")
+
+# --- Autocomplete popup (Toplevel + Listbox) ---
+# We'll show a small popup listbox under the combobox entry so suggestions
+# remain visible while the user keeps typing (the popup won't steal focus).
+_suggestion_win = None
+_suggestion_listbox = None
+
+def _hide_suggestions():
+    global _suggestion_win, _suggestion_listbox
+    try:
+        if _suggestion_win:
+            _suggestion_win.destroy()
+    except Exception:
+        pass
+    _suggestion_win = None
+    _suggestion_listbox = None
+
+
+def _accept_suggestion(evt=None):
+    global _suggestion_listbox
+    if not _suggestion_listbox:
+        return
+    sel = _suggestion_listbox.curselection()
+    if not sel:
+        return
+    value = _suggestion_listbox.get(sel[0])
+    item_var.set(value)
+    _hide_suggestions()
+    try:
+        entry_item.icursor('end')
+    except Exception:
+        pass
+
+
+def _show_suggestions(suggestions):
+    global _suggestion_win, _suggestion_listbox
+    _hide_suggestions()
+    if not suggestions:
+        return
+    try:
+        _suggestion_win = tk.Toplevel(root)
+        _suggestion_win.wm_overrideredirect(True)
+        _suggestion_win.attributes('-topmost', True)
+        _suggestion_listbox = tk.Listbox(_suggestion_win, activestyle='none')
+        for s in suggestions:
+            _suggestion_listbox.insert('end', s)
+        _suggestion_listbox.pack(fill='both', expand=True)
+
+        x = entry_item.winfo_rootx()
+        y = entry_item.winfo_rooty() + entry_item.winfo_height()
+        width = entry_item.winfo_width()
+        height = min(6, len(suggestions)) * 20
+        _suggestion_win.geometry(f"{width}x{height}+{x}+{y}")
+
+        _suggestion_listbox.bind('<Double-Button-1>', _accept_suggestion)
+        _suggestion_listbox.bind('<Return>', _accept_suggestion)
+        _suggestion_listbox.bind('<FocusOut>', lambda e: _hide_suggestions())
+    except Exception:
+        _hide_suggestions()
+
+
+def _update_item_suggestions(event=None):
+    typed = item_var.get() or ""
+    if typed == "":
+        _hide_suggestions()
+        return
+    lower = typed.lower()
+    suggestions = [it for it in ALL_ITEMS if lower in it.lower()]
+    if suggestions:
+        _show_suggestions(suggestions)
+    else:
+        _hide_suggestions()
+
+
+# Bind key releases to update suggestions as the user types
+entry_item.bind('<KeyRelease>', _update_item_suggestions)
+entry_item.bind('<Down>', lambda e: (_suggestion_listbox.focus_set(), _suggestion_listbox.selection_set(0)) if _suggestion_listbox else None)
 ttk.Label(left, text="Qty:").grid(row=1, column=0, sticky="w")
 entry_qty = ttk.Entry(left)
 entry_qty.grid(row=1, column=1, sticky="ew")
