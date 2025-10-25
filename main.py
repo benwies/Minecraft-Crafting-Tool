@@ -31,8 +31,8 @@ def format_stacks(qty: int) -> str:
     stacks = qty // 64
     rem = qty % 64
     if stacks > 0:
-        return f"{qty} ({stacks} stack(s) + {rem})"
-    return f"{qty}"
+        return f"{stacks} stack(s) + {rem}"
+    return "-"
 
 
 class Project:
@@ -167,12 +167,30 @@ def _update_item_suggestions(event=None):
 # Bind key releases to update suggestions as the user types
 entry_item.bind('<KeyRelease>', _update_item_suggestions)
 entry_item.bind('<Down>', lambda e: (_suggestion_listbox.focus_set(), _suggestion_listbox.selection_set(0)) if _suggestion_listbox else None)
-ttk.Label(left, text="Qty:").grid(row=1, column=0, sticky="w")
+# Quantity mode: either raw quantity or stacks of 64
+mode_var = tk.StringVar(value="Qty")
+ttk.Label(left, text="Mode:").grid(row=1, column=0, sticky="w")
+mode_combo = ttk.Combobox(left, textvariable=mode_var, values=("Qty", "Stacks"), width=8, state="readonly")
+mode_combo.grid(row=1, column=0, sticky="e", padx=(0,6))
+# Numeric entry for the chosen mode (Qty or Stacks)
 entry_qty = ttk.Entry(left)
 entry_qty.grid(row=1, column=1, sticky="ew")
 entry_qty.insert(0, "1")
+
+def _mode_changed(event=None):
+    """Optional: keep focus in the qty entry after changing mode."""
+    try:
+        entry_qty.focus_set()
+        entry_qty.select_range(0, 'end')
+    except Exception:
+        pass
+
+mode_combo.bind('<<ComboboxSelected>>', _mode_changed)
 btn_add = ttk.Button(left, text="Add / Increment")
-btn_add.grid(row=2, column=0, columnspan=2, pady=6)
+btn_add.grid(row=2, column=0, sticky="ew", padx=2, pady=6)
+# Remove button for selected project item(s)
+btn_remove = ttk.Button(left, text="Remove Selected")
+btn_remove.grid(row=2, column=1, sticky="ew", padx=2, pady=6)
 
 items_tree = ttk.Treeview(left, columns=("item", "qty", "stacks"), show="tree headings", height=12)
 items_tree.heading("#0", text="")  # Image column
@@ -183,8 +201,10 @@ items_tree.column("#0", width=40, stretch=False)  # Fixed width for images
 items_tree.column("item", width=180, anchor="w", stretch=True)
 items_tree.column("qty", width=60, anchor="center", stretch=False)
 items_tree.column("stacks", width=100, anchor="w", stretch=False)
-items_tree.grid(row=3, column=0, columnspan=2, sticky="nsew")
-left.columnconfigure(1, weight=1)
+items_tree.grid(row=4, column=0, columnspan=2, sticky="nsew")
+# Make the two button columns equally sized so Add / Remove look balanced
+left.columnconfigure(0, weight=1, uniform="btn")
+left.columnconfigure(1, weight=1, uniform="btn")
 
 
 # Right: raw materials
@@ -215,7 +235,18 @@ def load_item_image(item_name):
     # Preserve the originally requested name (e.g. 'planks') and
     # map it to a concrete texture name to look up (e.g. 'oak_planks').
     requested_name = item_name
-    lookup_name = "oak_planks" if item_name == "planks" else item_name
+    # Define mappings for generic material names to specific textures
+    material_mappings = {
+        "planks": "oak_planks",
+        "stone_tool_materials": "cobblestone",
+        "wooden_tool_materials": "oak_planks",
+        "iron_tool_materials": "iron_ingot",
+        "diamond_tool_materials": "diamond",
+        "gold_tool_materials": "gold_ingot",
+        "copper_tool_materials": "copper_ingot",
+        "stone_crafting_materials": "cobblestone",
+    }
+    lookup_name = material_mappings.get(item_name, item_name)
 
     # If the lookup image has already been cached under its concrete name,
     # reuse it and also cache it under the requested name.
@@ -270,8 +301,26 @@ def refresh_items_view():
         items_tree.delete(r)
     for itm, q in sorted(current_project.items.items()):
         img = load_item_image(itm)
-        items_tree.insert("", "end", iid=itm, image=img if img else "", text="", values=(itm, q, format_stacks(q)))
+        items_tree.insert("", "end", iid=itm, image=img if img else "", text="", values=(format_item_name(itm), q, format_stacks(q)))
 
+
+def format_item_name(name: str) -> str:
+    """Convert item_name_with_underscores to Title Case With Spaces"""
+    # Handle special cases
+    name_mappings = {
+        "copper_tool_materials": "Copper Ingot",
+        "stone_tool_materials": "Cobblestone",
+        "wooden_tool_materials": "Oak Planks",
+        "iron_tool_materials": "Iron Ingot",
+        "diamond_tool_materials": "Diamond",
+        "gold_tool_materials": "Gold Ingot",
+        "stone_crafting_materials": "Cobblestone",
+        "planks": "Oak Planks"
+    }
+    if name in name_mappings:
+        return name_mappings[name]
+    # Default formatting: replace underscores with spaces and title case
+    return name.replace('_', ' ').title()
 
 def refresh_materials_view():
     try:
@@ -283,7 +332,7 @@ def refresh_materials_view():
             materials_tree.delete(r)
         for mat, q in sorted(mats.items()):
             img = load_item_image(mat)
-            materials_tree.insert("", "end", iid=mat, image=img if img else "", text="", values=(mat, q, format_stacks(q)))
+            materials_tree.insert("", "end", iid=mat, image=img if img else "", text="", values=(format_item_name(mat), q, format_stacks(q)))
     except Exception as e:
         messagebox.showerror("Calculation error", f"Failed to calculate materials: {e}")
 
@@ -350,7 +399,11 @@ def on_add_item():
         messagebox.showerror("Invalid Item", f"Item does not exist: {itm}")
         return
     try:
-        q = int(entry_qty.get())
+        raw = int(entry_qty.get())
+        if mode_var.get() == "Stacks":
+            q = raw * 64
+        else:
+            q = raw
         if q <= 0:
             raise ValueError("Quantity must be positive")
         logging.info(f"Adding {q}x {itm}")
@@ -364,11 +417,28 @@ def on_add_item():
     update_views()
 
 
+def on_remove_item():
+    """Remove the selected item(s) from the current project and refresh views."""
+    sel = items_tree.selection()
+    if not sel:
+        messagebox.showinfo("Select", "Please select one or more items to remove")
+        return
+    removed = []
+    for iid in sel:
+        # Ensure we remove from project state if present
+        if iid in current_project.items:
+            removed.append(iid)
+            del current_project.items[iid]
+    logging.info(f"Removed items from project: {removed}")
+    update_views()
+
+
 # Wire buttons
 btn_new.config(command=on_new_project)
 btn_save.config(command=on_save_project)
 btn_load.config(command=on_load_project)
 btn_add.config(command=on_add_item)
+btn_remove.config(command=on_remove_item)
 
 # Initial population
 refresh_projects_combo()
