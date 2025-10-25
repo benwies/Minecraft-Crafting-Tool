@@ -61,6 +61,7 @@ _autosave_after_id = None
 # column_key in {"default", "item", "qty", "stacks", "acq"}
 _mat_sort = ("default", False)
 
+
 def _sorted_by_label_text():
     try:
         key, desc = _mat_sort
@@ -1050,6 +1051,7 @@ def _begin_qty_edit(item_id: str):
                 record_undo("edit_qty")
                 current_project.items[item_id] = new_val
             update_views()
+            _schedule_autosave()
 
         def _cancel(*_):
             global _qty_edit_entry
@@ -1088,6 +1090,7 @@ def _on_items_tree_click(event):
             record_undo("delete_item")
             del current_project.items[row_id]
             update_views()
+            _schedule_autosave()
 
 
 def refresh_projects_combo():
@@ -1972,6 +1975,8 @@ btn_custom_add.config(command=on_add_custom_mat)
 custom_qty_entry.bind("<Return>", on_add_custom_mat)
 apply_theme("dark")
 refresh_projects_combo()
+
+
 def _open_last_project_if_available():
     try:
         if LAST_PROJECT_FILE.exists():
@@ -1983,6 +1988,7 @@ def _open_last_project_if_available():
     except Exception:
         pass
     return False
+
 
 if not _open_last_project_if_available():
     update_views()

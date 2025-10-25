@@ -11724,3 +11724,337 @@
 2025-10-25 22:11:12.568 [DEBUG] STREAM b'PLTE' 41 24
 2025-10-25 22:11:12.569 [DEBUG] STREAM b'tRNS' 77 1
 2025-10-25 22:11:12.569 [DEBUG] STREAM b'IDAT' 90 73
+2025-10-25 22:12:12.507 [INFO] Attempting to load project: untitled.json
+2025-10-25 22:12:12.507 [INFO] Loaded project 'untitled' with 2 items
+2025-10-25 22:12:12.507 [DEBUG] Loaded project contents: {'stick': 1, 'piston': 1}
+2025-10-25 22:12:12.515 [DEBUG] STREAM b'IHDR' 16 13
+2025-10-25 22:12:12.516 [DEBUG] STREAM b'PLTE' 41 21
+2025-10-25 22:12:12.516 [DEBUG] STREAM b'IDAT' 74 108
+2025-10-25 22:12:12.521 [DEBUG] STREAM b'IHDR' 16 13
+2025-10-25 22:12:12.521 [DEBUG] STREAM b'IDAT' 41 48
+2025-10-25 22:12:12.522 [INFO] Calculating aggregate requirements for items: {'stick': 1, 'piston': 1}
+2025-10-25 22:12:12.522 [DEBUG] Processing requirements for 1x stick
+2025-10-25 22:12:12.522 [DEBUG] Calculating requirements for 1x stick
+2025-10-25 22:12:12.522 [DEBUG] Processing: 1x stick
+2025-10-25 22:12:12.522 [DEBUG] Current recipe stack: 
+2025-10-25 22:12:12.522 [DEBUG] Found recipe for stick: {'planks': 2}
+2025-10-25 22:12:12.522 [DEBUG] Need 2x planks for 1x stick
+2025-10-25 22:12:12.522 [DEBUG]   Processing: 2x planks
+2025-10-25 22:12:12.522 [DEBUG]   Current recipe stack: stick
+2025-10-25 22:12:12.522 [DEBUG]   Adding material: 2x planks
+2025-10-25 22:12:12.523 [DEBUG] Final totals for 1x stick: {'planks': 2}
+2025-10-25 22:12:12.523 [DEBUG] Requirements for 1x stick: {'planks': 2}
+2025-10-25 22:12:12.523 [DEBUG] Updated total for planks: 2
+2025-10-25 22:12:12.523 [DEBUG] Processing requirements for 1x piston
+2025-10-25 22:12:12.523 [DEBUG] Calculating requirements for 1x piston
+2025-10-25 22:12:12.523 [DEBUG] Processing: 1x piston
+2025-10-25 22:12:12.523 [DEBUG] Current recipe stack: 
+2025-10-25 22:12:12.523 [DEBUG] Found recipe for piston: {'cobblestone': 4, 'redstone': 1, 'planks': 3, 'iron_ingot': 1}
+2025-10-25 22:12:12.523 [DEBUG] Need 4x cobblestone for 1x piston
+2025-10-25 22:12:12.523 [DEBUG]   Processing: 4x cobblestone
+2025-10-25 22:12:12.523 [DEBUG]   Current recipe stack: piston
+2025-10-25 22:12:12.523 [DEBUG]   Adding material: 4x cobblestone
+2025-10-25 22:12:12.523 [DEBUG] Need 1x redstone for 1x piston
+2025-10-25 22:12:12.523 [DEBUG]   Processing: 1x redstone
+2025-10-25 22:12:12.523 [DEBUG]   Current recipe stack: piston
+2025-10-25 22:12:12.523 [DEBUG]   Adding material: 1x redstone
+2025-10-25 22:12:12.524 [DEBUG] Need 3x planks for 1x piston
+2025-10-25 22:12:12.524 [DEBUG]   Processing: 3x planks
+2025-10-25 22:12:12.524 [DEBUG]   Current recipe stack: piston
+2025-10-25 22:12:12.524 [DEBUG]   Adding material: 3x planks
+2025-10-25 22:12:12.524 [DEBUG] Need 1x iron_ingot for 1x piston
+2025-10-25 22:12:12.524 [DEBUG]   Processing: 1x iron_ingot
+2025-10-25 22:12:12.524 [DEBUG]   Current recipe stack: piston
+2025-10-25 22:12:12.524 [DEBUG]   Adding material: 1x iron_ingot
+2025-10-25 22:12:12.524 [DEBUG] Final totals for 1x piston: {'cobblestone': 4, 'redstone': 1, 'planks': 3, 'iron_ingot': 1}
+2025-10-25 22:12:12.524 [DEBUG] Requirements for 1x piston: {'cobblestone': 4, 'redstone': 1, 'planks': 3, 'iron_ingot': 1}
+2025-10-25 22:12:12.524 [DEBUG] Updated total for cobblestone: 4
+2025-10-25 22:12:12.524 [DEBUG] Updated total for redstone: 1
+2025-10-25 22:12:12.524 [DEBUG] Updated total for planks: 5
+2025-10-25 22:12:12.524 [DEBUG] Updated total for iron_ingot: 1
+2025-10-25 22:12:12.524 [INFO] Final aggregate totals: {'planks': 5, 'cobblestone': 4, 'redstone': 1, 'iron_ingot': 1}
+2025-10-25 22:12:12.525 [DEBUG] STREAM b'IHDR' 16 13
+2025-10-25 22:12:12.525 [DEBUG] STREAM b'PLTE' 41 18
+2025-10-25 22:12:12.525 [DEBUG] STREAM b'IDAT' 71 113
+2025-10-25 22:12:12.525 [DEBUG] STREAM b'IHDR' 16 13
+2025-10-25 22:12:12.525 [DEBUG] STREAM b'tRNS' 41 2
+2025-10-25 22:12:12.525 [DEBUG] STREAM b'IDAT' 55 86
+2025-10-25 22:12:12.526 [DEBUG] STREAM b'IHDR' 16 13
+2025-10-25 22:12:12.526 [DEBUG] STREAM b'PLTE' 41 21
+2025-10-25 22:12:12.526 [DEBUG] STREAM b'IDAT' 74 105
+2025-10-25 22:12:12.526 [DEBUG] STREAM b'IHDR' 16 13
+2025-10-25 22:12:12.526 [DEBUG] STREAM b'PLTE' 41 24
+2025-10-25 22:12:12.526 [DEBUG] STREAM b'tRNS' 77 1
+2025-10-25 22:12:12.527 [DEBUG] STREAM b'IDAT' 90 73
+2025-10-25 22:12:13.796 [INFO] Calculating aggregate requirements for items: {'stick': 1, 'piston': 1}
+2025-10-25 22:12:13.796 [DEBUG] Processing requirements for 1x stick
+2025-10-25 22:12:13.796 [DEBUG] Calculating requirements for 1x stick
+2025-10-25 22:12:13.796 [DEBUG] Processing: 1x stick
+2025-10-25 22:12:13.796 [DEBUG] Current recipe stack: 
+2025-10-25 22:12:13.797 [DEBUG] Found recipe for stick: {'planks': 2}
+2025-10-25 22:12:13.797 [DEBUG] Need 2x planks for 1x stick
+2025-10-25 22:12:13.797 [DEBUG]   Processing: 2x planks
+2025-10-25 22:12:13.797 [DEBUG]   Current recipe stack: stick
+2025-10-25 22:12:13.797 [DEBUG]   Adding material: 2x planks
+2025-10-25 22:12:13.797 [DEBUG] Final totals for 1x stick: {'planks': 2}
+2025-10-25 22:12:13.797 [DEBUG] Requirements for 1x stick: {'planks': 2}
+2025-10-25 22:12:13.798 [DEBUG] Updated total for planks: 2
+2025-10-25 22:12:13.798 [DEBUG] Processing requirements for 1x piston
+2025-10-25 22:12:13.798 [DEBUG] Calculating requirements for 1x piston
+2025-10-25 22:12:13.798 [DEBUG] Processing: 1x piston
+2025-10-25 22:12:13.798 [DEBUG] Current recipe stack: 
+2025-10-25 22:12:13.798 [DEBUG] Found recipe for piston: {'cobblestone': 4, 'redstone': 1, 'planks': 3, 'iron_ingot': 1}
+2025-10-25 22:12:13.798 [DEBUG] Need 4x cobblestone for 1x piston
+2025-10-25 22:12:13.799 [DEBUG]   Processing: 4x cobblestone
+2025-10-25 22:12:13.799 [DEBUG]   Current recipe stack: piston
+2025-10-25 22:12:13.799 [DEBUG]   Adding material: 4x cobblestone
+2025-10-25 22:12:13.799 [DEBUG] Need 1x redstone for 1x piston
+2025-10-25 22:12:13.799 [DEBUG]   Processing: 1x redstone
+2025-10-25 22:12:13.799 [DEBUG]   Current recipe stack: piston
+2025-10-25 22:12:13.799 [DEBUG]   Adding material: 1x redstone
+2025-10-25 22:12:13.799 [DEBUG] Need 3x planks for 1x piston
+2025-10-25 22:12:13.799 [DEBUG]   Processing: 3x planks
+2025-10-25 22:12:13.800 [DEBUG]   Current recipe stack: piston
+2025-10-25 22:12:13.800 [DEBUG]   Adding material: 3x planks
+2025-10-25 22:12:13.800 [DEBUG] Need 1x iron_ingot for 1x piston
+2025-10-25 22:12:13.800 [DEBUG]   Processing: 1x iron_ingot
+2025-10-25 22:12:13.800 [DEBUG]   Current recipe stack: piston
+2025-10-25 22:12:13.800 [DEBUG]   Adding material: 1x iron_ingot
+2025-10-25 22:12:13.800 [DEBUG] Final totals for 1x piston: {'cobblestone': 4, 'redstone': 1, 'planks': 3, 'iron_ingot': 1}
+2025-10-25 22:12:13.800 [DEBUG] Requirements for 1x piston: {'cobblestone': 4, 'redstone': 1, 'planks': 3, 'iron_ingot': 1}
+2025-10-25 22:12:13.800 [DEBUG] Updated total for cobblestone: 4
+2025-10-25 22:12:13.800 [DEBUG] Updated total for redstone: 1
+2025-10-25 22:12:13.801 [DEBUG] Updated total for planks: 5
+2025-10-25 22:12:13.801 [DEBUG] Updated total for iron_ingot: 1
+2025-10-25 22:12:13.801 [INFO] Final aggregate totals: {'planks': 5, 'cobblestone': 4, 'redstone': 1, 'iron_ingot': 1}
+2025-10-25 22:12:15.310 [INFO] Saving project 'untitled' to d:\code\mc\projects\untitled.json
+2025-10-25 22:12:15.311 [DEBUG] Project contents: {'stick': 1, 'piston': 1}
+2025-10-25 22:12:22.261 [INFO] Attempting to load project: untitled.json
+2025-10-25 22:12:22.261 [INFO] Loaded project 'untitled' with 2 items
+2025-10-25 22:12:22.262 [DEBUG] Loaded project contents: {'stick': 1, 'piston': 1}
+2025-10-25 22:12:22.270 [DEBUG] STREAM b'IHDR' 16 13
+2025-10-25 22:12:22.270 [DEBUG] STREAM b'PLTE' 41 21
+2025-10-25 22:12:22.270 [DEBUG] STREAM b'IDAT' 74 108
+2025-10-25 22:12:22.275 [DEBUG] STREAM b'IHDR' 16 13
+2025-10-25 22:12:22.275 [DEBUG] STREAM b'IDAT' 41 48
+2025-10-25 22:12:22.276 [INFO] Calculating aggregate requirements for items: {'stick': 1, 'piston': 1}
+2025-10-25 22:12:22.276 [DEBUG] Processing requirements for 1x stick
+2025-10-25 22:12:22.276 [DEBUG] Calculating requirements for 1x stick
+2025-10-25 22:12:22.276 [DEBUG] Processing: 1x stick
+2025-10-25 22:12:22.276 [DEBUG] Current recipe stack: 
+2025-10-25 22:12:22.276 [DEBUG] Found recipe for stick: {'planks': 2}
+2025-10-25 22:12:22.276 [DEBUG] Need 2x planks for 1x stick
+2025-10-25 22:12:22.276 [DEBUG]   Processing: 2x planks
+2025-10-25 22:12:22.276 [DEBUG]   Current recipe stack: stick
+2025-10-25 22:12:22.276 [DEBUG]   Adding material: 2x planks
+2025-10-25 22:12:22.276 [DEBUG] Final totals for 1x stick: {'planks': 2}
+2025-10-25 22:12:22.276 [DEBUG] Requirements for 1x stick: {'planks': 2}
+2025-10-25 22:12:22.276 [DEBUG] Updated total for planks: 2
+2025-10-25 22:12:22.276 [DEBUG] Processing requirements for 1x piston
+2025-10-25 22:12:22.276 [DEBUG] Calculating requirements for 1x piston
+2025-10-25 22:12:22.276 [DEBUG] Processing: 1x piston
+2025-10-25 22:12:22.276 [DEBUG] Current recipe stack: 
+2025-10-25 22:12:22.277 [DEBUG] Found recipe for piston: {'cobblestone': 4, 'redstone': 1, 'planks': 3, 'iron_ingot': 1}
+2025-10-25 22:12:22.277 [DEBUG] Need 4x cobblestone for 1x piston
+2025-10-25 22:12:22.277 [DEBUG]   Processing: 4x cobblestone
+2025-10-25 22:12:22.277 [DEBUG]   Current recipe stack: piston
+2025-10-25 22:12:22.277 [DEBUG]   Adding material: 4x cobblestone
+2025-10-25 22:12:22.277 [DEBUG] Need 1x redstone for 1x piston
+2025-10-25 22:12:22.277 [DEBUG]   Processing: 1x redstone
+2025-10-25 22:12:22.277 [DEBUG]   Current recipe stack: piston
+2025-10-25 22:12:22.277 [DEBUG]   Adding material: 1x redstone
+2025-10-25 22:12:22.277 [DEBUG] Need 3x planks for 1x piston
+2025-10-25 22:12:22.277 [DEBUG]   Processing: 3x planks
+2025-10-25 22:12:22.277 [DEBUG]   Current recipe stack: piston
+2025-10-25 22:12:22.277 [DEBUG]   Adding material: 3x planks
+2025-10-25 22:12:22.277 [DEBUG] Need 1x iron_ingot for 1x piston
+2025-10-25 22:12:22.277 [DEBUG]   Processing: 1x iron_ingot
+2025-10-25 22:12:22.277 [DEBUG]   Current recipe stack: piston
+2025-10-25 22:12:22.278 [DEBUG]   Adding material: 1x iron_ingot
+2025-10-25 22:12:22.278 [DEBUG] Final totals for 1x piston: {'cobblestone': 4, 'redstone': 1, 'planks': 3, 'iron_ingot': 1}
+2025-10-25 22:12:22.278 [DEBUG] Requirements for 1x piston: {'cobblestone': 4, 'redstone': 1, 'planks': 3, 'iron_ingot': 1}
+2025-10-25 22:12:22.278 [DEBUG] Updated total for cobblestone: 4
+2025-10-25 22:12:22.278 [DEBUG] Updated total for redstone: 1
+2025-10-25 22:12:22.278 [DEBUG] Updated total for planks: 5
+2025-10-25 22:12:22.278 [DEBUG] Updated total for iron_ingot: 1
+2025-10-25 22:12:22.278 [INFO] Final aggregate totals: {'planks': 5, 'cobblestone': 4, 'redstone': 1, 'iron_ingot': 1}
+2025-10-25 22:12:22.278 [DEBUG] STREAM b'IHDR' 16 13
+2025-10-25 22:12:22.279 [DEBUG] STREAM b'PLTE' 41 18
+2025-10-25 22:12:22.279 [DEBUG] STREAM b'IDAT' 71 113
+2025-10-25 22:12:22.279 [DEBUG] STREAM b'IHDR' 16 13
+2025-10-25 22:12:22.279 [DEBUG] STREAM b'tRNS' 41 2
+2025-10-25 22:12:22.279 [DEBUG] STREAM b'IDAT' 55 86
+2025-10-25 22:12:22.280 [DEBUG] STREAM b'IHDR' 16 13
+2025-10-25 22:12:22.280 [DEBUG] STREAM b'PLTE' 41 21
+2025-10-25 22:12:22.280 [DEBUG] STREAM b'IDAT' 74 105
+2025-10-25 22:12:22.280 [DEBUG] STREAM b'IHDR' 16 13
+2025-10-25 22:12:22.280 [DEBUG] STREAM b'PLTE' 41 24
+2025-10-25 22:12:22.280 [DEBUG] STREAM b'tRNS' 77 1
+2025-10-25 22:12:22.280 [DEBUG] STREAM b'IDAT' 90 73
+2025-10-25 22:12:26.336 [DEBUG] Recorded undo snapshot (delete_item); undo depth=1
+2025-10-25 22:12:26.337 [INFO] Calculating aggregate requirements for items: {'stick': 1}
+2025-10-25 22:12:26.338 [DEBUG] Processing requirements for 1x stick
+2025-10-25 22:12:26.338 [DEBUG] Calculating requirements for 1x stick
+2025-10-25 22:12:26.338 [DEBUG] Processing: 1x stick
+2025-10-25 22:12:26.339 [DEBUG] Current recipe stack: 
+2025-10-25 22:12:26.339 [DEBUG] Found recipe for stick: {'planks': 2}
+2025-10-25 22:12:26.339 [DEBUG] Need 2x planks for 1x stick
+2025-10-25 22:12:26.339 [DEBUG]   Processing: 2x planks
+2025-10-25 22:12:26.340 [DEBUG]   Current recipe stack: stick
+2025-10-25 22:12:26.340 [DEBUG]   Adding material: 2x planks
+2025-10-25 22:12:26.341 [DEBUG] Final totals for 1x stick: {'planks': 2}
+2025-10-25 22:12:26.341 [DEBUG] Requirements for 1x stick: {'planks': 2}
+2025-10-25 22:12:26.341 [DEBUG] Updated total for planks: 2
+2025-10-25 22:12:26.341 [INFO] Final aggregate totals: {'planks': 2}
+2025-10-25 22:12:27.091 [DEBUG] Recorded undo snapshot (delete_item); undo depth=2
+2025-10-25 22:12:27.092 [INFO] Calculating aggregate requirements for items: {}
+2025-10-25 22:12:27.092 [INFO] Final aggregate totals: {}
+2025-10-25 22:12:31.481 [INFO] Attempting to load project: untitled.json
+2025-10-25 22:12:31.481 [INFO] Loaded project 'untitled' with 2 items
+2025-10-25 22:12:31.481 [DEBUG] Loaded project contents: {'stick': 1, 'piston': 1}
+2025-10-25 22:12:31.489 [DEBUG] STREAM b'IHDR' 16 13
+2025-10-25 22:12:31.489 [DEBUG] STREAM b'PLTE' 41 21
+2025-10-25 22:12:31.489 [DEBUG] STREAM b'IDAT' 74 108
+2025-10-25 22:12:31.494 [DEBUG] STREAM b'IHDR' 16 13
+2025-10-25 22:12:31.495 [DEBUG] STREAM b'IDAT' 41 48
+2025-10-25 22:12:31.495 [INFO] Calculating aggregate requirements for items: {'stick': 1, 'piston': 1}
+2025-10-25 22:12:31.495 [DEBUG] Processing requirements for 1x stick
+2025-10-25 22:12:31.495 [DEBUG] Calculating requirements for 1x stick
+2025-10-25 22:12:31.495 [DEBUG] Processing: 1x stick
+2025-10-25 22:12:31.496 [DEBUG] Current recipe stack: 
+2025-10-25 22:12:31.496 [DEBUG] Found recipe for stick: {'planks': 2}
+2025-10-25 22:12:31.496 [DEBUG] Need 2x planks for 1x stick
+2025-10-25 22:12:31.496 [DEBUG]   Processing: 2x planks
+2025-10-25 22:12:31.496 [DEBUG]   Current recipe stack: stick
+2025-10-25 22:12:31.496 [DEBUG]   Adding material: 2x planks
+2025-10-25 22:12:31.496 [DEBUG] Final totals for 1x stick: {'planks': 2}
+2025-10-25 22:12:31.496 [DEBUG] Requirements for 1x stick: {'planks': 2}
+2025-10-25 22:12:31.496 [DEBUG] Updated total for planks: 2
+2025-10-25 22:12:31.496 [DEBUG] Processing requirements for 1x piston
+2025-10-25 22:12:31.496 [DEBUG] Calculating requirements for 1x piston
+2025-10-25 22:12:31.496 [DEBUG] Processing: 1x piston
+2025-10-25 22:12:31.496 [DEBUG] Current recipe stack: 
+2025-10-25 22:12:31.496 [DEBUG] Found recipe for piston: {'cobblestone': 4, 'redstone': 1, 'planks': 3, 'iron_ingot': 1}
+2025-10-25 22:12:31.497 [DEBUG] Need 4x cobblestone for 1x piston
+2025-10-25 22:12:31.497 [DEBUG]   Processing: 4x cobblestone
+2025-10-25 22:12:31.497 [DEBUG]   Current recipe stack: piston
+2025-10-25 22:12:31.497 [DEBUG]   Adding material: 4x cobblestone
+2025-10-25 22:12:31.497 [DEBUG] Need 1x redstone for 1x piston
+2025-10-25 22:12:31.497 [DEBUG]   Processing: 1x redstone
+2025-10-25 22:12:31.497 [DEBUG]   Current recipe stack: piston
+2025-10-25 22:12:31.497 [DEBUG]   Adding material: 1x redstone
+2025-10-25 22:12:31.497 [DEBUG] Need 3x planks for 1x piston
+2025-10-25 22:12:31.497 [DEBUG]   Processing: 3x planks
+2025-10-25 22:12:31.497 [DEBUG]   Current recipe stack: piston
+2025-10-25 22:12:31.497 [DEBUG]   Adding material: 3x planks
+2025-10-25 22:12:31.497 [DEBUG] Need 1x iron_ingot for 1x piston
+2025-10-25 22:12:31.497 [DEBUG]   Processing: 1x iron_ingot
+2025-10-25 22:12:31.497 [DEBUG]   Current recipe stack: piston
+2025-10-25 22:12:31.497 [DEBUG]   Adding material: 1x iron_ingot
+2025-10-25 22:12:31.498 [DEBUG] Final totals for 1x piston: {'cobblestone': 4, 'redstone': 1, 'planks': 3, 'iron_ingot': 1}
+2025-10-25 22:12:31.498 [DEBUG] Requirements for 1x piston: {'cobblestone': 4, 'redstone': 1, 'planks': 3, 'iron_ingot': 1}
+2025-10-25 22:12:31.498 [DEBUG] Updated total for cobblestone: 4
+2025-10-25 22:12:31.498 [DEBUG] Updated total for redstone: 1
+2025-10-25 22:12:31.498 [DEBUG] Updated total for planks: 5
+2025-10-25 22:12:31.498 [DEBUG] Updated total for iron_ingot: 1
+2025-10-25 22:12:31.498 [INFO] Final aggregate totals: {'planks': 5, 'cobblestone': 4, 'redstone': 1, 'iron_ingot': 1}
+2025-10-25 22:12:31.498 [DEBUG] STREAM b'IHDR' 16 13
+2025-10-25 22:12:31.498 [DEBUG] STREAM b'PLTE' 41 18
+2025-10-25 22:12:31.498 [DEBUG] STREAM b'IDAT' 71 113
+2025-10-25 22:12:31.499 [DEBUG] STREAM b'IHDR' 16 13
+2025-10-25 22:12:31.499 [DEBUG] STREAM b'tRNS' 41 2
+2025-10-25 22:12:31.499 [DEBUG] STREAM b'IDAT' 55 86
+2025-10-25 22:12:31.500 [DEBUG] STREAM b'IHDR' 16 13
+2025-10-25 22:12:31.500 [DEBUG] STREAM b'PLTE' 41 21
+2025-10-25 22:12:31.500 [DEBUG] STREAM b'IDAT' 74 105
+2025-10-25 22:12:31.500 [DEBUG] STREAM b'IHDR' 16 13
+2025-10-25 22:12:31.500 [DEBUG] STREAM b'PLTE' 41 24
+2025-10-25 22:12:31.500 [DEBUG] STREAM b'tRNS' 77 1
+2025-10-25 22:12:31.500 [DEBUG] STREAM b'IDAT' 90 73
+2025-10-25 22:14:39.399 [INFO] Attempting to load project: untitled.json
+2025-10-25 22:14:39.399 [INFO] Loaded project 'untitled' with 2 items
+2025-10-25 22:14:39.399 [DEBUG] Loaded project contents: {'stick': 1, 'piston': 1}
+2025-10-25 22:14:39.407 [DEBUG] STREAM b'IHDR' 16 13
+2025-10-25 22:14:39.408 [DEBUG] STREAM b'PLTE' 41 21
+2025-10-25 22:14:39.408 [DEBUG] STREAM b'IDAT' 74 108
+2025-10-25 22:14:39.413 [DEBUG] STREAM b'IHDR' 16 13
+2025-10-25 22:14:39.413 [DEBUG] STREAM b'IDAT' 41 48
+2025-10-25 22:14:39.414 [INFO] Calculating aggregate requirements for items: {'stick': 1, 'piston': 1}
+2025-10-25 22:14:39.414 [DEBUG] Processing requirements for 1x stick
+2025-10-25 22:14:39.414 [DEBUG] Calculating requirements for 1x stick
+2025-10-25 22:14:39.414 [DEBUG] Processing: 1x stick
+2025-10-25 22:14:39.414 [DEBUG] Current recipe stack: 
+2025-10-25 22:14:39.414 [DEBUG] Found recipe for stick: {'planks': 2}
+2025-10-25 22:14:39.414 [DEBUG] Need 2x planks for 1x stick
+2025-10-25 22:14:39.414 [DEBUG]   Processing: 2x planks
+2025-10-25 22:14:39.414 [DEBUG]   Current recipe stack: stick
+2025-10-25 22:14:39.414 [DEBUG]   Adding material: 2x planks
+2025-10-25 22:14:39.414 [DEBUG] Final totals for 1x stick: {'planks': 2}
+2025-10-25 22:14:39.415 [DEBUG] Requirements for 1x stick: {'planks': 2}
+2025-10-25 22:14:39.415 [DEBUG] Updated total for planks: 2
+2025-10-25 22:14:39.415 [DEBUG] Processing requirements for 1x piston
+2025-10-25 22:14:39.415 [DEBUG] Calculating requirements for 1x piston
+2025-10-25 22:14:39.415 [DEBUG] Processing: 1x piston
+2025-10-25 22:14:39.415 [DEBUG] Current recipe stack: 
+2025-10-25 22:14:39.415 [DEBUG] Found recipe for piston: {'cobblestone': 4, 'redstone': 1, 'planks': 3, 'iron_ingot': 1}
+2025-10-25 22:14:39.415 [DEBUG] Need 4x cobblestone for 1x piston
+2025-10-25 22:14:39.415 [DEBUG]   Processing: 4x cobblestone
+2025-10-25 22:14:39.415 [DEBUG]   Current recipe stack: piston
+2025-10-25 22:14:39.415 [DEBUG]   Adding material: 4x cobblestone
+2025-10-25 22:14:39.415 [DEBUG] Need 1x redstone for 1x piston
+2025-10-25 22:14:39.415 [DEBUG]   Processing: 1x redstone
+2025-10-25 22:14:39.415 [DEBUG]   Current recipe stack: piston
+2025-10-25 22:14:39.415 [DEBUG]   Adding material: 1x redstone
+2025-10-25 22:14:39.415 [DEBUG] Need 3x planks for 1x piston
+2025-10-25 22:14:39.416 [DEBUG]   Processing: 3x planks
+2025-10-25 22:14:39.416 [DEBUG]   Current recipe stack: piston
+2025-10-25 22:14:39.416 [DEBUG]   Adding material: 3x planks
+2025-10-25 22:14:39.416 [DEBUG] Need 1x iron_ingot for 1x piston
+2025-10-25 22:14:39.416 [DEBUG]   Processing: 1x iron_ingot
+2025-10-25 22:14:39.416 [DEBUG]   Current recipe stack: piston
+2025-10-25 22:14:39.416 [DEBUG]   Adding material: 1x iron_ingot
+2025-10-25 22:14:39.416 [DEBUG] Final totals for 1x piston: {'cobblestone': 4, 'redstone': 1, 'planks': 3, 'iron_ingot': 1}
+2025-10-25 22:14:39.416 [DEBUG] Requirements for 1x piston: {'cobblestone': 4, 'redstone': 1, 'planks': 3, 'iron_ingot': 1}
+2025-10-25 22:14:39.416 [DEBUG] Updated total for cobblestone: 4
+2025-10-25 22:14:39.416 [DEBUG] Updated total for redstone: 1
+2025-10-25 22:14:39.416 [DEBUG] Updated total for planks: 5
+2025-10-25 22:14:39.416 [DEBUG] Updated total for iron_ingot: 1
+2025-10-25 22:14:39.416 [INFO] Final aggregate totals: {'planks': 5, 'cobblestone': 4, 'redstone': 1, 'iron_ingot': 1}
+2025-10-25 22:14:39.417 [DEBUG] STREAM b'IHDR' 16 13
+2025-10-25 22:14:39.417 [DEBUG] STREAM b'PLTE' 41 18
+2025-10-25 22:14:39.417 [DEBUG] STREAM b'IDAT' 71 113
+2025-10-25 22:14:39.417 [DEBUG] STREAM b'IHDR' 16 13
+2025-10-25 22:14:39.417 [DEBUG] STREAM b'tRNS' 41 2
+2025-10-25 22:14:39.418 [DEBUG] STREAM b'IDAT' 55 86
+2025-10-25 22:14:39.418 [DEBUG] STREAM b'IHDR' 16 13
+2025-10-25 22:14:39.418 [DEBUG] STREAM b'PLTE' 41 21
+2025-10-25 22:14:39.418 [DEBUG] STREAM b'IDAT' 74 105
+2025-10-25 22:14:39.419 [DEBUG] STREAM b'IHDR' 16 13
+2025-10-25 22:14:39.419 [DEBUG] STREAM b'PLTE' 41 24
+2025-10-25 22:14:39.419 [DEBUG] STREAM b'tRNS' 77 1
+2025-10-25 22:14:39.419 [DEBUG] STREAM b'IDAT' 90 73
+2025-10-25 22:14:41.171 [DEBUG] Recorded undo snapshot (delete_item); undo depth=1
+2025-10-25 22:14:41.172 [INFO] Calculating aggregate requirements for items: {'stick': 1}
+2025-10-25 22:14:41.172 [DEBUG] Processing requirements for 1x stick
+2025-10-25 22:14:41.172 [DEBUG] Calculating requirements for 1x stick
+2025-10-25 22:14:41.172 [DEBUG] Processing: 1x stick
+2025-10-25 22:14:41.172 [DEBUG] Current recipe stack: 
+2025-10-25 22:14:41.172 [DEBUG] Found recipe for stick: {'planks': 2}
+2025-10-25 22:14:41.172 [DEBUG] Need 2x planks for 1x stick
+2025-10-25 22:14:41.173 [DEBUG]   Processing: 2x planks
+2025-10-25 22:14:41.173 [DEBUG]   Current recipe stack: stick
+2025-10-25 22:14:41.173 [DEBUG]   Adding material: 2x planks
+2025-10-25 22:14:41.173 [DEBUG] Final totals for 1x stick: {'planks': 2}
+2025-10-25 22:14:41.173 [DEBUG] Requirements for 1x stick: {'planks': 2}
+2025-10-25 22:14:41.173 [DEBUG] Updated total for planks: 2
+2025-10-25 22:14:41.173 [INFO] Final aggregate totals: {'planks': 2}
+2025-10-25 22:14:42.227 [DEBUG] Recorded undo snapshot (delete_item); undo depth=2
+2025-10-25 22:14:42.228 [INFO] Calculating aggregate requirements for items: {}
+2025-10-25 22:14:42.229 [INFO] Final aggregate totals: {}
+2025-10-25 22:14:43.744 [INFO] Saving project 'untitled' to d:\code\mc\projects\untitled.json
+2025-10-25 22:14:43.744 [DEBUG] Project contents: {}
+2025-10-25 22:14:48.406 [INFO] Attempting to load project: untitled.json
+2025-10-25 22:14:48.406 [INFO] Loaded project 'untitled' with 0 items
+2025-10-25 22:14:48.406 [DEBUG] Loaded project contents: {}
+2025-10-25 22:14:48.406 [INFO] Calculating aggregate requirements for items: {}
+2025-10-25 22:14:48.407 [INFO] Final aggregate totals: {}

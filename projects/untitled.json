@@ -1,22 +1,13 @@
 {
   "name": "untitled",
-  "items": {
-    "stick": 1,
-    "piston": 1
-  },
+  "items": {},
   "custom_mats": {},
   "acquired_mats": {},
   "done_mats": [
-    "iron_ingot",
-    "cobblestone",
+    "redstone",
     "planks",
-    "redstone"
+    "cobblestone"
   ],
   "manual_undone": [],
-  "manual_done": [
-    "iron_ingot",
-    "cobblestone",
-    "planks",
-    "redstone"
-  ]
+  "manual_done": []
 }
