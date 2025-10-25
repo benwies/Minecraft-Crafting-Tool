@@ -9954,3 +9954,16 @@
 2025-10-25 21:46:13.353 [DEBUG] Recorded undo snapshot (delete_custom_material); undo depth=4
 2025-10-25 21:46:13.353 [INFO] Calculating aggregate requirements for items: {}
 2025-10-25 21:46:13.353 [INFO] Final aggregate totals: {}
+2025-10-25 21:48:56.805 [DEBUG] Calculating requirements for 10x redstone_torch
+2025-10-25 21:48:56.805 [DEBUG] Processing: 10x redstone_torch
+2025-10-25 21:48:56.805 [DEBUG] Current recipe stack: 
+2025-10-25 21:48:56.805 [DEBUG] Found recipe for redstone_torch: {'stick': 1, 'redstone': 1}
+2025-10-25 21:48:56.806 [DEBUG] Need 10x stick for 10x redstone_torch
+2025-10-25 21:48:56.806 [DEBUG]   Processing: 10x stick
+2025-10-25 21:48:56.806 [DEBUG]   Current recipe stack: redstone_torch
+2025-10-25 21:48:56.806 [DEBUG]   Adding material: 10x stick
+2025-10-25 21:48:56.806 [DEBUG] Need 10x redstone for 10x redstone_torch
+2025-10-25 21:48:56.806 [DEBUG]   Processing: 10x redstone
+2025-10-25 21:48:56.806 [DEBUG]   Current recipe stack: redstone_torch
+2025-10-25 21:48:56.806 [DEBUG]   Adding material: 10x redstone
+2025-10-25 21:48:56.806 [DEBUG] Final totals for 10x redstone_torch: {'stick': 10, 'redstone': 10}
