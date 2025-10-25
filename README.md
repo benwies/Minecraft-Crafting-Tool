@@ -49,22 +49,6 @@ These locations don’t require admin rights and are created automatically.
 - Windows 10 or 11
 - No separate Python install needed when using the installer or portable ZIP
 
-## Build it yourself (optional)
-
-If you want to reproduce the Windows artifacts locally:
-
-1) Install Python 3.10+ and Inno Setup (for the installer).
-2) Run the all‑in‑one build script in PowerShell:
-
-```powershell
-& .\tools\build\build_all.ps1 -Version "1.0.0" -Publisher "Benedikt Wiesner"
-```
-
-This produces:
-- One‑folder app: `dist/MCCraftingCalculator/`
-- Portable ZIP: `dist/MCCraftingCalculator-portable.zip`
-- Installer EXE: `dist/installer/MCCraftingCalculator-Setup.exe`
-
 ## Troubleshooting
 
 - Missing or wrong item image:
