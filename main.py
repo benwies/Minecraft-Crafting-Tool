@@ -115,11 +115,11 @@ main.pack(fill="both", expand=True)
 proj_frame = ttk.Frame(main)
 proj_frame.grid(row=0, column=0, columnspan=3, sticky="ew")
 
-# Toolbar-like Undo/Redo on the top-left
-btn_undo = ttk.Button(proj_frame, text="Undo", state="disabled")
-btn_undo.grid(row=0, column=0, padx=4)
-btn_redo = ttk.Button(proj_frame, text="Redo", state="disabled")
-btn_redo.grid(row=0, column=1, padx=4)
+# Toolbar-like Undo/Redo on the top-left (icon-like buttons using Unicode arrows)
+btn_undo = ttk.Button(proj_frame, text="⟲", width=3, style="Toolbutton", state="disabled")
+btn_undo.grid(row=0, column=0, padx=(4, 2))
+btn_redo = ttk.Button(proj_frame, text="⟳", width=3, style="Toolbutton", state="disabled")
+btn_redo.grid(row=0, column=1, padx=(2, 4))
 
 ttk.Label(proj_frame, text="Project name:").grid(row=1, column=0)
 entry_proj = ttk.Entry(proj_frame)
