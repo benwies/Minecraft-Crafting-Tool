@@ -239,6 +239,13 @@ def apply_theme(name: str = 'light'):
     try:
         materials_tree.tag_configure('even', background=P['tree_bg'])
         materials_tree.tag_configure('odd', background=P['tree_alt'])
+        # Done rows: grey + strike-through
+        try:
+            done_font = tkfont.nametofont('TkDefaultFont').copy()
+            done_font.configure(overstrike=1)
+        except Exception:
+            done_font = ('Segoe UI', 10, 'overstrike')
+        materials_tree.tag_configure('done', foreground=P['subtext'], font=done_font)
     except Exception:
         pass
     # Update theme toggle button glyph
@@ -509,21 +516,29 @@ left.columnconfigure(0, weight=1)
 # Right: raw materials
 right = ttk.LabelFrame(main, text="Raw Materials", padding=8)
 right.grid(row=1, column=1, sticky="nsew", padx=6, pady=6)
-materials_tree = ttk.Treeview(right, columns=("item", "qty", "stacks"), show="tree headings", height=20)
+materials_tree = ttk.Treeview(right, columns=("item", "qty", "stacks", "acq"), show="tree headings", height=20)
 materials_tree.heading("#0", text="Img")  # Image column
 materials_tree.heading("item", text="Item")
-materials_tree.heading("qty", text="Qty")
+materials_tree.heading("qty", text="Qty (missing)")
 materials_tree.heading("stacks", text="Stacks")
+materials_tree.heading("acq", text="Acquired")
 materials_tree.column("#0", width=40, stretch=False)  # Fixed width for images
 materials_tree.column("item", width=200, anchor="w", stretch=True)
 materials_tree.column("qty", width=60, anchor="center", stretch=False)
 materials_tree.column("stacks", width=120, anchor="w", stretch=False)
+materials_tree.column("acq", width=80, anchor="center", stretch=False)
 materials_tree.grid(row=0, column=0, sticky="nsew")
 right.columnconfigure(0, weight=1)
 
 
 # Internal state
 current_project = Project("untitled")
+ACQUIRED_MATS = {}  # material -> acquired quantity (int)
+DONE_MATS = set()   # set of materials marked done
+
+_acq_edit_entry = None
+_hover_done_btn = None
+_hover_row = None
 
 def load_item_image(item_name):
     """Load and cache an item's image"""
@@ -777,7 +792,13 @@ def refresh_materials_view():
         for idx, (mat, q) in enumerate(sorted(mats.items())):
             img = load_item_image(mat)
             tag = 'odd' if idx % 2 else 'even'
-            materials_tree.insert("", "end", iid=mat, image=img if img else "", text="", values=(format_item_name(mat), q, format_stacks(q)), tags=(tag,))
+            acq = max(int(ACQUIRED_MATS.get(mat, 0)), 0)
+            missing = max(q - acq, 0)
+            qty_display = f"{q} ({missing})"
+            row = materials_tree.insert("", "end", iid=mat, image=img if img else "", text="", values=(format_item_name(mat), qty_display, format_stacks(q), acq), tags=(tag,))
+            # Apply done tag if marked done
+            if mat in DONE_MATS:
+                materials_tree.item(row, tags=(tag, 'done'))
     except Exception as e:
         messagebox.showerror("Calculation error", f"Failed to calculate materials: {e}")
 
@@ -919,6 +940,114 @@ def on_redo():
 
 btn_undo.config(command=on_undo)
 btn_redo.config(command=on_redo)
+
+# --- Materials interactions: inline edit for Acquired and hover Done button ---
+def _begin_acq_edit(mat_id: str):
+    global _acq_edit_entry
+    try:
+        bbox = materials_tree.bbox(mat_id, 'acq')
+        if not bbox:
+            return
+        x, y, w, h = bbox
+        _acq_edit_entry = ttk.Entry(materials_tree)
+        _acq_edit_entry.place(x=x, y=y, width=w, height=h)
+        _acq_edit_entry.insert(0, str(ACQUIRED_MATS.get(mat_id, 0)))
+        _acq_edit_entry.focus_set()
+        _acq_edit_entry.select_range(0, 'end')
+
+        def _commit(*_):
+            global _acq_edit_entry
+            val = _acq_edit_entry.get().strip()
+            try:
+                n = int(val)
+            except Exception:
+                n = 0
+            _acq_edit_entry.destroy()
+            _acq_edit_entry = None
+            ACQUIRED_MATS[mat_id] = max(n, 0)
+            refresh_materials_view()
+
+        def _cancel(*_):
+            global _acq_edit_entry
+            if _acq_edit_entry:
+                _acq_edit_entry.destroy()
+                _acq_edit_entry = None
+
+        _acq_edit_entry.bind('<Return>', _commit)
+        _acq_edit_entry.bind('<FocusOut>', _commit)
+        _acq_edit_entry.bind('<Escape>', _cancel)
+    except Exception as e:
+        logging.error(f"Failed to begin acquired edit for {mat_id}: {e}")
+
+
+def _on_materials_double_click(event):
+    row_id = materials_tree.identify_row(event.y)
+    col = materials_tree.identify_column(event.x)
+    if not row_id:
+        return
+    # If double-click Acquired column, edit
+    if col in ('#4', 'acq'):
+        _begin_acq_edit(row_id)
+
+
+def _ensure_done_button():
+    global _hover_done_btn
+    if _hover_done_btn is None:
+        _hover_done_btn = ttk.Button(materials_tree, text='Done', style='Toolbutton')
+        _hover_done_btn.bind('<Button-1>', _on_done_click)
+
+
+def _on_done_click(event=None):
+    global _hover_row
+    if not _hover_row:
+        return
+    mat = _hover_row
+    if mat in DONE_MATS:
+        DONE_MATS.remove(mat)
+    else:
+        DONE_MATS.add(mat)
+    refresh_materials_view()
+    _hide_done_button()
+
+
+def _hide_done_button():
+    global _hover_done_btn
+    if _hover_done_btn:
+        _hover_done_btn.place_forget()
+
+
+def _on_materials_motion(event):
+    """Show a small Done button when hovering over a material row."""
+    global _hover_row
+    row = materials_tree.identify_row(event.y)
+    if not row:
+        _hover_row = None
+        _hide_done_button()
+        return
+    _hover_row = row
+    # Place button at right edge of the Item column
+    try:
+        bbox = materials_tree.bbox(row, 'item')
+        if not bbox:
+            _hide_done_button()
+            return
+        x, y, w, h = bbox
+        _ensure_done_button()
+        _hover_done_btn.configure(text=('Undo' if row in DONE_MATS else 'Done'))
+        # Position a bit inside the item cell on the right
+        btn_w = 50
+        _hover_done_btn.place(x=x + max(w - btn_w - 4, 0), y=y, width=btn_w, height=h)
+    except Exception:
+        _hide_done_button()
+
+
+def _on_materials_leave(event):
+    _hide_done_button()
+
+
+materials_tree.bind('<Double-1>', _on_materials_double_click)
+materials_tree.bind('<Motion>', _on_materials_motion)
+materials_tree.bind('<Leave>', _on_materials_leave)
 
 # Initial population and apply theme last so styles reach all widgets
 apply_theme('dark')
