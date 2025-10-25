@@ -25,10 +25,35 @@ function Get-ISCCPath {
   } catch {}
 
   $candidates = @(
+    (Join-Path $env:ProgramFiles 'Inno Setup 6\\ISCC.exe'),
+    (Join-Path $env:ProgramFiles 'Inno Setup\\ISCC.exe'),
+    (Join-Path ${env:ProgramFiles(x86)} 'Inno Setup 6\\ISCC.exe'),
+    (Join-Path ${env:ProgramFiles(x86)} 'Inno Setup\\ISCC.exe'),
+    (Join-Path $env:LOCALAPPDATA 'Programs\\Inno Setup 6\\ISCC.exe'),
+    (Join-Path $env:LOCALAPPDATA 'Programs\\Inno Setup\\ISCC.exe'),
     'C:\\Program Files\\Inno Setup 6\\ISCC.exe',
     'C:\\Program Files (x86)\\Inno Setup 6\\ISCC.exe'
   )
   foreach ($p in $candidates) { if (Test-Path $p) { return $p } }
+
+  # Registry lookup (some installers set uninstall info)
+  $regKeys = @(
+    'HKLM:\SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall\Inno Setup 6_is1',
+    'HKCU:\SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall\Inno Setup 6_is1'
+  )
+  foreach ($rk in $regKeys) {
+    try {
+      $k = Get-ItemProperty -Path $rk -ErrorAction SilentlyContinue
+      if ($k) {
+        $appPath = $k.'Inno Setup: App Path'
+        if (-not $appPath -and $k.InstallLocation) { $appPath = $k.InstallLocation }
+        if ($appPath) {
+          $exe = Join-Path $appPath 'ISCC.exe'
+          if (Test-Path $exe) { return $exe }
+        }
+      }
+    } catch {}
+  }
   return $null
 }
 

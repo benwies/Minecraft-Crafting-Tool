@@ -14,7 +14,8 @@ DefaultDirName={autopf}\{#MyAppFolderName}
 DisableDirPage=no
 DefaultGroupName={#MyAppFolderName}
 DisableProgramGroupPage=no
-OutputDir=dist\installer
+; Output relative to repo root (two levels up from this script)
+OutputDir={#SourcePath}\..\..\dist\installer
 OutputBaseFilename=MinecraftFarmCalculator-Setup
 Compression=lzma
 SolidCompression=yes
@@ -24,8 +25,8 @@ ArchitecturesInstallIn64BitMode=x64
 Name: "english"; MessagesFile: "compiler:Default.isl"
 
 [Files]
-; Include everything from the PyInstaller one-folder dir
-Source: "dist\MinecraftFarmCalc\*"; DestDir: "{app}"; Flags: recursesubdirs ignoreversion
+; Include everything from the PyInstaller one-folder dir at repo root
+Source: "{#SourcePath}\..\..\dist\MinecraftFarmCalc\*"; DestDir: "{app}"; Flags: recursesubdirs ignoreversion
 
 [Icons]
 Name: "{group}\{#MyAppName}"; Filename: "{app}\{#MyAppExeName}"
