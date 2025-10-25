@@ -5,33 +5,24 @@ from typing import Dict, Any
 from datetime import datetime
 
 logging.basicConfig(
-
     level=logging.DEBUG,
-
-    format='%(asctime)s.%(msecs)03d [%(levelname)s] %(message)s',
-
-    datefmt='%Y-%m-%d %H:%M:%S',
-
-    handlers=[
-
-        logging.FileHandler('minecraft_calculator.log'),
-
-        logging.StreamHandler()
-
-    ]
-
+    format="%(asctime)s.%(msecs)03d [%(levelname)s] %(message)s",
+    datefmt="%Y-%m-%d %H:%M:%S",
+    handlers=[logging.FileHandler("minecraft_calculator.log"), logging.StreamHandler()],
 )
 
-def load_recipes(path: str) -> Dict[str, Any]:
 
+def load_recipes(path: str) -> Dict[str, Any]:
     """Load recipes JSON from path."""
 
     with open(path, "r", encoding="utf-8") as f:
 
         return json.load(f)
 
-def calculate_requirements(recipes: Dict[str, Dict[str, int]], item: str, qty: int, expand_all: bool = False) -> Dict[str, int]:
 
+def calculate_requirements(
+    recipes: Dict[str, Dict[str, int]], item: str, qty: int, expand_all: bool = False
+) -> Dict[str, int]:
     """Return a dict of material -> qty needed to craft `qty` of `item`.
 
     - If expand_all=True: Recursively expand all recipes to base materials
@@ -45,18 +36,17 @@ def calculate_requirements(recipes: Dict[str, Dict[str, int]], item: str, qty: i
     recipe_stack = []
 
     def is_base_material(recipe_item: str, depth: int) -> bool:
-
         """Check if this is a base material that shouldn't be expanded further"""
 
-        if any(recipe_item.endswith('_planks') for x in recipe_item.split('_')):
+        if any(recipe_item.endswith("_planks") for x in recipe_item.split("_")):
 
             return True
 
-        if recipe_item.endswith('_ingot'):
+        if recipe_item.endswith("_ingot"):
 
             return True
 
-        if recipe_item.endswith('_block') and not recipe_item.startswith('stripped_'):
+        if recipe_item.endswith("_block") and not recipe_item.startswith("stripped_"):
 
             return True
 
@@ -72,17 +62,17 @@ def calculate_requirements(recipes: Dict[str, Dict[str, int]], item: str, qty: i
 
         if cur_item in recipe_stack:
 
-            cycle = ' -> '.join(recipe_stack + [cur_item])
+            cycle = " -> ".join(recipe_stack + [cur_item])
 
             logging.error(f"{indent}Recipe cycle detected: {cycle}")
 
             raise ValueError(f"Recipe cycle detected: {cycle}")
 
-        if (cur_item not in recipes or
-
-            not recipes[cur_item] or
-
-            (not expand_all and depth > 0 and is_base_material(cur_item, depth))):
+        if (
+            cur_item not in recipes
+            or not recipes[cur_item]
+            or (not expand_all and depth > 0 and is_base_material(cur_item, depth))
+        ):
 
             logging.debug(f"{indent}Adding material: {cur_qty}x {cur_item}")
 
@@ -100,7 +90,9 @@ def calculate_requirements(recipes: Dict[str, Dict[str, int]], item: str, qty: i
 
                 total_sub_qty = cur_qty * int(sub_q)
 
-                logging.debug(f"{indent}Need {total_sub_qty}x {sub} for {cur_qty}x {cur_item}")
+                logging.debug(
+                    f"{indent}Need {total_sub_qty}x {sub} for {cur_qty}x {cur_item}"
+                )
 
                 helper(sub, total_sub_qty, depth + 1)
 
@@ -114,8 +106,10 @@ def calculate_requirements(recipes: Dict[str, Dict[str, int]], item: str, qty: i
 
     return dict(totals)
 
-def aggregate_requirements(recipes: Dict[str, Dict[str, int]], items: Dict[str, int]) -> Dict[str, int]:
 
+def aggregate_requirements(
+    recipes: Dict[str, Dict[str, int]], items: Dict[str, int]
+) -> Dict[str, int]:
     """Given a dict of item -> qty, return aggregated material requirements."""
 
     logging.info(f"Calculating aggregate requirements for items: {items}")
@@ -139,6 +133,7 @@ def aggregate_requirements(recipes: Dict[str, Dict[str, int]], items: Dict[str, 
     logging.info(f"Final aggregate totals: {dict(totals)}")
 
     return dict(totals)
+
 
 if __name__ == "__main__":
 
