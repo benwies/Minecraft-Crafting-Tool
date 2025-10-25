@@ -4100,3 +4100,51 @@
 2025-10-25 18:19:16.770 [INFO] Final aggregate totals: {}
 2025-10-25 18:19:51.325 [INFO] Calculating aggregate requirements for items: {}
 2025-10-25 18:19:51.325 [INFO] Final aggregate totals: {}
+2025-10-25 18:20:27.669 [INFO] Calculating aggregate requirements for items: {}
+2025-10-25 18:20:27.669 [INFO] Final aggregate totals: {}
+2025-10-25 18:20:33.016 [INFO] Adding item: amethyst_block
+2025-10-25 18:20:33.016 [INFO] Adding 1x amethyst_block
+2025-10-25 18:20:33.016 [DEBUG] Current project items before add: {}
+2025-10-25 18:20:33.016 [DEBUG] Recorded undo snapshot (add_item); undo depth=1
+2025-10-25 18:20:33.016 [DEBUG] Updated project items: {'amethyst_block': 1}
+2025-10-25 18:20:33.023 [DEBUG] STREAM b'IHDR' 16 13
+2025-10-25 18:20:33.024 [DEBUG] STREAM b'PLTE' 41 21
+2025-10-25 18:20:33.024 [DEBUG] STREAM b'IDAT' 74 122
+2025-10-25 18:20:33.029 [INFO] Calculating aggregate requirements for items: {'amethyst_block': 1}
+2025-10-25 18:20:33.029 [DEBUG] Processing requirements for 1x amethyst_block
+2025-10-25 18:20:33.029 [DEBUG] Calculating requirements for 1x amethyst_block
+2025-10-25 18:20:33.029 [DEBUG] Processing: 1x amethyst_block
+2025-10-25 18:20:33.029 [DEBUG] Current recipe stack: 
+2025-10-25 18:20:33.029 [DEBUG] Found recipe for amethyst_block: {'amethyst_shard': 4}
+2025-10-25 18:20:33.029 [DEBUG] Need 4x amethyst_shard for 1x amethyst_block
+2025-10-25 18:20:33.029 [DEBUG]   Processing: 4x amethyst_shard
+2025-10-25 18:20:33.029 [DEBUG]   Current recipe stack: amethyst_block
+2025-10-25 18:20:33.029 [DEBUG]   Adding material: 4x amethyst_shard
+2025-10-25 18:20:33.029 [DEBUG] Final totals for 1x amethyst_block: {'amethyst_shard': 4}
+2025-10-25 18:20:33.029 [DEBUG] Requirements for 1x amethyst_block: {'amethyst_shard': 4}
+2025-10-25 18:20:33.029 [DEBUG] Updated total for amethyst_shard: 4
+2025-10-25 18:20:33.029 [INFO] Final aggregate totals: {'amethyst_shard': 4}
+2025-10-25 18:20:33.030 [DEBUG] STREAM b'IHDR' 16 13
+2025-10-25 18:20:33.030 [DEBUG] STREAM b'PLTE' 41 24
+2025-10-25 18:20:33.030 [DEBUG] STREAM b'tRNS' 77 1
+2025-10-25 18:20:33.030 [DEBUG] STREAM b'IDAT' 90 77
+2025-10-25 18:20:34.651 [INFO] Calculating aggregate requirements for items: {}
+2025-10-25 18:20:34.652 [INFO] Final aggregate totals: {}
+2025-10-25 18:20:35.669 [INFO] Calculating aggregate requirements for items: {'amethyst_block': 1}
+2025-10-25 18:20:35.670 [DEBUG] Processing requirements for 1x amethyst_block
+2025-10-25 18:20:35.670 [DEBUG] Calculating requirements for 1x amethyst_block
+2025-10-25 18:20:35.670 [DEBUG] Processing: 1x amethyst_block
+2025-10-25 18:20:35.670 [DEBUG] Current recipe stack: 
+2025-10-25 18:20:35.670 [DEBUG] Found recipe for amethyst_block: {'amethyst_shard': 4}
+2025-10-25 18:20:35.671 [DEBUG] Need 4x amethyst_shard for 1x amethyst_block
+2025-10-25 18:20:35.671 [DEBUG]   Processing: 4x amethyst_shard
+2025-10-25 18:20:35.671 [DEBUG]   Current recipe stack: amethyst_block
+2025-10-25 18:20:35.671 [DEBUG]   Adding material: 4x amethyst_shard
+2025-10-25 18:20:35.671 [DEBUG] Final totals for 1x amethyst_block: {'amethyst_shard': 4}
+2025-10-25 18:20:35.672 [DEBUG] Requirements for 1x amethyst_block: {'amethyst_shard': 4}
+2025-10-25 18:20:35.672 [DEBUG] Updated total for amethyst_shard: 4
+2025-10-25 18:20:35.672 [INFO] Final aggregate totals: {'amethyst_shard': 4}
+2025-10-25 18:21:02.858 [INFO] Calculating aggregate requirements for items: {}
+2025-10-25 18:21:02.858 [INFO] Final aggregate totals: {}
+2025-10-25 18:21:56.672 [INFO] Calculating aggregate requirements for items: {}
+2025-10-25 18:21:56.672 [INFO] Final aggregate totals: {}
