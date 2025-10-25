@@ -1,0 +1,141 @@
+2025-10-25 22:42:53.126 [INFO] Calculating aggregate requirements for items: {}
+2025-10-25 22:42:53.127 [INFO] Final aggregate totals: {}
+2025-10-25 22:43:15.518 [INFO] Creating new project: test1
+2025-10-25 22:43:15.518 [INFO] Calculating aggregate requirements for items: {}
+2025-10-25 22:43:15.518 [INFO] Final aggregate totals: {}
+2025-10-25 22:43:23.120 [INFO] Adding item: carrot_on_a_stick
+2025-10-25 22:43:23.120 [INFO] Adding 1x carrot_on_a_stick
+2025-10-25 22:43:23.120 [DEBUG] Current project items before add: {}
+2025-10-25 22:43:23.121 [DEBUG] Recorded undo snapshot (add_item); undo depth=1
+2025-10-25 22:43:23.121 [DEBUG] Updated project items: {'carrot_on_a_stick': 1}
+2025-10-25 22:43:23.130 [DEBUG] STREAM b'IHDR' 16 13
+2025-10-25 22:43:23.130 [DEBUG] STREAM b'IDAT' 41 152
+2025-10-25 22:43:23.144 [INFO] Calculating aggregate requirements for items: {'carrot_on_a_stick': 1}
+2025-10-25 22:43:23.144 [DEBUG] Processing requirements for 1x carrot_on_a_stick
+2025-10-25 22:43:23.144 [DEBUG] Calculating requirements for 1x carrot_on_a_stick
+2025-10-25 22:43:23.145 [DEBUG] Processing: 1x carrot_on_a_stick
+2025-10-25 22:43:23.145 [DEBUG] Current recipe stack: 
+2025-10-25 22:43:23.145 [DEBUG] Found recipe for carrot_on_a_stick: {'fishing_rod': 1, 'carrot': 1}
+2025-10-25 22:43:23.145 [DEBUG] Need 1x fishing_rod for 1x carrot_on_a_stick
+2025-10-25 22:43:23.145 [DEBUG]   Processing: 1x fishing_rod
+2025-10-25 22:43:23.145 [DEBUG]   Current recipe stack: carrot_on_a_stick
+2025-10-25 22:43:23.145 [DEBUG]   Found recipe for fishing_rod: {'stick': 3, 'string': 2}
+2025-10-25 22:43:23.145 [DEBUG]   Need 3x stick for 1x fishing_rod
+2025-10-25 22:43:23.145 [DEBUG]     Processing: 3x stick
+2025-10-25 22:43:23.145 [DEBUG]     Current recipe stack: carrot_on_a_stick -> fishing_rod
+2025-10-25 22:43:23.145 [DEBUG]     Found recipe for stick: {'planks': 2}
+2025-10-25 22:43:23.145 [DEBUG]     Need 6x planks for 3x stick
+2025-10-25 22:43:23.145 [DEBUG]       Processing: 6x planks
+2025-10-25 22:43:23.145 [DEBUG]       Current recipe stack: carrot_on_a_stick -> fishing_rod -> stick
+2025-10-25 22:43:23.145 [DEBUG]       Adding material: 6x planks
+2025-10-25 22:43:23.145 [DEBUG]   Need 2x string for 1x fishing_rod
+2025-10-25 22:43:23.145 [DEBUG]     Processing: 2x string
+2025-10-25 22:43:23.145 [DEBUG]     Current recipe stack: carrot_on_a_stick -> fishing_rod
+2025-10-25 22:43:23.145 [DEBUG]     Adding material: 2x string
+2025-10-25 22:43:23.145 [DEBUG] Need 1x carrot for 1x carrot_on_a_stick
+2025-10-25 22:43:23.145 [DEBUG]   Processing: 1x carrot
+2025-10-25 22:43:23.145 [DEBUG]   Current recipe stack: carrot_on_a_stick
+2025-10-25 22:43:23.145 [DEBUG]   Adding material: 1x carrot
+2025-10-25 22:43:23.145 [DEBUG] Final totals for 1x carrot_on_a_stick: {'planks': 6, 'string': 2, 'carrot': 1}
+2025-10-25 22:43:23.145 [DEBUG] Requirements for 1x carrot_on_a_stick: {'planks': 6, 'string': 2, 'carrot': 1}
+2025-10-25 22:43:23.145 [DEBUG] Updated total for planks: 6
+2025-10-25 22:43:23.145 [DEBUG] Updated total for string: 2
+2025-10-25 22:43:23.145 [DEBUG] Updated total for carrot: 1
+2025-10-25 22:43:23.145 [INFO] Final aggregate totals: {'planks': 6, 'string': 2, 'carrot': 1}
+2025-10-25 22:43:23.145 [DEBUG] STREAM b'IHDR' 16 13
+2025-10-25 22:43:23.145 [DEBUG] STREAM b'PLTE' 41 33
+2025-10-25 22:43:23.146 [DEBUG] STREAM b'tRNS' 86 1
+2025-10-25 22:43:23.146 [DEBUG] STREAM b'IDAT' 99 86
+2025-10-25 22:43:23.146 [DEBUG] STREAM b'IHDR' 16 13
+2025-10-25 22:43:23.146 [DEBUG] STREAM b'PLTE' 41 21
+2025-10-25 22:43:23.146 [DEBUG] STREAM b'IDAT' 74 105
+2025-10-25 22:43:23.147 [DEBUG] STREAM b'IHDR' 16 13
+2025-10-25 22:43:23.147 [DEBUG] STREAM b'PLTE' 41 12
+2025-10-25 22:43:23.147 [DEBUG] STREAM b'tRNS' 65 1
+2025-10-25 22:43:23.147 [DEBUG] STREAM b'IDAT' 78 69
+2025-10-25 22:43:24.659 [INFO] Saving project 'test1' to D:\code\mc\dist\MinecraftFarmCalc\_internal\projects\test1.json
+2025-10-25 22:43:24.659 [DEBUG] Project contents: {'carrot_on_a_stick': 1}
+2025-10-25 22:43:24.926 [INFO] Calculating aggregate requirements for items: {'carrot_on_a_stick': 1}
+2025-10-25 22:43:24.926 [DEBUG] Processing requirements for 1x carrot_on_a_stick
+2025-10-25 22:43:24.926 [DEBUG] Calculating requirements for 1x carrot_on_a_stick
+2025-10-25 22:43:24.926 [DEBUG] Processing: 1x carrot_on_a_stick
+2025-10-25 22:43:24.926 [DEBUG] Current recipe stack: 
+2025-10-25 22:43:24.926 [DEBUG] Found recipe for carrot_on_a_stick: {'fishing_rod': 1, 'carrot': 1}
+2025-10-25 22:43:24.926 [DEBUG] Need 1x fishing_rod for 1x carrot_on_a_stick
+2025-10-25 22:43:24.926 [DEBUG]   Processing: 1x fishing_rod
+2025-10-25 22:43:24.926 [DEBUG]   Current recipe stack: carrot_on_a_stick
+2025-10-25 22:43:24.926 [DEBUG]   Found recipe for fishing_rod: {'stick': 3, 'string': 2}
+2025-10-25 22:43:24.926 [DEBUG]   Need 3x stick for 1x fishing_rod
+2025-10-25 22:43:24.926 [DEBUG]     Processing: 3x stick
+2025-10-25 22:43:24.926 [DEBUG]     Current recipe stack: carrot_on_a_stick -> fishing_rod
+2025-10-25 22:43:24.926 [DEBUG]     Found recipe for stick: {'planks': 2}
+2025-10-25 22:43:24.926 [DEBUG]     Need 6x planks for 3x stick
+2025-10-25 22:43:24.926 [DEBUG]       Processing: 6x planks
+2025-10-25 22:43:24.926 [DEBUG]       Current recipe stack: carrot_on_a_stick -> fishing_rod -> stick
+2025-10-25 22:43:24.926 [DEBUG]       Adding material: 6x planks
+2025-10-25 22:43:24.926 [DEBUG]   Need 2x string for 1x fishing_rod
+2025-10-25 22:43:24.926 [DEBUG]     Processing: 2x string
+2025-10-25 22:43:24.926 [DEBUG]     Current recipe stack: carrot_on_a_stick -> fishing_rod
+2025-10-25 22:43:24.926 [DEBUG]     Adding material: 2x string
+2025-10-25 22:43:24.926 [DEBUG] Need 1x carrot for 1x carrot_on_a_stick
+2025-10-25 22:43:24.926 [DEBUG]   Processing: 1x carrot
+2025-10-25 22:43:24.926 [DEBUG]   Current recipe stack: carrot_on_a_stick
+2025-10-25 22:43:24.926 [DEBUG]   Adding material: 1x carrot
+2025-10-25 22:43:24.926 [DEBUG] Final totals for 1x carrot_on_a_stick: {'planks': 6, 'string': 2, 'carrot': 1}
+2025-10-25 22:43:24.926 [DEBUG] Requirements for 1x carrot_on_a_stick: {'planks': 6, 'string': 2, 'carrot': 1}
+2025-10-25 22:43:24.926 [DEBUG] Updated total for planks: 6
+2025-10-25 22:43:24.926 [DEBUG] Updated total for string: 2
+2025-10-25 22:43:24.926 [DEBUG] Updated total for carrot: 1
+2025-10-25 22:43:24.926 [INFO] Final aggregate totals: {'planks': 6, 'string': 2, 'carrot': 1}
+2025-10-25 22:43:26.428 [INFO] Saving project 'test1' to D:\code\mc\dist\MinecraftFarmCalc\_internal\projects\test1.json
+2025-10-25 22:43:26.428 [DEBUG] Project contents: {'carrot_on_a_stick': 1}
+2025-10-25 22:43:27.023 [INFO] Saving project 'test1' to D:\code\mc\dist\MinecraftFarmCalc\_internal\projects\test1.json
+2025-10-25 22:43:27.023 [DEBUG] Project contents: {'carrot_on_a_stick': 1}
+2025-10-25 22:43:29.933 [INFO] Attempting to load project: test1.json
+2025-10-25 22:43:29.933 [INFO] Loaded project 'test1' with 1 items
+2025-10-25 22:43:29.933 [DEBUG] Loaded project contents: {'carrot_on_a_stick': 1}
+2025-10-25 22:43:29.941 [DEBUG] STREAM b'IHDR' 16 13
+2025-10-25 22:43:29.941 [DEBUG] STREAM b'IDAT' 41 152
+2025-10-25 22:43:29.945 [INFO] Calculating aggregate requirements for items: {'carrot_on_a_stick': 1}
+2025-10-25 22:43:29.946 [DEBUG] Processing requirements for 1x carrot_on_a_stick
+2025-10-25 22:43:29.946 [DEBUG] Calculating requirements for 1x carrot_on_a_stick
+2025-10-25 22:43:29.946 [DEBUG] Processing: 1x carrot_on_a_stick
+2025-10-25 22:43:29.946 [DEBUG] Current recipe stack: 
+2025-10-25 22:43:29.946 [DEBUG] Found recipe for carrot_on_a_stick: {'fishing_rod': 1, 'carrot': 1}
+2025-10-25 22:43:29.946 [DEBUG] Need 1x fishing_rod for 1x carrot_on_a_stick
+2025-10-25 22:43:29.946 [DEBUG]   Processing: 1x fishing_rod
+2025-10-25 22:43:29.946 [DEBUG]   Current recipe stack: carrot_on_a_stick
+2025-10-25 22:43:29.946 [DEBUG]   Found recipe for fishing_rod: {'stick': 3, 'string': 2}
+2025-10-25 22:43:29.946 [DEBUG]   Need 3x stick for 1x fishing_rod
+2025-10-25 22:43:29.946 [DEBUG]     Processing: 3x stick
+2025-10-25 22:43:29.946 [DEBUG]     Current recipe stack: carrot_on_a_stick -> fishing_rod
+2025-10-25 22:43:29.946 [DEBUG]     Found recipe for stick: {'planks': 2}
+2025-10-25 22:43:29.946 [DEBUG]     Need 6x planks for 3x stick
+2025-10-25 22:43:29.946 [DEBUG]       Processing: 6x planks
+2025-10-25 22:43:29.946 [DEBUG]       Current recipe stack: carrot_on_a_stick -> fishing_rod -> stick
+2025-10-25 22:43:29.946 [DEBUG]       Adding material: 6x planks
+2025-10-25 22:43:29.946 [DEBUG]   Need 2x string for 1x fishing_rod
+2025-10-25 22:43:29.946 [DEBUG]     Processing: 2x string
+2025-10-25 22:43:29.946 [DEBUG]     Current recipe stack: carrot_on_a_stick -> fishing_rod
+2025-10-25 22:43:29.946 [DEBUG]     Adding material: 2x string
+2025-10-25 22:43:29.946 [DEBUG] Need 1x carrot for 1x carrot_on_a_stick
+2025-10-25 22:43:29.946 [DEBUG]   Processing: 1x carrot
+2025-10-25 22:43:29.946 [DEBUG]   Current recipe stack: carrot_on_a_stick
+2025-10-25 22:43:29.946 [DEBUG]   Adding material: 1x carrot
+2025-10-25 22:43:29.946 [DEBUG] Final totals for 1x carrot_on_a_stick: {'planks': 6, 'string': 2, 'carrot': 1}
+2025-10-25 22:43:29.946 [DEBUG] Requirements for 1x carrot_on_a_stick: {'planks': 6, 'string': 2, 'carrot': 1}
+2025-10-25 22:43:29.946 [DEBUG] Updated total for planks: 6
+2025-10-25 22:43:29.946 [DEBUG] Updated total for string: 2
+2025-10-25 22:43:29.946 [DEBUG] Updated total for carrot: 1
+2025-10-25 22:43:29.946 [INFO] Final aggregate totals: {'planks': 6, 'string': 2, 'carrot': 1}
+2025-10-25 22:43:29.947 [DEBUG] STREAM b'IHDR' 16 13
+2025-10-25 22:43:29.947 [DEBUG] STREAM b'PLTE' 41 33
+2025-10-25 22:43:29.947 [DEBUG] STREAM b'tRNS' 86 1
+2025-10-25 22:43:29.947 [DEBUG] STREAM b'IDAT' 99 86
+2025-10-25 22:43:29.948 [DEBUG] STREAM b'IHDR' 16 13
+2025-10-25 22:43:29.948 [DEBUG] STREAM b'PLTE' 41 21
+2025-10-25 22:43:29.948 [DEBUG] STREAM b'IDAT' 74 105
+2025-10-25 22:43:29.949 [DEBUG] STREAM b'IHDR' 16 13
+2025-10-25 22:43:29.949 [DEBUG] STREAM b'PLTE' 41 12
+2025-10-25 22:43:29.949 [DEBUG] STREAM b'tRNS' 65 1
+2025-10-25 22:43:29.949 [DEBUG] STREAM b'IDAT' 78 69

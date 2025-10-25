@@ -1,0 +1,15 @@
+{
+  "name": "test1",
+  "items": {
+    "carrot_on_a_stick": 1
+  },
+  "custom_mats": {},
+  "acquired_mats": {},
+  "done_mats": [
+    "carrot"
+  ],
+  "manual_undone": [],
+  "manual_done": [
+    "carrot"
+  ]
+}

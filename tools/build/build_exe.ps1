@@ -20,9 +20,13 @@ try {
   }
 }
 
-# Ensure PyInstaller is available (robust check for PS 5.1)
+# Show which Python will be used
+Write-Host "Using Python:"
+& $python -c "import sys; print(sys.executable)"
+
+# Ensure PyInstaller is available (avoid importlib.util to prevent shadowing issues)
 Write-Host "Checking for PyInstaller..."
-& $python -c "import importlib,sys; sys.exit(0) if importlib.util.find_spec('PyInstaller') else sys.exit(1)"
+& $python -c "import PyInstaller" 2>$null
 $hasPyInstaller = ($LASTEXITCODE -eq 0)
 if (-not $hasPyInstaller) {
   Write-Host "Installing PyInstaller..."
@@ -30,7 +34,7 @@ if (-not $hasPyInstaller) {
   # Use --user to avoid permission issues on some systems
   & $python -m pip install --user pyinstaller
   # Re-check
-  & $python -c "import importlib,sys; sys.exit(0) if importlib.util.find_spec('PyInstaller') else sys.exit(1)"
+  & $python -c "import PyInstaller" 2>$null
   $hasPyInstaller = ($LASTEXITCODE -eq 0)
   if (-not $hasPyInstaller) {
     throw "PyInstaller is not available after installation. Ensure pip installs to the same Python ($python)."
