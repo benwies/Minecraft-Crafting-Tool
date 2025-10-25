@@ -6,26 +6,35 @@ Set-Location $repoRoot
 
 Write-Host "Repo root: $repoRoot"
 
-# Pick a Python
-$python = $env:PYTHON ?? 'python'
+# Pick a Python (PowerShell 5.1 compatible)
+$python = $env:PYTHON
+if (-not $python) { $python = 'python' }
 try {
   & $python -V | Out-Null
 } catch {
   $python = 'py'
+  try {
+    & $python -V | Out-Null
+  } catch {
+    throw "Python not found. Install Python 3.x or set $env:PYTHON to your interpreter path."
+  }
 }
 
-# Ensure PyInstaller is available
-$hasPyInstaller = $false
-try {
-  & $python -m PyInstaller --version | Out-Null
-  $hasPyInstaller = $true
-} catch {
-  $hasPyInstaller = $false
-}
+# Ensure PyInstaller is available (robust check for PS 5.1)
+Write-Host "Checking for PyInstaller..."
+& $python -c "import importlib,sys; sys.exit(0) if importlib.util.find_spec('PyInstaller') else sys.exit(1)"
+$hasPyInstaller = ($LASTEXITCODE -eq 0)
 if (-not $hasPyInstaller) {
   Write-Host "Installing PyInstaller..."
   & $python -m pip install --upgrade pip
-  & $python -m pip install pyinstaller
+  # Use --user to avoid permission issues on some systems
+  & $python -m pip install --user pyinstaller
+  # Re-check
+  & $python -c "import importlib,sys; sys.exit(0) if importlib.util.find_spec('PyInstaller') else sys.exit(1)"
+  $hasPyInstaller = ($LASTEXITCODE -eq 0)
+  if (-not $hasPyInstaller) {
+    throw "PyInstaller is not available after installation. Ensure pip installs to the same Python ($python)."
+  }
 }
 
 # Build name
