@@ -190,6 +190,9 @@ def apply_theme(name: str = 'light'):
     style.map('TButton', background=[('active', P['hover'])])
     style.configure('Toolbutton', padding=(6, 4), relief='flat')
     style.map('Toolbutton', background=[('active', P['hover'])])
+    # Row action button (Done/Undo) with compact padding
+    style.configure('RowAction.TButton', padding=(8, 2), relief='flat')
+    style.map('RowAction.TButton', background=[('active', P['hover'])])
 
     # Inputs
     style.configure('TEntry', fieldbackground=P['surface'], foreground=P['text'])
@@ -494,7 +497,8 @@ def _mode_changed(event=None):
 
 mode_combo.bind('<<ComboboxSelected>>', _mode_changed)
 btn_add = ttk.Button(left, text="Add")
-btn_add.grid(row=2, column=0, sticky="ew", padx=2, pady=6)
+# Stretch across both columns to align with the items table width
+btn_add.grid(row=2, column=0, columnspan=2, sticky="ew", padx=2, pady=6)
 
 # Items table with per-row delete and editable qty
 items_tree = ttk.Treeview(left, columns=("item", "qty", "stacks", "del"), show="tree headings", height=12)
@@ -544,12 +548,11 @@ right.columnconfigure(0, weight=1)
 current_project = Project("untitled")
 ACQUIRED_MATS = {}  # material -> acquired quantity (int)
 DONE_MATS = set()   # set of materials marked done
+MANUAL_UNDONE = set()  # materials explicitly marked Undo by user even if fully acquired
 
 _acq_edit_entry = None
-_hover_done_btn = None
-_hover_row = None
-_hide_done_after_id = None
-_over_done_btn = False
+_row_done_btns = {}  # row_id -> button widget always visible in item cell
+_stacks_overlays = {}  # row_id -> Label to render '-' without strike in stacks cell when done
 
 def load_item_image(item_name):
     """Load and cache an item's image"""
@@ -806,10 +809,15 @@ def refresh_materials_view():
             acq = max(int(ACQUIRED_MATS.get(mat, 0)), 0)
             missing = max(q - acq, 0)
             qty_display = f"{q} ({missing})"
+            # Auto-mark as done only if fully acquired and not manually undone
+            if missing == 0 and mat not in MANUAL_UNDONE:
+                DONE_MATS.add(mat)
             row = materials_tree.insert("", "end", iid=mat, image=img if img else "", text="", values=(format_item_name(mat), qty_display, format_stacks(q), acq), tags=(tag,))
             # Apply done tag if marked done
             if mat in DONE_MATS:
                 materials_tree.item(row, tags=(tag, 'done'))
+        # After populating rows, refresh and place the persistent Done/Undo buttons
+        root.after_idle(_refresh_done_buttons)
     except Exception as e:
         messagebox.showerror("Calculation error", f"Failed to calculate materials: {e}")
 
@@ -952,7 +960,7 @@ def on_redo():
 btn_undo.config(command=on_undo)
 btn_redo.config(command=on_redo)
 
-# --- Materials interactions: inline edit for Acquired and hover Done button ---
+# --- Materials interactions: inline edit for Acquired and persistent Done/Undo buttons ---
 def _begin_acq_edit(mat_id: str):
     global _acq_edit_entry
     try:
@@ -1001,6 +1009,152 @@ def _on_materials_double_click(event):
         _begin_acq_edit(row_id)
 
 
+def _on_row_done_click(row_id: str):
+    """Toggle Done/Undo for a specific material row and refresh UI."""
+    if not row_id:
+        return
+    if row_id in DONE_MATS:
+        DONE_MATS.remove(row_id)
+        # Respect manual Undo even if fully acquired
+        MANUAL_UNDONE.add(row_id)
+    else:
+        DONE_MATS.add(row_id)
+        # Clearing manual override when user marks as Done
+        MANUAL_UNDONE.discard(row_id)
+    refresh_materials_view()
+
+
+def _ensure_row_button(row_id: str):
+    """Create a per-row persistent Done/Undo button if missing."""
+    if row_id in _row_done_btns and _row_done_btns[row_id].winfo_exists():
+        return _row_done_btns[row_id]
+    btn = ttk.Button(materials_tree, text='Done', style='RowAction.TButton')
+    try:
+        btn.configure(takefocus=False)
+    except Exception:
+        pass
+    btn.configure(command=lambda rid=row_id: _on_row_done_click(rid))
+    _row_done_btns[row_id] = btn
+    return btn
+
+
+def _layout_done_buttons(event=None):
+    """Place the persistent Done/Undo buttons inside the right side of the Item cell for each visible row."""
+    try:
+        children = materials_tree.get_children('')
+        # Measure text width for current font to size buttons consistently
+        try:
+            fnt = tkfont.nametofont('TkDefaultFont')
+            w_done = fnt.measure('Done') + 28
+            w_undo = fnt.measure('Undo') + 28
+            btn_w = max(w_done, w_undo, 64)
+            # Also get a reasonable button height from font metrics to avoid text clipping
+            line_h = int(fnt.metrics('linespace')) if 'linespace' in fnt.metrics() else 16
+        except Exception:
+            btn_w = 68
+            line_h = 16
+        for rid in children:
+            bbox = materials_tree.bbox(rid, 'item')
+            btn = _ensure_row_button(rid)
+            if not bbox:
+                # Row not visible; hide button
+                btn.place_forget()
+                # Also hide stacks overlay if exists for this offscreen row
+                if rid in _stacks_overlays and _stacks_overlays[rid].winfo_exists():
+                    _stacks_overlays[rid].place_forget()
+                continue
+            x, y, w, h = bbox
+            btn.configure(text=('Undo' if rid in DONE_MATS else 'Done'))
+            # Place near right edge of the Item cell
+            # Compute a height that fits the text plus padding but does not exceed the cell
+            desired_h = max(line_h + 8, 22)
+            btn_h = min(max(h - 2, 20), desired_h)
+            # Center vertically within the cell to keep descenders from clipping
+            y_off = y + max((h - btn_h) // 2, 0)
+            btn.place(x=x + max(w - btn_w - 6, 0), y=y_off, width=btn_w, height=btn_h)
+
+            # Manage Stacks '-' overlay: when row is done and stacks text is '-', show grey '-' without strike-through
+            try:
+                stacks_txt = (materials_tree.set(rid, 'stacks') or '').strip()
+            except Exception:
+                stacks_txt = ''
+            overlay = _stacks_overlays.get(rid)
+            show_overlay = (rid in DONE_MATS and stacks_txt == '-')
+            if show_overlay:
+                # Ensure overlay exists
+                if overlay is None or not overlay.winfo_exists():
+                    overlay = tk.Label(materials_tree, text='-', bd=0, relief='flat')
+                    _stacks_overlays[rid] = overlay
+                # Compute cell bbox for stacks column
+                sb = materials_tree.bbox(rid, 'stacks')
+                if sb:
+                    sx, sy, sw, sh = sb
+                    # Match row background color based on stripe
+                    try:
+                        idx = materials_tree.index(rid)
+                    except Exception:
+                        idx = 0
+                    cell_bg = THEME_PALETTE.get('tree_alt' if (idx % 2) else 'tree_bg', '#111827')
+                    cell_fg = THEME_PALETTE.get('subtext', '#9CA3AF')
+                    try:
+                        overlay.configure(bg=cell_bg, fg=cell_fg, anchor='center')
+                    except Exception:
+                        pass
+                    overlay.place(x=sx, y=sy, width=sw, height=sh)
+                else:
+                    overlay.place_forget()
+            else:
+                if overlay and overlay.winfo_exists():
+                    overlay.place_forget()
+    except Exception:
+        # On any error, avoid crashing the UI; buttons will be refreshed on next call
+        pass
+
+
+def _refresh_done_buttons():
+    """Sync the button set with current rows and layout them."""
+    current_rows = set(materials_tree.get_children(''))
+    # Remove buttons for rows no longer present
+    to_remove = [rid for rid in list(_row_done_btns.keys()) if rid not in current_rows]
+    for rid in to_remove:
+        try:
+            _row_done_btns[rid].place_forget()
+            _row_done_btns[rid].destroy()
+        except Exception:
+            pass
+        _row_done_btns.pop(rid, None)
+    # Remove stacks overlays for rows no longer present
+    to_remove_ov = [rid for rid in list(_stacks_overlays.keys()) if rid not in current_rows]
+    for rid in to_remove_ov:
+        try:
+            _stacks_overlays[rid].place_forget()
+            _stacks_overlays[rid].destroy()
+        except Exception:
+            pass
+        _stacks_overlays.pop(rid, None)
+    # Ensure button exists for each row
+    for rid in current_rows:
+        _ensure_row_button(rid)
+    # Drop manual overrides for rows no longer present
+    removed_manual = [rid for rid in list(MANUAL_UNDONE) if rid not in current_rows]
+    for rid in removed_manual:
+        MANUAL_UNDONE.discard(rid)
+    _layout_done_buttons()
+
+
+def _on_materials_click(event):
+    """Handle clicks on the Done column to mark a material as done."""
+    row_id = materials_tree.identify_row(event.y)
+    col = materials_tree.identify_column(event.x)
+    if not row_id:
+        return
+    # Done column is the 5th data column (#5)
+    if col in ('#5', 'done'):
+        if row_id not in DONE_MATS:
+            DONE_MATS.add(row_id)
+            refresh_materials_view()
+
+
 def _cancel_hide_done():
     global _hide_done_after_id
     if _hide_done_after_id is not None:
@@ -1035,7 +1189,8 @@ def _on_done_leave(event=None):
 def _ensure_done_button():
     global _hover_done_btn
     if _hover_done_btn is None:
-        _hover_done_btn = ttk.Button(materials_tree, text='Done', style='Toolbutton')
+        # Use a flat Label instead of a Button for crisper centering and no extra padding
+        _hover_done_btn = tk.Label(materials_tree, text='↺', bd=0, relief='flat', cursor='hand2')
         _hover_done_btn.bind('<Button-1>', _on_done_click)
         _hover_done_btn.bind('<Enter>', _on_done_enter)
         _hover_done_btn.bind('<Leave>', _on_done_leave)
@@ -1076,15 +1231,34 @@ def _on_materials_motion(event):
         _hover_row = row
     # Place button at right edge of the Item column
     try:
+        # Only show the hover Undo button for rows already marked done
+        if row not in DONE_MATS:
+            _hide_done_button()
+            return
         bbox = materials_tree.bbox(row, 'item')
         if not bbox:
             _hide_done_button()
             return
         x, y, w, h = bbox
         _ensure_done_button()
-        _hover_done_btn.configure(text=('Undo' if row in DONE_MATS else 'Done'))
+        # Choose a simple glyph to render crisply on all DPI/scales
+        label = '↺'
+        # Set background to match the row's stripe color for seamless look
+        try:
+            idx = materials_tree.index(row)
+        except Exception:
+            idx = 0
+        cell_bg = THEME_PALETTE.get('tree_alt' if (idx % 2) else 'tree_bg', '#111827')
+        cell_fg = THEME_PALETTE.get('text', '#E5E7EB')
+        _hover_done_btn.configure(text=label, bg=cell_bg, fg=cell_fg)
+        # Compute a compact pixel width for the glyph plus padding
+        try:
+            fnt = tkfont.nametofont('TkDefaultFont')
+            glyph_w = fnt.measure(label)
+        except Exception:
+            glyph_w = 12
+        btn_w = max(glyph_w + 10, 20)  # padding and minimum
         # Position a bit inside the item cell on the right
-        btn_w = 50
         _hover_done_btn.place(x=x + max(w - btn_w - 4, 0), y=y, width=btn_w, height=h)
     except Exception:
         _hide_done_button()
@@ -1097,8 +1271,11 @@ def _on_materials_leave(event):
 
 
 materials_tree.bind('<Double-1>', _on_materials_double_click)
-materials_tree.bind('<Motion>', _on_materials_motion)
-materials_tree.bind('<Leave>', _on_materials_leave)
+# Reposition buttons when the tree resizes, scrolls, or user interacts
+materials_tree.bind('<Configure>', _layout_done_buttons)
+materials_tree.bind('<ButtonRelease-1>', _layout_done_buttons)
+materials_tree.bind('<KeyRelease>', _layout_done_buttons)
+materials_tree.bind('<MouseWheel>', _layout_done_buttons)
 
 # Initial population and apply theme last so styles reach all widgets
 apply_theme('dark')
