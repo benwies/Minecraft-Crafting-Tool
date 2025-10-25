@@ -20,6 +20,8 @@ OutputBaseFilename=MCCraftingCalculator-Setup
 Compression=lzma
 SolidCompression=yes
 ArchitecturesInstallIn64BitMode=x64
+; Show license during install
+LicenseFile={#SourcePath}\..\..\LICENSE
 #ifdef MyAppIcon
 SetupIconFile={#MyAppIcon}
 #endif

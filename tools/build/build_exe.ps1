@@ -52,7 +52,9 @@ if (Test-Path "$repoRoot\build\$appName") { Remove-Item -Recurse -Force "$repoRo
 $datas = @(
   "recepies.json;.",
   "recepies;recepies",
-  "pic;pic"
+  "pic;pic",
+  "LICENSE;.",
+  "NOTICE.md;."
 )
 
 # If an app icon exists, also ship it as data so the Tk window can load it at runtime
