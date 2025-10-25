@@ -194,6 +194,15 @@ def apply_theme(name: str = 'light'):
     # Inputs
     style.configure('TEntry', fieldbackground=P['surface'], foreground=P['text'])
     style.configure('TCombobox', fieldbackground=P['surface'], foreground=P['text'], background=P['surface'])
+    # Specialized style for the Mode combobox (Qty/Stacks)
+    if name == 'dark':
+        mode_bg = '#FFFFFF'
+        mode_fg = '#111827'
+    else:
+        mode_bg = P['surface']
+        mode_fg = P['text']
+    style.configure('Mode.TCombobox', fieldbackground=mode_bg, foreground=mode_fg, background=mode_bg)
+    style.map('Mode.TCombobox', fieldbackground=[('readonly', mode_bg)], foreground=[('readonly', mode_fg)])
     # Selection and cursor colors via option database (applies to native subwidgets)
     try:
         root.option_clear()
@@ -202,10 +211,18 @@ def apply_theme(name: str = 'light'):
     root.option_add('*Entry.selectBackground', P['select'])
     root.option_add('*Entry.selectForeground', P['text'])
     root.option_add('*Entry.insertBackground', P['text'])
-    root.option_add('*TCombobox*Listbox*background', P['surface'])
-    root.option_add('*TCombobox*Listbox*foreground', P['text'])
-    root.option_add('*TCombobox*Listbox*selectBackground', P['select'])
-    root.option_add('*TCombobox*Listbox*selectForeground', P['text'])
+    # Combobox dropdown (Listbox inside the popdown)
+    if name == 'dark':
+        # In dark mode, use light menu with dark text for readability
+        root.option_add('*TCombobox*Listbox*background', '#FFFFFF')
+        root.option_add('*TCombobox*Listbox*foreground', '#111827')
+        root.option_add('*TCombobox*Listbox*selectBackground', '#DBEAFE')
+        root.option_add('*TCombobox*Listbox*selectForeground', '#111827')
+    else:
+        root.option_add('*TCombobox*Listbox*background', P['surface'])
+        root.option_add('*TCombobox*Listbox*foreground', P['text'])
+        root.option_add('*TCombobox*Listbox*selectBackground', P['select'])
+        root.option_add('*TCombobox*Listbox*selectForeground', P['text'])
 
     # Treeview
     style.configure('Treeview', background=P['tree_bg'], fieldbackground=P['tree_bg'],
@@ -452,7 +469,7 @@ entry_item.bind('<Escape>', _on_item_escape)
 # Quantity mode: either raw quantity or stacks of 64
 mode_var = tk.StringVar(value="Qty")
 ttk.Label(left, text="Mode:").grid(row=1, column=0, sticky="w")
-mode_combo = ttk.Combobox(left, textvariable=mode_var, values=("Qty", "Stacks"), width=8, state="readonly")
+mode_combo = ttk.Combobox(left, textvariable=mode_var, values=("Qty", "Stacks"), width=8, state="readonly", style='Mode.TCombobox')
 mode_combo.grid(row=1, column=0, sticky="e", padx=(0,6))
 # Numeric entry for the chosen mode (Qty or Stacks)
 entry_qty = ttk.Entry(left)

@@ -5134,3 +5134,58 @@
 2025-10-25 18:46:31.352 [DEBUG] Requirements for 1x acacia_planks: {'acacia_logs': 1}
 2025-10-25 18:46:31.352 [DEBUG] Updated total for acacia_logs: 1
 2025-10-25 18:46:31.352 [INFO] Final aggregate totals: {'acacia_logs': 1}
+2025-10-25 18:47:18.939 [INFO] Calculating aggregate requirements for items: {}
+2025-10-25 18:47:18.940 [INFO] Final aggregate totals: {}
+2025-10-25 18:47:42.932 [INFO] Calculating aggregate requirements for items: {}
+2025-10-25 18:47:42.932 [INFO] Final aggregate totals: {}
+2025-10-25 18:47:43.957 [INFO] Calculating aggregate requirements for items: {}
+2025-10-25 18:47:43.958 [INFO] Final aggregate totals: {}
+2025-10-25 18:48:44.256 [INFO] Calculating aggregate requirements for items: {}
+2025-10-25 18:48:44.256 [INFO] Final aggregate totals: {}
+2025-10-25 18:49:10.531 [INFO] Calculating aggregate requirements for items: {}
+2025-10-25 18:49:10.532 [INFO] Final aggregate totals: {}
+2025-10-25 18:49:11.050 [INFO] Calculating aggregate requirements for items: {}
+2025-10-25 18:49:11.050 [INFO] Final aggregate totals: {}
+2025-10-25 18:49:29.267 [INFO] Calculating aggregate requirements for items: {}
+2025-10-25 18:49:29.267 [INFO] Final aggregate totals: {}
+2025-10-25 19:47:52.201 [INFO] Calculating aggregate requirements for items: {}
+2025-10-25 19:47:52.201 [INFO] Final aggregate totals: {}
+2025-10-25 19:47:53.289 [INFO] Calculating aggregate requirements for items: {}
+2025-10-25 19:47:53.289 [INFO] Final aggregate totals: {}
+2025-10-25 19:47:56.487 [INFO] Calculating aggregate requirements for items: {}
+2025-10-25 19:47:56.488 [INFO] Final aggregate totals: {}
+2025-10-25 19:47:57.053 [INFO] Calculating aggregate requirements for items: {}
+2025-10-25 19:47:57.053 [INFO] Final aggregate totals: {}
+2025-10-25 19:48:01.837 [INFO] Adding item: acacia_stairs
+2025-10-25 19:48:01.837 [INFO] Adding 135872x acacia_stairs
+2025-10-25 19:48:01.838 [DEBUG] Current project items before add: {}
+2025-10-25 19:48:01.838 [DEBUG] Recorded undo snapshot (add_item); undo depth=1
+2025-10-25 19:48:01.838 [DEBUG] Updated project items: {'acacia_stairs': 135872}
+2025-10-25 19:48:01.848 [DEBUG] STREAM b'IHDR' 16 13
+2025-10-25 19:48:01.849 [DEBUG] STREAM b'PLTE' 41 21
+2025-10-25 19:48:01.849 [DEBUG] STREAM b'IDAT' 74 112
+2025-10-25 19:48:01.855 [INFO] Calculating aggregate requirements for items: {'acacia_stairs': 135872}
+2025-10-25 19:48:01.855 [DEBUG] Processing requirements for 135872x acacia_stairs
+2025-10-25 19:48:01.855 [DEBUG] Calculating requirements for 135872x acacia_stairs
+2025-10-25 19:48:01.855 [DEBUG] Processing: 135872x acacia_stairs
+2025-10-25 19:48:01.855 [DEBUG] Current recipe stack: 
+2025-10-25 19:48:01.855 [DEBUG] Found recipe for acacia_stairs: {'acacia_planks': 6}
+2025-10-25 19:48:01.855 [DEBUG] Need 815232x acacia_planks for 135872x acacia_stairs
+2025-10-25 19:48:01.855 [DEBUG]   Processing: 815232x acacia_planks
+2025-10-25 19:48:01.855 [DEBUG]   Current recipe stack: acacia_stairs
+2025-10-25 19:48:01.856 [DEBUG]   Adding material: 815232x acacia_planks
+2025-10-25 19:48:01.856 [DEBUG] Final totals for 135872x acacia_stairs: {'acacia_planks': 815232}
+2025-10-25 19:48:01.856 [DEBUG] Requirements for 135872x acacia_stairs: {'acacia_planks': 815232}
+2025-10-25 19:48:01.856 [DEBUG] Updated total for acacia_planks: 815232
+2025-10-25 19:48:01.856 [INFO] Final aggregate totals: {'acacia_planks': 815232}
+2025-10-25 19:48:01.856 [DEBUG] STREAM b'IHDR' 16 13
+2025-10-25 19:48:01.856 [DEBUG] STREAM b'PLTE' 41 21
+2025-10-25 19:48:01.856 [DEBUG] STREAM b'IDAT' 74 112
+2025-10-25 19:48:05.047 [INFO] Calculating aggregate requirements for items: {}
+2025-10-25 19:48:05.047 [INFO] Final aggregate totals: {}
+2025-10-25 19:48:22.577 [INFO] Calculating aggregate requirements for items: {}
+2025-10-25 19:48:22.577 [INFO] Final aggregate totals: {}
+2025-10-25 19:48:35.197 [INFO] Calculating aggregate requirements for items: {}
+2025-10-25 19:48:35.198 [INFO] Final aggregate totals: {}
+2025-10-25 19:48:38.300 [INFO] Calculating aggregate requirements for items: {}
+2025-10-25 19:48:38.300 [INFO] Final aggregate totals: {}
