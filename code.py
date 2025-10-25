@@ -4,102 +4,144 @@ from collections import defaultdict
 from typing import Dict, Any
 from datetime import datetime
 
-# Configure logging
 logging.basicConfig(
+
     level=logging.DEBUG,
+
     format='%(asctime)s.%(msecs)03d [%(levelname)s] %(message)s',
+
     datefmt='%Y-%m-%d %H:%M:%S',
+
     handlers=[
+
         logging.FileHandler('minecraft_calculator.log'),
+
         logging.StreamHandler()
+
     ]
+
 )
 
-
 def load_recipes(path: str) -> Dict[str, Any]:
-	"""Load recipes JSON from path."""
-	with open(path, "r", encoding="utf-8") as f:
-		return json.load(f)
 
+    """Load recipes JSON from path."""
+
+    with open(path, "r", encoding="utf-8") as f:
+
+        return json.load(f)
 
 def calculate_requirements(recipes: Dict[str, Dict[str, int]], item: str, qty: int, expand_all: bool = False) -> Dict[str, int]:
+
     """Return a dict of material -> qty needed to craft `qty` of `item`.
 
     - If expand_all=True: Recursively expand all recipes to base materials
     - If expand_all=False: Only stop expansion for wood plank recipes
     """
+
     logging.debug(f"Calculating requirements for {qty}x {item}")
+
     totals = defaultdict(int)
+
     recipe_stack = []
 
     def is_base_material(recipe_item: str, depth: int) -> bool:
+
         """Check if this is a base material that shouldn't be expanded further"""
-        # Don't expand plank recipes (logs -> planks)
+
         if any(recipe_item.endswith('_planks') for x in recipe_item.split('_')):
+
             return True
-        # Don't expand ingot recipes (nuggets -> ingots)
+
         if recipe_item.endswith('_ingot'):
+
             return True
-        # Don't expand block recipes (ingots -> blocks)
+
         if recipe_item.endswith('_block') and not recipe_item.startswith('stripped_'):
+
             return True
+
         return False
 
     def helper(cur_item: str, cur_qty: int, depth=0):
+
         indent = "  " * depth
-        
+
         logging.debug(f"{indent}Processing: {cur_qty}x {cur_item}")
+
         logging.debug(f"{indent}Current recipe stack: {' -> '.join(recipe_stack)}")
-        
+
         if cur_item in recipe_stack:
+
             cycle = ' -> '.join(recipe_stack + [cur_item])
+
             logging.error(f"{indent}Recipe cycle detected: {cycle}")
+
             raise ValueError(f"Recipe cycle detected: {cycle}")
-        
-        # Stop expanding if:
-        # 1. Item has no recipe, or
-        # 2. Item has an empty recipe (base material), or
-        # 3. It's a base material and we're not specifically requesting it
-        if (cur_item not in recipes or 
-            not recipes[cur_item] or  # Empty recipe
+
+        if (cur_item not in recipes or
+
+            not recipes[cur_item] or
+
             (not expand_all and depth > 0 and is_base_material(cur_item, depth))):
+
             logging.debug(f"{indent}Adding material: {cur_qty}x {cur_item}")
+
             totals[cur_item] += cur_qty
+
             return
 
         recipe_stack.append(cur_item)
+
         try:
+
             logging.debug(f"{indent}Found recipe for {cur_item}: {recipes[cur_item]}")
+
             for sub, sub_q in recipes[cur_item].items():
+
                 total_sub_qty = cur_qty * int(sub_q)
+
                 logging.debug(f"{indent}Need {total_sub_qty}x {sub} for {cur_qty}x {cur_item}")
+
                 helper(sub, total_sub_qty, depth + 1)
+
         finally:
+
             recipe_stack.pop()
 
     helper(item, int(qty), depth=0)
-    logging.debug(f"Final totals for {qty}x {item}: {dict(totals)}")
-    return dict(totals)
 
+    logging.debug(f"Final totals for {qty}x {item}: {dict(totals)}")
+
+    return dict(totals)
 
 def aggregate_requirements(recipes: Dict[str, Dict[str, int]], items: Dict[str, int]) -> Dict[str, int]:
+
     """Given a dict of item -> qty, return aggregated material requirements."""
+
     logging.info(f"Calculating aggregate requirements for items: {items}")
+
     totals = defaultdict(int)
+
     for itm, q in items.items():
+
         logging.debug(f"Processing requirements for {q}x {itm}")
-        # Only expand recipe if the item is directly requested
+
         sub = calculate_requirements(recipes, itm, q, expand_all=False)
+
         logging.debug(f"Requirements for {q}x {itm}: {sub}")
+
         for mat, mq in sub.items():
+
             totals[mat] += mq
+
             logging.debug(f"Updated total for {mat}: {totals[mat]}")
+
     logging.info(f"Final aggregate totals: {dict(totals)}")
+
     return dict(totals)
 
-
 if __name__ == "__main__":
-	# Quick manual check
-	sample = {"redstone_torch": {"stick": 1, "redstone": 1}}
-	print(calculate_requirements(sample, "redstone_torch", 10))
 
+    sample = {"redstone_torch": {"stick": 1, "redstone": 1}}
+
+    print(calculate_requirements(sample, "redstone_torch", 10))
