@@ -331,7 +331,7 @@ btn_add.grid(row=2, column=0, sticky="ew", padx=2, pady=6)
 
 # Items table with per-row delete and editable qty
 items_tree = ttk.Treeview(left, columns=("item", "qty", "stacks", "del"), show="tree headings", height=12)
-items_tree.heading("#0", text="")  # Image column
+items_tree.heading("#0", text="Img")  # Image column
 items_tree.heading("item", text="Item")
 items_tree.heading("qty", text="Qty")
 items_tree.heading("stacks", text="Stacks")
@@ -350,7 +350,7 @@ left.columnconfigure(0, weight=1)
 right = ttk.LabelFrame(main, text="Raw Materials", padding=8)
 right.grid(row=1, column=1, sticky="nsew", padx=6, pady=6)
 materials_tree = ttk.Treeview(right, columns=("item", "qty", "stacks"), show="tree headings", height=20)
-materials_tree.heading("#0", text="")  # Image column
+materials_tree.heading("#0", text="Img")  # Image column
 materials_tree.heading("item", text="Item")
 materials_tree.heading("qty", text="Qty")
 materials_tree.heading("stacks", text="Stacks")
