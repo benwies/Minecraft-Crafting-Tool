@@ -2507,9 +2507,6 @@
     "paper": 1,
     "wither_skeleton_skull": 1
   },
-  "slime_ball": {
-    "slime_block": 1
-  },
   "slime_block": {
     "slime_ball": 9
   },

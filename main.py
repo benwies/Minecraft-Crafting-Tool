@@ -33,6 +33,9 @@ for p in PIC_DIR.glob("*.png"):
     except Exception:
         pass
 
+# Suggestions list for custom materials (initialized later)
+ALL_MATERIAL_SUGGESTIONS = []
+
 
 PROJECTS_DIR = BASE / "projects"
 PROJECTS_DIR.mkdir(exist_ok=True)
@@ -71,13 +74,22 @@ MAX_HISTORY = 5
 def snapshot_state():
     return {
         "name": current_project.name if 'current_project' in globals() else "",
-        "items": copy.deepcopy(current_project.items) if 'current_project' in globals() else {}
+        "items": copy.deepcopy(current_project.items) if 'current_project' in globals() else {},
+        "custom_mats": copy.deepcopy(CUSTOM_MATS),
+        "acquired_mats": copy.deepcopy(ACQUIRED_MATS),
     }
 
 def apply_state(state):
     try:
         current_project.name = state.get("name", current_project.name)
         current_project.items = dict(state.get("items", {}))
+        # Restore custom and acquired materials if present
+        try:
+            global CUSTOM_MATS, ACQUIRED_MATS
+            CUSTOM_MATS = dict(state.get("custom_mats", CUSTOM_MATS))
+            ACQUIRED_MATS = dict(state.get("acquired_mats", ACQUIRED_MATS))
+        except Exception:
+            pass
         # Reflect name into entry field
         try:
             entry_proj.delete(0, 'end')
@@ -125,16 +137,24 @@ class Project:
     def __init__(self, name: str, items=None):
         self.name = name
         self.items = items or {}  # item -> qty
+        # Optional per-project custom raw materials
+        self.custom_mats = {}
 
     @classmethod
     def load(cls, path: Path):
         with open(path, "r", encoding="utf-8") as f:
             data = json.load(f)
-        return cls(data.get("name", path.stem), data.get("items", {}))
+        proj = cls(data.get("name", path.stem), data.get("items", {}))
+        proj.custom_mats = dict(data.get("custom_mats", {}))
+        return proj
 
     def save(self, path: Path):
         with open(path, "w", encoding="utf-8") as f:
-            json.dump({"name": self.name, "items": self.items}, f, indent=2)
+            json.dump({
+                "name": self.name,
+                "items": self.items,
+                "custom_mats": getattr(self, 'custom_mats', {}),
+            }, f, indent=2)
 
 
 def list_project_files():
@@ -526,6 +546,148 @@ btn_add = ttk.Button(left, text="Add")
 # Stretch across both columns to align with the items table width
 btn_add.grid(row=2, column=0, columnspan=2, sticky="ew", padx=2, pady=6)
 
+# --- Custom materials autocomplete (separate popup like the item field) ---
+_cust_suggestion_win = None
+_cust_suggestion_listbox = None
+_cust_tab_pressed = False
+
+def _cust_hide_suggestions():
+    global _cust_suggestion_win, _cust_suggestion_listbox
+    try:
+        if _cust_suggestion_win:
+            _cust_suggestion_win.destroy()
+    except Exception:
+        pass
+    _cust_suggestion_win = None
+    _cust_suggestion_listbox = None
+
+
+def _cust_accept_suggestion(evt=None):
+    global _cust_suggestion_listbox
+    if not _cust_suggestion_listbox:
+        return
+    sel = _cust_suggestion_listbox.curselection()
+    if not sel:
+        return
+    value = _cust_suggestion_listbox.get(sel[0])
+    custom_name_var.set(value)
+    _cust_hide_suggestions()
+    try:
+        custom_name_combo.icursor('end')
+    except Exception:
+        pass
+
+
+def _cust_show_suggestions(suggestions):
+    global _cust_suggestion_win, _cust_suggestion_listbox
+    _cust_hide_suggestions()
+    if not suggestions:
+        return
+    try:
+        _cust_suggestion_win = tk.Toplevel(root)
+        _cust_suggestion_win.wm_overrideredirect(True)
+        _cust_suggestion_win.attributes('-topmost', True)
+        _cust_suggestion_listbox = tk.Listbox(
+            _cust_suggestion_win,
+            activestyle='dotbox',
+            exportselection=False,
+            selectmode='browse',
+            highlightthickness=0
+        )
+        # Apply theme colors
+        try:
+            _cust_suggestion_listbox.configure(
+                bg=THEME_PALETTE.get('surface', '#FFFFFF'),
+                fg=THEME_PALETTE.get('text', '#000000'),
+                selectbackground=THEME_PALETTE.get('select', '#DBEAFE'),
+                selectforeground=THEME_PALETTE.get('text', '#000000'),
+                relief='flat', bd=1
+            )
+        except Exception:
+            pass
+        for s in suggestions:
+            _cust_suggestion_listbox.insert('end', s)
+        _cust_suggestion_listbox.pack(fill='both', expand=True)
+
+        x = custom_name_combo.winfo_rootx()
+        y = custom_name_combo.winfo_rooty() + custom_name_combo.winfo_height()
+        width = custom_name_combo.winfo_width()
+        height = min(6, len(suggestions)) * 20
+        _cust_suggestion_win.geometry(f"{width}x{height}+{x}+{y}")
+
+        _cust_suggestion_listbox.bind('<Double-Button-1>', _cust_accept_suggestion)
+        _cust_suggestion_listbox.bind('<Return>', _cust_accept_suggestion)
+    except Exception:
+        _cust_hide_suggestions()
+
+
+def _cust_update_suggestions(event=None):
+    global _cust_tab_pressed
+    if _cust_tab_pressed:
+        _cust_tab_pressed = False
+        return
+    typed = custom_name_var.get() or ""
+    if typed == "":
+        _cust_hide_suggestions()
+        return
+    lower = typed.lower()
+    suggestions = [it for it in ALL_MATERIAL_SUGGESTIONS if lower in it.lower()]
+    if suggestions:
+        _cust_show_suggestions(suggestions)
+    else:
+        _cust_hide_suggestions()
+
+
+def _cust_on_tab(event):
+    global _cust_suggestion_listbox, _cust_tab_pressed
+    _cust_tab_pressed = True
+    if _cust_suggestion_listbox:
+        try:
+            sel = _cust_suggestion_listbox.curselection()
+            if not sel:
+                _cust_suggestion_listbox.selection_clear(0, 'end')
+                _cust_suggestion_listbox.selection_set(0)
+                _cust_suggestion_listbox.activate(0)
+                _cust_suggestion_listbox.see(0)
+            else:
+                current_idx = sel[0]
+                next_idx = (current_idx + 1) % _cust_suggestion_listbox.size()
+                _cust_suggestion_listbox.selection_clear(0, 'end')
+                _cust_suggestion_listbox.selection_set(next_idx)
+                _cust_suggestion_listbox.activate(next_idx)
+                _cust_suggestion_listbox.see(next_idx)
+            custom_name_combo.focus_set()
+            return "break"
+        except Exception:
+            _cust_tab_pressed = False
+    return None
+
+
+def _cust_on_enter(event):
+    if _cust_suggestion_listbox:
+        _cust_accept_suggestion()
+        # Move to qty entry
+        try:
+            custom_qty_entry.focus_set()
+            custom_qty_entry.select_range(0, 'end')
+        except Exception:
+            pass
+    else:
+        try:
+            custom_qty_entry.focus_set()
+            custom_qty_entry.select_range(0, 'end')
+        except Exception:
+            pass
+    return "break"
+
+
+def _cust_on_escape(event):
+    _cust_hide_suggestions()
+    return "break"
+
+
+# Bindings for custom name field are attached after widget creation
+
 # Items table with per-row delete and editable qty
 items_tree = ttk.Treeview(left, columns=("item", "qty", "stacks", "del"), show="tree headings", height=12)
 items_tree.heading("#0", text="Img")  # Image column
@@ -546,6 +708,27 @@ left.columnconfigure(0, weight=1)
 # Right: raw materials
 right = ttk.LabelFrame(main, text="Raw Materials", padding=8)
 right.grid(row=1, column=1, sticky="nsew", padx=6, pady=6)
+
+# Custom materials input (name + qty)
+custom_frame = ttk.Frame(right)
+custom_frame.grid(row=0, column=0, sticky="ew", pady=(0, 6))
+ttk.Label(custom_frame, text="Add custom material:").pack(side="left", padx=(0, 6))
+custom_name_var = tk.StringVar()
+custom_name_combo = ttk.Combobox(custom_frame, textvariable=custom_name_var, values=ALL_MATERIAL_SUGGESTIONS)
+custom_name_combo.pack(side="left", padx=(0, 6))
+custom_qty_entry = ttk.Entry(custom_frame, width=6)
+custom_qty_entry.insert(0, "1")
+custom_qty_entry.pack(side="left", padx=(0, 6))
+btn_custom_add = ttk.Button(custom_frame, text="Add")
+btn_custom_add.pack(side="left")
+
+# Now that custom_name_combo exists, attach autocomplete bindings
+custom_name_combo.bind('<KeyRelease>', _cust_update_suggestions)
+custom_name_combo.bind('<Down>', lambda e: (_cust_suggestion_listbox.focus_set(), _cust_suggestion_listbox.selection_set(0)) if _cust_suggestion_listbox else None)
+custom_name_combo.bind('<Tab>', _cust_on_tab)
+custom_name_combo.bind('<Return>', _cust_on_enter)
+custom_name_combo.bind('<Escape>', _cust_on_escape)
+
 materials_tree = ttk.Treeview(right, columns=("item", "qty", "stacks", "acq"), show="tree headings", height=20)
 materials_tree.heading("#0", text="Img")  # Image column
 materials_tree.heading("item", text="Item")
@@ -557,7 +740,7 @@ materials_tree.column("item", width=200, anchor="w", stretch=True)
 materials_tree.column("qty", width=120, anchor="center", stretch=False)
 materials_tree.column("stacks", width=120, anchor="w", stretch=False)
 materials_tree.column("acq", width=80, anchor="center", stretch=False)
-materials_tree.grid(row=0, column=0, sticky="nsew")
+materials_tree.grid(row=1, column=0, sticky="nsew")
 # Ensure the Qty header fits fully based on current font metrics
 try:
     _hdr_font = tkfont.nametofont('TkHeadingFont')
@@ -576,11 +759,45 @@ ACQUIRED_MATS = {}  # material -> acquired quantity (int)
 DONE_MATS = set()   # set of materials marked done
 MANUAL_UNDONE = set()  # materials explicitly marked Undo by user even if fully acquired
 MANUAL_DONE = set()    # materials explicitly marked Done by user even if not fully acquired
+CUSTOM_MATS = {}  # additional raw materials user adds manually: material -> qty
 
 _acq_edit_entry = None
 _row_done_btns = {}  # row_id -> button widget always visible in item cell
 _stacks_overlays = {}  # row_id -> Label to render '-' without strike in stacks cell when done
 _qty_overlays = {}  # row_id -> Frame+Labels overlay for coloring (missing) in red in Qty column
+
+# Build a suggestions list for custom materials from recipes keys, their sub-keys, and available images
+def _collect_material_suggestions():
+    try:
+        mats = set()
+        # All top-level recipe keys and their ingredient keys
+        for k, v in RECIPES.items():
+            mats.add(k)
+            try:
+                for sk in (v or {}).keys():
+                    mats.add(sk)
+            except Exception:
+                pass
+        # Image base names
+        try:
+            for base in PIC_INDEX.keys():
+                mats.add(base)
+        except Exception:
+            pass
+        # Common aliases
+        mats.update({"dirt", "stone", "cobblestone", "sand", "gravel", "glass"})
+        # Return sorted list
+        return sorted(mats)
+    except Exception:
+        return []
+
+ALL_MATERIAL_SUGGESTIONS = _collect_material_suggestions()
+
+def _normalize_material_key(name: str) -> str:
+    try:
+        return str(name).strip().lower().replace(' ', '_')
+    except Exception:
+        return str(name).strip()
 
 def load_item_image(item_name):
     """Load and cache an item's image"""
@@ -831,6 +1048,12 @@ def refresh_materials_view():
         mats = aggregate_requirements(RECIPES, current_project.items)
         # Normalize certain materials for display (e.g., slime_block -> slime_ball x9)
         mats = normalize_display_mats(mats)
+        # Add any custom materials the user requested
+        try:
+            for k, v in CUSTOM_MATS.items():
+                mats[k] = mats.get(k, 0) + max(int(v), 0)
+        except Exception:
+            pass
         for r in materials_tree.get_children():
             materials_tree.delete(r)
         for idx, (mat, q) in enumerate(sorted(mats.items())):
@@ -876,6 +1099,13 @@ def on_new_project():
     logging.info(f"Creating new project: {name}")
     global current_project
     current_project = Project(name, {})
+    # Reset per-project custom materials
+    try:
+        current_project.custom_mats = {}
+        global CUSTOM_MATS
+        CUSTOM_MATS = {}
+    except Exception:
+        pass
     clear_history()
     entry_proj.delete(0, "end")
     entry_proj.insert(0, name)
@@ -888,6 +1118,11 @@ def on_save_project():
     logging.info(f"Saving project '{name}' to {path}")
     logging.debug(f"Project contents: {current_project.items}")
     current_project.name = name
+    # Persist custom materials with the project
+    try:
+        current_project.custom_mats = dict(CUSTOM_MATS)
+    except Exception:
+        pass
     current_project.save(path)
     refresh_projects_combo()
     messagebox.showinfo("Saved", f"Project saved to {path}")
@@ -910,6 +1145,12 @@ def on_load_project():
         return
     global current_project
     current_project = Project.load(path)
+    # Load custom materials into runtime state
+    try:
+        global CUSTOM_MATS
+        CUSTOM_MATS = dict(getattr(current_project, 'custom_mats', {}))
+    except Exception:
+        pass
     clear_history()
     logging.info(f"Loaded project '{current_project.name}' with {len(current_project.items)} items")
     logging.debug(f"Loaded project contents: {current_project.items}")
@@ -1424,6 +1665,42 @@ materials_tree.bind('<Configure>', _layout_done_buttons)
 materials_tree.bind('<ButtonRelease-1>', _layout_done_buttons)
 materials_tree.bind('<KeyRelease>', _layout_done_buttons)
 materials_tree.bind('<MouseWheel>', _layout_done_buttons)
+
+# --- Custom materials add handler ---
+def on_add_custom_mat(event=None):
+    name = (custom_name_var.get() or '').strip()
+    if not name:
+        messagebox.showinfo("Input", "Enter a material name")
+        return "break"
+    try:
+        qty = int(custom_qty_entry.get().strip() or '0')
+    except Exception:
+        qty = 0
+    if qty <= 0:
+        messagebox.showerror("Quantity", "Enter a positive integer quantity")
+        return "break"
+    key = _normalize_material_key(name)
+    # Record undo and update state
+    record_undo("add_custom_material")
+    CUSTOM_MATS[key] = CUSTOM_MATS.get(key, 0) + qty
+    # Optional: keep in project object so a quick save persists without extra steps
+    try:
+        current_project.custom_mats = dict(CUSTOM_MATS)
+    except Exception:
+        pass
+    # Clear inputs and refresh
+    try:
+        custom_name_var.set("")
+        custom_qty_entry.delete(0, 'end')
+        custom_qty_entry.insert(0, '1')
+        custom_name_combo.focus_set()
+    except Exception:
+        pass
+    refresh_materials_view()
+    return "break"
+
+btn_custom_add.config(command=on_add_custom_mat)
+custom_qty_entry.bind('<Return>', on_add_custom_mat)
 
 # Initial population and apply theme last so styles reach all widgets
 apply_theme('dark')
