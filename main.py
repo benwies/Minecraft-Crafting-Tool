@@ -549,10 +549,12 @@ current_project = Project("untitled")
 ACQUIRED_MATS = {}  # material -> acquired quantity (int)
 DONE_MATS = set()   # set of materials marked done
 MANUAL_UNDONE = set()  # materials explicitly marked Undo by user even if fully acquired
+MANUAL_DONE = set()    # materials explicitly marked Done by user even if not fully acquired
 
 _acq_edit_entry = None
 _row_done_btns = {}  # row_id -> button widget always visible in item cell
 _stacks_overlays = {}  # row_id -> Label to render '-' without strike in stacks cell when done
+_qty_overlays = {}  # row_id -> Frame+Labels overlay for coloring (missing) in red in Qty column
 
 def load_item_image(item_name):
     """Load and cache an item's image"""
@@ -809,9 +811,23 @@ def refresh_materials_view():
             acq = max(int(ACQUIRED_MATS.get(mat, 0)), 0)
             missing = max(q - acq, 0)
             qty_display = f"{q} ({missing})"
-            # Auto-mark as done only if fully acquired and not manually undone
-            if missing == 0 and mat not in MANUAL_UNDONE:
+            # Manual overrides take precedence over auto state
+            if mat in MANUAL_DONE:
+                # Force Done regardless of acquired/missing
                 DONE_MATS.add(mat)
+            elif mat in MANUAL_UNDONE:
+                # Force not Done even if fully acquired
+                DONE_MATS.discard(mat)
+            else:
+                # Auto-state rules:
+                # - If fully acquired, auto-mark done
+                # - If not fully acquired (>0 missing), auto-uncheck and clear manual override
+                if missing == 0:
+                    DONE_MATS.add(mat)
+                else:
+                    DONE_MATS.discard(mat)
+                    # Reset manual-undo so a future return to 0 can auto-done again
+                    MANUAL_UNDONE.discard(mat)
             row = materials_tree.insert("", "end", iid=mat, image=img if img else "", text="", values=(format_item_name(mat), qty_display, format_stacks(q), acq), tags=(tag,))
             # Apply done tag if marked done
             if mat in DONE_MATS:
@@ -1017,9 +1033,12 @@ def _on_row_done_click(row_id: str):
         DONE_MATS.remove(row_id)
         # Respect manual Undo even if fully acquired
         MANUAL_UNDONE.add(row_id)
+        # Clear manual-done override
+        MANUAL_DONE.discard(row_id)
     else:
         DONE_MATS.add(row_id)
-        # Clearing manual override when user marks as Done
+        # User explicitly marked Done: set manual-done and clear manual-undo
+        MANUAL_DONE.add(row_id)
         MANUAL_UNDONE.discard(row_id)
     refresh_materials_view()
 
@@ -1106,6 +1125,93 @@ def _layout_done_buttons(event=None):
             else:
                 if overlay and overlay.winfo_exists():
                     overlay.place_forget()
+            # Manage Qty overlay to color only the (missing) part in red
+            try:
+                qty_txt = (materials_tree.set(rid, 'qty') or '').strip()
+            except Exception:
+                qty_txt = ''
+            # Parse into total and (missing) parts
+            lp = qty_txt.find('(')
+            rp = qty_txt.rfind(')')
+            have_missing = (lp != -1 and rp != -1 and rp > lp)
+            qty_total = qty_txt[:lp].strip() if have_missing else qty_txt
+            qty_missing = qty_txt[lp:rp+1].strip() if have_missing else ''
+
+            # Only create overlay if we have a parsed (missing) segment
+            qov = _qty_overlays.get(rid)
+            if have_missing and bbox:
+                # Ensure overlay widgets exist
+                if not qov or not qov.get('frame') or not qov['frame'].winfo_exists():
+                    qf = tk.Frame(materials_tree, bd=0, highlightthickness=0)
+                    l_total = tk.Label(qf, bd=0)
+                    l_missing = tk.Label(qf, bd=0)
+                    # Pack side-by-side
+                    l_total.pack(side='left', fill='y')
+                    l_missing.pack(side='left', fill='y')
+                    qov = {'frame': qf, 'total': l_total, 'missing': l_missing}
+                    _qty_overlays[rid] = qov
+                qf = qov['frame']
+                l_total = qov['total']
+                l_missing = qov['missing']
+                # Colors and fonts
+                try:
+                    idx = materials_tree.index(rid)
+                except Exception:
+                    idx = 0
+                cell_bg = THEME_PALETTE.get('tree_alt' if (idx % 2) else 'tree_bg', '#111827')
+                total_fg = THEME_PALETTE.get('subtext' if (rid in DONE_MATS) else 'text', '#E5E7EB')
+                # When done, grey out the (missing) text too; otherwise keep it red
+                missing_fg = (THEME_PALETTE.get('subtext', '#9CA3AF') if (rid in DONE_MATS) else '#DC2626')
+                try:
+                    fnt = tkfont.nametofont('TkDefaultFont')
+                except Exception:
+                    fnt = None
+                # For done rows, use an overstrike font for the total number
+                try:
+                    if fnt is not None and (rid in DONE_MATS):
+                        done_fnt = fnt.copy()
+                        done_fnt.configure(overstrike=1)
+                    else:
+                        done_fnt = fnt
+                except Exception:
+                    done_fnt = fnt
+                for wdg in (qf, l_total, l_missing):
+                    try:
+                        wdg.configure(bg=cell_bg)
+                    except Exception:
+                        pass
+                try:
+                    l_total.configure(fg=total_fg, font=done_fnt)
+                    l_missing.configure(fg=missing_fg, font=fnt)
+                except Exception:
+                    pass
+                # Set text
+                try:
+                    # Ensure a space between total and missing when total exists
+                    l_total.configure(text=(qty_total + (' ' if qty_total and qty_missing else '')))
+                    l_missing.configure(text=qty_missing)
+                except Exception:
+                    pass
+                # Compute placement centered within the Qty cell
+                sb = materials_tree.bbox(rid, 'qty')
+                if sb:
+                    sx, sy, sw, sh = sb
+                    try:
+                        tw = (fnt.measure(qty_total + ' ') if fnt else 0) if qty_total else 0
+                        mw = (fnt.measure(qty_missing) if fnt else 0) if qty_missing else 0
+                        content_w = max(0, tw + mw)
+                    except Exception:
+                        content_w = sw
+                    # Center if content narrower than cell
+                    place_w = min(sw, content_w if content_w > 0 else sw)
+                    x_off = sx + max((sw - place_w) // 2, 0)
+                    qf.place(x=x_off, y=sy, width=place_w, height=sh)
+                else:
+                    qf.place_forget()
+            else:
+                # No (missing) part or row not visible; hide overlay if exists
+                if qov and qov.get('frame') and qov['frame'].winfo_exists():
+                    qov['frame'].place_forget()
     except Exception:
         # On any error, avoid crashing the UI; buttons will be refreshed on next call
         pass
@@ -1132,13 +1238,27 @@ def _refresh_done_buttons():
         except Exception:
             pass
         _stacks_overlays.pop(rid, None)
+    # Remove qty overlays for rows no longer present
+    to_remove_qo = [rid for rid in list(_qty_overlays.keys()) if rid not in current_rows]
+    for rid in to_remove_qo:
+        try:
+            fr = _qty_overlays[rid].get('frame')
+            if fr and fr.winfo_exists():
+                fr.place_forget()
+                fr.destroy()
+        except Exception:
+            pass
+        _qty_overlays.pop(rid, None)
     # Ensure button exists for each row
     for rid in current_rows:
         _ensure_row_button(rid)
     # Drop manual overrides for rows no longer present
-    removed_manual = [rid for rid in list(MANUAL_UNDONE) if rid not in current_rows]
-    for rid in removed_manual:
+    removed_manual_undo = [rid for rid in list(MANUAL_UNDONE) if rid not in current_rows]
+    for rid in removed_manual_undo:
         MANUAL_UNDONE.discard(rid)
+    removed_manual_done = [rid for rid in list(MANUAL_DONE) if rid not in current_rows]
+    for rid in removed_manual_done:
+        MANUAL_DONE.discard(rid)
     _layout_done_buttons()
 
 
