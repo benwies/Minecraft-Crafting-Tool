@@ -96,6 +96,7 @@ entry_item.grid(row=0, column=1, sticky="ew")
 # remain visible while the user keeps typing (the popup won't steal focus).
 _suggestion_win = None
 _suggestion_listbox = None
+_tab_pressed = False  # Flag to track if Tab was just pressed
 
 def _hide_suggestions():
     global _suggestion_win, _suggestion_listbox
@@ -133,7 +134,13 @@ def _show_suggestions(suggestions):
         _suggestion_win = tk.Toplevel(root)
         _suggestion_win.wm_overrideredirect(True)
         _suggestion_win.attributes('-topmost', True)
-        _suggestion_listbox = tk.Listbox(_suggestion_win, activestyle='none')
+        _suggestion_listbox = tk.Listbox(
+            _suggestion_win, 
+            activestyle='dotbox', 
+            exportselection=False,
+            selectmode='browse',
+            highlightthickness=0
+        )
         for s in suggestions:
             _suggestion_listbox.insert('end', s)
         _suggestion_listbox.pack(fill='both', expand=True)
@@ -146,12 +153,19 @@ def _show_suggestions(suggestions):
 
         _suggestion_listbox.bind('<Double-Button-1>', _accept_suggestion)
         _suggestion_listbox.bind('<Return>', _accept_suggestion)
-        _suggestion_listbox.bind('<FocusOut>', lambda e: _hide_suggestions())
+        # Don't hide on FocusOut since we want to keep it visible during Tab navigation
     except Exception:
         _hide_suggestions()
 
 
 def _update_item_suggestions(event=None):
+    global _tab_pressed
+    
+    # Skip update if Tab was just pressed
+    if _tab_pressed:
+        _tab_pressed = False
+        return
+    
     typed = item_var.get() or ""
     if typed == "":
         _hide_suggestions()
@@ -164,9 +178,75 @@ def _update_item_suggestions(event=None):
         _hide_suggestions()
 
 
+def _on_item_tab(event):
+    """Handle Tab key to cycle through autocomplete suggestions"""
+    global _suggestion_listbox, _tab_pressed
+    
+    # Set flag to prevent KeyRelease from updating suggestions
+    _tab_pressed = True
+    
+    if _suggestion_listbox:
+        # If suggestions are visible, cycle through them
+        try:
+            sel = _suggestion_listbox.curselection()
+            if not sel:
+                # Nothing selected yet, select first
+                _suggestion_listbox.selection_clear(0, 'end')
+                _suggestion_listbox.selection_set(0)
+                _suggestion_listbox.activate(0)
+                _suggestion_listbox.see(0)
+            else:
+                # Move to next suggestion
+                current_idx = sel[0]
+                next_idx = (current_idx + 1) % _suggestion_listbox.size()
+                _suggestion_listbox.selection_clear(0, 'end')
+                _suggestion_listbox.selection_set(next_idx)
+                _suggestion_listbox.activate(next_idx)
+                _suggestion_listbox.see(next_idx)
+            # Keep focus on entry_item so user can continue typing or press Enter
+            entry_item.focus_set()
+            return "break"  # Prevent default Tab behavior
+        except Exception as e:
+            print(f"Tab error: {e}")
+            _tab_pressed = False
+            pass
+    return None
+
+
+def _on_item_enter(event):
+    """Handle Enter key in item field to accept suggestion or move to quantity"""
+    global _suggestion_listbox
+    if _suggestion_listbox:
+        # If suggestions are visible, accept the selected one
+        _accept_suggestion()
+        # After accepting, move to quantity field
+        entry_qty.focus_set()
+        entry_qty.select_range(0, 'end')
+    else:
+        # No suggestions, just move to quantity field
+        entry_qty.focus_set()
+        entry_qty.select_range(0, 'end')
+    return "break"
+
+
+def _on_item_escape(event):
+    """Handle Escape key to close suggestions"""
+    _hide_suggestions()
+    return "break"
+
+
+def _on_qty_enter(event):
+    """Handle Enter key in quantity field to add the item"""
+    on_add_item()
+    return "break"
+
+
 # Bind key releases to update suggestions as the user types
 entry_item.bind('<KeyRelease>', _update_item_suggestions)
 entry_item.bind('<Down>', lambda e: (_suggestion_listbox.focus_set(), _suggestion_listbox.selection_set(0)) if _suggestion_listbox else None)
+entry_item.bind('<Tab>', _on_item_tab)
+entry_item.bind('<Return>', _on_item_enter)
+entry_item.bind('<Escape>', _on_item_escape)
 # Quantity mode: either raw quantity or stacks of 64
 mode_var = tk.StringVar(value="Qty")
 ttk.Label(left, text="Mode:").grid(row=1, column=0, sticky="w")
@@ -176,6 +256,7 @@ mode_combo.grid(row=1, column=0, sticky="e", padx=(0,6))
 entry_qty = ttk.Entry(left)
 entry_qty.grid(row=1, column=1, sticky="ew")
 entry_qty.insert(0, "1")
+entry_qty.bind('<Return>', _on_qty_enter)
 
 def _mode_changed(event=None):
     """Optional: keep focus in the qty entry after changing mode."""
@@ -186,7 +267,7 @@ def _mode_changed(event=None):
         pass
 
 mode_combo.bind('<<ComboboxSelected>>', _mode_changed)
-btn_add = ttk.Button(left, text="Add / Increment")
+btn_add = ttk.Button(left, text="Add")
 btn_add.grid(row=2, column=0, sticky="ew", padx=2, pady=6)
 # Remove button for selected project item(s)
 btn_remove = ttk.Button(left, text="Remove Selected")
