@@ -23,6 +23,15 @@ for p in RECIPES_PATHS:
 # Cache for item images
 ITEM_IMAGES = {}
 
+# Index available images in PIC_DIR by base name (lowercase, no extension)
+PIC_INDEX = {}
+for p in PIC_DIR.glob("*.png"):
+    try:
+        key = p.stem.lower()
+        PIC_INDEX[key] = p
+    except Exception:
+        pass
+
 
 PROJECTS_DIR = BASE / "projects"
 PROJECTS_DIR.mkdir(exist_ok=True)
@@ -393,37 +402,109 @@ def load_item_image(item_name):
         ITEM_IMAGES[requested_name] = ITEM_IMAGES[lookup_name]
         return ITEM_IMAGES[requested_name]
 
-    # Try common item image patterns for the lookup name
-    possible_names = [
-        f"{lookup_name}.png",
-        f"{lookup_name}_top.png",
-        f"{lookup_name}_side.png",
-        f"{lookup_name}_front.png"
-    ]
-    
-    for name in possible_names:
-        img_path = PIC_DIR / name
-        if img_path.exists():
-            try:
-                # Load and resize the image to 24x24 pixels
-                img = Image.open(img_path)
-                # Convert to RGBA if necessary
-                if img.mode != 'RGBA':
-                    img = img.convert('RGBA')
-                img = img.resize((20, 20), Image.Resampling.LANCZOS)
-                photo = ImageTk.PhotoImage(img)
-                # Cache under both the concrete lookup name and the originally
-                # requested name so future lookups succeed regardless of which
-                # key is used.
-                ITEM_IMAGES[lookup_name] = photo
-                ITEM_IMAGES[requested_name] = photo
+    # Normalize the lookup key
+    key = str(lookup_name).lower().replace(' ', '_')
+
+    def _load_and_cache(img_path: Path):
+        try:
+            img = Image.open(img_path)
+            if img.mode != 'RGBA':
+                img = img.convert('RGBA')
+            img = img.resize((20, 20), Image.Resampling.LANCZOS)
+            photo = ImageTk.PhotoImage(img)
+            ITEM_IMAGES[lookup_name] = photo
+            ITEM_IMAGES[requested_name] = photo
+            return photo
+        except Exception as e:
+            logging.warning(f"Failed to load image for {requested_name} from {img_path.name}: {e}")
+            return None
+
+    # 1) Direct exact match
+    if key in PIC_INDEX:
+        photo = _load_and_cache(PIC_INDEX[key])
+        if photo:
+            return photo
+
+    # 2) Try common suffix variants
+    for suffix in ("", "_top", "_side", "_front"):
+        cand = key + suffix
+        if cand in PIC_INDEX:
+            photo = _load_and_cache(PIC_INDEX[cand])
+            if photo:
                 return photo
-            except Exception as e:
-                logging.warning(f"Failed to load image for {item_name} ({name}): {e}")
-                continue
-    
-    logging.debug(f"No image found for {requested_name} (lookup: {lookup_name})")
-    # If no image found, cache None under the requested name to avoid repeated disk checks
+
+    # 3) Token-based fuzzy match: prefer filenames containing all tokens
+    tokens = [t for t in key.split('_') if t]
+    best = None
+    best_score = -1
+    for base, path in PIC_INDEX.items():
+        score = 0
+        ok = True
+        for t in tokens:
+            if t in base:
+                score += 1
+            else:
+                ok = False
+                break
+        if ok and score > best_score:
+            best_score = score
+            best = path
+    if best is not None:
+        photo = _load_and_cache(best)
+        if photo:
+            return photo
+
+    # 3.5) Structural fallback: strip common suffix tokens and prefer base material images
+    suffix_tokens = {
+        'stairs','slab','wall','plate','pressure','button','door','trapdoor','fence','gate',
+        'sign','hanging','pane','carpet','bed','boat','minecart','helmet','chestplate','leggings','boots',
+        'concrete','powder','terracotta','glazed','stained','glass','pane','block','ore','ingot','nugget',
+        'dust','tile','tiles','bricks','brick'
+    }
+    btokens = tokens[:]
+    while btokens and btokens[-1] in suffix_tokens:
+        btokens.pop()
+    if btokens:
+        base_key = '_'.join(btokens)
+        # Direct base match
+        if base_key in PIC_INDEX:
+            photo = _load_and_cache(PIC_INDEX[base_key])
+            if photo:
+                return photo
+        # Prefer wood planks for wood-type bases
+        wood_types = [
+            'oak','spruce','birch','jungle','acacia','dark_oak','mangrove',
+            'cherry','bamboo','crimson','warped'
+        ]
+        if len(btokens) == 1 and btokens[0] in wood_types:
+            cand = f"{btokens[0]}_planks"
+            if cand in PIC_INDEX:
+                photo = _load_and_cache(PIC_INDEX[cand])
+                if photo:
+                    return photo
+        # Prefer the shortest filename beginning with base_key_
+        candidates = [(base, path) for base, path in PIC_INDEX.items() if base.startswith(base_key + '_')]
+        if candidates:
+            candidates.sort(key=lambda x: (len(x[0].split('_')), x[0]))
+            photo = _load_and_cache(candidates[0][1])
+            if photo:
+                return photo
+
+    # 4) Wood fallback: if name includes a wood type, fall back to its planks
+    wood_types = [
+        'oak','spruce','birch','jungle','acacia','dark_oak','mangrove',
+        'cherry','bamboo','crimson','warped'
+    ]
+    for wt in wood_types:
+        if wt in key:
+            plank_key = f"{wt}_planks"
+            if plank_key in PIC_INDEX:
+                photo = _load_and_cache(PIC_INDEX[plank_key])
+                if photo:
+                    return photo
+            break
+
+    logging.debug(f"No image found for {requested_name} (lookup: {lookup_name}); caching None")
     ITEM_IMAGES[requested_name] = None
     return None
 
