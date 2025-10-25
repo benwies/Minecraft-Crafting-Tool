@@ -3,11 +3,13 @@ import logging
 import tkinter as tk
 from tkinter import ttk, messagebox, filedialog
 from pathlib import Path
+from PIL import Image, ImageTk
 from code import load_recipes, calculate_requirements, aggregate_requirements
 
 
 BASE = Path(__file__).parent
 RECIPES_PATHS = [BASE / "recepies.json", BASE / "recipes.json"]
+PIC_DIR = BASE / "pic"
 RECIPES = {}
 for p in RECIPES_PATHS:
     if p.exists():
@@ -16,6 +18,9 @@ for p in RECIPES_PATHS:
             break
         except Exception:
             RECIPES = {}
+
+# Cache for item images
+ITEM_IMAGES = {}
 
 
 PROJECTS_DIR = BASE / "projects"
@@ -89,13 +94,15 @@ entry_qty.insert(0, "1")
 btn_add = ttk.Button(left, text="Add / Increment")
 btn_add.grid(row=2, column=0, columnspan=2, pady=6)
 
-items_tree = ttk.Treeview(left, columns=("item", "qty", "stacks"), show="headings", height=12)
+items_tree = ttk.Treeview(left, columns=("item", "qty", "stacks"), show="tree headings", height=12)
+items_tree.heading("#0", text="")  # Image column
 items_tree.heading("item", text="Item")
 items_tree.heading("qty", text="Qty")
 items_tree.heading("stacks", text="Stacks")
-items_tree.column("item", width=200, anchor="w")
-items_tree.column("qty", width=80, anchor="center")
-items_tree.column("stacks", width=120, anchor="w")
+items_tree.column("#0", width=40, stretch=False)  # Fixed width for images
+items_tree.column("item", width=180, anchor="w", stretch=True)
+items_tree.column("qty", width=60, anchor="center", stretch=False)
+items_tree.column("stacks", width=100, anchor="w", stretch=False)
 items_tree.grid(row=3, column=0, columnspan=2, sticky="nsew")
 left.columnconfigure(1, weight=1)
 
@@ -103,13 +110,15 @@ left.columnconfigure(1, weight=1)
 # Right: raw materials
 right = ttk.LabelFrame(main, text="Raw Materials", padding=8)
 right.grid(row=1, column=1, sticky="nsew", padx=6, pady=6)
-materials_tree = ttk.Treeview(right, columns=("item", "qty", "stacks"), show="headings", height=20)
+materials_tree = ttk.Treeview(right, columns=("item", "qty", "stacks"), show="tree headings", height=20)
+materials_tree.heading("#0", text="")  # Image column
 materials_tree.heading("item", text="Item")
 materials_tree.heading("qty", text="Qty")
 materials_tree.heading("stacks", text="Stacks")
-materials_tree.column("item", width=220, anchor="w")
-materials_tree.column("qty", width=80, anchor="center")
-materials_tree.column("stacks", width=140, anchor="w")
+materials_tree.column("#0", width=40, stretch=False)  # Fixed width for images
+materials_tree.column("item", width=200, anchor="w", stretch=True)
+materials_tree.column("qty", width=60, anchor="center", stretch=False)
+materials_tree.column("stacks", width=120, anchor="w", stretch=False)
 materials_tree.grid(row=0, column=0, sticky="nsew")
 right.columnconfigure(0, weight=1)
 
@@ -117,25 +126,84 @@ right.columnconfigure(0, weight=1)
 # Internal state
 current_project = Project("untitled")
 
+def load_item_image(item_name):
+    """Load and cache an item's image"""
+    # If we've already cached this exact key, return it
+    if item_name in ITEM_IMAGES:
+        return ITEM_IMAGES[item_name]
+
+    # Preserve the originally requested name (e.g. 'planks') and
+    # map it to a concrete texture name to look up (e.g. 'oak_planks').
+    requested_name = item_name
+    lookup_name = "oak_planks" if item_name == "planks" else item_name
+
+    # If the lookup image has already been cached under its concrete name,
+    # reuse it and also cache it under the requested name.
+    if lookup_name in ITEM_IMAGES:
+        ITEM_IMAGES[requested_name] = ITEM_IMAGES[lookup_name]
+        return ITEM_IMAGES[requested_name]
+
+    # Try common item image patterns for the lookup name
+    possible_names = [
+        f"{lookup_name}.png",
+        f"{lookup_name}_top.png",
+        f"{lookup_name}_side.png",
+        f"{lookup_name}_front.png"
+    ]
+    
+    for name in possible_names:
+        img_path = PIC_DIR / name
+        if img_path.exists():
+            try:
+                # Load and resize the image to 24x24 pixels
+                img = Image.open(img_path)
+                # Convert to RGBA if necessary
+                if img.mode != 'RGBA':
+                    img = img.convert('RGBA')
+                img = img.resize((20, 20), Image.Resampling.LANCZOS)
+                photo = ImageTk.PhotoImage(img)
+                # Cache under both the concrete lookup name and the originally
+                # requested name so future lookups succeed regardless of which
+                # key is used.
+                ITEM_IMAGES[lookup_name] = photo
+                ITEM_IMAGES[requested_name] = photo
+                return photo
+            except Exception as e:
+                logging.warning(f"Failed to load image for {item_name} ({name}): {e}")
+                continue
+    
+    logging.debug(f"No image found for {requested_name} (lookup: {lookup_name})")
+    # If no image found, cache None under the requested name to avoid repeated disk checks
+    ITEM_IMAGES[requested_name] = None
+    return None
+
 
 def refresh_projects_combo():
     combo_projects["values"] = [p.name for p in list_project_files()]
 
 
 def refresh_items_view():
+    style = ttk.Style()
+    style.configure('Treeview', rowheight=26)  # Increase row height to fit images
+    
     for r in items_tree.get_children():
         items_tree.delete(r)
     for itm, q in sorted(current_project.items.items()):
-        items_tree.insert("", "end", iid=itm, values=(itm, q, format_stacks(q)))
+        img = load_item_image(itm)
+        items_tree.insert("", "end", iid=itm, image=img if img else "", text="", values=(itm, q, format_stacks(q)))
 
 
 def refresh_materials_view():
     try:
+        style = ttk.Style()
+        style.configure('Treeview', rowheight=26)  # Increase row height to fit images
+        
         mats = aggregate_requirements(RECIPES, current_project.items)
         for r in materials_tree.get_children():
             materials_tree.delete(r)
         for mat, q in sorted(mats.items()):
-            materials_tree.insert("", "end", iid=mat, values=(mat, q, format_stacks(q)))
+            img = load_item_image(mat)
+            materials_tree.insert("", "end", iid=mat, image=img if img else "", text="", values=(mat, q, format_stacks(q)))
     except Exception as e:
         messagebox.showerror("Calculation error", f"Failed to calculate materials: {e}")
 

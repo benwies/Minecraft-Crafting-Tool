@@ -2090,3 +2090,515 @@
 2025-10-25 16:43:09.418 [DEBUG] Updated total for diamond: 7
 2025-10-25 16:43:09.418 [DEBUG] Updated total for cobbled_deepslate: 1
 2025-10-25 16:43:09.418 [INFO] Final aggregate totals: {'acacia_logs': 1, 'blackstone': 6, 'exposed_copper': 12, 'honeycomb': 13, 'allium': 1, 'string': 1, 'lapis_lazuli': 1, 'mangrove_log': 4, 'cobblestone': 2, 'diamond': 7, 'cobbled_deepslate': 1}
+2025-10-25 16:48:44.320 [INFO] Calculating aggregate requirements for items: {}
+2025-10-25 16:48:44.320 [INFO] Final aggregate totals: {}
+2025-10-25 16:48:47.370 [INFO] Adding item: acacia_button
+2025-10-25 16:48:47.370 [INFO] Adding 1x acacia_button
+2025-10-25 16:48:47.370 [DEBUG] Current project items before add: {}
+2025-10-25 16:48:47.370 [DEBUG] Updated project items: {'acacia_button': 1}
+2025-10-25 16:49:59.961 [INFO] Calculating aggregate requirements for items: {}
+2025-10-25 16:49:59.962 [INFO] Final aggregate totals: {}
+2025-10-25 16:50:02.777 [INFO] Adding item: acacia_chest_boat
+2025-10-25 16:50:02.778 [INFO] Adding 1x acacia_chest_boat
+2025-10-25 16:50:02.778 [DEBUG] Current project items before add: {}
+2025-10-25 16:50:02.778 [DEBUG] Updated project items: {'acacia_chest_boat': 1}
+2025-10-25 16:50:02.828 [DEBUG] STREAM b'IHDR' 16 13
+2025-10-25 16:50:02.829 [DEBUG] STREAM b'PLTE' 41 54
+2025-10-25 16:50:02.829 [DEBUG] STREAM b'tRNS' 107 1
+2025-10-25 16:50:02.829 [DEBUG] STREAM b'IDAT' 120 124
+2025-10-25 16:50:02.849 [INFO] Calculating aggregate requirements for items: {'acacia_chest_boat': 1}
+2025-10-25 16:50:02.849 [DEBUG] Processing requirements for 1x acacia_chest_boat
+2025-10-25 16:50:02.850 [DEBUG] Calculating requirements for 1x acacia_chest_boat
+2025-10-25 16:50:02.850 [DEBUG] Processing: 1x acacia_chest_boat
+2025-10-25 16:50:02.850 [DEBUG] Current recipe stack: 
+2025-10-25 16:50:02.850 [DEBUG] Found recipe for acacia_chest_boat: {'planks': 8, 'acacia_planks': 5}
+2025-10-25 16:50:02.850 [DEBUG] Need 8x planks for 1x acacia_chest_boat
+2025-10-25 16:50:02.850 [DEBUG]   Processing: 8x planks
+2025-10-25 16:50:02.850 [DEBUG]   Current recipe stack: acacia_chest_boat
+2025-10-25 16:50:02.850 [DEBUG]   Adding material: 8x planks
+2025-10-25 16:50:02.850 [DEBUG] Need 5x acacia_planks for 1x acacia_chest_boat
+2025-10-25 16:50:02.850 [DEBUG]   Processing: 5x acacia_planks
+2025-10-25 16:50:02.850 [DEBUG]   Current recipe stack: acacia_chest_boat
+2025-10-25 16:50:02.850 [DEBUG]   Adding material: 5x acacia_planks
+2025-10-25 16:50:02.850 [DEBUG] Final totals for 1x acacia_chest_boat: {'planks': 8, 'acacia_planks': 5}
+2025-10-25 16:50:02.851 [DEBUG] Requirements for 1x acacia_chest_boat: {'planks': 8, 'acacia_planks': 5}
+2025-10-25 16:50:02.851 [DEBUG] Updated total for planks: 8
+2025-10-25 16:50:02.851 [DEBUG] Updated total for acacia_planks: 5
+2025-10-25 16:50:02.851 [INFO] Final aggregate totals: {'planks': 8, 'acacia_planks': 5}
+2025-10-25 16:50:02.851 [DEBUG] STREAM b'IHDR' 16 13
+2025-10-25 16:50:02.851 [DEBUG] STREAM b'PLTE' 41 21
+2025-10-25 16:50:02.851 [DEBUG] STREAM b'IDAT' 74 112
+2025-10-25 16:50:02.852 [DEBUG] No image found for planks
+2025-10-25 16:50:23.760 [INFO] Calculating aggregate requirements for items: {}
+2025-10-25 16:50:23.760 [INFO] Final aggregate totals: {}
+2025-10-25 16:50:26.331 [INFO] Adding item: acacia_planks
+2025-10-25 16:50:26.332 [INFO] Adding 1x acacia_planks
+2025-10-25 16:50:26.332 [DEBUG] Current project items before add: {}
+2025-10-25 16:50:26.332 [DEBUG] Updated project items: {'acacia_planks': 1}
+2025-10-25 16:50:26.339 [DEBUG] STREAM b'IHDR' 16 13
+2025-10-25 16:50:26.340 [DEBUG] STREAM b'PLTE' 41 21
+2025-10-25 16:50:26.340 [DEBUG] STREAM b'IDAT' 74 112
+2025-10-25 16:50:26.345 [INFO] Calculating aggregate requirements for items: {'acacia_planks': 1}
+2025-10-25 16:50:26.345 [DEBUG] Processing requirements for 1x acacia_planks
+2025-10-25 16:50:26.345 [DEBUG] Calculating requirements for 1x acacia_planks
+2025-10-25 16:50:26.345 [DEBUG] Processing: 1x acacia_planks
+2025-10-25 16:50:26.345 [DEBUG] Current recipe stack: 
+2025-10-25 16:50:26.345 [DEBUG] Found recipe for acacia_planks: {'acacia_logs': 1}
+2025-10-25 16:50:26.345 [DEBUG] Need 1x acacia_logs for 1x acacia_planks
+2025-10-25 16:50:26.345 [DEBUG]   Processing: 1x acacia_logs
+2025-10-25 16:50:26.346 [DEBUG]   Current recipe stack: acacia_planks
+2025-10-25 16:50:26.346 [DEBUG]   Adding material: 1x acacia_logs
+2025-10-25 16:50:26.346 [DEBUG] Final totals for 1x acacia_planks: {'acacia_logs': 1}
+2025-10-25 16:50:26.346 [DEBUG] Requirements for 1x acacia_planks: {'acacia_logs': 1}
+2025-10-25 16:50:26.346 [DEBUG] Updated total for acacia_logs: 1
+2025-10-25 16:50:26.346 [INFO] Final aggregate totals: {'acacia_logs': 1}
+2025-10-25 16:50:26.346 [DEBUG] No image found for acacia_logs
+2025-10-25 16:50:31.694 [INFO] Adding item: birch_boat
+2025-10-25 16:50:31.694 [INFO] Adding 1x birch_boat
+2025-10-25 16:50:31.694 [DEBUG] Current project items before add: {'acacia_planks': 1}
+2025-10-25 16:50:31.694 [DEBUG] Updated project items: {'acacia_planks': 1, 'birch_boat': 1}
+2025-10-25 16:50:31.695 [DEBUG] STREAM b'IHDR' 16 13
+2025-10-25 16:50:31.695 [DEBUG] STREAM b'PLTE' 41 27
+2025-10-25 16:50:31.695 [DEBUG] STREAM b'tRNS' 80 1
+2025-10-25 16:50:31.695 [DEBUG] STREAM b'IDAT' 93 106
+2025-10-25 16:50:31.696 [INFO] Calculating aggregate requirements for items: {'acacia_planks': 1, 'birch_boat': 1}
+2025-10-25 16:50:31.696 [DEBUG] Processing requirements for 1x acacia_planks
+2025-10-25 16:50:31.696 [DEBUG] Calculating requirements for 1x acacia_planks
+2025-10-25 16:50:31.696 [DEBUG] Processing: 1x acacia_planks
+2025-10-25 16:50:31.696 [DEBUG] Current recipe stack: 
+2025-10-25 16:50:31.696 [DEBUG] Found recipe for acacia_planks: {'acacia_logs': 1}
+2025-10-25 16:50:31.696 [DEBUG] Need 1x acacia_logs for 1x acacia_planks
+2025-10-25 16:50:31.696 [DEBUG]   Processing: 1x acacia_logs
+2025-10-25 16:50:31.696 [DEBUG]   Current recipe stack: acacia_planks
+2025-10-25 16:50:31.696 [DEBUG]   Adding material: 1x acacia_logs
+2025-10-25 16:50:31.696 [DEBUG] Final totals for 1x acacia_planks: {'acacia_logs': 1}
+2025-10-25 16:50:31.696 [DEBUG] Requirements for 1x acacia_planks: {'acacia_logs': 1}
+2025-10-25 16:50:31.696 [DEBUG] Updated total for acacia_logs: 1
+2025-10-25 16:50:31.696 [DEBUG] Processing requirements for 1x birch_boat
+2025-10-25 16:50:31.697 [DEBUG] Calculating requirements for 1x birch_boat
+2025-10-25 16:50:31.697 [DEBUG] Processing: 1x birch_boat
+2025-10-25 16:50:31.697 [DEBUG] Current recipe stack: 
+2025-10-25 16:50:31.697 [DEBUG] Found recipe for birch_boat: {'birch_planks': 5}
+2025-10-25 16:50:31.697 [DEBUG] Need 5x birch_planks for 1x birch_boat
+2025-10-25 16:50:31.697 [DEBUG]   Processing: 5x birch_planks
+2025-10-25 16:50:31.697 [DEBUG]   Current recipe stack: birch_boat
+2025-10-25 16:50:31.697 [DEBUG]   Adding material: 5x birch_planks
+2025-10-25 16:50:31.697 [DEBUG] Final totals for 1x birch_boat: {'birch_planks': 5}
+2025-10-25 16:50:31.697 [DEBUG] Requirements for 1x birch_boat: {'birch_planks': 5}
+2025-10-25 16:50:31.697 [DEBUG] Updated total for birch_planks: 5
+2025-10-25 16:50:31.697 [INFO] Final aggregate totals: {'acacia_logs': 1, 'birch_planks': 5}
+2025-10-25 16:50:31.697 [DEBUG] STREAM b'IHDR' 16 13
+2025-10-25 16:50:31.698 [DEBUG] STREAM b'PLTE' 41 21
+2025-10-25 16:50:31.698 [DEBUG] STREAM b'IDAT' 74 105
+2025-10-25 16:50:34.285 [INFO] Adding item: birch_button
+2025-10-25 16:50:34.285 [INFO] Adding 1x birch_button
+2025-10-25 16:50:34.285 [DEBUG] Current project items before add: {'acacia_planks': 1, 'birch_boat': 1}
+2025-10-25 16:50:34.285 [DEBUG] Updated project items: {'acacia_planks': 1, 'birch_boat': 1, 'birch_button': 1}
+2025-10-25 16:50:34.286 [DEBUG] No image found for birch_button
+2025-10-25 16:50:34.286 [INFO] Calculating aggregate requirements for items: {'acacia_planks': 1, 'birch_boat': 1, 'birch_button': 1}
+2025-10-25 16:50:34.286 [DEBUG] Processing requirements for 1x acacia_planks
+2025-10-25 16:50:34.287 [DEBUG] Calculating requirements for 1x acacia_planks
+2025-10-25 16:50:34.287 [DEBUG] Processing: 1x acacia_planks
+2025-10-25 16:50:34.287 [DEBUG] Current recipe stack: 
+2025-10-25 16:50:34.287 [DEBUG] Found recipe for acacia_planks: {'acacia_logs': 1}
+2025-10-25 16:50:34.287 [DEBUG] Need 1x acacia_logs for 1x acacia_planks
+2025-10-25 16:50:34.287 [DEBUG]   Processing: 1x acacia_logs
+2025-10-25 16:50:34.288 [DEBUG]   Current recipe stack: acacia_planks
+2025-10-25 16:50:34.288 [DEBUG]   Adding material: 1x acacia_logs
+2025-10-25 16:50:34.288 [DEBUG] Final totals for 1x acacia_planks: {'acacia_logs': 1}
+2025-10-25 16:50:34.288 [DEBUG] Requirements for 1x acacia_planks: {'acacia_logs': 1}
+2025-10-25 16:50:34.288 [DEBUG] Updated total for acacia_logs: 1
+2025-10-25 16:50:34.288 [DEBUG] Processing requirements for 1x birch_boat
+2025-10-25 16:50:34.288 [DEBUG] Calculating requirements for 1x birch_boat
+2025-10-25 16:50:34.289 [DEBUG] Processing: 1x birch_boat
+2025-10-25 16:50:34.289 [DEBUG] Current recipe stack: 
+2025-10-25 16:50:34.289 [DEBUG] Found recipe for birch_boat: {'birch_planks': 5}
+2025-10-25 16:50:34.289 [DEBUG] Need 5x birch_planks for 1x birch_boat
+2025-10-25 16:50:34.289 [DEBUG]   Processing: 5x birch_planks
+2025-10-25 16:50:34.289 [DEBUG]   Current recipe stack: birch_boat
+2025-10-25 16:50:34.289 [DEBUG]   Adding material: 5x birch_planks
+2025-10-25 16:50:34.289 [DEBUG] Final totals for 1x birch_boat: {'birch_planks': 5}
+2025-10-25 16:50:34.289 [DEBUG] Requirements for 1x birch_boat: {'birch_planks': 5}
+2025-10-25 16:50:34.289 [DEBUG] Updated total for birch_planks: 5
+2025-10-25 16:50:34.290 [DEBUG] Processing requirements for 1x birch_button
+2025-10-25 16:50:34.290 [DEBUG] Calculating requirements for 1x birch_button
+2025-10-25 16:50:34.290 [DEBUG] Processing: 1x birch_button
+2025-10-25 16:50:34.290 [DEBUG] Current recipe stack: 
+2025-10-25 16:50:34.290 [DEBUG] Found recipe for birch_button: {'birch_planks': 1}
+2025-10-25 16:50:34.290 [DEBUG] Need 1x birch_planks for 1x birch_button
+2025-10-25 16:50:34.290 [DEBUG]   Processing: 1x birch_planks
+2025-10-25 16:50:34.290 [DEBUG]   Current recipe stack: birch_button
+2025-10-25 16:50:34.290 [DEBUG]   Adding material: 1x birch_planks
+2025-10-25 16:50:34.291 [DEBUG] Final totals for 1x birch_button: {'birch_planks': 1}
+2025-10-25 16:50:34.291 [DEBUG] Requirements for 1x birch_button: {'birch_planks': 1}
+2025-10-25 16:50:34.291 [DEBUG] Updated total for birch_planks: 6
+2025-10-25 16:50:34.291 [INFO] Final aggregate totals: {'acacia_logs': 1, 'birch_planks': 6}
+2025-10-25 16:50:38.242 [INFO] Adding item: repeater
+2025-10-25 16:50:38.243 [INFO] Adding 1x repeater
+2025-10-25 16:50:38.243 [DEBUG] Current project items before add: {'acacia_planks': 1, 'birch_boat': 1, 'birch_button': 1}
+2025-10-25 16:50:38.243 [DEBUG] Updated project items: {'acacia_planks': 1, 'birch_boat': 1, 'birch_button': 1, 'repeater': 1}
+2025-10-25 16:50:38.243 [DEBUG] STREAM b'IHDR' 16 13
+2025-10-25 16:50:38.243 [DEBUG] STREAM b'PLTE' 41 42
+2025-10-25 16:50:38.244 [DEBUG] STREAM b'tRNS' 95 1
+2025-10-25 16:50:38.244 [DEBUG] STREAM b'IDAT' 108 63
+2025-10-25 16:50:38.244 [INFO] Calculating aggregate requirements for items: {'acacia_planks': 1, 'birch_boat': 1, 'birch_button': 1, 'repeater': 1}
+2025-10-25 16:50:38.245 [DEBUG] Processing requirements for 1x acacia_planks
+2025-10-25 16:50:38.245 [DEBUG] Calculating requirements for 1x acacia_planks
+2025-10-25 16:50:38.245 [DEBUG] Processing: 1x acacia_planks
+2025-10-25 16:50:38.245 [DEBUG] Current recipe stack: 
+2025-10-25 16:50:38.245 [DEBUG] Found recipe for acacia_planks: {'acacia_logs': 1}
+2025-10-25 16:50:38.245 [DEBUG] Need 1x acacia_logs for 1x acacia_planks
+2025-10-25 16:50:38.245 [DEBUG]   Processing: 1x acacia_logs
+2025-10-25 16:50:38.246 [DEBUG]   Current recipe stack: acacia_planks
+2025-10-25 16:50:38.246 [DEBUG]   Adding material: 1x acacia_logs
+2025-10-25 16:50:38.246 [DEBUG] Final totals for 1x acacia_planks: {'acacia_logs': 1}
+2025-10-25 16:50:38.246 [DEBUG] Requirements for 1x acacia_planks: {'acacia_logs': 1}
+2025-10-25 16:50:38.246 [DEBUG] Updated total for acacia_logs: 1
+2025-10-25 16:50:38.246 [DEBUG] Processing requirements for 1x birch_boat
+2025-10-25 16:50:38.246 [DEBUG] Calculating requirements for 1x birch_boat
+2025-10-25 16:50:38.246 [DEBUG] Processing: 1x birch_boat
+2025-10-25 16:50:38.247 [DEBUG] Current recipe stack: 
+2025-10-25 16:50:38.247 [DEBUG] Found recipe for birch_boat: {'birch_planks': 5}
+2025-10-25 16:50:38.247 [DEBUG] Need 5x birch_planks for 1x birch_boat
+2025-10-25 16:50:38.247 [DEBUG]   Processing: 5x birch_planks
+2025-10-25 16:50:38.247 [DEBUG]   Current recipe stack: birch_boat
+2025-10-25 16:50:38.247 [DEBUG]   Adding material: 5x birch_planks
+2025-10-25 16:50:38.247 [DEBUG] Final totals for 1x birch_boat: {'birch_planks': 5}
+2025-10-25 16:50:38.247 [DEBUG] Requirements for 1x birch_boat: {'birch_planks': 5}
+2025-10-25 16:50:38.247 [DEBUG] Updated total for birch_planks: 5
+2025-10-25 16:50:38.247 [DEBUG] Processing requirements for 1x birch_button
+2025-10-25 16:50:38.248 [DEBUG] Calculating requirements for 1x birch_button
+2025-10-25 16:50:38.248 [DEBUG] Processing: 1x birch_button
+2025-10-25 16:50:38.248 [DEBUG] Current recipe stack: 
+2025-10-25 16:50:38.248 [DEBUG] Found recipe for birch_button: {'birch_planks': 1}
+2025-10-25 16:50:38.248 [DEBUG] Need 1x birch_planks for 1x birch_button
+2025-10-25 16:50:38.248 [DEBUG]   Processing: 1x birch_planks
+2025-10-25 16:50:38.248 [DEBUG]   Current recipe stack: birch_button
+2025-10-25 16:50:38.248 [DEBUG]   Adding material: 1x birch_planks
+2025-10-25 16:50:38.248 [DEBUG] Final totals for 1x birch_button: {'birch_planks': 1}
+2025-10-25 16:50:38.248 [DEBUG] Requirements for 1x birch_button: {'birch_planks': 1}
+2025-10-25 16:50:38.248 [DEBUG] Updated total for birch_planks: 6
+2025-10-25 16:50:38.248 [DEBUG] Processing requirements for 1x repeater
+2025-10-25 16:50:38.248 [DEBUG] Calculating requirements for 1x repeater
+2025-10-25 16:50:38.249 [DEBUG] Processing: 1x repeater
+2025-10-25 16:50:38.249 [DEBUG] Current recipe stack: 
+2025-10-25 16:50:38.249 [DEBUG] Found recipe for repeater: {'redstone_torch': 2, 'stone': 3, 'redstone': 1}
+2025-10-25 16:50:38.249 [DEBUG] Need 2x redstone_torch for 1x repeater
+2025-10-25 16:50:38.249 [DEBUG]   Processing: 2x redstone_torch
+2025-10-25 16:50:38.249 [DEBUG]   Current recipe stack: repeater
+2025-10-25 16:50:38.249 [DEBUG]   Found recipe for redstone_torch: {'stick': 1, 'redstone': 1}
+2025-10-25 16:50:38.249 [DEBUG]   Need 2x stick for 2x redstone_torch
+2025-10-25 16:50:38.249 [DEBUG]     Processing: 2x stick
+2025-10-25 16:50:38.249 [DEBUG]     Current recipe stack: repeater -> redstone_torch
+2025-10-25 16:50:38.249 [DEBUG]     Found recipe for stick: {'oak_planks': 2}
+2025-10-25 16:50:38.249 [DEBUG]     Need 4x oak_planks for 2x stick
+2025-10-25 16:50:38.249 [DEBUG]       Processing: 4x oak_planks
+2025-10-25 16:50:38.249 [DEBUG]       Current recipe stack: repeater -> redstone_torch -> stick
+2025-10-25 16:50:38.250 [DEBUG]       Adding material: 4x oak_planks
+2025-10-25 16:50:38.250 [DEBUG]   Need 2x redstone for 2x redstone_torch
+2025-10-25 16:50:38.250 [DEBUG]     Processing: 2x redstone
+2025-10-25 16:50:38.250 [DEBUG]     Current recipe stack: repeater -> redstone_torch
+2025-10-25 16:50:38.250 [DEBUG]     Adding material: 2x redstone
+2025-10-25 16:50:38.250 [DEBUG] Need 3x stone for 1x repeater
+2025-10-25 16:50:38.250 [DEBUG]   Processing: 3x stone
+2025-10-25 16:50:38.250 [DEBUG]   Current recipe stack: repeater
+2025-10-25 16:50:38.250 [DEBUG]   Found recipe for stone: {'cobblestone': 1}
+2025-10-25 16:50:38.250 [DEBUG]   Need 3x cobblestone for 3x stone
+2025-10-25 16:50:38.250 [DEBUG]     Processing: 3x cobblestone
+2025-10-25 16:50:38.250 [DEBUG]     Current recipe stack: repeater -> stone
+2025-10-25 16:50:38.251 [DEBUG]     Adding material: 3x cobblestone
+2025-10-25 16:50:38.251 [DEBUG] Need 1x redstone for 1x repeater
+2025-10-25 16:50:38.251 [DEBUG]   Processing: 1x redstone
+2025-10-25 16:50:38.251 [DEBUG]   Current recipe stack: repeater
+2025-10-25 16:50:38.251 [DEBUG]   Adding material: 1x redstone
+2025-10-25 16:50:38.251 [DEBUG] Final totals for 1x repeater: {'oak_planks': 4, 'redstone': 3, 'cobblestone': 3}
+2025-10-25 16:50:38.251 [DEBUG] Requirements for 1x repeater: {'oak_planks': 4, 'redstone': 3, 'cobblestone': 3}
+2025-10-25 16:50:38.251 [DEBUG] Updated total for oak_planks: 4
+2025-10-25 16:50:38.251 [DEBUG] Updated total for redstone: 3
+2025-10-25 16:50:38.251 [DEBUG] Updated total for cobblestone: 3
+2025-10-25 16:50:38.251 [INFO] Final aggregate totals: {'acacia_logs': 1, 'birch_planks': 6, 'oak_planks': 4, 'redstone': 3, 'cobblestone': 3}
+2025-10-25 16:50:38.252 [DEBUG] STREAM b'IHDR' 16 13
+2025-10-25 16:50:38.252 [DEBUG] STREAM b'PLTE' 41 18
+2025-10-25 16:50:38.252 [DEBUG] STREAM b'IDAT' 71 113
+2025-10-25 16:50:38.252 [DEBUG] STREAM b'IHDR' 16 13
+2025-10-25 16:50:38.252 [DEBUG] STREAM b'PLTE' 41 21
+2025-10-25 16:50:38.252 [DEBUG] STREAM b'IDAT' 74 105
+2025-10-25 16:50:38.253 [DEBUG] STREAM b'IHDR' 16 13
+2025-10-25 16:50:38.253 [DEBUG] STREAM b'PLTE' 41 24
+2025-10-25 16:50:38.253 [DEBUG] STREAM b'tRNS' 77 1
+2025-10-25 16:50:38.253 [DEBUG] STREAM b'IDAT' 90 73
+2025-10-25 16:51:53.890 [INFO] Calculating aggregate requirements for items: {}
+2025-10-25 16:51:53.890 [INFO] Final aggregate totals: {}
+2025-10-25 16:51:57.515 [INFO] Adding item: acacia_chest_boat
+2025-10-25 16:51:57.515 [INFO] Adding 1x acacia_chest_boat
+2025-10-25 16:51:57.515 [DEBUG] Current project items before add: {}
+2025-10-25 16:51:57.516 [DEBUG] Updated project items: {'acacia_chest_boat': 1}
+2025-10-25 16:51:57.523 [DEBUG] STREAM b'IHDR' 16 13
+2025-10-25 16:51:57.523 [DEBUG] STREAM b'PLTE' 41 54
+2025-10-25 16:51:57.523 [DEBUG] STREAM b'tRNS' 107 1
+2025-10-25 16:51:57.523 [DEBUG] STREAM b'IDAT' 120 124
+2025-10-25 16:51:57.528 [INFO] Calculating aggregate requirements for items: {'acacia_chest_boat': 1}
+2025-10-25 16:51:57.529 [DEBUG] Processing requirements for 1x acacia_chest_boat
+2025-10-25 16:51:57.529 [DEBUG] Calculating requirements for 1x acacia_chest_boat
+2025-10-25 16:51:57.529 [DEBUG] Processing: 1x acacia_chest_boat
+2025-10-25 16:51:57.529 [DEBUG] Current recipe stack: 
+2025-10-25 16:51:57.529 [DEBUG] Found recipe for acacia_chest_boat: {'planks': 8, 'acacia_planks': 5}
+2025-10-25 16:51:57.529 [DEBUG] Need 8x planks for 1x acacia_chest_boat
+2025-10-25 16:51:57.529 [DEBUG]   Processing: 8x planks
+2025-10-25 16:51:57.529 [DEBUG]   Current recipe stack: acacia_chest_boat
+2025-10-25 16:51:57.529 [DEBUG]   Adding material: 8x planks
+2025-10-25 16:51:57.530 [DEBUG] Need 5x acacia_planks for 1x acacia_chest_boat
+2025-10-25 16:51:57.530 [DEBUG]   Processing: 5x acacia_planks
+2025-10-25 16:51:57.530 [DEBUG]   Current recipe stack: acacia_chest_boat
+2025-10-25 16:51:57.530 [DEBUG]   Adding material: 5x acacia_planks
+2025-10-25 16:51:57.530 [DEBUG] Final totals for 1x acacia_chest_boat: {'planks': 8, 'acacia_planks': 5}
+2025-10-25 16:51:57.530 [DEBUG] Requirements for 1x acacia_chest_boat: {'planks': 8, 'acacia_planks': 5}
+2025-10-25 16:51:57.530 [DEBUG] Updated total for planks: 8
+2025-10-25 16:51:57.530 [DEBUG] Updated total for acacia_planks: 5
+2025-10-25 16:51:57.531 [INFO] Final aggregate totals: {'planks': 8, 'acacia_planks': 5}
+2025-10-25 16:51:57.531 [DEBUG] STREAM b'IHDR' 16 13
+2025-10-25 16:51:57.531 [DEBUG] STREAM b'PLTE' 41 21
+2025-10-25 16:51:57.531 [DEBUG] STREAM b'IDAT' 74 112
+2025-10-25 16:51:57.532 [DEBUG] No image found for planks
+2025-10-25 16:52:07.854 [INFO] Adding item: acacia_hanging_sign
+2025-10-25 16:52:07.855 [INFO] Adding 1x acacia_hanging_sign
+2025-10-25 16:52:07.855 [DEBUG] Current project items before add: {'acacia_chest_boat': 1}
+2025-10-25 16:52:07.855 [DEBUG] Updated project items: {'acacia_chest_boat': 1, 'acacia_hanging_sign': 1}
+2025-10-25 16:52:07.855 [DEBUG] STREAM b'IHDR' 16 13
+2025-10-25 16:52:07.856 [DEBUG] STREAM b'PLTE' 41 42
+2025-10-25 16:52:07.856 [DEBUG] STREAM b'tRNS' 95 1
+2025-10-25 16:52:07.856 [DEBUG] STREAM b'IDAT' 108 90
+2025-10-25 16:52:07.856 [INFO] Calculating aggregate requirements for items: {'acacia_chest_boat': 1, 'acacia_hanging_sign': 1}
+2025-10-25 16:52:07.856 [DEBUG] Processing requirements for 1x acacia_chest_boat
+2025-10-25 16:52:07.857 [DEBUG] Calculating requirements for 1x acacia_chest_boat
+2025-10-25 16:52:07.857 [DEBUG] Processing: 1x acacia_chest_boat
+2025-10-25 16:52:07.857 [DEBUG] Current recipe stack: 
+2025-10-25 16:52:07.857 [DEBUG] Found recipe for acacia_chest_boat: {'planks': 8, 'acacia_planks': 5}
+2025-10-25 16:52:07.857 [DEBUG] Need 8x planks for 1x acacia_chest_boat
+2025-10-25 16:52:07.857 [DEBUG]   Processing: 8x planks
+2025-10-25 16:52:07.857 [DEBUG]   Current recipe stack: acacia_chest_boat
+2025-10-25 16:52:07.857 [DEBUG]   Adding material: 8x planks
+2025-10-25 16:52:07.857 [DEBUG] Need 5x acacia_planks for 1x acacia_chest_boat
+2025-10-25 16:52:07.857 [DEBUG]   Processing: 5x acacia_planks
+2025-10-25 16:52:07.857 [DEBUG]   Current recipe stack: acacia_chest_boat
+2025-10-25 16:52:07.857 [DEBUG]   Adding material: 5x acacia_planks
+2025-10-25 16:52:07.858 [DEBUG] Final totals for 1x acacia_chest_boat: {'planks': 8, 'acacia_planks': 5}
+2025-10-25 16:52:07.858 [DEBUG] Requirements for 1x acacia_chest_boat: {'planks': 8, 'acacia_planks': 5}
+2025-10-25 16:52:07.858 [DEBUG] Updated total for planks: 8
+2025-10-25 16:52:07.858 [DEBUG] Updated total for acacia_planks: 5
+2025-10-25 16:52:07.858 [DEBUG] Processing requirements for 1x acacia_hanging_sign
+2025-10-25 16:52:07.858 [DEBUG] Calculating requirements for 1x acacia_hanging_sign
+2025-10-25 16:52:07.858 [DEBUG] Processing: 1x acacia_hanging_sign
+2025-10-25 16:52:07.858 [DEBUG] Current recipe stack: 
+2025-10-25 16:52:07.859 [DEBUG] Found recipe for acacia_hanging_sign: {'stripped_acacia_log': 6, 'iron_chain': 2}
+2025-10-25 16:52:07.859 [DEBUG] Need 6x stripped_acacia_log for 1x acacia_hanging_sign
+2025-10-25 16:52:07.859 [DEBUG]   Processing: 6x stripped_acacia_log
+2025-10-25 16:52:07.859 [DEBUG]   Current recipe stack: acacia_hanging_sign
+2025-10-25 16:52:07.859 [DEBUG]   Adding material: 6x stripped_acacia_log
+2025-10-25 16:52:07.859 [DEBUG] Need 2x iron_chain for 1x acacia_hanging_sign
+2025-10-25 16:52:07.859 [DEBUG]   Processing: 2x iron_chain
+2025-10-25 16:52:07.859 [DEBUG]   Current recipe stack: acacia_hanging_sign
+2025-10-25 16:52:07.859 [DEBUG]   Found recipe for iron_chain: {'iron_ingot': 2}
+2025-10-25 16:52:07.859 [DEBUG]   Need 4x iron_ingot for 2x iron_chain
+2025-10-25 16:52:07.859 [DEBUG]     Processing: 4x iron_ingot
+2025-10-25 16:52:07.859 [DEBUG]     Current recipe stack: acacia_hanging_sign -> iron_chain
+2025-10-25 16:52:07.859 [DEBUG]     Adding material: 4x iron_ingot
+2025-10-25 16:52:07.860 [DEBUG] Final totals for 1x acacia_hanging_sign: {'stripped_acacia_log': 6, 'iron_ingot': 4}
+2025-10-25 16:52:07.860 [DEBUG] Requirements for 1x acacia_hanging_sign: {'stripped_acacia_log': 6, 'iron_ingot': 4}
+2025-10-25 16:52:07.860 [DEBUG] Updated total for stripped_acacia_log: 6
+2025-10-25 16:52:07.860 [DEBUG] Updated total for iron_ingot: 4
+2025-10-25 16:52:07.860 [INFO] Final aggregate totals: {'planks': 8, 'acacia_planks': 5, 'stripped_acacia_log': 6, 'iron_ingot': 4}
+2025-10-25 16:52:07.860 [DEBUG] STREAM b'IHDR' 16 13
+2025-10-25 16:52:07.860 [DEBUG] STREAM b'tRNS' 41 2
+2025-10-25 16:52:07.860 [DEBUG] STREAM b'IDAT' 55 86
+2025-10-25 16:52:07.862 [DEBUG] STREAM b'IHDR' 16 13
+2025-10-25 16:52:07.862 [DEBUG] STREAM b'IDAT' 41 366
+2025-10-25 16:52:11.221 [INFO] Adding item: mangrove_fence_gate
+2025-10-25 16:52:11.222 [INFO] Adding 1x mangrove_fence_gate
+2025-10-25 16:52:11.222 [DEBUG] Current project items before add: {'acacia_chest_boat': 1, 'acacia_hanging_sign': 1}
+2025-10-25 16:52:11.223 [DEBUG] Updated project items: {'acacia_chest_boat': 1, 'acacia_hanging_sign': 1, 'mangrove_fence_gate': 1}
+2025-10-25 16:52:11.223 [DEBUG] No image found for mangrove_fence_gate
+2025-10-25 16:52:11.223 [INFO] Calculating aggregate requirements for items: {'acacia_chest_boat': 1, 'acacia_hanging_sign': 1, 'mangrove_fence_gate': 1}
+2025-10-25 16:52:11.224 [DEBUG] Processing requirements for 1x acacia_chest_boat
+2025-10-25 16:52:11.224 [DEBUG] Calculating requirements for 1x acacia_chest_boat
+2025-10-25 16:52:11.224 [DEBUG] Processing: 1x acacia_chest_boat
+2025-10-25 16:52:11.224 [DEBUG] Current recipe stack: 
+2025-10-25 16:52:11.224 [DEBUG] Found recipe for acacia_chest_boat: {'planks': 8, 'acacia_planks': 5}
+2025-10-25 16:52:11.225 [DEBUG] Need 8x planks for 1x acacia_chest_boat
+2025-10-25 16:52:11.225 [DEBUG]   Processing: 8x planks
+2025-10-25 16:52:11.225 [DEBUG]   Current recipe stack: acacia_chest_boat
+2025-10-25 16:52:11.225 [DEBUG]   Adding material: 8x planks
+2025-10-25 16:52:11.225 [DEBUG] Need 5x acacia_planks for 1x acacia_chest_boat
+2025-10-25 16:52:11.226 [DEBUG]   Processing: 5x acacia_planks
+2025-10-25 16:52:11.226 [DEBUG]   Current recipe stack: acacia_chest_boat
+2025-10-25 16:52:11.226 [DEBUG]   Adding material: 5x acacia_planks
+2025-10-25 16:52:11.226 [DEBUG] Final totals for 1x acacia_chest_boat: {'planks': 8, 'acacia_planks': 5}
+2025-10-25 16:52:11.226 [DEBUG] Requirements for 1x acacia_chest_boat: {'planks': 8, 'acacia_planks': 5}
+2025-10-25 16:52:11.227 [DEBUG] Updated total for planks: 8
+2025-10-25 16:52:11.227 [DEBUG] Updated total for acacia_planks: 5
+2025-10-25 16:52:11.227 [DEBUG] Processing requirements for 1x acacia_hanging_sign
+2025-10-25 16:52:11.227 [DEBUG] Calculating requirements for 1x acacia_hanging_sign
+2025-10-25 16:52:11.227 [DEBUG] Processing: 1x acacia_hanging_sign
+2025-10-25 16:52:11.227 [DEBUG] Current recipe stack: 
+2025-10-25 16:52:11.227 [DEBUG] Found recipe for acacia_hanging_sign: {'stripped_acacia_log': 6, 'iron_chain': 2}
+2025-10-25 16:52:11.227 [DEBUG] Need 6x stripped_acacia_log for 1x acacia_hanging_sign
+2025-10-25 16:52:11.227 [DEBUG]   Processing: 6x stripped_acacia_log
+2025-10-25 16:52:11.227 [DEBUG]   Current recipe stack: acacia_hanging_sign
+2025-10-25 16:52:11.227 [DEBUG]   Adding material: 6x stripped_acacia_log
+2025-10-25 16:52:11.228 [DEBUG] Need 2x iron_chain for 1x acacia_hanging_sign
+2025-10-25 16:52:11.228 [DEBUG]   Processing: 2x iron_chain
+2025-10-25 16:52:11.228 [DEBUG]   Current recipe stack: acacia_hanging_sign
+2025-10-25 16:52:11.228 [DEBUG]   Found recipe for iron_chain: {'iron_ingot': 2}
+2025-10-25 16:52:11.228 [DEBUG]   Need 4x iron_ingot for 2x iron_chain
+2025-10-25 16:52:11.228 [DEBUG]     Processing: 4x iron_ingot
+2025-10-25 16:52:11.228 [DEBUG]     Current recipe stack: acacia_hanging_sign -> iron_chain
+2025-10-25 16:52:11.228 [DEBUG]     Adding material: 4x iron_ingot
+2025-10-25 16:52:11.228 [DEBUG] Final totals for 1x acacia_hanging_sign: {'stripped_acacia_log': 6, 'iron_ingot': 4}
+2025-10-25 16:52:11.229 [DEBUG] Requirements for 1x acacia_hanging_sign: {'stripped_acacia_log': 6, 'iron_ingot': 4}
+2025-10-25 16:52:11.229 [DEBUG] Updated total for stripped_acacia_log: 6
+2025-10-25 16:52:11.229 [DEBUG] Updated total for iron_ingot: 4
+2025-10-25 16:52:11.229 [DEBUG] Processing requirements for 1x mangrove_fence_gate
+2025-10-25 16:52:11.229 [DEBUG] Calculating requirements for 1x mangrove_fence_gate
+2025-10-25 16:52:11.229 [DEBUG] Processing: 1x mangrove_fence_gate
+2025-10-25 16:52:11.229 [DEBUG] Current recipe stack: 
+2025-10-25 16:52:11.229 [DEBUG] Found recipe for mangrove_fence_gate: {'stick': 4, 'mangrove_planks': 2}
+2025-10-25 16:52:11.229 [DEBUG] Need 4x stick for 1x mangrove_fence_gate
+2025-10-25 16:52:11.229 [DEBUG]   Processing: 4x stick
+2025-10-25 16:52:11.229 [DEBUG]   Current recipe stack: mangrove_fence_gate
+2025-10-25 16:52:11.229 [DEBUG]   Found recipe for stick: {'oak_planks': 2}
+2025-10-25 16:52:11.230 [DEBUG]   Need 8x oak_planks for 4x stick
+2025-10-25 16:52:11.230 [DEBUG]     Processing: 8x oak_planks
+2025-10-25 16:52:11.230 [DEBUG]     Current recipe stack: mangrove_fence_gate -> stick
+2025-10-25 16:52:11.230 [DEBUG]     Adding material: 8x oak_planks
+2025-10-25 16:52:11.230 [DEBUG] Need 2x mangrove_planks for 1x mangrove_fence_gate
+2025-10-25 16:52:11.230 [DEBUG]   Processing: 2x mangrove_planks
+2025-10-25 16:52:11.230 [DEBUG]   Current recipe stack: mangrove_fence_gate
+2025-10-25 16:52:11.230 [DEBUG]   Adding material: 2x mangrove_planks
+2025-10-25 16:52:11.230 [DEBUG] Final totals for 1x mangrove_fence_gate: {'oak_planks': 8, 'mangrove_planks': 2}
+2025-10-25 16:52:11.230 [DEBUG] Requirements for 1x mangrove_fence_gate: {'oak_planks': 8, 'mangrove_planks': 2}
+2025-10-25 16:52:11.230 [DEBUG] Updated total for oak_planks: 8
+2025-10-25 16:52:11.230 [DEBUG] Updated total for mangrove_planks: 2
+2025-10-25 16:52:11.231 [INFO] Final aggregate totals: {'planks': 8, 'acacia_planks': 5, 'stripped_acacia_log': 6, 'iron_ingot': 4, 'oak_planks': 8, 'mangrove_planks': 2}
+2025-10-25 16:52:11.231 [DEBUG] STREAM b'IHDR' 16 13
+2025-10-25 16:52:11.231 [DEBUG] STREAM b'PLTE' 41 21
+2025-10-25 16:52:11.231 [DEBUG] STREAM b'IDAT' 74 105
+2025-10-25 16:52:11.232 [DEBUG] STREAM b'IHDR' 16 13
+2025-10-25 16:52:11.232 [DEBUG] STREAM b'PLTE' 41 21
+2025-10-25 16:52:11.232 [DEBUG] STREAM b'IDAT' 74 105
+2025-10-25 16:56:12.722 [INFO] Calculating aggregate requirements for items: {}
+2025-10-25 16:56:12.722 [INFO] Final aggregate totals: {}
+2025-10-25 16:56:22.733 [INFO] Adding item: stick
+2025-10-25 16:56:22.733 [INFO] Adding 1x stick
+2025-10-25 16:56:22.734 [DEBUG] Current project items before add: {}
+2025-10-25 16:56:22.734 [DEBUG] Updated project items: {'stick': 1}
+2025-10-25 16:56:22.743 [DEBUG] STREAM b'IHDR' 16 13
+2025-10-25 16:56:22.743 [DEBUG] STREAM b'IDAT' 41 48
+2025-10-25 16:56:22.750 [INFO] Calculating aggregate requirements for items: {'stick': 1}
+2025-10-25 16:56:22.750 [DEBUG] Processing requirements for 1x stick
+2025-10-25 16:56:22.750 [DEBUG] Calculating requirements for 1x stick
+2025-10-25 16:56:22.750 [DEBUG] Processing: 1x stick
+2025-10-25 16:56:22.750 [DEBUG] Current recipe stack: 
+2025-10-25 16:56:22.750 [DEBUG] Found recipe for stick: {'planks': 2}
+2025-10-25 16:56:22.751 [DEBUG] Need 2x planks for 1x stick
+2025-10-25 16:56:22.751 [DEBUG]   Processing: 2x planks
+2025-10-25 16:56:22.751 [DEBUG]   Current recipe stack: stick
+2025-10-25 16:56:22.751 [DEBUG]   Adding material: 2x planks
+2025-10-25 16:56:22.751 [DEBUG] Final totals for 1x stick: {'planks': 2}
+2025-10-25 16:56:22.751 [DEBUG] Requirements for 1x stick: {'planks': 2}
+2025-10-25 16:56:22.751 [DEBUG] Updated total for planks: 2
+2025-10-25 16:56:22.751 [INFO] Final aggregate totals: {'planks': 2}
+2025-10-25 16:56:22.751 [DEBUG] No image found for planks
+2025-10-25 16:57:24.840 [INFO] Calculating aggregate requirements for items: {}
+2025-10-25 16:57:24.840 [INFO] Final aggregate totals: {}
+2025-10-25 16:57:28.768 [INFO] Adding item: stick
+2025-10-25 16:57:28.769 [INFO] Adding 1x stick
+2025-10-25 16:57:28.769 [DEBUG] Current project items before add: {}
+2025-10-25 16:57:28.769 [DEBUG] Updated project items: {'stick': 1}
+2025-10-25 16:57:28.776 [DEBUG] STREAM b'IHDR' 16 13
+2025-10-25 16:57:28.776 [DEBUG] STREAM b'IDAT' 41 48
+2025-10-25 16:57:28.781 [INFO] Calculating aggregate requirements for items: {'stick': 1}
+2025-10-25 16:57:28.781 [DEBUG] Processing requirements for 1x stick
+2025-10-25 16:57:28.782 [DEBUG] Calculating requirements for 1x stick
+2025-10-25 16:57:28.782 [DEBUG] Processing: 1x stick
+2025-10-25 16:57:28.782 [DEBUG] Current recipe stack: 
+2025-10-25 16:57:28.782 [DEBUG] Found recipe for stick: {'planks': 2}
+2025-10-25 16:57:28.782 [DEBUG] Need 2x planks for 1x stick
+2025-10-25 16:57:28.782 [DEBUG]   Processing: 2x planks
+2025-10-25 16:57:28.782 [DEBUG]   Current recipe stack: stick
+2025-10-25 16:57:28.782 [DEBUG]   Adding material: 2x planks
+2025-10-25 16:57:28.782 [DEBUG] Final totals for 1x stick: {'planks': 2}
+2025-10-25 16:57:28.782 [DEBUG] Requirements for 1x stick: {'planks': 2}
+2025-10-25 16:57:28.782 [DEBUG] Updated total for planks: 2
+2025-10-25 16:57:28.783 [INFO] Final aggregate totals: {'planks': 2}
+2025-10-25 16:57:28.783 [DEBUG] No image found for planks
+2025-10-25 16:58:43.861 [INFO] Calculating aggregate requirements for items: {}
+2025-10-25 16:58:43.862 [INFO] Final aggregate totals: {}
+2025-10-25 16:58:46.870 [INFO] Adding item: stick
+2025-10-25 16:58:46.870 [INFO] Adding 1x stick
+2025-10-25 16:58:46.870 [DEBUG] Current project items before add: {}
+2025-10-25 16:58:46.870 [DEBUG] Updated project items: {'stick': 1}
+2025-10-25 16:58:46.878 [DEBUG] STREAM b'IHDR' 16 13
+2025-10-25 16:58:46.879 [DEBUG] STREAM b'IDAT' 41 48
+2025-10-25 16:58:46.884 [INFO] Calculating aggregate requirements for items: {'stick': 1}
+2025-10-25 16:58:46.884 [DEBUG] Processing requirements for 1x stick
+2025-10-25 16:58:46.884 [DEBUG] Calculating requirements for 1x stick
+2025-10-25 16:58:46.884 [DEBUG] Processing: 1x stick
+2025-10-25 16:58:46.884 [DEBUG] Current recipe stack: 
+2025-10-25 16:58:46.884 [DEBUG] Found recipe for stick: {'planks': 2}
+2025-10-25 16:58:46.884 [DEBUG] Need 2x planks for 1x stick
+2025-10-25 16:58:46.885 [DEBUG]   Processing: 2x planks
+2025-10-25 16:58:46.885 [DEBUG]   Current recipe stack: stick
+2025-10-25 16:58:46.885 [DEBUG]   Adding material: 2x planks
+2025-10-25 16:58:46.885 [DEBUG] Final totals for 1x stick: {'planks': 2}
+2025-10-25 16:58:46.885 [DEBUG] Requirements for 1x stick: {'planks': 2}
+2025-10-25 16:58:46.885 [DEBUG] Updated total for planks: 2
+2025-10-25 16:58:46.885 [INFO] Final aggregate totals: {'planks': 2}
+2025-10-25 16:58:46.886 [DEBUG] No image found for planks
+2025-10-25 17:01:15.452 [INFO] Calculating aggregate requirements for items: {}
+2025-10-25 17:01:15.453 [INFO] Final aggregate totals: {}
+2025-10-25 17:01:20.031 [INFO] Adding item: stick
+2025-10-25 17:01:20.031 [INFO] Adding 1x stick
+2025-10-25 17:01:20.032 [DEBUG] Current project items before add: {}
+2025-10-25 17:01:20.032 [DEBUG] Updated project items: {'stick': 1}
+2025-10-25 17:01:20.040 [DEBUG] STREAM b'IHDR' 16 13
+2025-10-25 17:01:20.040 [DEBUG] STREAM b'IDAT' 41 48
+2025-10-25 17:01:20.045 [INFO] Calculating aggregate requirements for items: {'stick': 1}
+2025-10-25 17:01:20.046 [DEBUG] Processing requirements for 1x stick
+2025-10-25 17:01:20.046 [DEBUG] Calculating requirements for 1x stick
+2025-10-25 17:01:20.046 [DEBUG] Processing: 1x stick
+2025-10-25 17:01:20.046 [DEBUG] Current recipe stack: 
+2025-10-25 17:01:20.047 [DEBUG] Found recipe for stick: {'planks': 2}
+2025-10-25 17:01:20.047 [DEBUG] Need 2x planks for 1x stick
+2025-10-25 17:01:20.047 [DEBUG]   Processing: 2x planks
+2025-10-25 17:01:20.047 [DEBUG]   Current recipe stack: stick
+2025-10-25 17:01:20.048 [DEBUG]   Adding material: 2x planks
+2025-10-25 17:01:20.048 [DEBUG] Final totals for 1x stick: {'planks': 2}
+2025-10-25 17:01:20.048 [DEBUG] Requirements for 1x stick: {'planks': 2}
+2025-10-25 17:01:20.048 [DEBUG] Updated total for planks: 2
+2025-10-25 17:01:20.048 [INFO] Final aggregate totals: {'planks': 2}
+2025-10-25 17:01:20.048 [DEBUG] No image found for planks
+2025-10-25 17:03:39.523 [INFO] Calculating aggregate requirements for items: {}
+2025-10-25 17:03:39.524 [INFO] Final aggregate totals: {}
+2025-10-25 17:03:43.123 [INFO] Adding item: stick
+2025-10-25 17:03:43.123 [INFO] Adding 1x stick
+2025-10-25 17:03:43.123 [DEBUG] Current project items before add: {}
+2025-10-25 17:03:43.123 [DEBUG] Updated project items: {'stick': 1}
+2025-10-25 17:03:43.131 [DEBUG] STREAM b'IHDR' 16 13
+2025-10-25 17:03:43.131 [DEBUG] STREAM b'IDAT' 41 48
+2025-10-25 17:03:43.137 [INFO] Calculating aggregate requirements for items: {'stick': 1}
+2025-10-25 17:03:43.137 [DEBUG] Processing requirements for 1x stick
+2025-10-25 17:03:43.137 [DEBUG] Calculating requirements for 1x stick
+2025-10-25 17:03:43.137 [DEBUG] Processing: 1x stick
+2025-10-25 17:03:43.138 [DEBUG] Current recipe stack: 
+2025-10-25 17:03:43.138 [DEBUG] Found recipe for stick: {'planks': 2}
+2025-10-25 17:03:43.138 [DEBUG] Need 2x planks for 1x stick
+2025-10-25 17:03:43.138 [DEBUG]   Processing: 2x planks
+2025-10-25 17:03:43.138 [DEBUG]   Current recipe stack: stick
+2025-10-25 17:03:43.138 [DEBUG]   Adding material: 2x planks
+2025-10-25 17:03:43.138 [DEBUG] Final totals for 1x stick: {'planks': 2}
+2025-10-25 17:03:43.138 [DEBUG] Requirements for 1x stick: {'planks': 2}
+2025-10-25 17:03:43.138 [DEBUG] Updated total for planks: 2
+2025-10-25 17:03:43.139 [INFO] Final aggregate totals: {'planks': 2}
+2025-10-25 17:03:43.139 [DEBUG] STREAM b'IHDR' 16 13
+2025-10-25 17:03:43.139 [DEBUG] STREAM b'PLTE' 41 21
+2025-10-25 17:03:43.139 [DEBUG] STREAM b'IDAT' 74 105

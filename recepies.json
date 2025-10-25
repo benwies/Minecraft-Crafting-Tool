@@ -2649,7 +2649,7 @@
     "copper_ingot": 2
   },
   "stick": {
-    "oak_planks": 2
+    "planks": 2
   },
   "sticky_piston": {
     "piston": 1,
@@ -3209,4 +3209,6 @@
     "terracotta": 8,
     "yellow_dye": 1
   }
+  ,
+  "planks": {}
 }
