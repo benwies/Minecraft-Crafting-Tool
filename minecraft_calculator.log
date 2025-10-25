@@ -4881,3 +4881,97 @@
 2025-10-25 18:31:58.066 [DEBUG] STREAM b'PLTE' 41 12
 2025-10-25 18:31:58.066 [DEBUG] STREAM b'tRNS' 65 1
 2025-10-25 18:31:58.066 [DEBUG] STREAM b'IDAT' 78 69
+2025-10-25 18:35:56.498 [INFO] Calculating aggregate requirements for items: {}
+2025-10-25 18:35:56.498 [INFO] Final aggregate totals: {}
+2025-10-25 18:41:48.450 [INFO] Calculating aggregate requirements for items: {}
+2025-10-25 18:41:48.451 [INFO] Final aggregate totals: {}
+2025-10-25 18:41:50.419 [INFO] Calculating aggregate requirements for items: {}
+2025-10-25 18:41:50.419 [INFO] Final aggregate totals: {}
+2025-10-25 18:41:51.953 [INFO] Calculating aggregate requirements for items: {}
+2025-10-25 18:41:51.953 [INFO] Final aggregate totals: {}
+2025-10-25 18:41:52.710 [INFO] Calculating aggregate requirements for items: {}
+2025-10-25 18:41:52.710 [INFO] Final aggregate totals: {}
+2025-10-25 18:41:54.009 [INFO] Calculating aggregate requirements for items: {}
+2025-10-25 18:41:54.010 [INFO] Final aggregate totals: {}
+2025-10-25 18:41:58.659 [INFO] Calculating aggregate requirements for items: {}
+2025-10-25 18:41:58.659 [INFO] Final aggregate totals: {}
+2025-10-25 18:41:59.000 [INFO] Calculating aggregate requirements for items: {}
+2025-10-25 18:41:59.000 [INFO] Final aggregate totals: {}
+2025-10-25 18:42:35.741 [INFO] Calculating aggregate requirements for items: {}
+2025-10-25 18:42:35.742 [INFO] Final aggregate totals: {}
+2025-10-25 18:42:37.635 [INFO] Calculating aggregate requirements for items: {}
+2025-10-25 18:42:37.635 [INFO] Final aggregate totals: {}
+2025-10-25 18:42:58.820 [INFO] Adding item: acacia_fence_gate
+2025-10-25 18:42:58.820 [INFO] Adding 13x acacia_fence_gate
+2025-10-25 18:42:58.820 [DEBUG] Current project items before add: {}
+2025-10-25 18:42:58.821 [DEBUG] Recorded undo snapshot (add_item); undo depth=1
+2025-10-25 18:42:58.821 [DEBUG] Updated project items: {'acacia_fence_gate': 13}
+2025-10-25 18:42:58.829 [DEBUG] STREAM b'IHDR' 16 13
+2025-10-25 18:42:58.829 [DEBUG] STREAM b'PLTE' 41 21
+2025-10-25 18:42:58.829 [DEBUG] STREAM b'IDAT' 74 112
+2025-10-25 18:42:58.834 [INFO] Calculating aggregate requirements for items: {'acacia_fence_gate': 13}
+2025-10-25 18:42:58.835 [DEBUG] Processing requirements for 13x acacia_fence_gate
+2025-10-25 18:42:58.835 [DEBUG] Calculating requirements for 13x acacia_fence_gate
+2025-10-25 18:42:58.835 [DEBUG] Processing: 13x acacia_fence_gate
+2025-10-25 18:42:58.835 [DEBUG] Current recipe stack: 
+2025-10-25 18:42:58.835 [DEBUG] Found recipe for acacia_fence_gate: {'stick': 4, 'acacia_planks': 2}
+2025-10-25 18:42:58.835 [DEBUG] Need 52x stick for 13x acacia_fence_gate
+2025-10-25 18:42:58.835 [DEBUG]   Processing: 52x stick
+2025-10-25 18:42:58.835 [DEBUG]   Current recipe stack: acacia_fence_gate
+2025-10-25 18:42:58.835 [DEBUG]   Found recipe for stick: {'planks': 2}
+2025-10-25 18:42:58.835 [DEBUG]   Need 104x planks for 52x stick
+2025-10-25 18:42:58.836 [DEBUG]     Processing: 104x planks
+2025-10-25 18:42:58.836 [DEBUG]     Current recipe stack: acacia_fence_gate -> stick
+2025-10-25 18:42:58.836 [DEBUG]     Adding material: 104x planks
+2025-10-25 18:42:58.836 [DEBUG] Need 26x acacia_planks for 13x acacia_fence_gate
+2025-10-25 18:42:58.836 [DEBUG]   Processing: 26x acacia_planks
+2025-10-25 18:42:58.836 [DEBUG]   Current recipe stack: acacia_fence_gate
+2025-10-25 18:42:58.836 [DEBUG]   Adding material: 26x acacia_planks
+2025-10-25 18:42:58.836 [DEBUG] Final totals for 13x acacia_fence_gate: {'planks': 104, 'acacia_planks': 26}
+2025-10-25 18:42:58.836 [DEBUG] Requirements for 13x acacia_fence_gate: {'planks': 104, 'acacia_planks': 26}
+2025-10-25 18:42:58.836 [DEBUG] Updated total for planks: 104
+2025-10-25 18:42:58.837 [DEBUG] Updated total for acacia_planks: 26
+2025-10-25 18:42:58.837 [INFO] Final aggregate totals: {'planks': 104, 'acacia_planks': 26}
+2025-10-25 18:42:58.837 [DEBUG] STREAM b'IHDR' 16 13
+2025-10-25 18:42:58.837 [DEBUG] STREAM b'PLTE' 41 21
+2025-10-25 18:42:58.837 [DEBUG] STREAM b'IDAT' 74 112
+2025-10-25 18:42:58.838 [DEBUG] STREAM b'IHDR' 16 13
+2025-10-25 18:42:58.838 [DEBUG] STREAM b'PLTE' 41 21
+2025-10-25 18:42:58.838 [DEBUG] STREAM b'IDAT' 74 105
+2025-10-25 18:43:16.398 [DEBUG] Recorded undo snapshot (delete_item); undo depth=2
+2025-10-25 18:43:16.399 [INFO] Calculating aggregate requirements for items: {}
+2025-10-25 18:43:16.399 [INFO] Final aggregate totals: {}
+2025-10-25 18:43:23.718 [INFO] Adding item: acacia_fence_gate
+2025-10-25 18:43:23.719 [INFO] Adding 1x acacia_fence_gate
+2025-10-25 18:43:23.719 [DEBUG] Current project items before add: {}
+2025-10-25 18:43:23.719 [DEBUG] Recorded undo snapshot (add_item); undo depth=3
+2025-10-25 18:43:23.719 [DEBUG] Updated project items: {'acacia_fence_gate': 1}
+2025-10-25 18:43:23.721 [INFO] Calculating aggregate requirements for items: {'acacia_fence_gate': 1}
+2025-10-25 18:43:23.721 [DEBUG] Processing requirements for 1x acacia_fence_gate
+2025-10-25 18:43:23.721 [DEBUG] Calculating requirements for 1x acacia_fence_gate
+2025-10-25 18:43:23.721 [DEBUG] Processing: 1x acacia_fence_gate
+2025-10-25 18:43:23.721 [DEBUG] Current recipe stack: 
+2025-10-25 18:43:23.721 [DEBUG] Found recipe for acacia_fence_gate: {'stick': 4, 'acacia_planks': 2}
+2025-10-25 18:43:23.721 [DEBUG] Need 4x stick for 1x acacia_fence_gate
+2025-10-25 18:43:23.721 [DEBUG]   Processing: 4x stick
+2025-10-25 18:43:23.721 [DEBUG]   Current recipe stack: acacia_fence_gate
+2025-10-25 18:43:23.722 [DEBUG]   Found recipe for stick: {'planks': 2}
+2025-10-25 18:43:23.722 [DEBUG]   Need 8x planks for 4x stick
+2025-10-25 18:43:23.722 [DEBUG]     Processing: 8x planks
+2025-10-25 18:43:23.722 [DEBUG]     Current recipe stack: acacia_fence_gate -> stick
+2025-10-25 18:43:23.722 [DEBUG]     Adding material: 8x planks
+2025-10-25 18:43:23.722 [DEBUG] Need 2x acacia_planks for 1x acacia_fence_gate
+2025-10-25 18:43:23.722 [DEBUG]   Processing: 2x acacia_planks
+2025-10-25 18:43:23.722 [DEBUG]   Current recipe stack: acacia_fence_gate
+2025-10-25 18:43:23.722 [DEBUG]   Adding material: 2x acacia_planks
+2025-10-25 18:43:23.722 [DEBUG] Final totals for 1x acacia_fence_gate: {'planks': 8, 'acacia_planks': 2}
+2025-10-25 18:43:23.722 [DEBUG] Requirements for 1x acacia_fence_gate: {'planks': 8, 'acacia_planks': 2}
+2025-10-25 18:43:23.722 [DEBUG] Updated total for planks: 8
+2025-10-25 18:43:23.722 [DEBUG] Updated total for acacia_planks: 2
+2025-10-25 18:43:23.722 [INFO] Final aggregate totals: {'planks': 8, 'acacia_planks': 2}
+2025-10-25 18:44:01.808 [INFO] Calculating aggregate requirements for items: {}
+2025-10-25 18:44:01.808 [INFO] Final aggregate totals: {}
+2025-10-25 18:44:04.031 [INFO] Calculating aggregate requirements for items: {}
+2025-10-25 18:44:04.031 [INFO] Final aggregate totals: {}
+2025-10-25 18:44:23.426 [INFO] Calculating aggregate requirements for items: {}
+2025-10-25 18:44:23.426 [INFO] Final aggregate totals: {}

@@ -3,6 +3,7 @@ import copy
 import logging
 import tkinter as tk
 from tkinter import ttk, messagebox, filedialog
+import tkinter.font as tkfont
 from pathlib import Path
 from PIL import Image, ImageTk
 from code import load_recipes, calculate_requirements, aggregate_requirements
@@ -120,17 +121,124 @@ root.title("Minecraft Farm Resource Calculator - Projects")
 main = ttk.Frame(root, padding=12)
 main.pack(fill="both", expand=True)
 
+# --- Theming: Modern light/dark styles ---
+current_theme = 'light'
+
+def apply_theme(name: str = 'light'):
+    global current_theme
+    current_theme = name
+    style = ttk.Style()
+    # Use a configurable theme as base
+    try:
+        style.theme_use('clam')
+    except Exception:
+        pass
+
+    # Palettes
+    LIGHT = {
+        'bg': '#F3F4F6',
+        'surface': '#FFFFFF',
+        'text': '#111827',
+        'subtext': '#374151',
+        'accent': '#2563EB',
+        'border': '#E5E7EB',
+        'hover': '#E5E7EB',
+        'select': '#DBEAFE',
+        'header_bg': '#EEF2F7',
+        'header_text': '#111827',
+        'tree_bg': '#FFFFFF',
+        'tree_alt': '#F9FAFB',
+    }
+    DARK = {
+        'bg': '#0F172A',
+        'surface': '#111827',
+        'text': '#E5E7EB',
+        'subtext': '#9CA3AF',
+        'accent': '#60A5FA',
+        'border': '#1F2937',
+        'hover': '#1F2937',
+        'select': '#1E3A8A',
+        'header_bg': '#1F2937',
+        'header_text': '#E5E7EB',
+        'tree_bg': '#111827',
+        'tree_alt': '#0F172A',
+    }
+    P = LIGHT if name == 'light' else DARK
+
+    # Fonts
+    try:
+        default_font = tkfont.nametofont('TkDefaultFont')
+        default_font.configure(family='Segoe UI', size=10)
+        text_font = tkfont.nametofont('TkTextFont')
+        text_font.configure(family='Segoe UI', size=10)
+        heading_font = tkfont.nametofont('TkHeadingFont')
+        heading_font.configure(family='Segoe UI Semibold', size=10)
+    except Exception:
+        pass
+
+    root.configure(bg=P['bg'])
+    style.configure('TFrame', background=P['bg'])
+    style.configure('Topbar.TFrame', background=P['surface'])
+    style.configure('TLabel', background=P['bg'], foreground=P['text'])
+    style.configure('Topbar.TLabel', background=P['surface'], foreground=P['text'])
+    style.configure('TLabelframe', background=P['bg'], bordercolor=P['border'])
+    style.configure('TLabelframe.Label', background=P['bg'], foreground=P['subtext'])
+    style.configure('TButton', padding=(10, 6), relief='flat')
+    style.map('TButton', background=[('active', P['hover'])])
+    style.configure('Toolbutton', padding=(6, 4), relief='flat')
+    style.map('Toolbutton', background=[('active', P['hover'])])
+
+    # Inputs
+    style.configure('TEntry', fieldbackground=P['surface'], foreground=P['text'])
+    style.configure('TCombobox', fieldbackground=P['surface'])
+
+    # Treeview
+    style.configure('Treeview', background=P['tree_bg'], fieldbackground=P['tree_bg'],
+                    foreground=P['text'], bordercolor=P['border'], rowheight=26)
+    style.configure('Treeview.Heading', background=P['header_bg'], foreground=P['header_text'], relief='flat')
+    style.map('Treeview', background=[('selected', P['select'])], foreground=[('selected', P['text'])])
+
+    # Apply alternating row tags if trees exist
+    try:
+        items_tree.tag_configure('even', background=P['tree_bg'])
+        items_tree.tag_configure('odd', background=P['tree_alt'])
+    except Exception:
+        pass
+    try:
+        materials_tree.tag_configure('even', background=P['tree_bg'])
+        materials_tree.tag_configure('odd', background=P['tree_alt'])
+    except Exception:
+        pass
+    # Update theme toggle button glyph
+    try:
+        btn_theme.config(text=('☀' if name == 'dark' else '☾'))
+    except Exception:
+        pass
+
+def toggle_theme():
+    new_mode = 'dark' if current_theme == 'light' else 'light'
+    apply_theme(new_mode)
+    try:
+        btn_theme.config(text='☀' if new_mode == 'dark' else '☾')
+    except Exception:
+        pass
+    update_views()
+
 # Top: project controls
 proj_frame = ttk.Frame(main)
 proj_frame.grid(row=0, column=0, columnspan=3, sticky="ew")
 
 # Toolbar-like Undo/Redo on the top-left (icon-like buttons using Unicode arrows)
-toolbar = ttk.Frame(proj_frame)
+toolbar = ttk.Frame(proj_frame, style='Topbar.TFrame')
 toolbar.grid(row=0, column=0, sticky="w")
 btn_undo = ttk.Button(toolbar, text="⟲", width=3, style="Toolbutton", state="disabled")
 btn_undo.pack(side="left", padx=(4, 2))
 btn_redo = ttk.Button(toolbar, text="⟳", width=3, style="Toolbutton", state="disabled")
 btn_redo.pack(side="left", padx=(2, 4))
+spacer = ttk.Frame(toolbar)
+spacer.pack(side="left", expand=True, fill="x")
+btn_theme = ttk.Button(toolbar, text="☾", width=3, style="Toolbutton", command=toggle_theme)
+btn_theme.pack(side="left", padx=(2, 4))
 
 ttk.Label(proj_frame, text="Project name:").grid(row=1, column=0)
 entry_proj = ttk.Entry(proj_frame)
@@ -591,9 +699,10 @@ def refresh_items_view():
     
     for r in items_tree.get_children():
         items_tree.delete(r)
-    for itm, q in sorted(current_project.items.items()):
+    for idx, (itm, q) in enumerate(sorted(current_project.items.items())):
         img = load_item_image(itm)
-        items_tree.insert("", "end", iid=itm, image=img if img else "", text="", values=(format_item_name(itm), q, format_stacks(q), "X"))
+        tag = 'odd' if idx % 2 else 'even'
+        items_tree.insert("", "end", iid=itm, image=img if img else "", text="", values=(format_item_name(itm), q, format_stacks(q), "X"), tags=(tag,))
 
 
 def format_item_name(name: str) -> str:
@@ -622,9 +731,10 @@ def refresh_materials_view():
         mats = aggregate_requirements(RECIPES, current_project.items)
         for r in materials_tree.get_children():
             materials_tree.delete(r)
-        for mat, q in sorted(mats.items()):
+        for idx, (mat, q) in enumerate(sorted(mats.items())):
             img = load_item_image(mat)
-            materials_tree.insert("", "end", iid=mat, image=img if img else "", text="", values=(format_item_name(mat), q, format_stacks(q)))
+            tag = 'odd' if idx % 2 else 'even'
+            materials_tree.insert("", "end", iid=mat, image=img if img else "", text="", values=(format_item_name(mat), q, format_stacks(q)), tags=(tag,))
     except Exception as e:
         messagebox.showerror("Calculation error", f"Failed to calculate materials: {e}")
 
@@ -767,7 +877,8 @@ def on_redo():
 btn_undo.config(command=on_undo)
 btn_redo.config(command=on_redo)
 
-# Initial population
+# Initial population and apply theme last so styles reach all widgets
+apply_theme('dark')
 refresh_projects_combo()
 update_views()
 
