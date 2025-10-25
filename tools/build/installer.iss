@@ -1,9 +1,9 @@
-; Inno Setup script for Minecraft Farm Calculator
-#define MyAppName "Minecraft Farm Calculator"
+; Inno Setup script for MC Crafting Calculator
+#define MyAppName "MC Crafting Calculator"
 #define MyAppVersion "1.0.0"
 #define MyAppPublisher "Your Name or Org"
-#define MyAppExeName "MinecraftFarmCalc.exe"
-#define MyAppFolderName "Minecraft Farm Calculator"
+#define MyAppExeName "MCCraftingCalculator.exe"
+#define MyAppFolderName "MC Crafting Calculator"
 
 [Setup]
 AppId={{A8C84F6E-44B6-4F46-80E9-2E3C7D9B1C49}
@@ -16,17 +16,20 @@ DefaultGroupName={#MyAppFolderName}
 DisableProgramGroupPage=no
 ; Output relative to repo root (two levels up from this script)
 OutputDir={#SourcePath}\..\..\dist\installer
-OutputBaseFilename=MinecraftFarmCalculator-Setup
+OutputBaseFilename=MCCraftingCalculator-Setup
 Compression=lzma
 SolidCompression=yes
 ArchitecturesInstallIn64BitMode=x64
+#ifdef MyAppIcon
+SetupIconFile={#MyAppIcon}
+#endif
 
 [Languages]
 Name: "english"; MessagesFile: "compiler:Default.isl"
 
 [Files]
 ; Include everything from the PyInstaller one-folder dir at repo root
-Source: "{#SourcePath}\..\..\dist\MinecraftFarmCalc\*"; DestDir: "{app}"; Flags: recursesubdirs ignoreversion
+Source: "{#SourcePath}\..\..\dist\MCCraftingCalculator\*"; DestDir: "{app}"; Flags: recursesubdirs ignoreversion
 
 [Icons]
 Name: "{group}\{#MyAppName}"; Filename: "{app}\{#MyAppExeName}"

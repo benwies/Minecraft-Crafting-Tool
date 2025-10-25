@@ -41,8 +41,8 @@ if (-not $hasPyInstaller) {
   }
 }
 
-# Build name
-$appName = 'MinecraftFarmCalc'
+# Build name (folder and exe base name)
+$appName = 'MCCraftingCalculator'
 
 # Ensure output is clean
 if (Test-Path "$repoRoot\dist\$appName") { Remove-Item -Recurse -Force "$repoRoot\dist\$appName" }
@@ -54,6 +54,11 @@ $datas = @(
   "recepies;recepies",
   "pic;pic"
 )
+
+# If an app icon exists, also ship it as data so the Tk window can load it at runtime
+if (Test-Path "$repoRoot\tools\build\app.ico") {
+  $datas += "tools\\build\\app.ico;."
+}
 
 # Optional icon (place tools/build/app.ico to enable)
 $iconArg = ''

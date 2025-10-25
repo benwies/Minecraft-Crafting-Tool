@@ -11,16 +11,12 @@ from datetime import datetime
 
 
 def _user_log_file_path() -> str:
-    """Return a user-writable log file path.
-
-    Prefers %LOCALAPPDATA%\Minecraft Farm Calculator\minecraft_calculator.log on Windows.
-    Falls back to the user's home directory if needed.
-    """
+    """Return a user-writable log file path in the new app folder only."""
     base = os.getenv("LOCALAPPDATA")
     if not base:
         # Fallback for non-Windows or if env var is missing
         base = os.path.join(os.path.expanduser("~"), "AppData", "Local")
-    app_dir = os.path.join(base, "Minecraft Farm Calculator")
+    app_dir = os.path.join(base, "MC Crafting Calculator")
     try:
         os.makedirs(app_dir, exist_ok=True)
         return os.path.join(app_dir, "minecraft_calculator.log")

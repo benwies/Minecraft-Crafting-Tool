@@ -13,6 +13,8 @@ import shutil
 import tkinter.font as tkfont
 
 from pathlib import Path
+import os
+import sys
 
 from PIL import Image, ImageTk
 
@@ -20,47 +22,72 @@ from code import load_recipes, calculate_requirements, aggregate_requirements
 
 BASE = Path(__file__).parent
 
+
+def _user_data_dir() -> Path:
+    try:
+        base = os.getenv("LOCALAPPDATA")
+        if not base:
+            base = str(Path.home() / "AppData" / "Local")
+        # Use the new app name only; no fallback
+        app = Path(base) / "MC Crafting Calculator"
+        app.mkdir(parents=True, exist_ok=True)
+        return app
+    except Exception:
+        # Home-dir fallback (same new name)
+        p = Path.home() / "MC Crafting Calculator"
+        try:
+            p.mkdir(parents=True, exist_ok=True)
+        except Exception:
+            pass
+        return p
+
+
+USER_DIR = _user_data_dir()
+
 RECIPES_PATHS = [BASE / "recepies.json", BASE / "recipes.json"]
 
 PIC_DIR = BASE / "pic"
+USER_PIC_DIR = USER_DIR / "pic"
 
 RECIPES = {}
-
 for p in RECIPES_PATHS:
-
     if p.exists():
-
         try:
-
             RECIPES = load_recipes(str(p))
-
             break
-
         except Exception:
-
             RECIPES = {}
 
 ITEM_IMAGES = {}
-
 PIC_INDEX = {}
-
 for p in PIC_DIR.glob("*.png"):
-
     try:
-
-        key = p.stem.lower()
-
-        PIC_INDEX[key] = p
-
+        PIC_INDEX[p.stem.lower()] = p
     except Exception:
-
         pass
+
+# Overlay with any user-supplied images; they take precedence
+try:
+    USER_PIC_DIR.mkdir(parents=True, exist_ok=True)
+except Exception:
+    pass
+try:
+    for p in USER_PIC_DIR.glob("*.png"):
+        try:
+            PIC_INDEX[p.stem.lower()] = p
+        except Exception:
+            pass
+except Exception:
+    pass
 
 ALL_MATERIAL_SUGGESTIONS = []
 
-PROJECTS_DIR = BASE / "projects"
-
-PROJECTS_DIR.mkdir(exist_ok=True)
+# Store projects in a user-writable location
+PROJECTS_DIR = USER_DIR / "projects"
+try:
+    PROJECTS_DIR.mkdir(parents=True, exist_ok=True)
+except Exception:
+    pass
 
 LAST_PROJECT_FILE = PROJECTS_DIR / ".last_project"
 
@@ -351,7 +378,28 @@ def list_project_files():
 
 root = tk.Tk()
 
-root.title("Minecraft Farm Resource Calculator - Projects")
+# Window title and icon (use JPEG from tools/build)
+root.title("MC Crafting Calculator - Projects")
+
+# Prefer JPEG icon; include it as PyInstaller data.
+_ICON_IMG = None
+try:
+    base_dir = Path(sys.executable).parent if getattr(sys, "frozen", False) else BASE
+    candidates = [
+        base_dir / "16x16-minecraft-icon-19.jpg",  # packaged (added as data)
+        BASE / "tools" / "build" / "16x16-minecraft-icon-19.jpg",  # dev tree
+    ]
+    for img_path in candidates:
+        if img_path.exists():
+            try:
+                pil = Image.open(img_path)
+                _ICON_IMG = ImageTk.PhotoImage(pil)
+                root.iconphoto(True, _ICON_IMG)
+                break
+            except Exception:
+                pass
+except Exception:
+    pass
 
 main = ttk.Frame(root, padding=12)
 
@@ -1528,28 +1576,6 @@ def load_item_image(item_name):
 
     suffix_tokens = {
         "stairs",
-        "slab",
-        "wall",
-        "plate",
-        "pressure",
-        "button",
-        "door",
-        "trapdoor",
-        "fence",
-        "gate",
-        "sign",
-        "hanging",
-        "pane",
-        "carpet",
-        "bed",
-        "boat",
-        "minecart",
-        "helmet",
-        "chestplate",
-        "leggings",
-        "boots",
-        "concrete",
-        "powder",
         "terracotta",
         "glazed",
         "stained",
@@ -3192,9 +3218,9 @@ def _on_pick_image_for_row(row_id: str):
 
             return
 
-        dst = PIC_DIR / f"{row_id}.png"
+        dst = USER_PIC_DIR / f"{row_id}.png"
 
-        PIC_DIR.mkdir(parents=True, exist_ok=True)
+        USER_PIC_DIR.mkdir(parents=True, exist_ok=True)
 
         shutil.copyfile(fpath, dst)
 

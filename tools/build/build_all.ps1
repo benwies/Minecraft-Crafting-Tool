@@ -15,14 +15,14 @@ Write-Host "Repo root: $repoRoot"
 Write-Host "Step 1/3: Building EXE with PyInstaller..."
 . "$PSScriptRoot\build_exe.ps1"
 
-$oneFolderDir = Join-Path $repoRoot 'dist\MinecraftFarmCalc'
+$oneFolderDir = Join-Path $repoRoot 'dist\MCCraftingCalculator'
 if (-not (Test-Path $oneFolderDir)) {
   throw "Expected one-folder output at $oneFolderDir not found."
 }
 
 # 2) Create a portable ZIP
 Write-Host "Step 2/3: Creating portable ZIP..."
-$zipPath = Join-Path $repoRoot 'dist\MinecraftFarmCalc-portable.zip'
+$zipPath = Join-Path $repoRoot 'dist\MCCraftingCalculator-portable.zip'
 if (Test-Path $zipPath) { Remove-Item -Force $zipPath }
 Compress-Archive -Path (Join-Path $oneFolderDir '*') -DestinationPath $zipPath
 Write-Host "Portable ZIP: $zipPath"

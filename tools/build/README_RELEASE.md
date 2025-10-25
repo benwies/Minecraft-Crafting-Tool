@@ -13,7 +13,7 @@ Everything you need to ship a Windows build lives in `tools/build/`.
 ## Local build (EXE)
 1) Right‑click `tools/build/build_exe.ps1` → “Run with PowerShell”.
   - Installs PyInstaller if needed
-  - Produces: `dist/MinecraftFarmCalc/MinecraftFarmCalc.exe`
+  - Produces: `dist/MCCraftingCalculator/MCCraftingCalculator.exe`
   - Bundles: `recepies.json`, `recepies/`, `pic/`
   - Optional icon: place `tools/build/app.ico` to brand the EXE
 
@@ -22,11 +22,11 @@ Two ways:
 
 1) Command line (after installing Inno Setup):
   - Run: `& tools/build/build_installer.ps1` (supports `-Version` and `-Publisher` overrides)
-  - Output: `dist/installer/MinecraftFarmCalculator-Setup.exe`
+  - Output: `dist/installer/MCCraftingCalculator-Setup.exe`
 
 2) GUI compiler:
   - Open `tools/build/installer.iss` in Inno Setup Compiler, then press F9
-  - Output: `dist/installer/MinecraftFarmCalculator-Setup.exe`
+  - Output: `dist/installer/MCCraftingCalculator-Setup.exe`
 
 ## One-shot build (EXE + ZIP + Installer)
 - Use `& tools/build/build_all.ps1`
@@ -40,16 +40,16 @@ Two options:
 Manual steps:
 1) Create a new release on GitHub (Draft → “Publish release”)
 2) Upload:
-  - `dist/installer/MinecraftFarmCalculator-Setup.exe`
-  - (Optional) a ZIP of `dist/MinecraftFarmCalc/`
+  - `dist/installer/MCCraftingCalculator-Setup.exe`
+  - (Optional) a ZIP of `dist/MCCraftingCalculator/`
 3) Add short notes and checksums if desired
 
 CI (optional): a GitHub Actions workflow can build and attach artifacts when you push a version tag. See `.github/workflows/release.yml` if present.
 
 ## Artifacts
-- One‑folder app: `dist/MinecraftFarmCalc/`
-- Installer: `dist/installer/MinecraftFarmCalculator-Setup.exe`
-- Optional portable ZIP: `dist/MinecraftFarmCalc-portable.zip`
+- One‑folder app: `dist/MCCraftingCalculator/`
+- Installer: `dist/installer/MCCraftingCalculator-Setup.exe`
+- Optional portable ZIP: `dist/MCCraftingCalculator-portable.zip`
 
 ## Tips
 - Missing images: Right‑click a material → “Set image…”.

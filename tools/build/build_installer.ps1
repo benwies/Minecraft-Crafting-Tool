@@ -12,7 +12,7 @@ Set-Location $repoRoot
 Write-Host "Repo root: $repoRoot"
 
 # Ensure the PyInstaller output exists
-$oneFolderDir = Join-Path $repoRoot 'dist\MinecraftFarmCalc'
+$oneFolderDir = Join-Path $repoRoot 'dist\MCCraftingCalculator'
 if (-not (Test-Path $oneFolderDir)) {
   throw "PyInstaller output not found at $oneFolderDir. Run tools/build/build_exe.ps1 first."
 }
@@ -80,6 +80,9 @@ if (-not (Test-Path $outDir)) { New-Item -ItemType Directory -Path $outDir | Out
 $isccArgs = @()
 if ($Version) { $isccArgs += "/DMyAppVersion=$Version" }
 if ($Publisher) { $isccArgs += "/DMyAppPublisher=$Publisher" }
+# If an app icon exists, pass it so the installer UI uses it
+$appIco = Join-Path $repoRoot 'tools\build\app.ico'
+if (Test-Path $appIco) { $isccArgs += "/DMyAppIcon=$appIco" }
 # Pass the .iss path as a single argument; PowerShell will quote if needed
 $isccArgs += $iss
 
@@ -87,4 +90,4 @@ Write-Host "Building installer with Inno Setup..."
 & $iscc @isccArgs
 if ($LASTEXITCODE -ne 0) { throw "Inno Setup failed with code $LASTEXITCODE" }
 
-Write-Host "Installer complete: dist\\installer\\MinecraftFarmCalculator-Setup.exe"
+Write-Host "Installer complete: dist\\installer\\MCCraftingCalculator-Setup.exe"
