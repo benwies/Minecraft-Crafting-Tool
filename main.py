@@ -3,6 +3,7 @@ import copy
 import logging
 import tkinter as tk
 from tkinter import ttk, messagebox, filedialog
+import shutil
 import tkinter.font as tkfont
 from pathlib import Path
 from PIL import Image, ImageTk
@@ -50,6 +51,35 @@ def normalize_display_mats(mats: dict) -> dict:
 UNDO_STACK = []
 REDO_STACK = []
 MAX_HISTORY = 5
+
+# Debounced autosave interval (milliseconds)
+AUTOSAVE_MS = 1500
+_autosave_after_id = None
+
+# Materials table sorting state: (column_key, descending?)
+# column_key in {"default", "item", "qty", "stacks", "acq"}
+_mat_sort = ("default", False)
+
+
+def _schedule_autosave():
+    global _autosave_after_id
+    try:
+        if _autosave_after_id is not None:
+            try:
+                root.after_cancel(_autosave_after_id)
+            except Exception:
+                pass
+        _autosave_after_id = root.after(AUTOSAVE_MS, _do_autosave)
+    except Exception:
+        pass
+
+
+def _do_autosave():
+    try:
+        if "current_project" in globals() and current_project:
+            on_save_project(silent=True)
+    except Exception:
+        pass
 
 
 def snapshot_state():
@@ -1083,7 +1113,35 @@ def refresh_materials_view():
             pass
         for r in materials_tree.get_children():
             materials_tree.delete(r)
-        for idx, (mat, q) in enumerate(sorted(mats.items())):
+        # Determine ordering (default preserves existing behavior)
+        order_keys = [k for k, _ in sorted(mats.items())]
+        try:
+            sort_key, desc = _mat_sort
+            if sort_key != "default":
+                # Precompute maps for sorting
+                acq_map = {m: max(int(ACQUIRED_MATS.get(m, 0)), 0) for m in mats.keys()}
+                miss_map = {m: max(int(mats[m]) - acq_map[m], 0) for m in mats.keys()}
+                if sort_key == "item":
+                    order_keys = sorted(mats.keys(), key=lambda m: format_item_name(m))
+                elif sort_key == "qty":
+                    order_keys = sorted(
+                        mats.keys(), key=lambda m: (miss_map[m], format_item_name(m))
+                    )
+                elif sort_key == "stacks":
+                    order_keys = sorted(
+                        mats.keys(), key=lambda m: format_stacks(int(mats[m]))
+                    )
+                elif sort_key == "acq":
+                    order_keys = sorted(
+                        mats.keys(), key=lambda m: (acq_map[m], format_item_name(m))
+                    )
+                if desc:
+                    order_keys = list(reversed(order_keys))
+        except Exception:
+            pass
+
+        for idx, mat in enumerate(order_keys):
+            q = mats[mat]
             img = load_item_image(mat)
             tag = "odd" if idx % 2 else "even"
             acq = max(int(ACQUIRED_MATS.get(mat, 0)), 0)
@@ -1136,7 +1194,7 @@ def on_new_project():
     update_views()
 
 
-def on_save_project():
+def on_save_project(silent: bool = False):
     name = entry_proj.get().strip() or current_project.name or "untitled"
     path = PROJECTS_DIR / f"{name}.json"
     logging.info(f"Saving project '{name}' to {path}")
@@ -1218,6 +1276,7 @@ def on_add_item():
     current_project.items[itm] = current_project.items.get(itm, 0) + q
     logging.debug(f"Updated project items: {current_project.items}")
     update_views()
+    _schedule_autosave()
     entry_item.delete(0, "end")
     entry_qty.delete(0, "end")
     entry_item.focus_set()
@@ -1236,6 +1295,7 @@ def on_remove_item():
             del current_project.items[iid]
     logging.info(f"Removed items from project: {removed}")
     update_views()
+    _schedule_autosave()
 
 
 btn_new.config(command=on_new_project)
@@ -1292,6 +1352,7 @@ def _begin_acq_edit(mat_id: str):
             _acq_edit_entry = None
             ACQUIRED_MATS[mat_id] = max(n, 0)
             refresh_materials_view()
+            _schedule_autosave()
 
         def _cancel(*_):
             global _acq_edit_entry
@@ -1313,6 +1374,11 @@ def _on_materials_double_click(event):
         return
     if col in ("#4", "acq"):
         _begin_acq_edit(row_id)
+    elif col in ("#1", "item"):
+        try:
+            _open_recipe_peek(row_id, 1)
+        except Exception:
+            pass
 
 
 def _on_row_done_click(row_id: str):
@@ -1327,6 +1393,7 @@ def _on_row_done_click(row_id: str):
         MANUAL_DONE.add(row_id)
         MANUAL_UNDONE.discard(row_id)
     refresh_materials_view()
+    _schedule_autosave()
 
 
 def _ensure_row_button(row_id: str):
@@ -1588,6 +1655,7 @@ def _on_row_del_click(row_id: str):
     except Exception:
         pass
     refresh_materials_view()
+    _schedule_autosave()
 
 
 def _on_materials_click(event):
@@ -1599,6 +1667,7 @@ def _on_materials_click(event):
         if row_id not in DONE_MATS:
             DONE_MATS.add(row_id)
             refresh_materials_view()
+            _schedule_autosave()
 
 
 def _cancel_hide_done():
@@ -1713,6 +1782,112 @@ materials_tree.bind("<Configure>", _layout_done_buttons)
 materials_tree.bind("<ButtonRelease-1>", _layout_done_buttons)
 materials_tree.bind("<KeyRelease>", _layout_done_buttons)
 materials_tree.bind("<MouseWheel>", _layout_done_buttons)
+materials_tree.bind("<Button-3>", lambda e: _on_materials_context_menu(e))
+
+
+def _init_materials_headers_for_sort():
+    try:
+        # Clickable headers for sorting
+        materials_tree.heading(
+            "item", command=lambda c="item": _on_mat_heading_click(c)
+        )
+        materials_tree.heading("qty", command=lambda c="qty": _on_mat_heading_click(c))
+        materials_tree.heading(
+            "stacks", command=lambda c="stacks": _on_mat_heading_click(c)
+        )
+        materials_tree.heading("acq", command=lambda c="acq": _on_mat_heading_click(c))
+    except Exception:
+        pass
+
+
+def _on_mat_heading_click(col_key: str):
+    global _mat_sort
+    try:
+        key, desc = _mat_sort
+        if key == col_key:
+            _mat_sort = (col_key, not desc)
+        else:
+            _mat_sort = (col_key, False)
+        refresh_materials_view()
+    except Exception:
+        pass
+
+
+def _on_materials_context_menu(event):
+    try:
+        row_id = materials_tree.identify_row(event.y)
+        if not row_id:
+            return
+        m = tk.Menu(root, tearoff=0)
+        m.add_command(
+            label="Recipe peek", command=lambda r=row_id: _open_recipe_peek(r, 1)
+        )
+        m.add_command(
+            label="Set image…", command=lambda r=row_id: _on_pick_image_for_row(r)
+        )
+        m.tk_popup(event.x_root, event.y_root)
+    except Exception:
+        pass
+    finally:
+        try:
+            m.grab_release()
+        except Exception:
+            pass
+
+
+def _on_pick_image_for_row(row_id: str):
+    try:
+        fpath = filedialog.askopenfilename(
+            title="Pick PNG image", filetypes=[("PNG", "*.png")]
+        )
+        if not fpath:
+            return
+        dst = PIC_DIR / f"{row_id}.png"
+        PIC_DIR.mkdir(parents=True, exist_ok=True)
+        shutil.copyfile(fpath, dst)
+        PIC_INDEX[str(row_id).lower()] = dst
+        # Bust cache for this item
+        try:
+            ITEM_IMAGES.pop(row_id, None)
+        except Exception:
+            pass
+        refresh_materials_view()
+        _schedule_autosave()
+    except Exception:
+        pass
+
+
+def _open_recipe_peek(item: str, qty: int = 1):
+    try:
+        win = tk.Toplevel(root)
+        win.title(f"Recipe: {format_item_name(item)}")
+        tv = ttk.Treeview(win, columns=("qty",), show="tree headings", height=14)
+        tv.heading("#0", text="Item")
+        tv.heading("qty", text="Qty")
+        tv.column("#0", width=240, stretch=True)
+        tv.column("qty", width=80, anchor="center")
+        tv.pack(fill="both", expand=True)
+
+        def add(node, it, q):
+            rid = tv.insert(node, "end", text=format_item_name(it), values=(q,))
+            rec = RECIPES.get(it)
+            if isinstance(rec, dict):
+                for sub, cnt in rec.items():
+                    try:
+                        add(rid, sub, int(cnt) * int(q))
+                    except Exception:
+                        add(rid, sub, q)
+
+        add("", item, qty)
+        ttk.Button(win, text="Close", command=win.destroy).pack(
+            side="right", padx=8, pady=8
+        )
+    except Exception:
+        pass
+
+
+# Initialize sortable headers
+_init_materials_headers_for_sort()
 
 
 def on_add_custom_mat(event=None):
@@ -1742,6 +1917,7 @@ def on_add_custom_mat(event=None):
     except Exception:
         pass
     refresh_materials_view()
+    _schedule_autosave()
     return "break"
 
 
