@@ -124,8 +124,12 @@ def main():
             merged[res] = ic
         except Exception as e:
             print(f"Failed to parse {p.name}: {e}")
-    OUT_FILE.write_text(json.dumps(merged, indent=2, ensure_ascii=False), encoding="utf-8")
-    print(f"Wrote {len(merged)} simplified recipes to {OUT_FILE.name} (backup {(BACKUP.name if BACKUP.exists() else 'none')})")
+    OUT_FILE.write_text(
+        json.dumps(merged, indent=2, ensure_ascii=False), encoding="utf-8"
+    )
+    print(
+        f"Wrote {len(merged)} simplified recipes to {OUT_FILE.name} (backup {(BACKUP.name if BACKUP.exists() else 'none')})"
+    )
 
 
 if __name__ == "__main__":

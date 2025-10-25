@@ -33,7 +33,11 @@ def main():
         for k, v in data.items():
             if k in merged and isinstance(merged[k], list) and isinstance(v, list):
                 merged[k].extend(v)
-            elif k in merged and isinstance(merged[k], list) and (not isinstance(v, list)):
+            elif (
+                k in merged
+                and isinstance(merged[k], list)
+                and (not isinstance(v, list))
+            ):
                 merged[k].append(v)
             else:
                 merged.setdefault(k, [])

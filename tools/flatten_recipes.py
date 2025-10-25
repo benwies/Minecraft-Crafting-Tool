@@ -41,7 +41,11 @@ def main():
         if isinstance(val, list):
             variant = None
             for v in val:
-                if isinstance(v, dict) and "recipe" in v and isinstance(v["recipe"], list):
+                if (
+                    isinstance(v, dict)
+                    and "recipe" in v
+                    and isinstance(v["recipe"], list)
+                ):
                     variant = v
                     break
             if not variant:
@@ -56,7 +60,9 @@ def main():
             out[k] = counts
             continue
     IN_FILE.write_text(json.dumps(out, indent=2, ensure_ascii=False), encoding="utf-8")
-    print(f"Wrote simplified recepies.json with {len(out)} items (backup at {BACKUP2.name})")
+    print(
+        f"Wrote simplified recepies.json with {len(out)} items (backup at {BACKUP2.name})"
+    )
 
 
 if __name__ == "__main__":
