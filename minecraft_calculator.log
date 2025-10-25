@@ -5328,3 +5328,92 @@
 2025-10-25 19:56:00.114 [DEBUG] Requirements for 22x stick: {'planks': 44}
 2025-10-25 19:56:00.114 [DEBUG] Updated total for planks: 44
 2025-10-25 19:56:00.114 [INFO] Final aggregate totals: {'planks': 44}
+2025-10-25 20:00:31.110 [INFO] Calculating aggregate requirements for items: {}
+2025-10-25 20:00:31.110 [INFO] Final aggregate totals: {}
+2025-10-25 20:00:56.818 [INFO] Calculating aggregate requirements for items: {}
+2025-10-25 20:00:56.818 [INFO] Final aggregate totals: {}
+2025-10-25 20:01:42.553 [INFO] Calculating aggregate requirements for items: {}
+2025-10-25 20:01:42.553 [INFO] Final aggregate totals: {}
+2025-10-25 20:02:20.736 [INFO] Calculating aggregate requirements for items: {}
+2025-10-25 20:02:20.737 [INFO] Final aggregate totals: {}
+2025-10-25 20:02:29.489 [INFO] Adding item: stripped_birch_wood
+2025-10-25 20:02:29.490 [INFO] Adding 121x stripped_birch_wood
+2025-10-25 20:02:29.490 [DEBUG] Current project items before add: {}
+2025-10-25 20:02:29.490 [DEBUG] Recorded undo snapshot (add_item); undo depth=1
+2025-10-25 20:02:29.490 [DEBUG] Updated project items: {'stripped_birch_wood': 121}
+2025-10-25 20:02:29.500 [DEBUG] STREAM b'IHDR' 16 13
+2025-10-25 20:02:29.501 [DEBUG] STREAM b'PLTE' 41 21
+2025-10-25 20:02:29.501 [DEBUG] STREAM b'IDAT' 74 105
+2025-10-25 20:02:29.506 [INFO] Calculating aggregate requirements for items: {'stripped_birch_wood': 121}
+2025-10-25 20:02:29.507 [DEBUG] Processing requirements for 121x stripped_birch_wood
+2025-10-25 20:02:29.507 [DEBUG] Calculating requirements for 121x stripped_birch_wood
+2025-10-25 20:02:29.507 [DEBUG] Processing: 121x stripped_birch_wood
+2025-10-25 20:02:29.507 [DEBUG] Current recipe stack: 
+2025-10-25 20:02:29.507 [DEBUG] Found recipe for stripped_birch_wood: {'stripped_birch_log': 4}
+2025-10-25 20:02:29.507 [DEBUG] Need 484x stripped_birch_log for 121x stripped_birch_wood
+2025-10-25 20:02:29.508 [DEBUG]   Processing: 484x stripped_birch_log
+2025-10-25 20:02:29.508 [DEBUG]   Current recipe stack: stripped_birch_wood
+2025-10-25 20:02:29.508 [DEBUG]   Adding material: 484x stripped_birch_log
+2025-10-25 20:02:29.508 [DEBUG] Final totals for 121x stripped_birch_wood: {'stripped_birch_log': 484}
+2025-10-25 20:02:29.508 [DEBUG] Requirements for 121x stripped_birch_wood: {'stripped_birch_log': 484}
+2025-10-25 20:02:29.508 [DEBUG] Updated total for stripped_birch_log: 484
+2025-10-25 20:02:29.508 [INFO] Final aggregate totals: {'stripped_birch_log': 484}
+2025-10-25 20:02:29.508 [DEBUG] STREAM b'IHDR' 16 13
+2025-10-25 20:02:29.508 [DEBUG] STREAM b'PLTE' 41 135
+2025-10-25 20:02:29.508 [DEBUG] STREAM b'IDAT' 188 188
+2025-10-25 20:02:47.199 [INFO] Calculating aggregate requirements for items: {'stripped_birch_wood': 121}
+2025-10-25 20:02:47.199 [DEBUG] Processing requirements for 121x stripped_birch_wood
+2025-10-25 20:02:47.200 [DEBUG] Calculating requirements for 121x stripped_birch_wood
+2025-10-25 20:02:47.201 [DEBUG] Processing: 121x stripped_birch_wood
+2025-10-25 20:02:47.201 [DEBUG] Current recipe stack: 
+2025-10-25 20:02:47.202 [DEBUG] Found recipe for stripped_birch_wood: {'stripped_birch_log': 4}
+2025-10-25 20:02:47.202 [DEBUG] Need 484x stripped_birch_log for 121x stripped_birch_wood
+2025-10-25 20:02:47.202 [DEBUG]   Processing: 484x stripped_birch_log
+2025-10-25 20:02:47.203 [DEBUG]   Current recipe stack: stripped_birch_wood
+2025-10-25 20:02:47.203 [DEBUG]   Adding material: 484x stripped_birch_log
+2025-10-25 20:02:47.203 [DEBUG] Final totals for 121x stripped_birch_wood: {'stripped_birch_log': 484}
+2025-10-25 20:02:47.204 [DEBUG] Requirements for 121x stripped_birch_wood: {'stripped_birch_log': 484}
+2025-10-25 20:02:47.204 [DEBUG] Updated total for stripped_birch_log: 484
+2025-10-25 20:02:47.204 [INFO] Final aggregate totals: {'stripped_birch_log': 484}
+2025-10-25 20:02:52.731 [INFO] Calculating aggregate requirements for items: {'stripped_birch_wood': 121}
+2025-10-25 20:02:52.732 [DEBUG] Processing requirements for 121x stripped_birch_wood
+2025-10-25 20:02:52.733 [DEBUG] Calculating requirements for 121x stripped_birch_wood
+2025-10-25 20:02:52.733 [DEBUG] Processing: 121x stripped_birch_wood
+2025-10-25 20:02:52.734 [DEBUG] Current recipe stack: 
+2025-10-25 20:02:52.734 [DEBUG] Found recipe for stripped_birch_wood: {'stripped_birch_log': 4}
+2025-10-25 20:02:52.735 [DEBUG] Need 484x stripped_birch_log for 121x stripped_birch_wood
+2025-10-25 20:02:52.735 [DEBUG]   Processing: 484x stripped_birch_log
+2025-10-25 20:02:52.736 [DEBUG]   Current recipe stack: stripped_birch_wood
+2025-10-25 20:02:52.736 [DEBUG]   Adding material: 484x stripped_birch_log
+2025-10-25 20:02:52.737 [DEBUG] Final totals for 121x stripped_birch_wood: {'stripped_birch_log': 484}
+2025-10-25 20:02:52.737 [DEBUG] Requirements for 121x stripped_birch_wood: {'stripped_birch_log': 484}
+2025-10-25 20:02:52.737 [DEBUG] Updated total for stripped_birch_log: 484
+2025-10-25 20:02:52.737 [INFO] Final aggregate totals: {'stripped_birch_log': 484}
+2025-10-25 20:03:02.925 [INFO] Calculating aggregate requirements for items: {'stripped_birch_wood': 121}
+2025-10-25 20:03:02.925 [DEBUG] Processing requirements for 121x stripped_birch_wood
+2025-10-25 20:03:02.925 [DEBUG] Calculating requirements for 121x stripped_birch_wood
+2025-10-25 20:03:02.926 [DEBUG] Processing: 121x stripped_birch_wood
+2025-10-25 20:03:02.926 [DEBUG] Current recipe stack: 
+2025-10-25 20:03:02.926 [DEBUG] Found recipe for stripped_birch_wood: {'stripped_birch_log': 4}
+2025-10-25 20:03:02.926 [DEBUG] Need 484x stripped_birch_log for 121x stripped_birch_wood
+2025-10-25 20:03:02.926 [DEBUG]   Processing: 484x stripped_birch_log
+2025-10-25 20:03:02.927 [DEBUG]   Current recipe stack: stripped_birch_wood
+2025-10-25 20:03:02.927 [DEBUG]   Adding material: 484x stripped_birch_log
+2025-10-25 20:03:02.927 [DEBUG] Final totals for 121x stripped_birch_wood: {'stripped_birch_log': 484}
+2025-10-25 20:03:02.927 [DEBUG] Requirements for 121x stripped_birch_wood: {'stripped_birch_log': 484}
+2025-10-25 20:03:02.927 [DEBUG] Updated total for stripped_birch_log: 484
+2025-10-25 20:03:02.927 [INFO] Final aggregate totals: {'stripped_birch_log': 484}
+2025-10-25 20:03:06.462 [INFO] Calculating aggregate requirements for items: {'stripped_birch_wood': 121}
+2025-10-25 20:03:06.462 [DEBUG] Processing requirements for 121x stripped_birch_wood
+2025-10-25 20:03:06.462 [DEBUG] Calculating requirements for 121x stripped_birch_wood
+2025-10-25 20:03:06.462 [DEBUG] Processing: 121x stripped_birch_wood
+2025-10-25 20:03:06.463 [DEBUG] Current recipe stack: 
+2025-10-25 20:03:06.463 [DEBUG] Found recipe for stripped_birch_wood: {'stripped_birch_log': 4}
+2025-10-25 20:03:06.463 [DEBUG] Need 484x stripped_birch_log for 121x stripped_birch_wood
+2025-10-25 20:03:06.463 [DEBUG]   Processing: 484x stripped_birch_log
+2025-10-25 20:03:06.463 [DEBUG]   Current recipe stack: stripped_birch_wood
+2025-10-25 20:03:06.464 [DEBUG]   Adding material: 484x stripped_birch_log
+2025-10-25 20:03:06.464 [DEBUG] Final totals for 121x stripped_birch_wood: {'stripped_birch_log': 484}
+2025-10-25 20:03:06.464 [DEBUG] Requirements for 121x stripped_birch_wood: {'stripped_birch_log': 484}
+2025-10-25 20:03:06.464 [DEBUG] Updated total for stripped_birch_log: 484
+2025-10-25 20:03:06.464 [INFO] Final aggregate totals: {'stripped_birch_log': 484}

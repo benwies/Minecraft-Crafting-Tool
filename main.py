@@ -524,10 +524,19 @@ materials_tree.heading("stacks", text="Stacks")
 materials_tree.heading("acq", text="Acquired")
 materials_tree.column("#0", width=40, stretch=False)  # Fixed width for images
 materials_tree.column("item", width=200, anchor="w", stretch=True)
-materials_tree.column("qty", width=60, anchor="center", stretch=False)
+materials_tree.column("qty", width=120, anchor="center", stretch=False)
 materials_tree.column("stacks", width=120, anchor="w", stretch=False)
 materials_tree.column("acq", width=80, anchor="center", stretch=False)
 materials_tree.grid(row=0, column=0, sticky="nsew")
+# Ensure the Qty header fits fully based on current font metrics
+try:
+    _hdr_font = tkfont.nametofont('TkHeadingFont')
+    _needed_w = _hdr_font.measure("Qty (missing)") + 24  # padding for sort arrow/margins
+    _cur_w = materials_tree.column("qty", option="width")
+    if _needed_w > _cur_w:
+        materials_tree.column("qty", width=_needed_w)
+except Exception:
+    pass
 right.columnconfigure(0, weight=1)
 
 
@@ -539,6 +548,8 @@ DONE_MATS = set()   # set of materials marked done
 _acq_edit_entry = None
 _hover_done_btn = None
 _hover_row = None
+_hide_done_after_id = None
+_over_done_btn = False
 
 def load_item_image(item_name):
     """Load and cache an item's image"""
@@ -990,11 +1001,44 @@ def _on_materials_double_click(event):
         _begin_acq_edit(row_id)
 
 
+def _cancel_hide_done():
+    global _hide_done_after_id
+    if _hide_done_after_id is not None:
+        try:
+            root.after_cancel(_hide_done_after_id)
+        except Exception:
+            pass
+        _hide_done_after_id = None
+
+
+def _schedule_hide_done(delay=150):
+    global _hide_done_after_id
+    _cancel_hide_done()
+    try:
+        _hide_done_after_id = root.after(delay, _hide_done_button)
+    except Exception:
+        _hide_done_button()
+
+
+def _on_done_enter(event=None):
+    global _over_done_btn
+    _over_done_btn = True
+    _cancel_hide_done()
+
+
+def _on_done_leave(event=None):
+    global _over_done_btn
+    _over_done_btn = False
+    _schedule_hide_done(150)
+
+
 def _ensure_done_button():
     global _hover_done_btn
     if _hover_done_btn is None:
         _hover_done_btn = ttk.Button(materials_tree, text='Done', style='Toolbutton')
         _hover_done_btn.bind('<Button-1>', _on_done_click)
+        _hover_done_btn.bind('<Enter>', _on_done_enter)
+        _hover_done_btn.bind('<Leave>', _on_done_leave)
 
 
 def _on_done_click(event=None):
@@ -1012,6 +1056,7 @@ def _on_done_click(event=None):
 
 def _hide_done_button():
     global _hover_done_btn
+    _cancel_hide_done()
     if _hover_done_btn:
         _hover_done_btn.place_forget()
 
@@ -1019,12 +1064,16 @@ def _hide_done_button():
 def _on_materials_motion(event):
     """Show a small Done button when hovering over a material row."""
     global _hover_row
+    _cancel_hide_done()
     row = materials_tree.identify_row(event.y)
     if not row:
         _hover_row = None
-        _hide_done_button()
+        # If pointer is not over the tree rows and not over the button, schedule hide
+        if not _over_done_btn:
+            _schedule_hide_done(120)
         return
-    _hover_row = row
+    if row != _hover_row:
+        _hover_row = row
     # Place button at right edge of the Item column
     try:
         bbox = materials_tree.bbox(row, 'item')
@@ -1042,7 +1091,9 @@ def _on_materials_motion(event):
 
 
 def _on_materials_leave(event):
-    _hide_done_button()
+    # When leaving the tree (e.g., moving onto the button), don't instantly hide; debounce instead
+    if not _over_done_btn:
+        _schedule_hide_done(150)
 
 
 materials_tree.bind('<Double-1>', _on_materials_double_click)
