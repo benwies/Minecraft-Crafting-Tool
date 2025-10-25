@@ -1,0 +1,2092 @@
+2025-10-25 16:09:56.648 [INFO] Calculating aggregate requirements for items: {}
+2025-10-25 16:09:56.648 [INFO] Final aggregate totals: {}
+2025-10-25 16:10:03.381 [INFO] Adding item: acacia_button
+2025-10-25 16:10:03.381 [INFO] Adding 1x acacia_button
+2025-10-25 16:10:03.382 [DEBUG] Current project items before add: {}
+2025-10-25 16:10:03.382 [DEBUG] Updated project items: {'acacia_button': 1}
+2025-10-25 16:10:03.382 [INFO] Calculating aggregate requirements for items: {'acacia_button': 1}
+2025-10-25 16:10:03.382 [DEBUG] Processing requirements for 1x acacia_button
+2025-10-25 16:10:03.382 [DEBUG] Calculating requirements for 1x acacia_button
+2025-10-25 16:10:03.382 [DEBUG] Processing: 1x acacia_button
+2025-10-25 16:10:03.383 [DEBUG] Current recipe stack: 
+2025-10-25 16:10:03.384 [DEBUG] Found recipe for acacia_button: {'acacia_planks': 1}
+2025-10-25 16:10:03.384 [DEBUG] Need 1x acacia_planks for 1x acacia_button
+2025-10-25 16:10:03.384 [DEBUG]   Processing: 1x acacia_planks
+2025-10-25 16:10:03.384 [DEBUG]   Current recipe stack: acacia_button
+2025-10-25 16:10:03.384 [DEBUG]   Found recipe for acacia_planks: {'acacia_logs': 1}
+2025-10-25 16:10:03.384 [DEBUG]   Need 1x acacia_logs for 1x acacia_planks
+2025-10-25 16:10:03.384 [DEBUG]     Processing: 1x acacia_logs
+2025-10-25 16:10:03.384 [DEBUG]     Current recipe stack: acacia_button -> acacia_planks
+2025-10-25 16:10:03.384 [DEBUG]     Base material found: adding 1x acacia_logs
+2025-10-25 16:10:03.385 [DEBUG]     Current totals: {'acacia_logs': 1}
+2025-10-25 16:10:03.385 [DEBUG] Final totals for 1x acacia_button: {'acacia_logs': 1}
+2025-10-25 16:10:03.385 [DEBUG] Requirements for 1x acacia_button: {'acacia_logs': 1}
+2025-10-25 16:10:03.385 [DEBUG] Updated total for acacia_logs: 1
+2025-10-25 16:10:03.385 [INFO] Final aggregate totals: {'acacia_logs': 1}
+2025-10-25 16:10:10.908 [INFO] Adding item: acacia_fence_gate
+2025-10-25 16:10:10.908 [INFO] Adding 1x acacia_fence_gate
+2025-10-25 16:10:10.908 [DEBUG] Current project items before add: {'acacia_button': 1}
+2025-10-25 16:10:10.908 [DEBUG] Updated project items: {'acacia_button': 1, 'acacia_fence_gate': 1}
+2025-10-25 16:10:10.909 [INFO] Calculating aggregate requirements for items: {'acacia_button': 1, 'acacia_fence_gate': 1}
+2025-10-25 16:10:10.909 [DEBUG] Processing requirements for 1x acacia_button
+2025-10-25 16:10:10.909 [DEBUG] Calculating requirements for 1x acacia_button
+2025-10-25 16:10:10.909 [DEBUG] Processing: 1x acacia_button
+2025-10-25 16:10:10.909 [DEBUG] Current recipe stack: 
+2025-10-25 16:10:10.909 [DEBUG] Found recipe for acacia_button: {'acacia_planks': 1}
+2025-10-25 16:10:10.909 [DEBUG] Need 1x acacia_planks for 1x acacia_button
+2025-10-25 16:10:10.910 [DEBUG]   Processing: 1x acacia_planks
+2025-10-25 16:10:10.910 [DEBUG]   Current recipe stack: acacia_button
+2025-10-25 16:10:10.910 [DEBUG]   Found recipe for acacia_planks: {'acacia_logs': 1}
+2025-10-25 16:10:10.910 [DEBUG]   Need 1x acacia_logs for 1x acacia_planks
+2025-10-25 16:10:10.910 [DEBUG]     Processing: 1x acacia_logs
+2025-10-25 16:10:10.910 [DEBUG]     Current recipe stack: acacia_button -> acacia_planks
+2025-10-25 16:10:10.910 [DEBUG]     Base material found: adding 1x acacia_logs
+2025-10-25 16:10:10.910 [DEBUG]     Current totals: {'acacia_logs': 1}
+2025-10-25 16:10:10.911 [DEBUG] Final totals for 1x acacia_button: {'acacia_logs': 1}
+2025-10-25 16:10:10.911 [DEBUG] Requirements for 1x acacia_button: {'acacia_logs': 1}
+2025-10-25 16:10:10.911 [DEBUG] Updated total for acacia_logs: 1
+2025-10-25 16:10:10.911 [DEBUG] Processing requirements for 1x acacia_fence_gate
+2025-10-25 16:10:10.911 [DEBUG] Calculating requirements for 1x acacia_fence_gate
+2025-10-25 16:10:10.911 [DEBUG] Processing: 1x acacia_fence_gate
+2025-10-25 16:10:10.911 [DEBUG] Current recipe stack: 
+2025-10-25 16:10:10.911 [DEBUG] Found recipe for acacia_fence_gate: {'stick': 4, 'acacia_planks': 2}
+2025-10-25 16:10:10.911 [DEBUG] Need 4x stick for 1x acacia_fence_gate
+2025-10-25 16:10:10.911 [DEBUG]   Processing: 4x stick
+2025-10-25 16:10:10.911 [DEBUG]   Current recipe stack: acacia_fence_gate
+2025-10-25 16:10:10.912 [DEBUG]   Found recipe for stick: {'planks': 2}
+2025-10-25 16:10:10.912 [DEBUG]   Need 8x planks for 4x stick
+2025-10-25 16:10:10.912 [DEBUG]     Processing: 8x planks
+2025-10-25 16:10:10.912 [DEBUG]     Current recipe stack: acacia_fence_gate -> stick
+2025-10-25 16:10:10.912 [DEBUG]     Base material found: adding 8x planks
+2025-10-25 16:10:10.912 [DEBUG]     Current totals: {'planks': 8}
+2025-10-25 16:10:10.912 [DEBUG] Need 2x acacia_planks for 1x acacia_fence_gate
+2025-10-25 16:10:10.912 [DEBUG]   Processing: 2x acacia_planks
+2025-10-25 16:10:10.912 [DEBUG]   Current recipe stack: acacia_fence_gate
+2025-10-25 16:10:10.912 [DEBUG]   Found recipe for acacia_planks: {'acacia_logs': 1}
+2025-10-25 16:10:10.912 [DEBUG]   Need 2x acacia_logs for 2x acacia_planks
+2025-10-25 16:10:10.912 [DEBUG]     Processing: 2x acacia_logs
+2025-10-25 16:10:10.912 [DEBUG]     Current recipe stack: acacia_fence_gate -> acacia_planks
+2025-10-25 16:10:10.912 [DEBUG]     Base material found: adding 2x acacia_logs
+2025-10-25 16:10:10.913 [DEBUG]     Current totals: {'planks': 8, 'acacia_logs': 2}
+2025-10-25 16:10:10.913 [DEBUG] Final totals for 1x acacia_fence_gate: {'planks': 8, 'acacia_logs': 2}
+2025-10-25 16:10:10.913 [DEBUG] Requirements for 1x acacia_fence_gate: {'planks': 8, 'acacia_logs': 2}
+2025-10-25 16:10:10.913 [DEBUG] Updated total for planks: 8
+2025-10-25 16:10:10.913 [DEBUG] Updated total for acacia_logs: 3
+2025-10-25 16:10:10.913 [INFO] Final aggregate totals: {'acacia_logs': 3, 'planks': 8}
+2025-10-25 16:10:55.106 [INFO] Calculating aggregate requirements for items: {}
+2025-10-25 16:10:55.106 [INFO] Final aggregate totals: {}
+2025-10-25 16:10:57.766 [INFO] Adding item: acacia_boat
+2025-10-25 16:10:57.766 [INFO] Adding 1x acacia_boat
+2025-10-25 16:10:57.766 [DEBUG] Current project items before add: {}
+2025-10-25 16:10:57.766 [DEBUG] Updated project items: {'acacia_boat': 1}
+2025-10-25 16:10:57.767 [INFO] Calculating aggregate requirements for items: {'acacia_boat': 1}
+2025-10-25 16:10:57.767 [DEBUG] Processing requirements for 1x acacia_boat
+2025-10-25 16:10:57.767 [DEBUG] Calculating requirements for 1x acacia_boat
+2025-10-25 16:10:57.767 [DEBUG] Processing: 1x acacia_boat
+2025-10-25 16:10:57.767 [DEBUG] Current recipe stack: 
+2025-10-25 16:10:57.767 [DEBUG] Found recipe for acacia_boat: {'acacia_planks': 5}
+2025-10-25 16:10:57.767 [DEBUG] Need 5x acacia_planks for 1x acacia_boat
+2025-10-25 16:10:57.767 [DEBUG]   Processing: 5x acacia_planks
+2025-10-25 16:10:57.768 [DEBUG]   Current recipe stack: acacia_boat
+2025-10-25 16:10:57.768 [DEBUG]   Found recipe for acacia_planks: {'acacia_logs': 1}
+2025-10-25 16:10:57.768 [DEBUG]   Need 5x acacia_logs for 5x acacia_planks
+2025-10-25 16:10:57.768 [DEBUG]     Processing: 5x acacia_logs
+2025-10-25 16:10:57.768 [DEBUG]     Current recipe stack: acacia_boat -> acacia_planks
+2025-10-25 16:10:57.768 [DEBUG]     Base material found: adding 5x acacia_logs
+2025-10-25 16:10:57.768 [DEBUG]     Current totals: {'acacia_logs': 5}
+2025-10-25 16:10:57.768 [DEBUG] Final totals for 1x acacia_boat: {'acacia_logs': 5}
+2025-10-25 16:10:57.768 [DEBUG] Requirements for 1x acacia_boat: {'acacia_logs': 5}
+2025-10-25 16:10:57.768 [DEBUG] Updated total for acacia_logs: 5
+2025-10-25 16:10:57.768 [INFO] Final aggregate totals: {'acacia_logs': 5}
+2025-10-25 16:11:01.007 [INFO] Adding item: acacia_fence
+2025-10-25 16:11:01.008 [INFO] Adding 1x acacia_fence
+2025-10-25 16:11:01.008 [DEBUG] Current project items before add: {'acacia_boat': 1}
+2025-10-25 16:11:01.008 [DEBUG] Updated project items: {'acacia_boat': 1, 'acacia_fence': 1}
+2025-10-25 16:11:01.008 [INFO] Calculating aggregate requirements for items: {'acacia_boat': 1, 'acacia_fence': 1}
+2025-10-25 16:11:01.008 [DEBUG] Processing requirements for 1x acacia_boat
+2025-10-25 16:11:01.008 [DEBUG] Calculating requirements for 1x acacia_boat
+2025-10-25 16:11:01.008 [DEBUG] Processing: 1x acacia_boat
+2025-10-25 16:11:01.008 [DEBUG] Current recipe stack: 
+2025-10-25 16:11:01.009 [DEBUG] Found recipe for acacia_boat: {'acacia_planks': 5}
+2025-10-25 16:11:01.009 [DEBUG] Need 5x acacia_planks for 1x acacia_boat
+2025-10-25 16:11:01.009 [DEBUG]   Processing: 5x acacia_planks
+2025-10-25 16:11:01.009 [DEBUG]   Current recipe stack: acacia_boat
+2025-10-25 16:11:01.009 [DEBUG]   Found recipe for acacia_planks: {'acacia_logs': 1}
+2025-10-25 16:11:01.009 [DEBUG]   Need 5x acacia_logs for 5x acacia_planks
+2025-10-25 16:11:01.009 [DEBUG]     Processing: 5x acacia_logs
+2025-10-25 16:11:01.009 [DEBUG]     Current recipe stack: acacia_boat -> acacia_planks
+2025-10-25 16:11:01.009 [DEBUG]     Base material found: adding 5x acacia_logs
+2025-10-25 16:11:01.009 [DEBUG]     Current totals: {'acacia_logs': 5}
+2025-10-25 16:11:01.009 [DEBUG] Final totals for 1x acacia_boat: {'acacia_logs': 5}
+2025-10-25 16:11:01.009 [DEBUG] Requirements for 1x acacia_boat: {'acacia_logs': 5}
+2025-10-25 16:11:01.009 [DEBUG] Updated total for acacia_logs: 5
+2025-10-25 16:11:01.009 [DEBUG] Processing requirements for 1x acacia_fence
+2025-10-25 16:11:01.009 [DEBUG] Calculating requirements for 1x acacia_fence
+2025-10-25 16:11:01.009 [DEBUG] Processing: 1x acacia_fence
+2025-10-25 16:11:01.009 [DEBUG] Current recipe stack: 
+2025-10-25 16:11:01.010 [DEBUG] Found recipe for acacia_fence: {'stick': 2, 'acacia_planks': 4}
+2025-10-25 16:11:01.010 [DEBUG] Need 2x stick for 1x acacia_fence
+2025-10-25 16:11:01.010 [DEBUG]   Processing: 2x stick
+2025-10-25 16:11:01.010 [DEBUG]   Current recipe stack: acacia_fence
+2025-10-25 16:11:01.010 [DEBUG]   Found recipe for stick: {'planks': 2}
+2025-10-25 16:11:01.010 [DEBUG]   Need 4x planks for 2x stick
+2025-10-25 16:11:01.010 [DEBUG]     Processing: 4x planks
+2025-10-25 16:11:01.010 [DEBUG]     Current recipe stack: acacia_fence -> stick
+2025-10-25 16:11:01.010 [DEBUG]     Base material found: adding 4x planks
+2025-10-25 16:11:01.010 [DEBUG]     Current totals: {'planks': 4}
+2025-10-25 16:11:01.010 [DEBUG] Need 4x acacia_planks for 1x acacia_fence
+2025-10-25 16:11:01.010 [DEBUG]   Processing: 4x acacia_planks
+2025-10-25 16:11:01.010 [DEBUG]   Current recipe stack: acacia_fence
+2025-10-25 16:11:01.010 [DEBUG]   Found recipe for acacia_planks: {'acacia_logs': 1}
+2025-10-25 16:11:01.010 [DEBUG]   Need 4x acacia_logs for 4x acacia_planks
+2025-10-25 16:11:01.010 [DEBUG]     Processing: 4x acacia_logs
+2025-10-25 16:11:01.011 [DEBUG]     Current recipe stack: acacia_fence -> acacia_planks
+2025-10-25 16:11:01.011 [DEBUG]     Base material found: adding 4x acacia_logs
+2025-10-25 16:11:01.011 [DEBUG]     Current totals: {'planks': 4, 'acacia_logs': 4}
+2025-10-25 16:11:01.011 [DEBUG] Final totals for 1x acacia_fence: {'planks': 4, 'acacia_logs': 4}
+2025-10-25 16:11:01.011 [DEBUG] Requirements for 1x acacia_fence: {'planks': 4, 'acacia_logs': 4}
+2025-10-25 16:11:01.011 [DEBUG] Updated total for planks: 4
+2025-10-25 16:11:01.011 [DEBUG] Updated total for acacia_logs: 9
+2025-10-25 16:11:01.011 [INFO] Final aggregate totals: {'acacia_logs': 9, 'planks': 4}
+2025-10-25 16:15:36.861 [INFO] Calculating aggregate requirements for items: {'acacia_boat': 1}
+2025-10-25 16:15:36.861 [DEBUG] Processing requirements for 1x acacia_boat
+2025-10-25 16:15:36.861 [DEBUG] Calculating requirements for 1x acacia_boat
+2025-10-25 16:15:36.861 [DEBUG] Processing: 1x acacia_boat
+2025-10-25 16:15:36.861 [DEBUG] Current recipe stack: 
+2025-10-25 16:15:36.861 [DEBUG] Found recipe for acacia_boat: {'acacia_planks': 5}
+2025-10-25 16:15:36.861 [DEBUG] Need 5x acacia_planks for 1x acacia_boat
+2025-10-25 16:15:36.862 [DEBUG]   Processing: 5x acacia_planks
+2025-10-25 16:15:36.862 [DEBUG]   Current recipe stack: acacia_boat
+2025-10-25 16:15:36.862 [DEBUG]   Found recipe for acacia_planks: {'acacia_logs': 1}
+2025-10-25 16:15:36.862 [DEBUG]   Need 5x acacia_logs for 5x acacia_planks
+2025-10-25 16:15:36.862 [DEBUG]     Processing: 5x acacia_logs
+2025-10-25 16:15:36.862 [DEBUG]     Current recipe stack: acacia_boat -> acacia_planks
+2025-10-25 16:15:36.862 [DEBUG]     Base material found: adding 5x acacia_logs
+2025-10-25 16:15:36.862 [DEBUG]     Current totals: {'acacia_logs': 5}
+2025-10-25 16:15:36.862 [DEBUG] Final totals for 1x acacia_boat: {'acacia_logs': 5}
+2025-10-25 16:15:36.862 [DEBUG] Requirements for 1x acacia_boat: {'acacia_logs': 5}
+2025-10-25 16:15:36.862 [DEBUG] Updated total for acacia_logs: 5
+2025-10-25 16:15:36.862 [INFO] Final aggregate totals: {'acacia_logs': 5}
+2025-10-25 16:16:35.615 [INFO] Calculating aggregate requirements for items: {'acacia_boat': 1}
+2025-10-25 16:16:35.616 [DEBUG] Processing requirements for 1x acacia_boat
+2025-10-25 16:16:35.616 [DEBUG] Calculating requirements for 1x acacia_boat
+2025-10-25 16:16:35.616 [DEBUG] Processing: 1x acacia_boat
+2025-10-25 16:16:35.616 [DEBUG] Current recipe stack: 
+2025-10-25 16:16:35.616 [DEBUG] Found recipe for acacia_boat: {'acacia_planks': 5}
+2025-10-25 16:16:35.616 [DEBUG] Need 5x acacia_planks for 1x acacia_boat
+2025-10-25 16:16:35.616 [DEBUG]   Processing: 5x acacia_planks
+2025-10-25 16:16:35.617 [DEBUG]   Current recipe stack: acacia_boat
+2025-10-25 16:16:35.617 [DEBUG]   Adding material: 5x acacia_planks
+2025-10-25 16:16:35.617 [DEBUG] Final totals for 1x acacia_boat: {'acacia_planks': 5}
+2025-10-25 16:16:35.617 [DEBUG] Requirements for 1x acacia_boat: {'acacia_planks': 5}
+2025-10-25 16:16:35.617 [DEBUG] Updated total for acacia_planks: 5
+2025-10-25 16:16:35.618 [INFO] Final aggregate totals: {'acacia_planks': 5}
+2025-10-25 16:16:35.618 [INFO] Calculating aggregate requirements for items: {'acacia_planks': 1}
+2025-10-25 16:16:35.618 [DEBUG] Processing requirements for 1x acacia_planks
+2025-10-25 16:16:35.618 [DEBUG] Calculating requirements for 1x acacia_planks
+2025-10-25 16:16:35.618 [DEBUG] Processing: 1x acacia_planks
+2025-10-25 16:16:35.618 [DEBUG] Current recipe stack: 
+2025-10-25 16:16:35.618 [DEBUG] Found recipe for acacia_planks: {'acacia_logs': 1}
+2025-10-25 16:16:35.618 [DEBUG] Need 1x acacia_logs for 1x acacia_planks
+2025-10-25 16:16:35.619 [DEBUG]   Processing: 1x acacia_logs
+2025-10-25 16:16:35.619 [DEBUG]   Current recipe stack: acacia_planks
+2025-10-25 16:16:35.619 [DEBUG]   Adding material: 1x acacia_logs
+2025-10-25 16:16:35.619 [DEBUG] Final totals for 1x acacia_planks: {'acacia_logs': 1}
+2025-10-25 16:16:35.619 [DEBUG] Requirements for 1x acacia_planks: {'acacia_logs': 1}
+2025-10-25 16:16:35.619 [DEBUG] Updated total for acacia_logs: 1
+2025-10-25 16:16:35.619 [INFO] Final aggregate totals: {'acacia_logs': 1}
+2025-10-25 16:16:51.967 [INFO] Calculating aggregate requirements for items: {}
+2025-10-25 16:16:51.967 [INFO] Final aggregate totals: {}
+2025-10-25 16:16:57.170 [INFO] Adding item: acacia_boat
+2025-10-25 16:16:57.170 [INFO] Adding 1x acacia_boat
+2025-10-25 16:16:57.170 [DEBUG] Current project items before add: {}
+2025-10-25 16:16:57.170 [DEBUG] Updated project items: {'acacia_boat': 1}
+2025-10-25 16:16:57.171 [INFO] Calculating aggregate requirements for items: {'acacia_boat': 1}
+2025-10-25 16:16:57.171 [DEBUG] Processing requirements for 1x acacia_boat
+2025-10-25 16:16:57.171 [DEBUG] Calculating requirements for 1x acacia_boat
+2025-10-25 16:16:57.171 [DEBUG] Processing: 1x acacia_boat
+2025-10-25 16:16:57.171 [DEBUG] Current recipe stack: 
+2025-10-25 16:16:57.171 [DEBUG] Found recipe for acacia_boat: {'acacia_planks': 5}
+2025-10-25 16:16:57.171 [DEBUG] Need 5x acacia_planks for 1x acacia_boat
+2025-10-25 16:16:57.171 [DEBUG]   Processing: 5x acacia_planks
+2025-10-25 16:16:57.171 [DEBUG]   Current recipe stack: acacia_boat
+2025-10-25 16:16:57.172 [DEBUG]   Adding material: 5x acacia_planks
+2025-10-25 16:16:57.172 [DEBUG] Final totals for 1x acacia_boat: {'acacia_planks': 5}
+2025-10-25 16:16:57.172 [DEBUG] Requirements for 1x acacia_boat: {'acacia_planks': 5}
+2025-10-25 16:16:57.172 [DEBUG] Updated total for acacia_planks: 5
+2025-10-25 16:16:57.172 [INFO] Final aggregate totals: {'acacia_planks': 5}
+2025-10-25 16:17:01.291 [INFO] Adding item: acacia_chest_boat
+2025-10-25 16:17:01.291 [INFO] Adding 1x acacia_chest_boat
+2025-10-25 16:17:01.291 [DEBUG] Current project items before add: {'acacia_boat': 1}
+2025-10-25 16:17:01.291 [DEBUG] Updated project items: {'acacia_boat': 1, 'acacia_chest_boat': 1}
+2025-10-25 16:17:01.292 [INFO] Calculating aggregate requirements for items: {'acacia_boat': 1, 'acacia_chest_boat': 1}
+2025-10-25 16:17:01.292 [DEBUG] Processing requirements for 1x acacia_boat
+2025-10-25 16:17:01.292 [DEBUG] Calculating requirements for 1x acacia_boat
+2025-10-25 16:17:01.292 [DEBUG] Processing: 1x acacia_boat
+2025-10-25 16:17:01.292 [DEBUG] Current recipe stack: 
+2025-10-25 16:17:01.292 [DEBUG] Found recipe for acacia_boat: {'acacia_planks': 5}
+2025-10-25 16:17:01.292 [DEBUG] Need 5x acacia_planks for 1x acacia_boat
+2025-10-25 16:17:01.293 [DEBUG]   Processing: 5x acacia_planks
+2025-10-25 16:17:01.293 [DEBUG]   Current recipe stack: acacia_boat
+2025-10-25 16:17:01.293 [DEBUG]   Adding material: 5x acacia_planks
+2025-10-25 16:17:01.293 [DEBUG] Final totals for 1x acacia_boat: {'acacia_planks': 5}
+2025-10-25 16:17:01.293 [DEBUG] Requirements for 1x acacia_boat: {'acacia_planks': 5}
+2025-10-25 16:17:01.293 [DEBUG] Updated total for acacia_planks: 5
+2025-10-25 16:17:01.293 [DEBUG] Processing requirements for 1x acacia_chest_boat
+2025-10-25 16:17:01.293 [DEBUG] Calculating requirements for 1x acacia_chest_boat
+2025-10-25 16:17:01.293 [DEBUG] Processing: 1x acacia_chest_boat
+2025-10-25 16:17:01.293 [DEBUG] Current recipe stack: 
+2025-10-25 16:17:01.293 [DEBUG] Found recipe for acacia_chest_boat: {'chest': 1, 'acacia_boat': 1}
+2025-10-25 16:17:01.294 [DEBUG] Need 1x chest for 1x acacia_chest_boat
+2025-10-25 16:17:01.294 [DEBUG]   Processing: 1x chest
+2025-10-25 16:17:01.294 [DEBUG]   Current recipe stack: acacia_chest_boat
+2025-10-25 16:17:01.294 [DEBUG]   Adding material: 1x chest
+2025-10-25 16:17:01.294 [DEBUG] Need 1x acacia_boat for 1x acacia_chest_boat
+2025-10-25 16:17:01.294 [DEBUG]   Processing: 1x acacia_boat
+2025-10-25 16:17:01.294 [DEBUG]   Current recipe stack: acacia_chest_boat
+2025-10-25 16:17:01.294 [DEBUG]   Adding material: 1x acacia_boat
+2025-10-25 16:17:01.294 [DEBUG] Final totals for 1x acacia_chest_boat: {'chest': 1, 'acacia_boat': 1}
+2025-10-25 16:17:01.294 [DEBUG] Requirements for 1x acacia_chest_boat: {'chest': 1, 'acacia_boat': 1}
+2025-10-25 16:17:01.294 [DEBUG] Updated total for chest: 1
+2025-10-25 16:17:01.294 [DEBUG] Updated total for acacia_boat: 1
+2025-10-25 16:17:01.294 [INFO] Final aggregate totals: {'acacia_planks': 5, 'chest': 1, 'acacia_boat': 1}
+2025-10-25 16:19:19.680 [INFO] Calculating aggregate requirements for items: {'acacia_chest_boat': 1}
+2025-10-25 16:19:19.680 [DEBUG] Processing requirements for 1x acacia_chest_boat
+2025-10-25 16:19:19.680 [DEBUG] Calculating requirements for 1x acacia_chest_boat
+2025-10-25 16:19:19.680 [DEBUG] Processing: 1x acacia_chest_boat
+2025-10-25 16:19:19.681 [DEBUG] Current recipe stack: 
+2025-10-25 16:19:19.681 [DEBUG] Found recipe for acacia_chest_boat: {'planks': 8, 'acacia_planks': 5}
+2025-10-25 16:19:19.681 [DEBUG] Need 8x planks for 1x acacia_chest_boat
+2025-10-25 16:19:19.681 [DEBUG]   Processing: 8x planks
+2025-10-25 16:19:19.681 [DEBUG]   Current recipe stack: acacia_chest_boat
+2025-10-25 16:19:19.681 [DEBUG]   Adding material: 8x planks
+2025-10-25 16:19:19.681 [DEBUG] Need 5x acacia_planks for 1x acacia_chest_boat
+2025-10-25 16:19:19.681 [DEBUG]   Processing: 5x acacia_planks
+2025-10-25 16:19:19.681 [DEBUG]   Current recipe stack: acacia_chest_boat
+2025-10-25 16:19:19.681 [DEBUG]   Adding material: 5x acacia_planks
+2025-10-25 16:19:19.681 [DEBUG] Final totals for 1x acacia_chest_boat: {'planks': 8, 'acacia_planks': 5}
+2025-10-25 16:19:19.681 [DEBUG] Requirements for 1x acacia_chest_boat: {'planks': 8, 'acacia_planks': 5}
+2025-10-25 16:19:19.681 [DEBUG] Updated total for planks: 8
+2025-10-25 16:19:19.681 [DEBUG] Updated total for acacia_planks: 5
+2025-10-25 16:19:19.682 [INFO] Final aggregate totals: {'planks': 8, 'acacia_planks': 5}
+2025-10-25 16:19:19.682 [INFO] Calculating aggregate requirements for items: {'acacia_planks': 1}
+2025-10-25 16:19:19.682 [DEBUG] Processing requirements for 1x acacia_planks
+2025-10-25 16:19:19.682 [DEBUG] Calculating requirements for 1x acacia_planks
+2025-10-25 16:19:19.682 [DEBUG] Processing: 1x acacia_planks
+2025-10-25 16:19:19.682 [DEBUG] Current recipe stack: 
+2025-10-25 16:19:19.682 [DEBUG] Found recipe for acacia_planks: {'acacia_logs': 1}
+2025-10-25 16:19:19.682 [DEBUG] Need 1x acacia_logs for 1x acacia_planks
+2025-10-25 16:19:19.682 [DEBUG]   Processing: 1x acacia_logs
+2025-10-25 16:19:19.682 [DEBUG]   Current recipe stack: acacia_planks
+2025-10-25 16:19:19.682 [DEBUG]   Adding material: 1x acacia_logs
+2025-10-25 16:19:19.682 [DEBUG] Final totals for 1x acacia_planks: {'acacia_logs': 1}
+2025-10-25 16:19:19.683 [DEBUG] Requirements for 1x acacia_planks: {'acacia_logs': 1}
+2025-10-25 16:19:19.683 [DEBUG] Updated total for acacia_logs: 1
+2025-10-25 16:19:19.683 [INFO] Final aggregate totals: {'acacia_logs': 1}
+2025-10-25 16:20:06.558 [INFO] Calculating aggregate requirements for items: {'bookshelf': 1}
+2025-10-25 16:20:06.558 [DEBUG] Processing requirements for 1x bookshelf
+2025-10-25 16:20:06.558 [DEBUG] Calculating requirements for 1x bookshelf
+2025-10-25 16:20:06.559 [DEBUG] Processing: 1x bookshelf
+2025-10-25 16:20:06.559 [DEBUG] Current recipe stack: 
+2025-10-25 16:20:06.559 [DEBUG] Found recipe for bookshelf: {'oak_planks': 6, 'book': 3, 'leather': 3, 'paper': 9}
+2025-10-25 16:20:06.559 [DEBUG] Need 6x oak_planks for 1x bookshelf
+2025-10-25 16:20:06.559 [DEBUG]   Processing: 6x oak_planks
+2025-10-25 16:20:06.559 [DEBUG]   Current recipe stack: bookshelf
+2025-10-25 16:20:06.559 [DEBUG]   Adding material: 6x oak_planks
+2025-10-25 16:20:06.559 [DEBUG] Need 3x book for 1x bookshelf
+2025-10-25 16:20:06.559 [DEBUG]   Processing: 3x book
+2025-10-25 16:20:06.559 [DEBUG]   Current recipe stack: bookshelf
+2025-10-25 16:20:06.559 [DEBUG]   Found recipe for book: {'paper': 3, 'leather': 1}
+2025-10-25 16:20:06.559 [DEBUG]   Need 9x paper for 3x book
+2025-10-25 16:20:06.559 [DEBUG]     Processing: 9x paper
+2025-10-25 16:20:06.560 [DEBUG]     Current recipe stack: bookshelf -> book
+2025-10-25 16:20:06.560 [DEBUG]     Found recipe for paper: {'sugar_cane': 3}
+2025-10-25 16:20:06.560 [DEBUG]     Need 27x sugar_cane for 9x paper
+2025-10-25 16:20:06.560 [DEBUG]       Processing: 27x sugar_cane
+2025-10-25 16:20:06.560 [DEBUG]       Current recipe stack: bookshelf -> book -> paper
+2025-10-25 16:20:06.560 [DEBUG]       Adding material: 27x sugar_cane
+2025-10-25 16:20:06.560 [DEBUG]   Need 3x leather for 3x book
+2025-10-25 16:20:06.560 [DEBUG]     Processing: 3x leather
+2025-10-25 16:20:06.560 [DEBUG]     Current recipe stack: bookshelf -> book
+2025-10-25 16:20:06.560 [DEBUG]     Found recipe for leather: {'rabbit_hide': 4}
+2025-10-25 16:20:06.560 [DEBUG]     Need 12x rabbit_hide for 3x leather
+2025-10-25 16:20:06.560 [DEBUG]       Processing: 12x rabbit_hide
+2025-10-25 16:20:06.560 [DEBUG]       Current recipe stack: bookshelf -> book -> leather
+2025-10-25 16:20:06.561 [DEBUG]       Adding material: 12x rabbit_hide
+2025-10-25 16:20:06.561 [DEBUG] Need 3x leather for 1x bookshelf
+2025-10-25 16:20:06.561 [DEBUG]   Processing: 3x leather
+2025-10-25 16:20:06.561 [DEBUG]   Current recipe stack: bookshelf
+2025-10-25 16:20:06.561 [DEBUG]   Found recipe for leather: {'rabbit_hide': 4}
+2025-10-25 16:20:06.561 [DEBUG]   Need 12x rabbit_hide for 3x leather
+2025-10-25 16:20:06.561 [DEBUG]     Processing: 12x rabbit_hide
+2025-10-25 16:20:06.561 [DEBUG]     Current recipe stack: bookshelf -> leather
+2025-10-25 16:20:06.561 [DEBUG]     Adding material: 12x rabbit_hide
+2025-10-25 16:20:06.561 [DEBUG] Need 9x paper for 1x bookshelf
+2025-10-25 16:20:06.561 [DEBUG]   Processing: 9x paper
+2025-10-25 16:20:06.561 [DEBUG]   Current recipe stack: bookshelf
+2025-10-25 16:20:06.561 [DEBUG]   Found recipe for paper: {'sugar_cane': 3}
+2025-10-25 16:20:06.562 [DEBUG]   Need 27x sugar_cane for 9x paper
+2025-10-25 16:20:06.562 [DEBUG]     Processing: 27x sugar_cane
+2025-10-25 16:20:06.562 [DEBUG]     Current recipe stack: bookshelf -> paper
+2025-10-25 16:20:06.562 [DEBUG]     Adding material: 27x sugar_cane
+2025-10-25 16:20:06.562 [DEBUG] Final totals for 1x bookshelf: {'oak_planks': 6, 'sugar_cane': 54, 'rabbit_hide': 24}
+2025-10-25 16:20:06.562 [DEBUG] Requirements for 1x bookshelf: {'oak_planks': 6, 'sugar_cane': 54, 'rabbit_hide': 24}
+2025-10-25 16:20:06.562 [DEBUG] Updated total for oak_planks: 6
+2025-10-25 16:20:06.562 [DEBUG] Updated total for sugar_cane: 54
+2025-10-25 16:20:06.562 [DEBUG] Updated total for rabbit_hide: 24
+2025-10-25 16:20:06.562 [INFO] Final aggregate totals: {'oak_planks': 6, 'sugar_cane': 54, 'rabbit_hide': 24}
+2025-10-25 16:21:13.758 [INFO] Calculating aggregate requirements for items: {}
+2025-10-25 16:21:13.758 [INFO] Final aggregate totals: {}
+2025-10-25 16:21:18.907 [INFO] Calculating aggregate requirements for items: {}
+2025-10-25 16:21:18.907 [INFO] Final aggregate totals: {}
+2025-10-25 16:21:21.891 [INFO] Adding item: acacia_boat
+2025-10-25 16:21:21.891 [INFO] Adding 1x acacia_boat
+2025-10-25 16:21:21.891 [DEBUG] Current project items before add: {}
+2025-10-25 16:21:21.892 [DEBUG] Updated project items: {'acacia_boat': 1}
+2025-10-25 16:21:21.892 [INFO] Calculating aggregate requirements for items: {'acacia_boat': 1}
+2025-10-25 16:21:21.892 [DEBUG] Processing requirements for 1x acacia_boat
+2025-10-25 16:21:21.892 [DEBUG] Calculating requirements for 1x acacia_boat
+2025-10-25 16:21:21.892 [DEBUG] Processing: 1x acacia_boat
+2025-10-25 16:21:21.892 [DEBUG] Current recipe stack: 
+2025-10-25 16:21:21.892 [DEBUG] Found recipe for acacia_boat: {'acacia_planks': 5}
+2025-10-25 16:21:21.892 [DEBUG] Need 5x acacia_planks for 1x acacia_boat
+2025-10-25 16:21:21.892 [DEBUG]   Processing: 5x acacia_planks
+2025-10-25 16:21:21.893 [DEBUG]   Current recipe stack: acacia_boat
+2025-10-25 16:21:21.893 [DEBUG]   Adding material: 5x acacia_planks
+2025-10-25 16:21:21.893 [DEBUG] Final totals for 1x acacia_boat: {'acacia_planks': 5}
+2025-10-25 16:21:21.893 [DEBUG] Requirements for 1x acacia_boat: {'acacia_planks': 5}
+2025-10-25 16:21:21.893 [DEBUG] Updated total for acacia_planks: 5
+2025-10-25 16:21:21.893 [INFO] Final aggregate totals: {'acacia_planks': 5}
+2025-10-25 16:21:26.450 [INFO] Adding item: acacia_chest_boat
+2025-10-25 16:21:26.451 [INFO] Adding 1x acacia_chest_boat
+2025-10-25 16:21:26.451 [DEBUG] Current project items before add: {'acacia_boat': 1}
+2025-10-25 16:21:26.451 [DEBUG] Updated project items: {'acacia_boat': 1, 'acacia_chest_boat': 1}
+2025-10-25 16:21:26.452 [INFO] Calculating aggregate requirements for items: {'acacia_boat': 1, 'acacia_chest_boat': 1}
+2025-10-25 16:21:26.452 [DEBUG] Processing requirements for 1x acacia_boat
+2025-10-25 16:21:26.452 [DEBUG] Calculating requirements for 1x acacia_boat
+2025-10-25 16:21:26.452 [DEBUG] Processing: 1x acacia_boat
+2025-10-25 16:21:26.452 [DEBUG] Current recipe stack: 
+2025-10-25 16:21:26.453 [DEBUG] Found recipe for acacia_boat: {'acacia_planks': 5}
+2025-10-25 16:21:26.453 [DEBUG] Need 5x acacia_planks for 1x acacia_boat
+2025-10-25 16:21:26.453 [DEBUG]   Processing: 5x acacia_planks
+2025-10-25 16:21:26.453 [DEBUG]   Current recipe stack: acacia_boat
+2025-10-25 16:21:26.453 [DEBUG]   Adding material: 5x acacia_planks
+2025-10-25 16:21:26.453 [DEBUG] Final totals for 1x acacia_boat: {'acacia_planks': 5}
+2025-10-25 16:21:26.453 [DEBUG] Requirements for 1x acacia_boat: {'acacia_planks': 5}
+2025-10-25 16:21:26.453 [DEBUG] Updated total for acacia_planks: 5
+2025-10-25 16:21:26.454 [DEBUG] Processing requirements for 1x acacia_chest_boat
+2025-10-25 16:21:26.454 [DEBUG] Calculating requirements for 1x acacia_chest_boat
+2025-10-25 16:21:26.454 [DEBUG] Processing: 1x acacia_chest_boat
+2025-10-25 16:21:26.454 [DEBUG] Current recipe stack: 
+2025-10-25 16:21:26.454 [DEBUG] Found recipe for acacia_chest_boat: {'planks': 8, 'acacia_planks': 5}
+2025-10-25 16:21:26.454 [DEBUG] Need 8x planks for 1x acacia_chest_boat
+2025-10-25 16:21:26.455 [DEBUG]   Processing: 8x planks
+2025-10-25 16:21:26.455 [DEBUG]   Current recipe stack: acacia_chest_boat
+2025-10-25 16:21:26.455 [DEBUG]   Adding material: 8x planks
+2025-10-25 16:21:26.455 [DEBUG] Need 5x acacia_planks for 1x acacia_chest_boat
+2025-10-25 16:21:26.455 [DEBUG]   Processing: 5x acacia_planks
+2025-10-25 16:21:26.455 [DEBUG]   Current recipe stack: acacia_chest_boat
+2025-10-25 16:21:26.455 [DEBUG]   Adding material: 5x acacia_planks
+2025-10-25 16:21:26.456 [DEBUG] Final totals for 1x acacia_chest_boat: {'planks': 8, 'acacia_planks': 5}
+2025-10-25 16:21:26.456 [DEBUG] Requirements for 1x acacia_chest_boat: {'planks': 8, 'acacia_planks': 5}
+2025-10-25 16:21:26.456 [DEBUG] Updated total for planks: 8
+2025-10-25 16:21:26.456 [DEBUG] Updated total for acacia_planks: 10
+2025-10-25 16:21:26.456 [INFO] Final aggregate totals: {'acacia_planks': 10, 'planks': 8}
+2025-10-25 16:21:34.113 [INFO] Adding item: acacia_hanging_sign
+2025-10-25 16:21:34.113 [INFO] Adding 1x acacia_hanging_sign
+2025-10-25 16:21:34.113 [DEBUG] Current project items before add: {'acacia_boat': 1, 'acacia_chest_boat': 1}
+2025-10-25 16:21:34.114 [DEBUG] Updated project items: {'acacia_boat': 1, 'acacia_chest_boat': 1, 'acacia_hanging_sign': 1}
+2025-10-25 16:21:34.114 [INFO] Calculating aggregate requirements for items: {'acacia_boat': 1, 'acacia_chest_boat': 1, 'acacia_hanging_sign': 1}
+2025-10-25 16:21:34.114 [DEBUG] Processing requirements for 1x acacia_boat
+2025-10-25 16:21:34.114 [DEBUG] Calculating requirements for 1x acacia_boat
+2025-10-25 16:21:34.114 [DEBUG] Processing: 1x acacia_boat
+2025-10-25 16:21:34.114 [DEBUG] Current recipe stack: 
+2025-10-25 16:21:34.114 [DEBUG] Found recipe for acacia_boat: {'acacia_planks': 5}
+2025-10-25 16:21:34.115 [DEBUG] Need 5x acacia_planks for 1x acacia_boat
+2025-10-25 16:21:34.115 [DEBUG]   Processing: 5x acacia_planks
+2025-10-25 16:21:34.115 [DEBUG]   Current recipe stack: acacia_boat
+2025-10-25 16:21:34.115 [DEBUG]   Adding material: 5x acacia_planks
+2025-10-25 16:21:34.115 [DEBUG] Final totals for 1x acacia_boat: {'acacia_planks': 5}
+2025-10-25 16:21:34.115 [DEBUG] Requirements for 1x acacia_boat: {'acacia_planks': 5}
+2025-10-25 16:21:34.116 [DEBUG] Updated total for acacia_planks: 5
+2025-10-25 16:21:34.116 [DEBUG] Processing requirements for 1x acacia_chest_boat
+2025-10-25 16:21:34.116 [DEBUG] Calculating requirements for 1x acacia_chest_boat
+2025-10-25 16:21:34.116 [DEBUG] Processing: 1x acacia_chest_boat
+2025-10-25 16:21:34.116 [DEBUG] Current recipe stack: 
+2025-10-25 16:21:34.116 [DEBUG] Found recipe for acacia_chest_boat: {'planks': 8, 'acacia_planks': 5}
+2025-10-25 16:21:34.116 [DEBUG] Need 8x planks for 1x acacia_chest_boat
+2025-10-25 16:21:34.116 [DEBUG]   Processing: 8x planks
+2025-10-25 16:21:34.117 [DEBUG]   Current recipe stack: acacia_chest_boat
+2025-10-25 16:21:34.117 [DEBUG]   Adding material: 8x planks
+2025-10-25 16:21:34.117 [DEBUG] Need 5x acacia_planks for 1x acacia_chest_boat
+2025-10-25 16:21:34.117 [DEBUG]   Processing: 5x acacia_planks
+2025-10-25 16:21:34.117 [DEBUG]   Current recipe stack: acacia_chest_boat
+2025-10-25 16:21:34.117 [DEBUG]   Adding material: 5x acacia_planks
+2025-10-25 16:21:34.117 [DEBUG] Final totals for 1x acacia_chest_boat: {'planks': 8, 'acacia_planks': 5}
+2025-10-25 16:21:34.117 [DEBUG] Requirements for 1x acacia_chest_boat: {'planks': 8, 'acacia_planks': 5}
+2025-10-25 16:21:34.117 [DEBUG] Updated total for planks: 8
+2025-10-25 16:21:34.118 [DEBUG] Updated total for acacia_planks: 10
+2025-10-25 16:21:34.118 [DEBUG] Processing requirements for 1x acacia_hanging_sign
+2025-10-25 16:21:34.118 [DEBUG] Calculating requirements for 1x acacia_hanging_sign
+2025-10-25 16:21:34.118 [DEBUG] Processing: 1x acacia_hanging_sign
+2025-10-25 16:21:34.118 [DEBUG] Current recipe stack: 
+2025-10-25 16:21:34.118 [DEBUG] Found recipe for acacia_hanging_sign: {'stripped_acacia_log': 6, 'iron_chain': 2}
+2025-10-25 16:21:34.118 [DEBUG] Need 6x stripped_acacia_log for 1x acacia_hanging_sign
+2025-10-25 16:21:34.118 [DEBUG]   Processing: 6x stripped_acacia_log
+2025-10-25 16:21:34.118 [DEBUG]   Current recipe stack: acacia_hanging_sign
+2025-10-25 16:21:34.119 [DEBUG]   Adding material: 6x stripped_acacia_log
+2025-10-25 16:21:34.119 [DEBUG] Need 2x iron_chain for 1x acacia_hanging_sign
+2025-10-25 16:21:34.119 [DEBUG]   Processing: 2x iron_chain
+2025-10-25 16:21:34.119 [DEBUG]   Current recipe stack: acacia_hanging_sign
+2025-10-25 16:21:34.119 [DEBUG]   Found recipe for iron_chain: {'iron_ingot': 1, 'iron_nugget': 2}
+2025-10-25 16:21:34.119 [DEBUG]   Need 2x iron_ingot for 2x iron_chain
+2025-10-25 16:21:34.119 [DEBUG]     Processing: 2x iron_ingot
+2025-10-25 16:21:34.119 [DEBUG]     Current recipe stack: acacia_hanging_sign -> iron_chain
+2025-10-25 16:21:34.120 [DEBUG]     Found recipe for iron_ingot: {}
+2025-10-25 16:21:34.120 [DEBUG]   Need 4x iron_nugget for 2x iron_chain
+2025-10-25 16:21:34.120 [DEBUG]     Processing: 4x iron_nugget
+2025-10-25 16:21:34.120 [DEBUG]     Current recipe stack: acacia_hanging_sign -> iron_chain
+2025-10-25 16:21:34.120 [DEBUG]     Found recipe for iron_nugget: {'iron_ingot': 1}
+2025-10-25 16:21:34.120 [DEBUG]     Need 4x iron_ingot for 4x iron_nugget
+2025-10-25 16:21:34.120 [DEBUG]       Processing: 4x iron_ingot
+2025-10-25 16:21:34.120 [DEBUG]       Current recipe stack: acacia_hanging_sign -> iron_chain -> iron_nugget
+2025-10-25 16:21:34.121 [DEBUG]       Found recipe for iron_ingot: {}
+2025-10-25 16:21:34.121 [DEBUG] Final totals for 1x acacia_hanging_sign: {'stripped_acacia_log': 6}
+2025-10-25 16:21:34.121 [DEBUG] Requirements for 1x acacia_hanging_sign: {'stripped_acacia_log': 6}
+2025-10-25 16:21:34.121 [DEBUG] Updated total for stripped_acacia_log: 6
+2025-10-25 16:21:34.121 [INFO] Final aggregate totals: {'acacia_planks': 10, 'planks': 8, 'stripped_acacia_log': 6}
+2025-10-25 16:26:21.147 [INFO] Calculating aggregate requirements for items: {'acacia_hanging_sign': 1}
+2025-10-25 16:26:21.147 [DEBUG] Processing requirements for 1x acacia_hanging_sign
+2025-10-25 16:26:21.147 [DEBUG] Calculating requirements for 1x acacia_hanging_sign
+2025-10-25 16:26:21.147 [DEBUG] Processing: 1x acacia_hanging_sign
+2025-10-25 16:26:21.147 [DEBUG] Current recipe stack: 
+2025-10-25 16:26:21.147 [DEBUG] Found recipe for acacia_hanging_sign: {'stripped_acacia_log': 6, 'iron_chain': 2}
+2025-10-25 16:26:21.147 [DEBUG] Need 6x stripped_acacia_log for 1x acacia_hanging_sign
+2025-10-25 16:26:21.147 [DEBUG]   Processing: 6x stripped_acacia_log
+2025-10-25 16:26:21.147 [DEBUG]   Current recipe stack: acacia_hanging_sign
+2025-10-25 16:26:21.147 [DEBUG]   Adding material: 6x stripped_acacia_log
+2025-10-25 16:26:21.148 [DEBUG] Need 2x iron_chain for 1x acacia_hanging_sign
+2025-10-25 16:26:21.148 [DEBUG]   Processing: 2x iron_chain
+2025-10-25 16:26:21.148 [DEBUG]   Current recipe stack: acacia_hanging_sign
+2025-10-25 16:26:21.148 [DEBUG]   Found recipe for iron_chain: {'iron_ingot': 2}
+2025-10-25 16:26:21.148 [DEBUG]   Need 4x iron_ingot for 2x iron_chain
+2025-10-25 16:26:21.148 [DEBUG]     Processing: 4x iron_ingot
+2025-10-25 16:26:21.148 [DEBUG]     Current recipe stack: acacia_hanging_sign -> iron_chain
+2025-10-25 16:26:21.148 [DEBUG]     Adding material: 4x iron_ingot
+2025-10-25 16:26:21.148 [DEBUG] Final totals for 1x acacia_hanging_sign: {'stripped_acacia_log': 6, 'iron_ingot': 4}
+2025-10-25 16:26:21.148 [DEBUG] Requirements for 1x acacia_hanging_sign: {'stripped_acacia_log': 6, 'iron_ingot': 4}
+2025-10-25 16:26:21.148 [DEBUG] Updated total for stripped_acacia_log: 6
+2025-10-25 16:26:21.148 [DEBUG] Updated total for iron_ingot: 4
+2025-10-25 16:26:21.148 [INFO] Final aggregate totals: {'stripped_acacia_log': 6, 'iron_ingot': 4}
+2025-10-25 16:26:32.515 [INFO] Calculating aggregate requirements for items: {'blast_furnace': 1}
+2025-10-25 16:26:32.516 [DEBUG] Processing requirements for 1x blast_furnace
+2025-10-25 16:26:32.516 [DEBUG] Calculating requirements for 1x blast_furnace
+2025-10-25 16:26:32.516 [DEBUG] Processing: 1x blast_furnace
+2025-10-25 16:26:32.516 [DEBUG] Current recipe stack: 
+2025-10-25 16:26:32.516 [DEBUG] Found recipe for blast_furnace: {'smooth_stone': 3, 'iron_ingot': 5, 'furnace': 1}
+2025-10-25 16:26:32.516 [DEBUG] Need 3x smooth_stone for 1x blast_furnace
+2025-10-25 16:26:32.516 [DEBUG]   Processing: 3x smooth_stone
+2025-10-25 16:26:32.516 [DEBUG]   Current recipe stack: blast_furnace
+2025-10-25 16:26:32.516 [DEBUG]   Found recipe for smooth_stone: {'stone': 1}
+2025-10-25 16:26:32.517 [DEBUG]   Need 3x stone for 3x smooth_stone
+2025-10-25 16:26:32.517 [DEBUG]     Processing: 3x stone
+2025-10-25 16:26:32.517 [DEBUG]     Current recipe stack: blast_furnace -> smooth_stone
+2025-10-25 16:26:32.517 [DEBUG]     Found recipe for stone: {'cobblestone': 1}
+2025-10-25 16:26:32.517 [DEBUG]     Need 3x cobblestone for 3x stone
+2025-10-25 16:26:32.517 [DEBUG]       Processing: 3x cobblestone
+2025-10-25 16:26:32.517 [DEBUG]       Current recipe stack: blast_furnace -> smooth_stone -> stone
+2025-10-25 16:26:32.517 [DEBUG]       Adding material: 3x cobblestone
+2025-10-25 16:26:32.517 [DEBUG] Need 5x iron_ingot for 1x blast_furnace
+2025-10-25 16:26:32.518 [DEBUG]   Processing: 5x iron_ingot
+2025-10-25 16:26:32.518 [DEBUG]   Current recipe stack: blast_furnace
+2025-10-25 16:26:32.518 [DEBUG]   Adding material: 5x iron_ingot
+2025-10-25 16:26:32.518 [DEBUG] Need 1x furnace for 1x blast_furnace
+2025-10-25 16:26:32.518 [DEBUG]   Processing: 1x furnace
+2025-10-25 16:26:32.518 [DEBUG]   Current recipe stack: blast_furnace
+2025-10-25 16:26:32.518 [DEBUG]   Found recipe for furnace: {'cobblestone': 8}
+2025-10-25 16:26:32.518 [DEBUG]   Need 8x cobblestone for 1x furnace
+2025-10-25 16:26:32.518 [DEBUG]     Processing: 8x cobblestone
+2025-10-25 16:26:32.518 [DEBUG]     Current recipe stack: blast_furnace -> furnace
+2025-10-25 16:26:32.518 [DEBUG]     Adding material: 8x cobblestone
+2025-10-25 16:26:32.518 [DEBUG] Final totals for 1x blast_furnace: {'cobblestone': 11, 'iron_ingot': 5}
+2025-10-25 16:26:32.518 [DEBUG] Requirements for 1x blast_furnace: {'cobblestone': 11, 'iron_ingot': 5}
+2025-10-25 16:26:32.518 [DEBUG] Updated total for cobblestone: 11
+2025-10-25 16:26:32.519 [DEBUG] Updated total for iron_ingot: 5
+2025-10-25 16:26:32.519 [INFO] Final aggregate totals: {'cobblestone': 11, 'iron_ingot': 5}
+2025-10-25 16:26:43.350 [INFO] Calculating aggregate requirements for items: {'anvil': 1}
+2025-10-25 16:26:43.350 [DEBUG] Processing requirements for 1x anvil
+2025-10-25 16:26:43.350 [DEBUG] Calculating requirements for 1x anvil
+2025-10-25 16:26:43.350 [DEBUG] Processing: 1x anvil
+2025-10-25 16:26:43.350 [DEBUG] Current recipe stack: 
+2025-10-25 16:26:43.350 [DEBUG] Found recipe for anvil: {'iron_block': 3, 'iron_ingot': 4}
+2025-10-25 16:26:43.351 [DEBUG] Need 3x iron_block for 1x anvil
+2025-10-25 16:26:43.351 [DEBUG]   Processing: 3x iron_block
+2025-10-25 16:26:43.351 [DEBUG]   Current recipe stack: anvil
+2025-10-25 16:26:43.351 [DEBUG]   Adding material: 3x iron_block
+2025-10-25 16:26:43.351 [DEBUG] Need 4x iron_ingot for 1x anvil
+2025-10-25 16:26:43.351 [DEBUG]   Processing: 4x iron_ingot
+2025-10-25 16:26:43.351 [DEBUG]   Current recipe stack: anvil
+2025-10-25 16:26:43.351 [DEBUG]   Adding material: 4x iron_ingot
+2025-10-25 16:26:43.351 [DEBUG] Final totals for 1x anvil: {'iron_block': 3, 'iron_ingot': 4}
+2025-10-25 16:26:43.351 [DEBUG] Requirements for 1x anvil: {'iron_block': 3, 'iron_ingot': 4}
+2025-10-25 16:26:43.351 [DEBUG] Updated total for iron_block: 3
+2025-10-25 16:26:43.352 [DEBUG] Updated total for iron_ingot: 4
+2025-10-25 16:26:43.352 [INFO] Final aggregate totals: {'iron_block': 3, 'iron_ingot': 4}
+2025-10-25 16:26:56.418 [INFO] Calculating aggregate requirements for items: {}
+2025-10-25 16:26:56.419 [INFO] Final aggregate totals: {}
+2025-10-25 16:26:59.643 [INFO] Adding item: acacia_boat
+2025-10-25 16:26:59.643 [INFO] Adding 1x acacia_boat
+2025-10-25 16:26:59.644 [DEBUG] Current project items before add: {}
+2025-10-25 16:26:59.644 [DEBUG] Updated project items: {'acacia_boat': 1}
+2025-10-25 16:26:59.644 [INFO] Calculating aggregate requirements for items: {'acacia_boat': 1}
+2025-10-25 16:26:59.644 [DEBUG] Processing requirements for 1x acacia_boat
+2025-10-25 16:26:59.645 [DEBUG] Calculating requirements for 1x acacia_boat
+2025-10-25 16:26:59.645 [DEBUG] Processing: 1x acacia_boat
+2025-10-25 16:26:59.645 [DEBUG] Current recipe stack: 
+2025-10-25 16:26:59.645 [DEBUG] Found recipe for acacia_boat: {'acacia_planks': 5}
+2025-10-25 16:26:59.645 [DEBUG] Need 5x acacia_planks for 1x acacia_boat
+2025-10-25 16:26:59.646 [DEBUG]   Processing: 5x acacia_planks
+2025-10-25 16:26:59.646 [DEBUG]   Current recipe stack: acacia_boat
+2025-10-25 16:26:59.646 [DEBUG]   Adding material: 5x acacia_planks
+2025-10-25 16:26:59.646 [DEBUG] Final totals for 1x acacia_boat: {'acacia_planks': 5}
+2025-10-25 16:26:59.647 [DEBUG] Requirements for 1x acacia_boat: {'acacia_planks': 5}
+2025-10-25 16:26:59.647 [DEBUG] Updated total for acacia_planks: 5
+2025-10-25 16:26:59.647 [INFO] Final aggregate totals: {'acacia_planks': 5}
+2025-10-25 16:27:04.687 [INFO] Adding item: acacia_fence_gate
+2025-10-25 16:27:04.687 [INFO] Adding 1x acacia_fence_gate
+2025-10-25 16:27:04.687 [DEBUG] Current project items before add: {'acacia_boat': 1}
+2025-10-25 16:27:04.687 [DEBUG] Updated project items: {'acacia_boat': 1, 'acacia_fence_gate': 1}
+2025-10-25 16:27:04.687 [INFO] Calculating aggregate requirements for items: {'acacia_boat': 1, 'acacia_fence_gate': 1}
+2025-10-25 16:27:04.688 [DEBUG] Processing requirements for 1x acacia_boat
+2025-10-25 16:27:04.688 [DEBUG] Calculating requirements for 1x acacia_boat
+2025-10-25 16:27:04.688 [DEBUG] Processing: 1x acacia_boat
+2025-10-25 16:27:04.688 [DEBUG] Current recipe stack: 
+2025-10-25 16:27:04.688 [DEBUG] Found recipe for acacia_boat: {'acacia_planks': 5}
+2025-10-25 16:27:04.688 [DEBUG] Need 5x acacia_planks for 1x acacia_boat
+2025-10-25 16:27:04.688 [DEBUG]   Processing: 5x acacia_planks
+2025-10-25 16:27:04.689 [DEBUG]   Current recipe stack: acacia_boat
+2025-10-25 16:27:04.689 [DEBUG]   Adding material: 5x acacia_planks
+2025-10-25 16:27:04.689 [DEBUG] Final totals for 1x acacia_boat: {'acacia_planks': 5}
+2025-10-25 16:27:04.689 [DEBUG] Requirements for 1x acacia_boat: {'acacia_planks': 5}
+2025-10-25 16:27:04.689 [DEBUG] Updated total for acacia_planks: 5
+2025-10-25 16:27:04.689 [DEBUG] Processing requirements for 1x acacia_fence_gate
+2025-10-25 16:27:04.690 [DEBUG] Calculating requirements for 1x acacia_fence_gate
+2025-10-25 16:27:04.690 [DEBUG] Processing: 1x acacia_fence_gate
+2025-10-25 16:27:04.690 [DEBUG] Current recipe stack: 
+2025-10-25 16:27:04.690 [DEBUG] Found recipe for acacia_fence_gate: {'stick': 4, 'acacia_planks': 2}
+2025-10-25 16:27:04.690 [DEBUG] Need 4x stick for 1x acacia_fence_gate
+2025-10-25 16:27:04.690 [DEBUG]   Processing: 4x stick
+2025-10-25 16:27:04.690 [DEBUG]   Current recipe stack: acacia_fence_gate
+2025-10-25 16:27:04.690 [DEBUG]   Found recipe for stick: {'oak_planks': 2}
+2025-10-25 16:27:04.690 [DEBUG]   Need 8x oak_planks for 4x stick
+2025-10-25 16:27:04.690 [DEBUG]     Processing: 8x oak_planks
+2025-10-25 16:27:04.690 [DEBUG]     Current recipe stack: acacia_fence_gate -> stick
+2025-10-25 16:27:04.690 [DEBUG]     Adding material: 8x oak_planks
+2025-10-25 16:27:04.691 [DEBUG] Need 2x acacia_planks for 1x acacia_fence_gate
+2025-10-25 16:27:04.691 [DEBUG]   Processing: 2x acacia_planks
+2025-10-25 16:27:04.691 [DEBUG]   Current recipe stack: acacia_fence_gate
+2025-10-25 16:27:04.691 [DEBUG]   Adding material: 2x acacia_planks
+2025-10-25 16:27:04.691 [DEBUG] Final totals for 1x acacia_fence_gate: {'oak_planks': 8, 'acacia_planks': 2}
+2025-10-25 16:27:04.691 [DEBUG] Requirements for 1x acacia_fence_gate: {'oak_planks': 8, 'acacia_planks': 2}
+2025-10-25 16:27:04.691 [DEBUG] Updated total for oak_planks: 8
+2025-10-25 16:27:04.691 [DEBUG] Updated total for acacia_planks: 7
+2025-10-25 16:27:04.691 [INFO] Final aggregate totals: {'acacia_planks': 7, 'oak_planks': 8}
+2025-10-25 16:27:14.280 [INFO] Adding item: acacia_door
+2025-10-25 16:27:14.280 [INFO] Adding 1x acacia_door
+2025-10-25 16:27:14.280 [DEBUG] Current project items before add: {'acacia_boat': 1, 'acacia_fence_gate': 1}
+2025-10-25 16:27:14.281 [DEBUG] Updated project items: {'acacia_boat': 1, 'acacia_fence_gate': 1, 'acacia_door': 1}
+2025-10-25 16:27:14.281 [INFO] Calculating aggregate requirements for items: {'acacia_boat': 1, 'acacia_fence_gate': 1, 'acacia_door': 1}
+2025-10-25 16:27:14.281 [DEBUG] Processing requirements for 1x acacia_boat
+2025-10-25 16:27:14.281 [DEBUG] Calculating requirements for 1x acacia_boat
+2025-10-25 16:27:14.282 [DEBUG] Processing: 1x acacia_boat
+2025-10-25 16:27:14.282 [DEBUG] Current recipe stack: 
+2025-10-25 16:27:14.282 [DEBUG] Found recipe for acacia_boat: {'acacia_planks': 5}
+2025-10-25 16:27:14.282 [DEBUG] Need 5x acacia_planks for 1x acacia_boat
+2025-10-25 16:27:14.282 [DEBUG]   Processing: 5x acacia_planks
+2025-10-25 16:27:14.282 [DEBUG]   Current recipe stack: acacia_boat
+2025-10-25 16:27:14.283 [DEBUG]   Adding material: 5x acacia_planks
+2025-10-25 16:27:14.283 [DEBUG] Final totals for 1x acacia_boat: {'acacia_planks': 5}
+2025-10-25 16:27:14.283 [DEBUG] Requirements for 1x acacia_boat: {'acacia_planks': 5}
+2025-10-25 16:27:14.283 [DEBUG] Updated total for acacia_planks: 5
+2025-10-25 16:27:14.283 [DEBUG] Processing requirements for 1x acacia_fence_gate
+2025-10-25 16:27:14.283 [DEBUG] Calculating requirements for 1x acacia_fence_gate
+2025-10-25 16:27:14.283 [DEBUG] Processing: 1x acacia_fence_gate
+2025-10-25 16:27:14.283 [DEBUG] Current recipe stack: 
+2025-10-25 16:27:14.283 [DEBUG] Found recipe for acacia_fence_gate: {'stick': 4, 'acacia_planks': 2}
+2025-10-25 16:27:14.284 [DEBUG] Need 4x stick for 1x acacia_fence_gate
+2025-10-25 16:27:14.284 [DEBUG]   Processing: 4x stick
+2025-10-25 16:27:14.284 [DEBUG]   Current recipe stack: acacia_fence_gate
+2025-10-25 16:27:14.284 [DEBUG]   Found recipe for stick: {'oak_planks': 2}
+2025-10-25 16:27:14.284 [DEBUG]   Need 8x oak_planks for 4x stick
+2025-10-25 16:27:14.284 [DEBUG]     Processing: 8x oak_planks
+2025-10-25 16:27:14.284 [DEBUG]     Current recipe stack: acacia_fence_gate -> stick
+2025-10-25 16:27:14.284 [DEBUG]     Adding material: 8x oak_planks
+2025-10-25 16:27:14.284 [DEBUG] Need 2x acacia_planks for 1x acacia_fence_gate
+2025-10-25 16:27:14.284 [DEBUG]   Processing: 2x acacia_planks
+2025-10-25 16:27:14.284 [DEBUG]   Current recipe stack: acacia_fence_gate
+2025-10-25 16:27:14.284 [DEBUG]   Adding material: 2x acacia_planks
+2025-10-25 16:27:14.284 [DEBUG] Final totals for 1x acacia_fence_gate: {'oak_planks': 8, 'acacia_planks': 2}
+2025-10-25 16:27:14.284 [DEBUG] Requirements for 1x acacia_fence_gate: {'oak_planks': 8, 'acacia_planks': 2}
+2025-10-25 16:27:14.285 [DEBUG] Updated total for oak_planks: 8
+2025-10-25 16:27:14.285 [DEBUG] Updated total for acacia_planks: 7
+2025-10-25 16:27:14.285 [DEBUG] Processing requirements for 1x acacia_door
+2025-10-25 16:27:14.285 [DEBUG] Calculating requirements for 1x acacia_door
+2025-10-25 16:27:14.285 [DEBUG] Processing: 1x acacia_door
+2025-10-25 16:27:14.285 [DEBUG] Current recipe stack: 
+2025-10-25 16:27:14.285 [DEBUG] Found recipe for acacia_door: {'acacia_planks': 6}
+2025-10-25 16:27:14.285 [DEBUG] Need 6x acacia_planks for 1x acacia_door
+2025-10-25 16:27:14.285 [DEBUG]   Processing: 6x acacia_planks
+2025-10-25 16:27:14.285 [DEBUG]   Current recipe stack: acacia_door
+2025-10-25 16:27:14.285 [DEBUG]   Adding material: 6x acacia_planks
+2025-10-25 16:27:14.285 [DEBUG] Final totals for 1x acacia_door: {'acacia_planks': 6}
+2025-10-25 16:27:14.285 [DEBUG] Requirements for 1x acacia_door: {'acacia_planks': 6}
+2025-10-25 16:27:14.285 [DEBUG] Updated total for acacia_planks: 13
+2025-10-25 16:27:14.286 [INFO] Final aggregate totals: {'acacia_planks': 13, 'oak_planks': 8}
+2025-10-25 16:27:18.321 [INFO] Adding item: acacia_pressure_plate
+2025-10-25 16:27:18.321 [INFO] Adding 1x acacia_pressure_plate
+2025-10-25 16:27:18.321 [DEBUG] Current project items before add: {'acacia_boat': 1, 'acacia_fence_gate': 1, 'acacia_door': 1}
+2025-10-25 16:27:18.322 [DEBUG] Updated project items: {'acacia_boat': 1, 'acacia_fence_gate': 1, 'acacia_door': 1, 'acacia_pressure_plate': 1}
+2025-10-25 16:27:18.322 [INFO] Calculating aggregate requirements for items: {'acacia_boat': 1, 'acacia_fence_gate': 1, 'acacia_door': 1, 'acacia_pressure_plate': 1}
+2025-10-25 16:27:18.322 [DEBUG] Processing requirements for 1x acacia_boat
+2025-10-25 16:27:18.322 [DEBUG] Calculating requirements for 1x acacia_boat
+2025-10-25 16:27:18.322 [DEBUG] Processing: 1x acacia_boat
+2025-10-25 16:27:18.322 [DEBUG] Current recipe stack: 
+2025-10-25 16:27:18.322 [DEBUG] Found recipe for acacia_boat: {'acacia_planks': 5}
+2025-10-25 16:27:18.323 [DEBUG] Need 5x acacia_planks for 1x acacia_boat
+2025-10-25 16:27:18.323 [DEBUG]   Processing: 5x acacia_planks
+2025-10-25 16:27:18.323 [DEBUG]   Current recipe stack: acacia_boat
+2025-10-25 16:27:18.323 [DEBUG]   Adding material: 5x acacia_planks
+2025-10-25 16:27:18.323 [DEBUG] Final totals for 1x acacia_boat: {'acacia_planks': 5}
+2025-10-25 16:27:18.323 [DEBUG] Requirements for 1x acacia_boat: {'acacia_planks': 5}
+2025-10-25 16:27:18.323 [DEBUG] Updated total for acacia_planks: 5
+2025-10-25 16:27:18.323 [DEBUG] Processing requirements for 1x acacia_fence_gate
+2025-10-25 16:27:18.324 [DEBUG] Calculating requirements for 1x acacia_fence_gate
+2025-10-25 16:27:18.324 [DEBUG] Processing: 1x acacia_fence_gate
+2025-10-25 16:27:18.324 [DEBUG] Current recipe stack: 
+2025-10-25 16:27:18.324 [DEBUG] Found recipe for acacia_fence_gate: {'stick': 4, 'acacia_planks': 2}
+2025-10-25 16:27:18.324 [DEBUG] Need 4x stick for 1x acacia_fence_gate
+2025-10-25 16:27:18.324 [DEBUG]   Processing: 4x stick
+2025-10-25 16:27:18.324 [DEBUG]   Current recipe stack: acacia_fence_gate
+2025-10-25 16:27:18.324 [DEBUG]   Found recipe for stick: {'oak_planks': 2}
+2025-10-25 16:27:18.324 [DEBUG]   Need 8x oak_planks for 4x stick
+2025-10-25 16:27:18.324 [DEBUG]     Processing: 8x oak_planks
+2025-10-25 16:27:18.324 [DEBUG]     Current recipe stack: acacia_fence_gate -> stick
+2025-10-25 16:27:18.325 [DEBUG]     Adding material: 8x oak_planks
+2025-10-25 16:27:18.325 [DEBUG] Need 2x acacia_planks for 1x acacia_fence_gate
+2025-10-25 16:27:18.325 [DEBUG]   Processing: 2x acacia_planks
+2025-10-25 16:27:18.325 [DEBUG]   Current recipe stack: acacia_fence_gate
+2025-10-25 16:27:18.325 [DEBUG]   Adding material: 2x acacia_planks
+2025-10-25 16:27:18.325 [DEBUG] Final totals for 1x acacia_fence_gate: {'oak_planks': 8, 'acacia_planks': 2}
+2025-10-25 16:27:18.325 [DEBUG] Requirements for 1x acacia_fence_gate: {'oak_planks': 8, 'acacia_planks': 2}
+2025-10-25 16:27:18.325 [DEBUG] Updated total for oak_planks: 8
+2025-10-25 16:27:18.325 [DEBUG] Updated total for acacia_planks: 7
+2025-10-25 16:27:18.325 [DEBUG] Processing requirements for 1x acacia_door
+2025-10-25 16:27:18.326 [DEBUG] Calculating requirements for 1x acacia_door
+2025-10-25 16:27:18.326 [DEBUG] Processing: 1x acacia_door
+2025-10-25 16:27:18.326 [DEBUG] Current recipe stack: 
+2025-10-25 16:27:18.326 [DEBUG] Found recipe for acacia_door: {'acacia_planks': 6}
+2025-10-25 16:27:18.326 [DEBUG] Need 6x acacia_planks for 1x acacia_door
+2025-10-25 16:27:18.326 [DEBUG]   Processing: 6x acacia_planks
+2025-10-25 16:27:18.326 [DEBUG]   Current recipe stack: acacia_door
+2025-10-25 16:27:18.326 [DEBUG]   Adding material: 6x acacia_planks
+2025-10-25 16:27:18.326 [DEBUG] Final totals for 1x acacia_door: {'acacia_planks': 6}
+2025-10-25 16:27:18.326 [DEBUG] Requirements for 1x acacia_door: {'acacia_planks': 6}
+2025-10-25 16:27:18.327 [DEBUG] Updated total for acacia_planks: 13
+2025-10-25 16:27:18.327 [DEBUG] Processing requirements for 1x acacia_pressure_plate
+2025-10-25 16:27:18.327 [DEBUG] Calculating requirements for 1x acacia_pressure_plate
+2025-10-25 16:27:18.327 [DEBUG] Processing: 1x acacia_pressure_plate
+2025-10-25 16:27:18.327 [DEBUG] Current recipe stack: 
+2025-10-25 16:27:18.327 [DEBUG] Found recipe for acacia_pressure_plate: {'acacia_planks': 2}
+2025-10-25 16:27:18.328 [DEBUG] Need 2x acacia_planks for 1x acacia_pressure_plate
+2025-10-25 16:27:18.328 [DEBUG]   Processing: 2x acacia_planks
+2025-10-25 16:27:18.328 [DEBUG]   Current recipe stack: acacia_pressure_plate
+2025-10-25 16:27:18.328 [DEBUG]   Adding material: 2x acacia_planks
+2025-10-25 16:27:18.328 [DEBUG] Final totals for 1x acacia_pressure_plate: {'acacia_planks': 2}
+2025-10-25 16:27:18.328 [DEBUG] Requirements for 1x acacia_pressure_plate: {'acacia_planks': 2}
+2025-10-25 16:27:18.328 [DEBUG] Updated total for acacia_planks: 15
+2025-10-25 16:27:18.328 [INFO] Final aggregate totals: {'acacia_planks': 15, 'oak_planks': 8}
+2025-10-25 16:27:21.879 [INFO] Adding item: acacia_hanging_sign
+2025-10-25 16:27:21.879 [INFO] Adding 1x acacia_hanging_sign
+2025-10-25 16:27:21.879 [DEBUG] Current project items before add: {'acacia_boat': 1, 'acacia_fence_gate': 1, 'acacia_door': 1, 'acacia_pressure_plate': 1}
+2025-10-25 16:27:21.880 [DEBUG] Updated project items: {'acacia_boat': 1, 'acacia_fence_gate': 1, 'acacia_door': 1, 'acacia_pressure_plate': 1, 'acacia_hanging_sign': 1}
+2025-10-25 16:27:21.880 [INFO] Calculating aggregate requirements for items: {'acacia_boat': 1, 'acacia_fence_gate': 1, 'acacia_door': 1, 'acacia_pressure_plate': 1, 'acacia_hanging_sign': 1}
+2025-10-25 16:27:21.880 [DEBUG] Processing requirements for 1x acacia_boat
+2025-10-25 16:27:21.880 [DEBUG] Calculating requirements for 1x acacia_boat
+2025-10-25 16:27:21.881 [DEBUG] Processing: 1x acacia_boat
+2025-10-25 16:27:21.881 [DEBUG] Current recipe stack: 
+2025-10-25 16:27:21.881 [DEBUG] Found recipe for acacia_boat: {'acacia_planks': 5}
+2025-10-25 16:27:21.881 [DEBUG] Need 5x acacia_planks for 1x acacia_boat
+2025-10-25 16:27:21.881 [DEBUG]   Processing: 5x acacia_planks
+2025-10-25 16:27:21.881 [DEBUG]   Current recipe stack: acacia_boat
+2025-10-25 16:27:21.881 [DEBUG]   Adding material: 5x acacia_planks
+2025-10-25 16:27:21.881 [DEBUG] Final totals for 1x acacia_boat: {'acacia_planks': 5}
+2025-10-25 16:27:21.882 [DEBUG] Requirements for 1x acacia_boat: {'acacia_planks': 5}
+2025-10-25 16:27:21.882 [DEBUG] Updated total for acacia_planks: 5
+2025-10-25 16:27:21.882 [DEBUG] Processing requirements for 1x acacia_fence_gate
+2025-10-25 16:27:21.882 [DEBUG] Calculating requirements for 1x acacia_fence_gate
+2025-10-25 16:27:21.882 [DEBUG] Processing: 1x acacia_fence_gate
+2025-10-25 16:27:21.882 [DEBUG] Current recipe stack: 
+2025-10-25 16:27:21.882 [DEBUG] Found recipe for acacia_fence_gate: {'stick': 4, 'acacia_planks': 2}
+2025-10-25 16:27:21.883 [DEBUG] Need 4x stick for 1x acacia_fence_gate
+2025-10-25 16:27:21.883 [DEBUG]   Processing: 4x stick
+2025-10-25 16:27:21.883 [DEBUG]   Current recipe stack: acacia_fence_gate
+2025-10-25 16:27:21.883 [DEBUG]   Found recipe for stick: {'oak_planks': 2}
+2025-10-25 16:27:21.883 [DEBUG]   Need 8x oak_planks for 4x stick
+2025-10-25 16:27:21.883 [DEBUG]     Processing: 8x oak_planks
+2025-10-25 16:27:21.883 [DEBUG]     Current recipe stack: acacia_fence_gate -> stick
+2025-10-25 16:27:21.883 [DEBUG]     Adding material: 8x oak_planks
+2025-10-25 16:27:21.884 [DEBUG] Need 2x acacia_planks for 1x acacia_fence_gate
+2025-10-25 16:27:21.884 [DEBUG]   Processing: 2x acacia_planks
+2025-10-25 16:27:21.884 [DEBUG]   Current recipe stack: acacia_fence_gate
+2025-10-25 16:27:21.884 [DEBUG]   Adding material: 2x acacia_planks
+2025-10-25 16:27:21.884 [DEBUG] Final totals for 1x acacia_fence_gate: {'oak_planks': 8, 'acacia_planks': 2}
+2025-10-25 16:27:21.884 [DEBUG] Requirements for 1x acacia_fence_gate: {'oak_planks': 8, 'acacia_planks': 2}
+2025-10-25 16:27:21.884 [DEBUG] Updated total for oak_planks: 8
+2025-10-25 16:27:21.884 [DEBUG] Updated total for acacia_planks: 7
+2025-10-25 16:27:21.884 [DEBUG] Processing requirements for 1x acacia_door
+2025-10-25 16:27:21.884 [DEBUG] Calculating requirements for 1x acacia_door
+2025-10-25 16:27:21.885 [DEBUG] Processing: 1x acacia_door
+2025-10-25 16:27:21.885 [DEBUG] Current recipe stack: 
+2025-10-25 16:27:21.885 [DEBUG] Found recipe for acacia_door: {'acacia_planks': 6}
+2025-10-25 16:27:21.885 [DEBUG] Need 6x acacia_planks for 1x acacia_door
+2025-10-25 16:27:21.885 [DEBUG]   Processing: 6x acacia_planks
+2025-10-25 16:27:21.885 [DEBUG]   Current recipe stack: acacia_door
+2025-10-25 16:27:21.885 [DEBUG]   Adding material: 6x acacia_planks
+2025-10-25 16:27:21.885 [DEBUG] Final totals for 1x acacia_door: {'acacia_planks': 6}
+2025-10-25 16:27:21.885 [DEBUG] Requirements for 1x acacia_door: {'acacia_planks': 6}
+2025-10-25 16:27:21.885 [DEBUG] Updated total for acacia_planks: 13
+2025-10-25 16:27:21.885 [DEBUG] Processing requirements for 1x acacia_pressure_plate
+2025-10-25 16:27:21.886 [DEBUG] Calculating requirements for 1x acacia_pressure_plate
+2025-10-25 16:27:21.886 [DEBUG] Processing: 1x acacia_pressure_plate
+2025-10-25 16:27:21.886 [DEBUG] Current recipe stack: 
+2025-10-25 16:27:21.886 [DEBUG] Found recipe for acacia_pressure_plate: {'acacia_planks': 2}
+2025-10-25 16:27:21.886 [DEBUG] Need 2x acacia_planks for 1x acacia_pressure_plate
+2025-10-25 16:27:21.886 [DEBUG]   Processing: 2x acacia_planks
+2025-10-25 16:27:21.886 [DEBUG]   Current recipe stack: acacia_pressure_plate
+2025-10-25 16:27:21.886 [DEBUG]   Adding material: 2x acacia_planks
+2025-10-25 16:27:21.886 [DEBUG] Final totals for 1x acacia_pressure_plate: {'acacia_planks': 2}
+2025-10-25 16:27:21.886 [DEBUG] Requirements for 1x acacia_pressure_plate: {'acacia_planks': 2}
+2025-10-25 16:27:21.886 [DEBUG] Updated total for acacia_planks: 15
+2025-10-25 16:27:21.886 [DEBUG] Processing requirements for 1x acacia_hanging_sign
+2025-10-25 16:27:21.886 [DEBUG] Calculating requirements for 1x acacia_hanging_sign
+2025-10-25 16:27:21.887 [DEBUG] Processing: 1x acacia_hanging_sign
+2025-10-25 16:27:21.887 [DEBUG] Current recipe stack: 
+2025-10-25 16:27:21.887 [DEBUG] Found recipe for acacia_hanging_sign: {'stripped_acacia_log': 6, 'iron_chain': 2}
+2025-10-25 16:27:21.887 [DEBUG] Need 6x stripped_acacia_log for 1x acacia_hanging_sign
+2025-10-25 16:27:21.887 [DEBUG]   Processing: 6x stripped_acacia_log
+2025-10-25 16:27:21.887 [DEBUG]   Current recipe stack: acacia_hanging_sign
+2025-10-25 16:27:21.887 [DEBUG]   Adding material: 6x stripped_acacia_log
+2025-10-25 16:27:21.887 [DEBUG] Need 2x iron_chain for 1x acacia_hanging_sign
+2025-10-25 16:27:21.887 [DEBUG]   Processing: 2x iron_chain
+2025-10-25 16:27:21.887 [DEBUG]   Current recipe stack: acacia_hanging_sign
+2025-10-25 16:27:21.887 [DEBUG]   Found recipe for iron_chain: {'iron_ingot': 2}
+2025-10-25 16:27:21.887 [DEBUG]   Need 4x iron_ingot for 2x iron_chain
+2025-10-25 16:27:21.887 [DEBUG]     Processing: 4x iron_ingot
+2025-10-25 16:27:21.887 [DEBUG]     Current recipe stack: acacia_hanging_sign -> iron_chain
+2025-10-25 16:27:21.888 [DEBUG]     Adding material: 4x iron_ingot
+2025-10-25 16:27:21.888 [DEBUG] Final totals for 1x acacia_hanging_sign: {'stripped_acacia_log': 6, 'iron_ingot': 4}
+2025-10-25 16:27:21.888 [DEBUG] Requirements for 1x acacia_hanging_sign: {'stripped_acacia_log': 6, 'iron_ingot': 4}
+2025-10-25 16:27:21.888 [DEBUG] Updated total for stripped_acacia_log: 6
+2025-10-25 16:27:21.888 [DEBUG] Updated total for iron_ingot: 4
+2025-10-25 16:27:21.888 [INFO] Final aggregate totals: {'acacia_planks': 15, 'oak_planks': 8, 'stripped_acacia_log': 6, 'iron_ingot': 4}
+2025-10-25 16:27:28.134 [INFO] Adding item: birch_pressure_plate
+2025-10-25 16:27:28.135 [INFO] Adding 1x birch_pressure_plate
+2025-10-25 16:27:28.135 [DEBUG] Current project items before add: {'acacia_boat': 1, 'acacia_fence_gate': 1, 'acacia_door': 1, 'acacia_pressure_plate': 1, 'acacia_hanging_sign': 1}
+2025-10-25 16:27:28.135 [DEBUG] Updated project items: {'acacia_boat': 1, 'acacia_fence_gate': 1, 'acacia_door': 1, 'acacia_pressure_plate': 1, 'acacia_hanging_sign': 1, 'birch_pressure_plate': 1}
+2025-10-25 16:27:28.135 [INFO] Calculating aggregate requirements for items: {'acacia_boat': 1, 'acacia_fence_gate': 1, 'acacia_door': 1, 'acacia_pressure_plate': 1, 'acacia_hanging_sign': 1, 'birch_pressure_plate': 1}
+2025-10-25 16:27:28.136 [DEBUG] Processing requirements for 1x acacia_boat
+2025-10-25 16:27:28.136 [DEBUG] Calculating requirements for 1x acacia_boat
+2025-10-25 16:27:28.136 [DEBUG] Processing: 1x acacia_boat
+2025-10-25 16:27:28.136 [DEBUG] Current recipe stack: 
+2025-10-25 16:27:28.136 [DEBUG] Found recipe for acacia_boat: {'acacia_planks': 5}
+2025-10-25 16:27:28.137 [DEBUG] Need 5x acacia_planks for 1x acacia_boat
+2025-10-25 16:27:28.137 [DEBUG]   Processing: 5x acacia_planks
+2025-10-25 16:27:28.137 [DEBUG]   Current recipe stack: acacia_boat
+2025-10-25 16:27:28.137 [DEBUG]   Adding material: 5x acacia_planks
+2025-10-25 16:27:28.137 [DEBUG] Final totals for 1x acacia_boat: {'acacia_planks': 5}
+2025-10-25 16:27:28.137 [DEBUG] Requirements for 1x acacia_boat: {'acacia_planks': 5}
+2025-10-25 16:27:28.138 [DEBUG] Updated total for acacia_planks: 5
+2025-10-25 16:27:28.138 [DEBUG] Processing requirements for 1x acacia_fence_gate
+2025-10-25 16:27:28.138 [DEBUG] Calculating requirements for 1x acacia_fence_gate
+2025-10-25 16:27:28.138 [DEBUG] Processing: 1x acacia_fence_gate
+2025-10-25 16:27:28.138 [DEBUG] Current recipe stack: 
+2025-10-25 16:27:28.138 [DEBUG] Found recipe for acacia_fence_gate: {'stick': 4, 'acacia_planks': 2}
+2025-10-25 16:27:28.138 [DEBUG] Need 4x stick for 1x acacia_fence_gate
+2025-10-25 16:27:28.139 [DEBUG]   Processing: 4x stick
+2025-10-25 16:27:28.139 [DEBUG]   Current recipe stack: acacia_fence_gate
+2025-10-25 16:27:28.139 [DEBUG]   Found recipe for stick: {'oak_planks': 2}
+2025-10-25 16:27:28.139 [DEBUG]   Need 8x oak_planks for 4x stick
+2025-10-25 16:27:28.139 [DEBUG]     Processing: 8x oak_planks
+2025-10-25 16:27:28.139 [DEBUG]     Current recipe stack: acacia_fence_gate -> stick
+2025-10-25 16:27:28.139 [DEBUG]     Adding material: 8x oak_planks
+2025-10-25 16:27:28.139 [DEBUG] Need 2x acacia_planks for 1x acacia_fence_gate
+2025-10-25 16:27:28.140 [DEBUG]   Processing: 2x acacia_planks
+2025-10-25 16:27:28.140 [DEBUG]   Current recipe stack: acacia_fence_gate
+2025-10-25 16:27:28.140 [DEBUG]   Adding material: 2x acacia_planks
+2025-10-25 16:27:28.140 [DEBUG] Final totals for 1x acacia_fence_gate: {'oak_planks': 8, 'acacia_planks': 2}
+2025-10-25 16:27:28.140 [DEBUG] Requirements for 1x acacia_fence_gate: {'oak_planks': 8, 'acacia_planks': 2}
+2025-10-25 16:27:28.140 [DEBUG] Updated total for oak_planks: 8
+2025-10-25 16:27:28.140 [DEBUG] Updated total for acacia_planks: 7
+2025-10-25 16:27:28.140 [DEBUG] Processing requirements for 1x acacia_door
+2025-10-25 16:27:28.140 [DEBUG] Calculating requirements for 1x acacia_door
+2025-10-25 16:27:28.140 [DEBUG] Processing: 1x acacia_door
+2025-10-25 16:27:28.140 [DEBUG] Current recipe stack: 
+2025-10-25 16:27:28.141 [DEBUG] Found recipe for acacia_door: {'acacia_planks': 6}
+2025-10-25 16:27:28.141 [DEBUG] Need 6x acacia_planks for 1x acacia_door
+2025-10-25 16:27:28.141 [DEBUG]   Processing: 6x acacia_planks
+2025-10-25 16:27:28.141 [DEBUG]   Current recipe stack: acacia_door
+2025-10-25 16:27:28.141 [DEBUG]   Adding material: 6x acacia_planks
+2025-10-25 16:27:28.141 [DEBUG] Final totals for 1x acacia_door: {'acacia_planks': 6}
+2025-10-25 16:27:28.141 [DEBUG] Requirements for 1x acacia_door: {'acacia_planks': 6}
+2025-10-25 16:27:28.141 [DEBUG] Updated total for acacia_planks: 13
+2025-10-25 16:27:28.141 [DEBUG] Processing requirements for 1x acacia_pressure_plate
+2025-10-25 16:27:28.141 [DEBUG] Calculating requirements for 1x acacia_pressure_plate
+2025-10-25 16:27:28.141 [DEBUG] Processing: 1x acacia_pressure_plate
+2025-10-25 16:27:28.141 [DEBUG] Current recipe stack: 
+2025-10-25 16:27:28.142 [DEBUG] Found recipe for acacia_pressure_plate: {'acacia_planks': 2}
+2025-10-25 16:27:28.142 [DEBUG] Need 2x acacia_planks for 1x acacia_pressure_plate
+2025-10-25 16:27:28.142 [DEBUG]   Processing: 2x acacia_planks
+2025-10-25 16:27:28.142 [DEBUG]   Current recipe stack: acacia_pressure_plate
+2025-10-25 16:27:28.142 [DEBUG]   Adding material: 2x acacia_planks
+2025-10-25 16:27:28.142 [DEBUG] Final totals for 1x acacia_pressure_plate: {'acacia_planks': 2}
+2025-10-25 16:27:28.142 [DEBUG] Requirements for 1x acacia_pressure_plate: {'acacia_planks': 2}
+2025-10-25 16:27:28.142 [DEBUG] Updated total for acacia_planks: 15
+2025-10-25 16:27:28.142 [DEBUG] Processing requirements for 1x acacia_hanging_sign
+2025-10-25 16:27:28.142 [DEBUG] Calculating requirements for 1x acacia_hanging_sign
+2025-10-25 16:27:28.142 [DEBUG] Processing: 1x acacia_hanging_sign
+2025-10-25 16:27:28.142 [DEBUG] Current recipe stack: 
+2025-10-25 16:27:28.142 [DEBUG] Found recipe for acacia_hanging_sign: {'stripped_acacia_log': 6, 'iron_chain': 2}
+2025-10-25 16:27:28.143 [DEBUG] Need 6x stripped_acacia_log for 1x acacia_hanging_sign
+2025-10-25 16:27:28.143 [DEBUG]   Processing: 6x stripped_acacia_log
+2025-10-25 16:27:28.143 [DEBUG]   Current recipe stack: acacia_hanging_sign
+2025-10-25 16:27:28.143 [DEBUG]   Adding material: 6x stripped_acacia_log
+2025-10-25 16:27:28.143 [DEBUG] Need 2x iron_chain for 1x acacia_hanging_sign
+2025-10-25 16:27:28.143 [DEBUG]   Processing: 2x iron_chain
+2025-10-25 16:27:28.143 [DEBUG]   Current recipe stack: acacia_hanging_sign
+2025-10-25 16:27:28.143 [DEBUG]   Found recipe for iron_chain: {'iron_ingot': 2}
+2025-10-25 16:27:28.143 [DEBUG]   Need 4x iron_ingot for 2x iron_chain
+2025-10-25 16:27:28.143 [DEBUG]     Processing: 4x iron_ingot
+2025-10-25 16:27:28.143 [DEBUG]     Current recipe stack: acacia_hanging_sign -> iron_chain
+2025-10-25 16:27:28.143 [DEBUG]     Adding material: 4x iron_ingot
+2025-10-25 16:27:28.143 [DEBUG] Final totals for 1x acacia_hanging_sign: {'stripped_acacia_log': 6, 'iron_ingot': 4}
+2025-10-25 16:27:28.144 [DEBUG] Requirements for 1x acacia_hanging_sign: {'stripped_acacia_log': 6, 'iron_ingot': 4}
+2025-10-25 16:27:28.144 [DEBUG] Updated total for stripped_acacia_log: 6
+2025-10-25 16:27:28.144 [DEBUG] Updated total for iron_ingot: 4
+2025-10-25 16:27:28.144 [DEBUG] Processing requirements for 1x birch_pressure_plate
+2025-10-25 16:27:28.144 [DEBUG] Calculating requirements for 1x birch_pressure_plate
+2025-10-25 16:27:28.144 [DEBUG] Processing: 1x birch_pressure_plate
+2025-10-25 16:27:28.144 [DEBUG] Current recipe stack: 
+2025-10-25 16:27:28.144 [DEBUG] Found recipe for birch_pressure_plate: {'birch_planks': 2}
+2025-10-25 16:27:28.144 [DEBUG] Need 2x birch_planks for 1x birch_pressure_plate
+2025-10-25 16:27:28.144 [DEBUG]   Processing: 2x birch_planks
+2025-10-25 16:27:28.144 [DEBUG]   Current recipe stack: birch_pressure_plate
+2025-10-25 16:27:28.144 [DEBUG]   Adding material: 2x birch_planks
+2025-10-25 16:27:28.144 [DEBUG] Final totals for 1x birch_pressure_plate: {'birch_planks': 2}
+2025-10-25 16:27:28.144 [DEBUG] Requirements for 1x birch_pressure_plate: {'birch_planks': 2}
+2025-10-25 16:27:28.144 [DEBUG] Updated total for birch_planks: 2
+2025-10-25 16:27:28.145 [INFO] Final aggregate totals: {'acacia_planks': 15, 'oak_planks': 8, 'stripped_acacia_log': 6, 'iron_ingot': 4, 'birch_planks': 2}
+2025-10-25 16:27:39.356 [INFO] Adding item: shaper_armor_trim_smithing_template
+2025-10-25 16:27:39.357 [INFO] Adding 1x shaper_armor_trim_smithing_template
+2025-10-25 16:27:39.357 [DEBUG] Current project items before add: {'acacia_boat': 1, 'acacia_fence_gate': 1, 'acacia_door': 1, 'acacia_pressure_plate': 1, 'acacia_hanging_sign': 1, 'birch_pressure_plate': 1}
+2025-10-25 16:27:39.357 [DEBUG] Updated project items: {'acacia_boat': 1, 'acacia_fence_gate': 1, 'acacia_door': 1, 'acacia_pressure_plate': 1, 'acacia_hanging_sign': 1, 'birch_pressure_plate': 1, 'shaper_armor_trim_smithing_template': 1}
+2025-10-25 16:27:39.357 [INFO] Calculating aggregate requirements for items: {'acacia_boat': 1, 'acacia_fence_gate': 1, 'acacia_door': 1, 'acacia_pressure_plate': 1, 'acacia_hanging_sign': 1, 'birch_pressure_plate': 1, 'shaper_armor_trim_smithing_template': 1}
+2025-10-25 16:27:39.358 [DEBUG] Processing requirements for 1x acacia_boat
+2025-10-25 16:27:39.358 [DEBUG] Calculating requirements for 1x acacia_boat
+2025-10-25 16:27:39.358 [DEBUG] Processing: 1x acacia_boat
+2025-10-25 16:27:39.358 [DEBUG] Current recipe stack: 
+2025-10-25 16:27:39.358 [DEBUG] Found recipe for acacia_boat: {'acacia_planks': 5}
+2025-10-25 16:27:39.358 [DEBUG] Need 5x acacia_planks for 1x acacia_boat
+2025-10-25 16:27:39.358 [DEBUG]   Processing: 5x acacia_planks
+2025-10-25 16:27:39.358 [DEBUG]   Current recipe stack: acacia_boat
+2025-10-25 16:27:39.358 [DEBUG]   Adding material: 5x acacia_planks
+2025-10-25 16:27:39.359 [DEBUG] Final totals for 1x acacia_boat: {'acacia_planks': 5}
+2025-10-25 16:27:39.359 [DEBUG] Requirements for 1x acacia_boat: {'acacia_planks': 5}
+2025-10-25 16:27:39.359 [DEBUG] Updated total for acacia_planks: 5
+2025-10-25 16:27:39.359 [DEBUG] Processing requirements for 1x acacia_fence_gate
+2025-10-25 16:27:39.359 [DEBUG] Calculating requirements for 1x acacia_fence_gate
+2025-10-25 16:27:39.359 [DEBUG] Processing: 1x acacia_fence_gate
+2025-10-25 16:27:39.359 [DEBUG] Current recipe stack: 
+2025-10-25 16:27:39.359 [DEBUG] Found recipe for acacia_fence_gate: {'stick': 4, 'acacia_planks': 2}
+2025-10-25 16:27:39.359 [DEBUG] Need 4x stick for 1x acacia_fence_gate
+2025-10-25 16:27:39.359 [DEBUG]   Processing: 4x stick
+2025-10-25 16:27:39.359 [DEBUG]   Current recipe stack: acacia_fence_gate
+2025-10-25 16:27:39.359 [DEBUG]   Found recipe for stick: {'oak_planks': 2}
+2025-10-25 16:27:39.360 [DEBUG]   Need 8x oak_planks for 4x stick
+2025-10-25 16:27:39.360 [DEBUG]     Processing: 8x oak_planks
+2025-10-25 16:27:39.360 [DEBUG]     Current recipe stack: acacia_fence_gate -> stick
+2025-10-25 16:27:39.360 [DEBUG]     Adding material: 8x oak_planks
+2025-10-25 16:27:39.360 [DEBUG] Need 2x acacia_planks for 1x acacia_fence_gate
+2025-10-25 16:27:39.360 [DEBUG]   Processing: 2x acacia_planks
+2025-10-25 16:27:39.360 [DEBUG]   Current recipe stack: acacia_fence_gate
+2025-10-25 16:27:39.360 [DEBUG]   Adding material: 2x acacia_planks
+2025-10-25 16:27:39.360 [DEBUG] Final totals for 1x acacia_fence_gate: {'oak_planks': 8, 'acacia_planks': 2}
+2025-10-25 16:27:39.360 [DEBUG] Requirements for 1x acacia_fence_gate: {'oak_planks': 8, 'acacia_planks': 2}
+2025-10-25 16:27:39.360 [DEBUG] Updated total for oak_planks: 8
+2025-10-25 16:27:39.361 [DEBUG] Updated total for acacia_planks: 7
+2025-10-25 16:27:39.361 [DEBUG] Processing requirements for 1x acacia_door
+2025-10-25 16:27:39.361 [DEBUG] Calculating requirements for 1x acacia_door
+2025-10-25 16:27:39.361 [DEBUG] Processing: 1x acacia_door
+2025-10-25 16:27:39.361 [DEBUG] Current recipe stack: 
+2025-10-25 16:27:39.361 [DEBUG] Found recipe for acacia_door: {'acacia_planks': 6}
+2025-10-25 16:27:39.361 [DEBUG] Need 6x acacia_planks for 1x acacia_door
+2025-10-25 16:27:39.361 [DEBUG]   Processing: 6x acacia_planks
+2025-10-25 16:27:39.361 [DEBUG]   Current recipe stack: acacia_door
+2025-10-25 16:27:39.361 [DEBUG]   Adding material: 6x acacia_planks
+2025-10-25 16:27:39.361 [DEBUG] Final totals for 1x acacia_door: {'acacia_planks': 6}
+2025-10-25 16:27:39.361 [DEBUG] Requirements for 1x acacia_door: {'acacia_planks': 6}
+2025-10-25 16:27:39.361 [DEBUG] Updated total for acacia_planks: 13
+2025-10-25 16:27:39.361 [DEBUG] Processing requirements for 1x acacia_pressure_plate
+2025-10-25 16:27:39.361 [DEBUG] Calculating requirements for 1x acacia_pressure_plate
+2025-10-25 16:27:39.362 [DEBUG] Processing: 1x acacia_pressure_plate
+2025-10-25 16:27:39.362 [DEBUG] Current recipe stack: 
+2025-10-25 16:27:39.362 [DEBUG] Found recipe for acacia_pressure_plate: {'acacia_planks': 2}
+2025-10-25 16:27:39.362 [DEBUG] Need 2x acacia_planks for 1x acacia_pressure_plate
+2025-10-25 16:27:39.362 [DEBUG]   Processing: 2x acacia_planks
+2025-10-25 16:27:39.362 [DEBUG]   Current recipe stack: acacia_pressure_plate
+2025-10-25 16:27:39.362 [DEBUG]   Adding material: 2x acacia_planks
+2025-10-25 16:27:39.362 [DEBUG] Final totals for 1x acacia_pressure_plate: {'acacia_planks': 2}
+2025-10-25 16:27:39.362 [DEBUG] Requirements for 1x acacia_pressure_plate: {'acacia_planks': 2}
+2025-10-25 16:27:39.362 [DEBUG] Updated total for acacia_planks: 15
+2025-10-25 16:27:39.362 [DEBUG] Processing requirements for 1x acacia_hanging_sign
+2025-10-25 16:27:39.362 [DEBUG] Calculating requirements for 1x acacia_hanging_sign
+2025-10-25 16:27:39.362 [DEBUG] Processing: 1x acacia_hanging_sign
+2025-10-25 16:27:39.362 [DEBUG] Current recipe stack: 
+2025-10-25 16:27:39.362 [DEBUG] Found recipe for acacia_hanging_sign: {'stripped_acacia_log': 6, 'iron_chain': 2}
+2025-10-25 16:27:39.363 [DEBUG] Need 6x stripped_acacia_log for 1x acacia_hanging_sign
+2025-10-25 16:27:39.363 [DEBUG]   Processing: 6x stripped_acacia_log
+2025-10-25 16:27:39.363 [DEBUG]   Current recipe stack: acacia_hanging_sign
+2025-10-25 16:27:39.363 [DEBUG]   Adding material: 6x stripped_acacia_log
+2025-10-25 16:27:39.363 [DEBUG] Need 2x iron_chain for 1x acacia_hanging_sign
+2025-10-25 16:27:39.363 [DEBUG]   Processing: 2x iron_chain
+2025-10-25 16:27:39.363 [DEBUG]   Current recipe stack: acacia_hanging_sign
+2025-10-25 16:27:39.363 [DEBUG]   Found recipe for iron_chain: {'iron_ingot': 2}
+2025-10-25 16:27:39.363 [DEBUG]   Need 4x iron_ingot for 2x iron_chain
+2025-10-25 16:27:39.363 [DEBUG]     Processing: 4x iron_ingot
+2025-10-25 16:27:39.363 [DEBUG]     Current recipe stack: acacia_hanging_sign -> iron_chain
+2025-10-25 16:27:39.363 [DEBUG]     Adding material: 4x iron_ingot
+2025-10-25 16:27:39.363 [DEBUG] Final totals for 1x acacia_hanging_sign: {'stripped_acacia_log': 6, 'iron_ingot': 4}
+2025-10-25 16:27:39.363 [DEBUG] Requirements for 1x acacia_hanging_sign: {'stripped_acacia_log': 6, 'iron_ingot': 4}
+2025-10-25 16:27:39.363 [DEBUG] Updated total for stripped_acacia_log: 6
+2025-10-25 16:27:39.364 [DEBUG] Updated total for iron_ingot: 4
+2025-10-25 16:27:39.364 [DEBUG] Processing requirements for 1x birch_pressure_plate
+2025-10-25 16:27:39.364 [DEBUG] Calculating requirements for 1x birch_pressure_plate
+2025-10-25 16:27:39.364 [DEBUG] Processing: 1x birch_pressure_plate
+2025-10-25 16:27:39.364 [DEBUG] Current recipe stack: 
+2025-10-25 16:27:39.364 [DEBUG] Found recipe for birch_pressure_plate: {'birch_planks': 2}
+2025-10-25 16:27:39.364 [DEBUG] Need 2x birch_planks for 1x birch_pressure_plate
+2025-10-25 16:27:39.364 [DEBUG]   Processing: 2x birch_planks
+2025-10-25 16:27:39.364 [DEBUG]   Current recipe stack: birch_pressure_plate
+2025-10-25 16:27:39.364 [DEBUG]   Adding material: 2x birch_planks
+2025-10-25 16:27:39.364 [DEBUG] Final totals for 1x birch_pressure_plate: {'birch_planks': 2}
+2025-10-25 16:27:39.364 [DEBUG] Requirements for 1x birch_pressure_plate: {'birch_planks': 2}
+2025-10-25 16:27:39.364 [DEBUG] Updated total for birch_planks: 2
+2025-10-25 16:27:39.364 [DEBUG] Processing requirements for 1x shaper_armor_trim_smithing_template
+2025-10-25 16:27:39.364 [DEBUG] Calculating requirements for 1x shaper_armor_trim_smithing_template
+2025-10-25 16:27:39.364 [DEBUG] Processing: 1x shaper_armor_trim_smithing_template
+2025-10-25 16:27:39.365 [DEBUG] Current recipe stack: 
+2025-10-25 16:27:39.365 [DEBUG] Found recipe for shaper_armor_trim_smithing_template: {'diamond': 7, 'terracotta': 1, 'shaper_armor_trim_smithing_template': 1}
+2025-10-25 16:27:39.365 [DEBUG] Need 7x diamond for 1x shaper_armor_trim_smithing_template
+2025-10-25 16:27:39.365 [DEBUG]   Processing: 7x diamond
+2025-10-25 16:27:39.365 [DEBUG]   Current recipe stack: shaper_armor_trim_smithing_template
+2025-10-25 16:27:39.365 [DEBUG]   Found recipe for diamond: {'diamond_block': 1}
+2025-10-25 16:27:39.365 [DEBUG]   Need 7x diamond_block for 7x diamond
+2025-10-25 16:27:39.365 [DEBUG]     Processing: 7x diamond_block
+2025-10-25 16:27:39.365 [DEBUG]     Current recipe stack: shaper_armor_trim_smithing_template -> diamond
+2025-10-25 16:27:39.365 [DEBUG]     Adding material: 7x diamond_block
+2025-10-25 16:27:39.365 [DEBUG] Need 1x terracotta for 1x shaper_armor_trim_smithing_template
+2025-10-25 16:27:39.365 [DEBUG]   Processing: 1x terracotta
+2025-10-25 16:27:39.366 [DEBUG]   Current recipe stack: shaper_armor_trim_smithing_template
+2025-10-25 16:27:39.366 [DEBUG]   Found recipe for terracotta: {'clay': 1}
+2025-10-25 16:27:39.366 [DEBUG]   Need 1x clay for 1x terracotta
+2025-10-25 16:27:39.366 [DEBUG]     Processing: 1x clay
+2025-10-25 16:27:39.366 [DEBUG]     Current recipe stack: shaper_armor_trim_smithing_template -> terracotta
+2025-10-25 16:27:39.366 [DEBUG]     Found recipe for clay: {'clay_ball': 4}
+2025-10-25 16:27:39.366 [DEBUG]     Need 4x clay_ball for 1x clay
+2025-10-25 16:27:39.366 [DEBUG]       Processing: 4x clay_ball
+2025-10-25 16:27:39.366 [DEBUG]       Current recipe stack: shaper_armor_trim_smithing_template -> terracotta -> clay
+2025-10-25 16:27:39.366 [DEBUG]       Adding material: 4x clay_ball
+2025-10-25 16:27:39.366 [DEBUG] Need 1x shaper_armor_trim_smithing_template for 1x shaper_armor_trim_smithing_template
+2025-10-25 16:27:39.366 [DEBUG]   Processing: 1x shaper_armor_trim_smithing_template
+2025-10-25 16:27:39.367 [DEBUG]   Current recipe stack: shaper_armor_trim_smithing_template
+2025-10-25 16:27:39.367 [ERROR]   Recipe cycle detected: shaper_armor_trim_smithing_template -> shaper_armor_trim_smithing_template
+2025-10-25 16:29:45.604 [INFO] Calculating aggregate requirements for items: {'shaper_armor_trim_smithing_template': 1}
+2025-10-25 16:29:45.605 [DEBUG] Processing requirements for 1x shaper_armor_trim_smithing_template
+2025-10-25 16:29:45.605 [DEBUG] Calculating requirements for 1x shaper_armor_trim_smithing_template
+2025-10-25 16:29:45.605 [DEBUG] Processing: 1x shaper_armor_trim_smithing_template
+2025-10-25 16:29:45.605 [DEBUG] Current recipe stack: 
+2025-10-25 16:29:45.605 [DEBUG] Found recipe for shaper_armor_trim_smithing_template: {'diamond': 7, 'terracotta': 1}
+2025-10-25 16:29:45.605 [DEBUG] Need 7x diamond for 1x shaper_armor_trim_smithing_template
+2025-10-25 16:29:45.605 [DEBUG]   Processing: 7x diamond
+2025-10-25 16:29:45.605 [DEBUG]   Current recipe stack: shaper_armor_trim_smithing_template
+2025-10-25 16:29:45.605 [DEBUG]   Found recipe for diamond: {'diamond_block': 1}
+2025-10-25 16:29:45.605 [DEBUG]   Need 7x diamond_block for 7x diamond
+2025-10-25 16:29:45.606 [DEBUG]     Processing: 7x diamond_block
+2025-10-25 16:29:45.606 [DEBUG]     Current recipe stack: shaper_armor_trim_smithing_template -> diamond
+2025-10-25 16:29:45.606 [DEBUG]     Adding material: 7x diamond_block
+2025-10-25 16:29:45.606 [DEBUG] Need 1x terracotta for 1x shaper_armor_trim_smithing_template
+2025-10-25 16:29:45.606 [DEBUG]   Processing: 1x terracotta
+2025-10-25 16:29:45.606 [DEBUG]   Current recipe stack: shaper_armor_trim_smithing_template
+2025-10-25 16:29:45.606 [DEBUG]   Found recipe for terracotta: {'clay': 1}
+2025-10-25 16:29:45.606 [DEBUG]   Need 1x clay for 1x terracotta
+2025-10-25 16:29:45.606 [DEBUG]     Processing: 1x clay
+2025-10-25 16:29:45.606 [DEBUG]     Current recipe stack: shaper_armor_trim_smithing_template -> terracotta
+2025-10-25 16:29:45.606 [DEBUG]     Found recipe for clay: {'clay_ball': 4}
+2025-10-25 16:29:45.606 [DEBUG]     Need 4x clay_ball for 1x clay
+2025-10-25 16:29:45.606 [DEBUG]       Processing: 4x clay_ball
+2025-10-25 16:29:45.606 [DEBUG]       Current recipe stack: shaper_armor_trim_smithing_template -> terracotta -> clay
+2025-10-25 16:29:45.606 [DEBUG]       Adding material: 4x clay_ball
+2025-10-25 16:29:45.606 [DEBUG] Final totals for 1x shaper_armor_trim_smithing_template: {'diamond_block': 7, 'clay_ball': 4}
+2025-10-25 16:29:45.607 [DEBUG] Requirements for 1x shaper_armor_trim_smithing_template: {'diamond_block': 7, 'clay_ball': 4}
+2025-10-25 16:29:45.607 [DEBUG] Updated total for diamond_block: 7
+2025-10-25 16:29:45.607 [DEBUG] Updated total for clay_ball: 4
+2025-10-25 16:29:45.607 [INFO] Final aggregate totals: {'diamond_block': 7, 'clay_ball': 4}
+2025-10-25 16:30:10.906 [INFO] Calculating aggregate requirements for items: {}
+2025-10-25 16:30:10.907 [INFO] Final aggregate totals: {}
+2025-10-25 16:30:15.958 [INFO] Adding item: acacia_pressure_plate
+2025-10-25 16:30:15.959 [INFO] Adding 1x acacia_pressure_plate
+2025-10-25 16:30:15.959 [DEBUG] Current project items before add: {}
+2025-10-25 16:30:15.959 [DEBUG] Updated project items: {'acacia_pressure_plate': 1}
+2025-10-25 16:30:15.959 [INFO] Calculating aggregate requirements for items: {'acacia_pressure_plate': 1}
+2025-10-25 16:30:15.959 [DEBUG] Processing requirements for 1x acacia_pressure_plate
+2025-10-25 16:30:15.959 [DEBUG] Calculating requirements for 1x acacia_pressure_plate
+2025-10-25 16:30:15.959 [DEBUG] Processing: 1x acacia_pressure_plate
+2025-10-25 16:30:15.960 [DEBUG] Current recipe stack: 
+2025-10-25 16:30:15.960 [DEBUG] Found recipe for acacia_pressure_plate: {'acacia_planks': 2}
+2025-10-25 16:30:15.960 [DEBUG] Need 2x acacia_planks for 1x acacia_pressure_plate
+2025-10-25 16:30:15.960 [DEBUG]   Processing: 2x acacia_planks
+2025-10-25 16:30:15.960 [DEBUG]   Current recipe stack: acacia_pressure_plate
+2025-10-25 16:30:15.960 [DEBUG]   Adding material: 2x acacia_planks
+2025-10-25 16:30:15.960 [DEBUG] Final totals for 1x acacia_pressure_plate: {'acacia_planks': 2}
+2025-10-25 16:30:15.960 [DEBUG] Requirements for 1x acacia_pressure_plate: {'acacia_planks': 2}
+2025-10-25 16:30:15.960 [DEBUG] Updated total for acacia_planks: 2
+2025-10-25 16:30:15.960 [INFO] Final aggregate totals: {'acacia_planks': 2}
+2025-10-25 16:30:20.592 [INFO] Adding item: andesite_wall
+2025-10-25 16:30:20.593 [INFO] Adding 1x andesite_wall
+2025-10-25 16:30:20.593 [DEBUG] Current project items before add: {'acacia_pressure_plate': 1}
+2025-10-25 16:30:20.593 [DEBUG] Updated project items: {'acacia_pressure_plate': 1, 'andesite_wall': 1}
+2025-10-25 16:30:20.593 [INFO] Calculating aggregate requirements for items: {'acacia_pressure_plate': 1, 'andesite_wall': 1}
+2025-10-25 16:30:20.593 [DEBUG] Processing requirements for 1x acacia_pressure_plate
+2025-10-25 16:30:20.593 [DEBUG] Calculating requirements for 1x acacia_pressure_plate
+2025-10-25 16:30:20.593 [DEBUG] Processing: 1x acacia_pressure_plate
+2025-10-25 16:30:20.594 [DEBUG] Current recipe stack: 
+2025-10-25 16:30:20.594 [DEBUG] Found recipe for acacia_pressure_plate: {'acacia_planks': 2}
+2025-10-25 16:30:20.594 [DEBUG] Need 2x acacia_planks for 1x acacia_pressure_plate
+2025-10-25 16:30:20.594 [DEBUG]   Processing: 2x acacia_planks
+2025-10-25 16:30:20.594 [DEBUG]   Current recipe stack: acacia_pressure_plate
+2025-10-25 16:30:20.594 [DEBUG]   Adding material: 2x acacia_planks
+2025-10-25 16:30:20.594 [DEBUG] Final totals for 1x acacia_pressure_plate: {'acacia_planks': 2}
+2025-10-25 16:30:20.594 [DEBUG] Requirements for 1x acacia_pressure_plate: {'acacia_planks': 2}
+2025-10-25 16:30:20.594 [DEBUG] Updated total for acacia_planks: 2
+2025-10-25 16:30:20.594 [DEBUG] Processing requirements for 1x andesite_wall
+2025-10-25 16:30:20.594 [DEBUG] Calculating requirements for 1x andesite_wall
+2025-10-25 16:30:20.595 [DEBUG] Processing: 1x andesite_wall
+2025-10-25 16:30:20.595 [DEBUG] Current recipe stack: 
+2025-10-25 16:30:20.595 [DEBUG] Found recipe for andesite_wall: {'andesite': 6}
+2025-10-25 16:30:20.595 [DEBUG] Need 6x andesite for 1x andesite_wall
+2025-10-25 16:30:20.595 [DEBUG]   Processing: 6x andesite
+2025-10-25 16:30:20.595 [DEBUG]   Current recipe stack: andesite_wall
+2025-10-25 16:30:20.595 [DEBUG]   Found recipe for andesite: {'diorite': 1, 'cobblestone': 1}
+2025-10-25 16:30:20.595 [DEBUG]   Need 6x diorite for 6x andesite
+2025-10-25 16:30:20.595 [DEBUG]     Processing: 6x diorite
+2025-10-25 16:30:20.596 [DEBUG]     Current recipe stack: andesite_wall -> andesite
+2025-10-25 16:30:20.596 [DEBUG]     Found recipe for diorite: {'cobblestone': 2, 'quartz': 2}
+2025-10-25 16:30:20.596 [DEBUG]     Need 12x cobblestone for 6x diorite
+2025-10-25 16:30:20.596 [DEBUG]       Processing: 12x cobblestone
+2025-10-25 16:30:20.596 [DEBUG]       Current recipe stack: andesite_wall -> andesite -> diorite
+2025-10-25 16:30:20.596 [DEBUG]       Adding material: 12x cobblestone
+2025-10-25 16:30:20.596 [DEBUG]     Need 12x quartz for 6x diorite
+2025-10-25 16:30:20.596 [DEBUG]       Processing: 12x quartz
+2025-10-25 16:30:20.596 [DEBUG]       Current recipe stack: andesite_wall -> andesite -> diorite
+2025-10-25 16:30:20.596 [DEBUG]       Found recipe for quartz: {'nether_quartz_ore': 1}
+2025-10-25 16:30:20.596 [DEBUG]       Need 12x nether_quartz_ore for 12x quartz
+2025-10-25 16:30:20.597 [DEBUG]         Processing: 12x nether_quartz_ore
+2025-10-25 16:30:20.597 [DEBUG]         Current recipe stack: andesite_wall -> andesite -> diorite -> quartz
+2025-10-25 16:30:20.597 [DEBUG]         Adding material: 12x nether_quartz_ore
+2025-10-25 16:30:20.597 [DEBUG]   Need 6x cobblestone for 6x andesite
+2025-10-25 16:30:20.597 [DEBUG]     Processing: 6x cobblestone
+2025-10-25 16:30:20.597 [DEBUG]     Current recipe stack: andesite_wall -> andesite
+2025-10-25 16:30:20.597 [DEBUG]     Adding material: 6x cobblestone
+2025-10-25 16:30:20.597 [DEBUG] Final totals for 1x andesite_wall: {'cobblestone': 18, 'nether_quartz_ore': 12}
+2025-10-25 16:30:20.598 [DEBUG] Requirements for 1x andesite_wall: {'cobblestone': 18, 'nether_quartz_ore': 12}
+2025-10-25 16:30:20.598 [DEBUG] Updated total for cobblestone: 18
+2025-10-25 16:30:20.598 [DEBUG] Updated total for nether_quartz_ore: 12
+2025-10-25 16:30:20.598 [INFO] Final aggregate totals: {'acacia_planks': 2, 'cobblestone': 18, 'nether_quartz_ore': 12}
+2025-10-25 16:30:31.348 [INFO] Adding item: silence_armor_trim_smithing_template
+2025-10-25 16:30:31.349 [INFO] Adding 1x silence_armor_trim_smithing_template
+2025-10-25 16:30:31.349 [DEBUG] Current project items before add: {'acacia_pressure_plate': 1, 'andesite_wall': 1}
+2025-10-25 16:30:31.349 [DEBUG] Updated project items: {'acacia_pressure_plate': 1, 'andesite_wall': 1, 'silence_armor_trim_smithing_template': 1}
+2025-10-25 16:30:31.349 [INFO] Calculating aggregate requirements for items: {'acacia_pressure_plate': 1, 'andesite_wall': 1, 'silence_armor_trim_smithing_template': 1}
+2025-10-25 16:30:31.349 [DEBUG] Processing requirements for 1x acacia_pressure_plate
+2025-10-25 16:30:31.350 [DEBUG] Calculating requirements for 1x acacia_pressure_plate
+2025-10-25 16:30:31.350 [DEBUG] Processing: 1x acacia_pressure_plate
+2025-10-25 16:30:31.350 [DEBUG] Current recipe stack: 
+2025-10-25 16:30:31.350 [DEBUG] Found recipe for acacia_pressure_plate: {'acacia_planks': 2}
+2025-10-25 16:30:31.350 [DEBUG] Need 2x acacia_planks for 1x acacia_pressure_plate
+2025-10-25 16:30:31.350 [DEBUG]   Processing: 2x acacia_planks
+2025-10-25 16:30:31.350 [DEBUG]   Current recipe stack: acacia_pressure_plate
+2025-10-25 16:30:31.350 [DEBUG]   Adding material: 2x acacia_planks
+2025-10-25 16:30:31.350 [DEBUG] Final totals for 1x acacia_pressure_plate: {'acacia_planks': 2}
+2025-10-25 16:30:31.350 [DEBUG] Requirements for 1x acacia_pressure_plate: {'acacia_planks': 2}
+2025-10-25 16:30:31.350 [DEBUG] Updated total for acacia_planks: 2
+2025-10-25 16:30:31.351 [DEBUG] Processing requirements for 1x andesite_wall
+2025-10-25 16:30:31.351 [DEBUG] Calculating requirements for 1x andesite_wall
+2025-10-25 16:30:31.351 [DEBUG] Processing: 1x andesite_wall
+2025-10-25 16:30:31.351 [DEBUG] Current recipe stack: 
+2025-10-25 16:30:31.351 [DEBUG] Found recipe for andesite_wall: {'andesite': 6}
+2025-10-25 16:30:31.351 [DEBUG] Need 6x andesite for 1x andesite_wall
+2025-10-25 16:30:31.351 [DEBUG]   Processing: 6x andesite
+2025-10-25 16:30:31.351 [DEBUG]   Current recipe stack: andesite_wall
+2025-10-25 16:30:31.351 [DEBUG]   Found recipe for andesite: {'diorite': 1, 'cobblestone': 1}
+2025-10-25 16:30:31.351 [DEBUG]   Need 6x diorite for 6x andesite
+2025-10-25 16:30:31.351 [DEBUG]     Processing: 6x diorite
+2025-10-25 16:30:31.351 [DEBUG]     Current recipe stack: andesite_wall -> andesite
+2025-10-25 16:30:31.351 [DEBUG]     Found recipe for diorite: {'cobblestone': 2, 'quartz': 2}
+2025-10-25 16:30:31.351 [DEBUG]     Need 12x cobblestone for 6x diorite
+2025-10-25 16:30:31.351 [DEBUG]       Processing: 12x cobblestone
+2025-10-25 16:30:31.352 [DEBUG]       Current recipe stack: andesite_wall -> andesite -> diorite
+2025-10-25 16:30:31.352 [DEBUG]       Adding material: 12x cobblestone
+2025-10-25 16:30:31.352 [DEBUG]     Need 12x quartz for 6x diorite
+2025-10-25 16:30:31.352 [DEBUG]       Processing: 12x quartz
+2025-10-25 16:30:31.352 [DEBUG]       Current recipe stack: andesite_wall -> andesite -> diorite
+2025-10-25 16:30:31.352 [DEBUG]       Found recipe for quartz: {'nether_quartz_ore': 1}
+2025-10-25 16:30:31.352 [DEBUG]       Need 12x nether_quartz_ore for 12x quartz
+2025-10-25 16:30:31.352 [DEBUG]         Processing: 12x nether_quartz_ore
+2025-10-25 16:30:31.352 [DEBUG]         Current recipe stack: andesite_wall -> andesite -> diorite -> quartz
+2025-10-25 16:30:31.352 [DEBUG]         Adding material: 12x nether_quartz_ore
+2025-10-25 16:30:31.352 [DEBUG]   Need 6x cobblestone for 6x andesite
+2025-10-25 16:30:31.352 [DEBUG]     Processing: 6x cobblestone
+2025-10-25 16:30:31.352 [DEBUG]     Current recipe stack: andesite_wall -> andesite
+2025-10-25 16:30:31.352 [DEBUG]     Adding material: 6x cobblestone
+2025-10-25 16:30:31.352 [DEBUG] Final totals for 1x andesite_wall: {'cobblestone': 18, 'nether_quartz_ore': 12}
+2025-10-25 16:30:31.352 [DEBUG] Requirements for 1x andesite_wall: {'cobblestone': 18, 'nether_quartz_ore': 12}
+2025-10-25 16:30:31.352 [DEBUG] Updated total for cobblestone: 18
+2025-10-25 16:30:31.353 [DEBUG] Updated total for nether_quartz_ore: 12
+2025-10-25 16:30:31.353 [DEBUG] Processing requirements for 1x silence_armor_trim_smithing_template
+2025-10-25 16:30:31.353 [DEBUG] Calculating requirements for 1x silence_armor_trim_smithing_template
+2025-10-25 16:30:31.353 [DEBUG] Processing: 1x silence_armor_trim_smithing_template
+2025-10-25 16:30:31.353 [DEBUG] Current recipe stack: 
+2025-10-25 16:30:31.353 [DEBUG] Found recipe for silence_armor_trim_smithing_template: {'diamond': 7, 'cobbled_deepslate': 1, 'silence_armor_trim_smithing_template': 1}
+2025-10-25 16:30:31.353 [DEBUG] Need 7x diamond for 1x silence_armor_trim_smithing_template
+2025-10-25 16:30:31.353 [DEBUG]   Processing: 7x diamond
+2025-10-25 16:30:31.353 [DEBUG]   Current recipe stack: silence_armor_trim_smithing_template
+2025-10-25 16:30:31.353 [DEBUG]   Found recipe for diamond: {'diamond_block': 1}
+2025-10-25 16:30:31.353 [DEBUG]   Need 7x diamond_block for 7x diamond
+2025-10-25 16:30:31.353 [DEBUG]     Processing: 7x diamond_block
+2025-10-25 16:30:31.353 [DEBUG]     Current recipe stack: silence_armor_trim_smithing_template -> diamond
+2025-10-25 16:30:31.353 [DEBUG]     Adding material: 7x diamond_block
+2025-10-25 16:30:31.353 [DEBUG] Need 1x cobbled_deepslate for 1x silence_armor_trim_smithing_template
+2025-10-25 16:30:31.353 [DEBUG]   Processing: 1x cobbled_deepslate
+2025-10-25 16:30:31.354 [DEBUG]   Current recipe stack: silence_armor_trim_smithing_template
+2025-10-25 16:30:31.354 [DEBUG]   Adding material: 1x cobbled_deepslate
+2025-10-25 16:30:31.354 [DEBUG] Need 1x silence_armor_trim_smithing_template for 1x silence_armor_trim_smithing_template
+2025-10-25 16:30:31.354 [DEBUG]   Processing: 1x silence_armor_trim_smithing_template
+2025-10-25 16:30:31.354 [DEBUG]   Current recipe stack: silence_armor_trim_smithing_template
+2025-10-25 16:30:31.354 [ERROR]   Recipe cycle detected: silence_armor_trim_smithing_template -> silence_armor_trim_smithing_template
+2025-10-25 16:34:23.191 [INFO] Calculating aggregate requirements for items: {}
+2025-10-25 16:34:23.191 [INFO] Final aggregate totals: {}
+2025-10-25 16:34:29.147 [INFO] Calculating aggregate requirements for items: {}
+2025-10-25 16:34:29.147 [INFO] Final aggregate totals: {}
+2025-10-25 16:34:34.006 [INFO] Adding item: acacia_pressure_plate
+2025-10-25 16:34:34.007 [INFO] Adding 1x acacia_pressure_plate
+2025-10-25 16:34:34.007 [DEBUG] Current project items before add: {}
+2025-10-25 16:34:34.007 [DEBUG] Updated project items: {'acacia_pressure_plate': 1}
+2025-10-25 16:34:34.007 [INFO] Calculating aggregate requirements for items: {'acacia_pressure_plate': 1}
+2025-10-25 16:34:34.007 [DEBUG] Processing requirements for 1x acacia_pressure_plate
+2025-10-25 16:34:34.007 [DEBUG] Calculating requirements for 1x acacia_pressure_plate
+2025-10-25 16:34:34.007 [DEBUG] Processing: 1x acacia_pressure_plate
+2025-10-25 16:34:34.008 [DEBUG] Current recipe stack: 
+2025-10-25 16:34:34.008 [DEBUG] Found recipe for acacia_pressure_plate: {'acacia_planks': 2}
+2025-10-25 16:34:34.008 [DEBUG] Need 2x acacia_planks for 1x acacia_pressure_plate
+2025-10-25 16:34:34.008 [DEBUG]   Processing: 2x acacia_planks
+2025-10-25 16:34:34.008 [DEBUG]   Current recipe stack: acacia_pressure_plate
+2025-10-25 16:34:34.008 [DEBUG]   Adding material: 2x acacia_planks
+2025-10-25 16:34:34.008 [DEBUG] Final totals for 1x acacia_pressure_plate: {'acacia_planks': 2}
+2025-10-25 16:34:34.008 [DEBUG] Requirements for 1x acacia_pressure_plate: {'acacia_planks': 2}
+2025-10-25 16:34:34.008 [DEBUG] Updated total for acacia_planks: 2
+2025-10-25 16:34:34.008 [INFO] Final aggregate totals: {'acacia_planks': 2}
+2025-10-25 16:34:40.067 [INFO] Adding item: chiseled_resin_bricks
+2025-10-25 16:34:40.067 [INFO] Adding 1x chiseled_resin_bricks
+2025-10-25 16:34:40.067 [DEBUG] Current project items before add: {'acacia_pressure_plate': 1}
+2025-10-25 16:34:40.068 [DEBUG] Updated project items: {'acacia_pressure_plate': 1, 'chiseled_resin_bricks': 1}
+2025-10-25 16:34:40.068 [INFO] Calculating aggregate requirements for items: {'acacia_pressure_plate': 1, 'chiseled_resin_bricks': 1}
+2025-10-25 16:34:40.068 [DEBUG] Processing requirements for 1x acacia_pressure_plate
+2025-10-25 16:34:40.068 [DEBUG] Calculating requirements for 1x acacia_pressure_plate
+2025-10-25 16:34:40.068 [DEBUG] Processing: 1x acacia_pressure_plate
+2025-10-25 16:34:40.068 [DEBUG] Current recipe stack: 
+2025-10-25 16:34:40.068 [DEBUG] Found recipe for acacia_pressure_plate: {'acacia_planks': 2}
+2025-10-25 16:34:40.068 [DEBUG] Need 2x acacia_planks for 1x acacia_pressure_plate
+2025-10-25 16:34:40.068 [DEBUG]   Processing: 2x acacia_planks
+2025-10-25 16:34:40.068 [DEBUG]   Current recipe stack: acacia_pressure_plate
+2025-10-25 16:34:40.069 [DEBUG]   Adding material: 2x acacia_planks
+2025-10-25 16:34:40.069 [DEBUG] Final totals for 1x acacia_pressure_plate: {'acacia_planks': 2}
+2025-10-25 16:34:40.069 [DEBUG] Requirements for 1x acacia_pressure_plate: {'acacia_planks': 2}
+2025-10-25 16:34:40.069 [DEBUG] Updated total for acacia_planks: 2
+2025-10-25 16:34:40.069 [DEBUG] Processing requirements for 1x chiseled_resin_bricks
+2025-10-25 16:34:40.070 [DEBUG] Calculating requirements for 1x chiseled_resin_bricks
+2025-10-25 16:34:40.070 [DEBUG] Processing: 1x chiseled_resin_bricks
+2025-10-25 16:34:40.070 [DEBUG] Current recipe stack: 
+2025-10-25 16:34:40.070 [DEBUG] Found recipe for chiseled_resin_bricks: {'resin_brick_slab': 2}
+2025-10-25 16:34:40.070 [DEBUG] Need 2x resin_brick_slab for 1x chiseled_resin_bricks
+2025-10-25 16:34:40.070 [DEBUG]   Processing: 2x resin_brick_slab
+2025-10-25 16:34:40.070 [DEBUG]   Current recipe stack: chiseled_resin_bricks
+2025-10-25 16:34:40.070 [DEBUG]   Found recipe for resin_brick_slab: {'resin_bricks': 3}
+2025-10-25 16:34:40.071 [DEBUG]   Need 6x resin_bricks for 2x resin_brick_slab
+2025-10-25 16:34:40.071 [DEBUG]     Processing: 6x resin_bricks
+2025-10-25 16:34:40.071 [DEBUG]     Current recipe stack: chiseled_resin_bricks -> resin_brick_slab
+2025-10-25 16:34:40.071 [DEBUG]     Found recipe for resin_bricks: {'resin_brick': 4}
+2025-10-25 16:34:40.071 [DEBUG]     Need 24x resin_brick for 6x resin_bricks
+2025-10-25 16:34:40.071 [DEBUG]       Processing: 24x resin_brick
+2025-10-25 16:34:40.071 [DEBUG]       Current recipe stack: chiseled_resin_bricks -> resin_brick_slab -> resin_bricks
+2025-10-25 16:34:40.071 [DEBUG]       Found recipe for resin_brick: {'resin_clump': 1}
+2025-10-25 16:34:40.071 [DEBUG]       Need 24x resin_clump for 24x resin_brick
+2025-10-25 16:34:40.071 [DEBUG]         Processing: 24x resin_clump
+2025-10-25 16:34:40.071 [DEBUG]         Current recipe stack: chiseled_resin_bricks -> resin_brick_slab -> resin_bricks -> resin_brick
+2025-10-25 16:34:40.071 [DEBUG]         Found recipe for resin_clump: {}
+2025-10-25 16:34:40.072 [DEBUG] Final totals for 1x chiseled_resin_bricks: {}
+2025-10-25 16:34:40.072 [DEBUG] Requirements for 1x chiseled_resin_bricks: {}
+2025-10-25 16:34:40.072 [INFO] Final aggregate totals: {'acacia_planks': 2}
+2025-10-25 16:34:48.714 [INFO] Adding item: chiseled_stone_bricks
+2025-10-25 16:34:48.714 [INFO] Adding 1x chiseled_stone_bricks
+2025-10-25 16:34:48.714 [DEBUG] Current project items before add: {'acacia_pressure_plate': 1, 'chiseled_resin_bricks': 1}
+2025-10-25 16:34:48.714 [DEBUG] Updated project items: {'acacia_pressure_plate': 1, 'chiseled_resin_bricks': 1, 'chiseled_stone_bricks': 1}
+2025-10-25 16:34:48.715 [INFO] Calculating aggregate requirements for items: {'acacia_pressure_plate': 1, 'chiseled_resin_bricks': 1, 'chiseled_stone_bricks': 1}
+2025-10-25 16:34:48.715 [DEBUG] Processing requirements for 1x acacia_pressure_plate
+2025-10-25 16:34:48.715 [DEBUG] Calculating requirements for 1x acacia_pressure_plate
+2025-10-25 16:34:48.715 [DEBUG] Processing: 1x acacia_pressure_plate
+2025-10-25 16:34:48.715 [DEBUG] Current recipe stack: 
+2025-10-25 16:34:48.715 [DEBUG] Found recipe for acacia_pressure_plate: {'acacia_planks': 2}
+2025-10-25 16:34:48.715 [DEBUG] Need 2x acacia_planks for 1x acacia_pressure_plate
+2025-10-25 16:34:48.715 [DEBUG]   Processing: 2x acacia_planks
+2025-10-25 16:34:48.715 [DEBUG]   Current recipe stack: acacia_pressure_plate
+2025-10-25 16:34:48.715 [DEBUG]   Adding material: 2x acacia_planks
+2025-10-25 16:34:48.715 [DEBUG] Final totals for 1x acacia_pressure_plate: {'acacia_planks': 2}
+2025-10-25 16:34:48.715 [DEBUG] Requirements for 1x acacia_pressure_plate: {'acacia_planks': 2}
+2025-10-25 16:34:48.715 [DEBUG] Updated total for acacia_planks: 2
+2025-10-25 16:34:48.715 [DEBUG] Processing requirements for 1x chiseled_resin_bricks
+2025-10-25 16:34:48.716 [DEBUG] Calculating requirements for 1x chiseled_resin_bricks
+2025-10-25 16:34:48.716 [DEBUG] Processing: 1x chiseled_resin_bricks
+2025-10-25 16:34:48.716 [DEBUG] Current recipe stack: 
+2025-10-25 16:34:48.716 [DEBUG] Found recipe for chiseled_resin_bricks: {'resin_brick_slab': 2}
+2025-10-25 16:34:48.716 [DEBUG] Need 2x resin_brick_slab for 1x chiseled_resin_bricks
+2025-10-25 16:34:48.716 [DEBUG]   Processing: 2x resin_brick_slab
+2025-10-25 16:34:48.716 [DEBUG]   Current recipe stack: chiseled_resin_bricks
+2025-10-25 16:34:48.716 [DEBUG]   Found recipe for resin_brick_slab: {'resin_bricks': 3}
+2025-10-25 16:34:48.716 [DEBUG]   Need 6x resin_bricks for 2x resin_brick_slab
+2025-10-25 16:34:48.716 [DEBUG]     Processing: 6x resin_bricks
+2025-10-25 16:34:48.716 [DEBUG]     Current recipe stack: chiseled_resin_bricks -> resin_brick_slab
+2025-10-25 16:34:48.716 [DEBUG]     Found recipe for resin_bricks: {'resin_brick': 4}
+2025-10-25 16:34:48.716 [DEBUG]     Need 24x resin_brick for 6x resin_bricks
+2025-10-25 16:34:48.716 [DEBUG]       Processing: 24x resin_brick
+2025-10-25 16:34:48.717 [DEBUG]       Current recipe stack: chiseled_resin_bricks -> resin_brick_slab -> resin_bricks
+2025-10-25 16:34:48.717 [DEBUG]       Found recipe for resin_brick: {'resin_clump': 1}
+2025-10-25 16:34:48.717 [DEBUG]       Need 24x resin_clump for 24x resin_brick
+2025-10-25 16:34:48.717 [DEBUG]         Processing: 24x resin_clump
+2025-10-25 16:34:48.717 [DEBUG]         Current recipe stack: chiseled_resin_bricks -> resin_brick_slab -> resin_bricks -> resin_brick
+2025-10-25 16:34:48.717 [DEBUG]         Found recipe for resin_clump: {}
+2025-10-25 16:34:48.717 [DEBUG] Final totals for 1x chiseled_resin_bricks: {}
+2025-10-25 16:34:48.717 [DEBUG] Requirements for 1x chiseled_resin_bricks: {}
+2025-10-25 16:34:48.717 [DEBUG] Processing requirements for 1x chiseled_stone_bricks
+2025-10-25 16:34:48.717 [DEBUG] Calculating requirements for 1x chiseled_stone_bricks
+2025-10-25 16:34:48.717 [DEBUG] Processing: 1x chiseled_stone_bricks
+2025-10-25 16:34:48.717 [DEBUG] Current recipe stack: 
+2025-10-25 16:34:48.717 [DEBUG] Found recipe for chiseled_stone_bricks: {'stone_brick_slab': 2}
+2025-10-25 16:34:48.718 [DEBUG] Need 2x stone_brick_slab for 1x chiseled_stone_bricks
+2025-10-25 16:34:48.718 [DEBUG]   Processing: 2x stone_brick_slab
+2025-10-25 16:34:48.718 [DEBUG]   Current recipe stack: chiseled_stone_bricks
+2025-10-25 16:34:48.718 [DEBUG]   Found recipe for stone_brick_slab: {'stone_bricks': 3}
+2025-10-25 16:34:48.718 [DEBUG]   Need 6x stone_bricks for 2x stone_brick_slab
+2025-10-25 16:34:48.718 [DEBUG]     Processing: 6x stone_bricks
+2025-10-25 16:34:48.718 [DEBUG]     Current recipe stack: chiseled_stone_bricks -> stone_brick_slab
+2025-10-25 16:34:48.718 [DEBUG]     Found recipe for stone_bricks: {'stone': 4}
+2025-10-25 16:34:48.718 [DEBUG]     Need 24x stone for 6x stone_bricks
+2025-10-25 16:34:48.718 [DEBUG]       Processing: 24x stone
+2025-10-25 16:34:48.719 [DEBUG]       Current recipe stack: chiseled_stone_bricks -> stone_brick_slab -> stone_bricks
+2025-10-25 16:34:48.719 [DEBUG]       Found recipe for stone: {'cobblestone': 1}
+2025-10-25 16:34:48.719 [DEBUG]       Need 24x cobblestone for 24x stone
+2025-10-25 16:34:48.719 [DEBUG]         Processing: 24x cobblestone
+2025-10-25 16:34:48.719 [DEBUG]         Current recipe stack: chiseled_stone_bricks -> stone_brick_slab -> stone_bricks -> stone
+2025-10-25 16:34:48.719 [DEBUG]         Adding material: 24x cobblestone
+2025-10-25 16:34:48.719 [DEBUG] Final totals for 1x chiseled_stone_bricks: {'cobblestone': 24}
+2025-10-25 16:34:48.719 [DEBUG] Requirements for 1x chiseled_stone_bricks: {'cobblestone': 24}
+2025-10-25 16:34:48.719 [DEBUG] Updated total for cobblestone: 24
+2025-10-25 16:34:48.719 [INFO] Final aggregate totals: {'acacia_planks': 2, 'cobblestone': 24}
+2025-10-25 16:34:57.415 [INFO] Adding item: spire_armor_trim_smithing_template
+2025-10-25 16:34:57.416 [INFO] Adding 1x spire_armor_trim_smithing_template
+2025-10-25 16:34:57.416 [DEBUG] Current project items before add: {'acacia_pressure_plate': 1, 'chiseled_resin_bricks': 1, 'chiseled_stone_bricks': 1}
+2025-10-25 16:34:57.416 [DEBUG] Updated project items: {'acacia_pressure_plate': 1, 'chiseled_resin_bricks': 1, 'chiseled_stone_bricks': 1, 'spire_armor_trim_smithing_template': 1}
+2025-10-25 16:34:57.416 [INFO] Calculating aggregate requirements for items: {'acacia_pressure_plate': 1, 'chiseled_resin_bricks': 1, 'chiseled_stone_bricks': 1, 'spire_armor_trim_smithing_template': 1}
+2025-10-25 16:34:57.416 [DEBUG] Processing requirements for 1x acacia_pressure_plate
+2025-10-25 16:34:57.416 [DEBUG] Calculating requirements for 1x acacia_pressure_plate
+2025-10-25 16:34:57.416 [DEBUG] Processing: 1x acacia_pressure_plate
+2025-10-25 16:34:57.416 [DEBUG] Current recipe stack: 
+2025-10-25 16:34:57.417 [DEBUG] Found recipe for acacia_pressure_plate: {'acacia_planks': 2}
+2025-10-25 16:34:57.417 [DEBUG] Need 2x acacia_planks for 1x acacia_pressure_plate
+2025-10-25 16:34:57.417 [DEBUG]   Processing: 2x acacia_planks
+2025-10-25 16:34:57.417 [DEBUG]   Current recipe stack: acacia_pressure_plate
+2025-10-25 16:34:57.417 [DEBUG]   Adding material: 2x acacia_planks
+2025-10-25 16:34:57.417 [DEBUG] Final totals for 1x acacia_pressure_plate: {'acacia_planks': 2}
+2025-10-25 16:34:57.417 [DEBUG] Requirements for 1x acacia_pressure_plate: {'acacia_planks': 2}
+2025-10-25 16:34:57.417 [DEBUG] Updated total for acacia_planks: 2
+2025-10-25 16:34:57.417 [DEBUG] Processing requirements for 1x chiseled_resin_bricks
+2025-10-25 16:34:57.417 [DEBUG] Calculating requirements for 1x chiseled_resin_bricks
+2025-10-25 16:34:57.417 [DEBUG] Processing: 1x chiseled_resin_bricks
+2025-10-25 16:34:57.417 [DEBUG] Current recipe stack: 
+2025-10-25 16:34:57.418 [DEBUG] Found recipe for chiseled_resin_bricks: {'resin_brick_slab': 2}
+2025-10-25 16:34:57.418 [DEBUG] Need 2x resin_brick_slab for 1x chiseled_resin_bricks
+2025-10-25 16:34:57.418 [DEBUG]   Processing: 2x resin_brick_slab
+2025-10-25 16:34:57.418 [DEBUG]   Current recipe stack: chiseled_resin_bricks
+2025-10-25 16:34:57.418 [DEBUG]   Found recipe for resin_brick_slab: {'resin_bricks': 3}
+2025-10-25 16:34:57.418 [DEBUG]   Need 6x resin_bricks for 2x resin_brick_slab
+2025-10-25 16:34:57.418 [DEBUG]     Processing: 6x resin_bricks
+2025-10-25 16:34:57.418 [DEBUG]     Current recipe stack: chiseled_resin_bricks -> resin_brick_slab
+2025-10-25 16:34:57.418 [DEBUG]     Found recipe for resin_bricks: {'resin_brick': 4}
+2025-10-25 16:34:57.418 [DEBUG]     Need 24x resin_brick for 6x resin_bricks
+2025-10-25 16:34:57.418 [DEBUG]       Processing: 24x resin_brick
+2025-10-25 16:34:57.418 [DEBUG]       Current recipe stack: chiseled_resin_bricks -> resin_brick_slab -> resin_bricks
+2025-10-25 16:34:57.418 [DEBUG]       Found recipe for resin_brick: {'resin_clump': 1}
+2025-10-25 16:34:57.418 [DEBUG]       Need 24x resin_clump for 24x resin_brick
+2025-10-25 16:34:57.418 [DEBUG]         Processing: 24x resin_clump
+2025-10-25 16:34:57.418 [DEBUG]         Current recipe stack: chiseled_resin_bricks -> resin_brick_slab -> resin_bricks -> resin_brick
+2025-10-25 16:34:57.418 [DEBUG]         Found recipe for resin_clump: {}
+2025-10-25 16:34:57.418 [DEBUG] Final totals for 1x chiseled_resin_bricks: {}
+2025-10-25 16:34:57.418 [DEBUG] Requirements for 1x chiseled_resin_bricks: {}
+2025-10-25 16:34:57.419 [DEBUG] Processing requirements for 1x chiseled_stone_bricks
+2025-10-25 16:34:57.419 [DEBUG] Calculating requirements for 1x chiseled_stone_bricks
+2025-10-25 16:34:57.419 [DEBUG] Processing: 1x chiseled_stone_bricks
+2025-10-25 16:34:57.419 [DEBUG] Current recipe stack: 
+2025-10-25 16:34:57.419 [DEBUG] Found recipe for chiseled_stone_bricks: {'stone_brick_slab': 2}
+2025-10-25 16:34:57.419 [DEBUG] Need 2x stone_brick_slab for 1x chiseled_stone_bricks
+2025-10-25 16:34:57.419 [DEBUG]   Processing: 2x stone_brick_slab
+2025-10-25 16:34:57.419 [DEBUG]   Current recipe stack: chiseled_stone_bricks
+2025-10-25 16:34:57.419 [DEBUG]   Found recipe for stone_brick_slab: {'stone_bricks': 3}
+2025-10-25 16:34:57.419 [DEBUG]   Need 6x stone_bricks for 2x stone_brick_slab
+2025-10-25 16:34:57.419 [DEBUG]     Processing: 6x stone_bricks
+2025-10-25 16:34:57.419 [DEBUG]     Current recipe stack: chiseled_stone_bricks -> stone_brick_slab
+2025-10-25 16:34:57.419 [DEBUG]     Found recipe for stone_bricks: {'stone': 4}
+2025-10-25 16:34:57.419 [DEBUG]     Need 24x stone for 6x stone_bricks
+2025-10-25 16:34:57.419 [DEBUG]       Processing: 24x stone
+2025-10-25 16:34:57.419 [DEBUG]       Current recipe stack: chiseled_stone_bricks -> stone_brick_slab -> stone_bricks
+2025-10-25 16:34:57.419 [DEBUG]       Found recipe for stone: {'cobblestone': 1}
+2025-10-25 16:34:57.419 [DEBUG]       Need 24x cobblestone for 24x stone
+2025-10-25 16:34:57.419 [DEBUG]         Processing: 24x cobblestone
+2025-10-25 16:34:57.419 [DEBUG]         Current recipe stack: chiseled_stone_bricks -> stone_brick_slab -> stone_bricks -> stone
+2025-10-25 16:34:57.419 [DEBUG]         Adding material: 24x cobblestone
+2025-10-25 16:34:57.419 [DEBUG] Final totals for 1x chiseled_stone_bricks: {'cobblestone': 24}
+2025-10-25 16:34:57.420 [DEBUG] Requirements for 1x chiseled_stone_bricks: {'cobblestone': 24}
+2025-10-25 16:34:57.420 [DEBUG] Updated total for cobblestone: 24
+2025-10-25 16:34:57.420 [DEBUG] Processing requirements for 1x spire_armor_trim_smithing_template
+2025-10-25 16:34:57.420 [DEBUG] Calculating requirements for 1x spire_armor_trim_smithing_template
+2025-10-25 16:34:57.420 [DEBUG] Processing: 1x spire_armor_trim_smithing_template
+2025-10-25 16:34:57.420 [DEBUG] Current recipe stack: 
+2025-10-25 16:34:57.420 [DEBUG] Found recipe for spire_armor_trim_smithing_template: {'diamond': 7, 'purpur_block': 1}
+2025-10-25 16:34:57.420 [DEBUG] Need 7x diamond for 1x spire_armor_trim_smithing_template
+2025-10-25 16:34:57.420 [DEBUG]   Processing: 7x diamond
+2025-10-25 16:34:57.420 [DEBUG]   Current recipe stack: spire_armor_trim_smithing_template
+2025-10-25 16:34:57.420 [DEBUG]   Found recipe for diamond: {'diamond_block': 1}
+2025-10-25 16:34:57.420 [DEBUG]   Need 7x diamond_block for 7x diamond
+2025-10-25 16:34:57.420 [DEBUG]     Processing: 7x diamond_block
+2025-10-25 16:34:57.420 [DEBUG]     Current recipe stack: spire_armor_trim_smithing_template -> diamond
+2025-10-25 16:34:57.420 [DEBUG]     Adding material: 7x diamond_block
+2025-10-25 16:34:57.420 [DEBUG] Need 1x purpur_block for 1x spire_armor_trim_smithing_template
+2025-10-25 16:34:57.420 [DEBUG]   Processing: 1x purpur_block
+2025-10-25 16:34:57.420 [DEBUG]   Current recipe stack: spire_armor_trim_smithing_template
+2025-10-25 16:34:57.420 [DEBUG]   Adding material: 1x purpur_block
+2025-10-25 16:34:57.420 [DEBUG] Final totals for 1x spire_armor_trim_smithing_template: {'diamond_block': 7, 'purpur_block': 1}
+2025-10-25 16:34:57.421 [DEBUG] Requirements for 1x spire_armor_trim_smithing_template: {'diamond_block': 7, 'purpur_block': 1}
+2025-10-25 16:34:57.421 [DEBUG] Updated total for diamond_block: 7
+2025-10-25 16:34:57.421 [DEBUG] Updated total for purpur_block: 1
+2025-10-25 16:34:57.421 [INFO] Final aggregate totals: {'acacia_planks': 2, 'cobblestone': 24, 'diamond_block': 7, 'purpur_block': 1}
+2025-10-25 16:35:55.071 [INFO] Calculating aggregate requirements for items: {'diamond_block': 1}
+2025-10-25 16:35:55.071 [DEBUG] Processing requirements for 1x diamond_block
+2025-10-25 16:35:55.071 [DEBUG] Calculating requirements for 1x diamond_block
+2025-10-25 16:35:55.071 [DEBUG] Processing: 1x diamond_block
+2025-10-25 16:35:55.071 [DEBUG] Current recipe stack: 
+2025-10-25 16:35:55.071 [DEBUG] Found recipe for diamond_block: {'diamond': 9}
+2025-10-25 16:35:55.071 [DEBUG] Need 9x diamond for 1x diamond_block
+2025-10-25 16:35:55.071 [DEBUG]   Processing: 9x diamond
+2025-10-25 16:35:55.071 [DEBUG]   Current recipe stack: diamond_block
+2025-10-25 16:35:55.071 [DEBUG]   Found recipe for diamond: {}
+2025-10-25 16:35:55.072 [DEBUG] Final totals for 1x diamond_block: {}
+2025-10-25 16:35:55.072 [DEBUG] Requirements for 1x diamond_block: {}
+2025-10-25 16:35:55.072 [INFO] Final aggregate totals: {}
+2025-10-25 16:36:23.926 [INFO] Calculating aggregate requirements for items: {'diamond_block': 1}
+2025-10-25 16:36:23.926 [DEBUG] Processing requirements for 1x diamond_block
+2025-10-25 16:36:23.926 [DEBUG] Calculating requirements for 1x diamond_block
+2025-10-25 16:36:23.926 [DEBUG] Processing: 1x diamond_block
+2025-10-25 16:36:23.927 [DEBUG] Current recipe stack: 
+2025-10-25 16:36:23.927 [DEBUG] Found recipe for diamond_block: {'diamond': 9}
+2025-10-25 16:36:23.927 [DEBUG] Need 9x diamond for 1x diamond_block
+2025-10-25 16:36:23.927 [DEBUG]   Processing: 9x diamond
+2025-10-25 16:36:23.927 [DEBUG]   Current recipe stack: diamond_block
+2025-10-25 16:36:23.927 [DEBUG]   Adding material: 9x diamond
+2025-10-25 16:36:23.927 [DEBUG] Final totals for 1x diamond_block: {'diamond': 9}
+2025-10-25 16:36:23.927 [DEBUG] Requirements for 1x diamond_block: {'diamond': 9}
+2025-10-25 16:36:23.927 [DEBUG] Updated total for diamond: 9
+2025-10-25 16:36:23.927 [INFO] Final aggregate totals: {'diamond': 9}
+2025-10-25 16:42:12.039 [INFO] Calculating aggregate requirements for items: {}
+2025-10-25 16:42:12.040 [INFO] Final aggregate totals: {}
+2025-10-25 16:42:19.752 [INFO] Calculating aggregate requirements for items: {}
+2025-10-25 16:42:19.753 [INFO] Final aggregate totals: {}
+2025-10-25 16:42:22.773 [INFO] Adding item: acacia_planks
+2025-10-25 16:42:22.773 [INFO] Adding 1x acacia_planks
+2025-10-25 16:42:22.773 [DEBUG] Current project items before add: {}
+2025-10-25 16:42:22.773 [DEBUG] Updated project items: {'acacia_planks': 1}
+2025-10-25 16:42:22.773 [INFO] Calculating aggregate requirements for items: {'acacia_planks': 1}
+2025-10-25 16:42:22.773 [DEBUG] Processing requirements for 1x acacia_planks
+2025-10-25 16:42:22.773 [DEBUG] Calculating requirements for 1x acacia_planks
+2025-10-25 16:42:22.773 [DEBUG] Processing: 1x acacia_planks
+2025-10-25 16:42:22.773 [DEBUG] Current recipe stack: 
+2025-10-25 16:42:22.774 [DEBUG] Found recipe for acacia_planks: {'acacia_logs': 1}
+2025-10-25 16:42:22.774 [DEBUG] Need 1x acacia_logs for 1x acacia_planks
+2025-10-25 16:42:22.774 [DEBUG]   Processing: 1x acacia_logs
+2025-10-25 16:42:22.774 [DEBUG]   Current recipe stack: acacia_planks
+2025-10-25 16:42:22.774 [DEBUG]   Adding material: 1x acacia_logs
+2025-10-25 16:42:22.774 [DEBUG] Final totals for 1x acacia_planks: {'acacia_logs': 1}
+2025-10-25 16:42:22.774 [DEBUG] Requirements for 1x acacia_planks: {'acacia_logs': 1}
+2025-10-25 16:42:22.774 [DEBUG] Updated total for acacia_logs: 1
+2025-10-25 16:42:22.774 [INFO] Final aggregate totals: {'acacia_logs': 1}
+2025-10-25 16:42:25.690 [INFO] Adding item: blackstone_wall
+2025-10-25 16:42:25.690 [INFO] Adding 1x blackstone_wall
+2025-10-25 16:42:25.690 [DEBUG] Current project items before add: {'acacia_planks': 1}
+2025-10-25 16:42:25.690 [DEBUG] Updated project items: {'acacia_planks': 1, 'blackstone_wall': 1}
+2025-10-25 16:42:25.691 [INFO] Calculating aggregate requirements for items: {'acacia_planks': 1, 'blackstone_wall': 1}
+2025-10-25 16:42:25.691 [DEBUG] Processing requirements for 1x acacia_planks
+2025-10-25 16:42:25.691 [DEBUG] Calculating requirements for 1x acacia_planks
+2025-10-25 16:42:25.691 [DEBUG] Processing: 1x acacia_planks
+2025-10-25 16:42:25.691 [DEBUG] Current recipe stack: 
+2025-10-25 16:42:25.691 [DEBUG] Found recipe for acacia_planks: {'acacia_logs': 1}
+2025-10-25 16:42:25.691 [DEBUG] Need 1x acacia_logs for 1x acacia_planks
+2025-10-25 16:42:25.691 [DEBUG]   Processing: 1x acacia_logs
+2025-10-25 16:42:25.692 [DEBUG]   Current recipe stack: acacia_planks
+2025-10-25 16:42:25.692 [DEBUG]   Adding material: 1x acacia_logs
+2025-10-25 16:42:25.692 [DEBUG] Final totals for 1x acacia_planks: {'acacia_logs': 1}
+2025-10-25 16:42:25.692 [DEBUG] Requirements for 1x acacia_planks: {'acacia_logs': 1}
+2025-10-25 16:42:25.692 [DEBUG] Updated total for acacia_logs: 1
+2025-10-25 16:42:25.692 [DEBUG] Processing requirements for 1x blackstone_wall
+2025-10-25 16:42:25.692 [DEBUG] Calculating requirements for 1x blackstone_wall
+2025-10-25 16:42:25.692 [DEBUG] Processing: 1x blackstone_wall
+2025-10-25 16:42:25.692 [DEBUG] Current recipe stack: 
+2025-10-25 16:42:25.692 [DEBUG] Found recipe for blackstone_wall: {'blackstone': 6}
+2025-10-25 16:42:25.692 [DEBUG] Need 6x blackstone for 1x blackstone_wall
+2025-10-25 16:42:25.693 [DEBUG]   Processing: 6x blackstone
+2025-10-25 16:42:25.693 [DEBUG]   Current recipe stack: blackstone_wall
+2025-10-25 16:42:25.693 [DEBUG]   Adding material: 6x blackstone
+2025-10-25 16:42:25.693 [DEBUG] Final totals for 1x blackstone_wall: {'blackstone': 6}
+2025-10-25 16:42:25.693 [DEBUG] Requirements for 1x blackstone_wall: {'blackstone': 6}
+2025-10-25 16:42:25.693 [DEBUG] Updated total for blackstone: 6
+2025-10-25 16:42:25.693 [INFO] Final aggregate totals: {'acacia_logs': 1, 'blackstone': 6}
+2025-10-25 16:42:31.016 [INFO] Adding item: waxed_exposed_cut_copper_slab
+2025-10-25 16:42:31.016 [INFO] Adding 1x waxed_exposed_cut_copper_slab
+2025-10-25 16:42:31.017 [DEBUG] Current project items before add: {'acacia_planks': 1, 'blackstone_wall': 1}
+2025-10-25 16:42:31.017 [DEBUG] Updated project items: {'acacia_planks': 1, 'blackstone_wall': 1, 'waxed_exposed_cut_copper_slab': 1}
+2025-10-25 16:42:31.017 [INFO] Calculating aggregate requirements for items: {'acacia_planks': 1, 'blackstone_wall': 1, 'waxed_exposed_cut_copper_slab': 1}
+2025-10-25 16:42:31.017 [DEBUG] Processing requirements for 1x acacia_planks
+2025-10-25 16:42:31.017 [DEBUG] Calculating requirements for 1x acacia_planks
+2025-10-25 16:42:31.017 [DEBUG] Processing: 1x acacia_planks
+2025-10-25 16:42:31.017 [DEBUG] Current recipe stack: 
+2025-10-25 16:42:31.017 [DEBUG] Found recipe for acacia_planks: {'acacia_logs': 1}
+2025-10-25 16:42:31.017 [DEBUG] Need 1x acacia_logs for 1x acacia_planks
+2025-10-25 16:42:31.018 [DEBUG]   Processing: 1x acacia_logs
+2025-10-25 16:42:31.018 [DEBUG]   Current recipe stack: acacia_planks
+2025-10-25 16:42:31.018 [DEBUG]   Adding material: 1x acacia_logs
+2025-10-25 16:42:31.018 [DEBUG] Final totals for 1x acacia_planks: {'acacia_logs': 1}
+2025-10-25 16:42:31.018 [DEBUG] Requirements for 1x acacia_planks: {'acacia_logs': 1}
+2025-10-25 16:42:31.018 [DEBUG] Updated total for acacia_logs: 1
+2025-10-25 16:42:31.018 [DEBUG] Processing requirements for 1x blackstone_wall
+2025-10-25 16:42:31.019 [DEBUG] Calculating requirements for 1x blackstone_wall
+2025-10-25 16:42:31.019 [DEBUG] Processing: 1x blackstone_wall
+2025-10-25 16:42:31.019 [DEBUG] Current recipe stack: 
+2025-10-25 16:42:31.019 [DEBUG] Found recipe for blackstone_wall: {'blackstone': 6}
+2025-10-25 16:42:31.019 [DEBUG] Need 6x blackstone for 1x blackstone_wall
+2025-10-25 16:42:31.019 [DEBUG]   Processing: 6x blackstone
+2025-10-25 16:42:31.019 [DEBUG]   Current recipe stack: blackstone_wall
+2025-10-25 16:42:31.019 [DEBUG]   Adding material: 6x blackstone
+2025-10-25 16:42:31.019 [DEBUG] Final totals for 1x blackstone_wall: {'blackstone': 6}
+2025-10-25 16:42:31.020 [DEBUG] Requirements for 1x blackstone_wall: {'blackstone': 6}
+2025-10-25 16:42:31.020 [DEBUG] Updated total for blackstone: 6
+2025-10-25 16:42:31.020 [DEBUG] Processing requirements for 1x waxed_exposed_cut_copper_slab
+2025-10-25 16:42:31.020 [DEBUG] Calculating requirements for 1x waxed_exposed_cut_copper_slab
+2025-10-25 16:42:31.020 [DEBUG] Processing: 1x waxed_exposed_cut_copper_slab
+2025-10-25 16:42:31.020 [DEBUG] Current recipe stack: 
+2025-10-25 16:42:31.020 [DEBUG] Found recipe for waxed_exposed_cut_copper_slab: {'waxed_exposed_cut_copper': 3}
+2025-10-25 16:42:31.020 [DEBUG] Need 3x waxed_exposed_cut_copper for 1x waxed_exposed_cut_copper_slab
+2025-10-25 16:42:31.020 [DEBUG]   Processing: 3x waxed_exposed_cut_copper
+2025-10-25 16:42:31.020 [DEBUG]   Current recipe stack: waxed_exposed_cut_copper_slab
+2025-10-25 16:42:31.020 [DEBUG]   Found recipe for waxed_exposed_cut_copper: {'waxed_exposed_copper': 4}
+2025-10-25 16:42:31.020 [DEBUG]   Need 12x waxed_exposed_copper for 3x waxed_exposed_cut_copper
+2025-10-25 16:42:31.020 [DEBUG]     Processing: 12x waxed_exposed_copper
+2025-10-25 16:42:31.020 [DEBUG]     Current recipe stack: waxed_exposed_cut_copper_slab -> waxed_exposed_cut_copper
+2025-10-25 16:42:31.021 [DEBUG]     Found recipe for waxed_exposed_copper: {'exposed_copper': 1, 'honeycomb': 1}
+2025-10-25 16:42:31.021 [DEBUG]     Need 12x exposed_copper for 12x waxed_exposed_copper
+2025-10-25 16:42:31.021 [DEBUG]       Processing: 12x exposed_copper
+2025-10-25 16:42:31.021 [DEBUG]       Current recipe stack: waxed_exposed_cut_copper_slab -> waxed_exposed_cut_copper -> waxed_exposed_copper
+2025-10-25 16:42:31.021 [DEBUG]       Adding material: 12x exposed_copper
+2025-10-25 16:42:31.021 [DEBUG]     Need 12x honeycomb for 12x waxed_exposed_copper
+2025-10-25 16:42:31.021 [DEBUG]       Processing: 12x honeycomb
+2025-10-25 16:42:31.021 [DEBUG]       Current recipe stack: waxed_exposed_cut_copper_slab -> waxed_exposed_cut_copper -> waxed_exposed_copper
+2025-10-25 16:42:31.021 [DEBUG]       Adding material: 12x honeycomb
+2025-10-25 16:42:31.021 [DEBUG] Final totals for 1x waxed_exposed_cut_copper_slab: {'exposed_copper': 12, 'honeycomb': 12}
+2025-10-25 16:42:31.021 [DEBUG] Requirements for 1x waxed_exposed_cut_copper_slab: {'exposed_copper': 12, 'honeycomb': 12}
+2025-10-25 16:42:31.021 [DEBUG] Updated total for exposed_copper: 12
+2025-10-25 16:42:31.021 [DEBUG] Updated total for honeycomb: 12
+2025-10-25 16:42:31.021 [INFO] Final aggregate totals: {'acacia_logs': 1, 'blackstone': 6, 'exposed_copper': 12, 'honeycomb': 12}
+2025-10-25 16:42:35.683 [INFO] Adding item: magenta_carpet
+2025-10-25 16:42:35.683 [INFO] Adding 1x magenta_carpet
+2025-10-25 16:42:35.683 [DEBUG] Current project items before add: {'acacia_planks': 1, 'blackstone_wall': 1, 'waxed_exposed_cut_copper_slab': 1}
+2025-10-25 16:42:35.684 [DEBUG] Updated project items: {'acacia_planks': 1, 'blackstone_wall': 1, 'waxed_exposed_cut_copper_slab': 1, 'magenta_carpet': 1}
+2025-10-25 16:42:35.684 [INFO] Calculating aggregate requirements for items: {'acacia_planks': 1, 'blackstone_wall': 1, 'waxed_exposed_cut_copper_slab': 1, 'magenta_carpet': 1}
+2025-10-25 16:42:35.684 [DEBUG] Processing requirements for 1x acacia_planks
+2025-10-25 16:42:35.684 [DEBUG] Calculating requirements for 1x acacia_planks
+2025-10-25 16:42:35.684 [DEBUG] Processing: 1x acacia_planks
+2025-10-25 16:42:35.684 [DEBUG] Current recipe stack: 
+2025-10-25 16:42:35.685 [DEBUG] Found recipe for acacia_planks: {'acacia_logs': 1}
+2025-10-25 16:42:35.685 [DEBUG] Need 1x acacia_logs for 1x acacia_planks
+2025-10-25 16:42:35.685 [DEBUG]   Processing: 1x acacia_logs
+2025-10-25 16:42:35.685 [DEBUG]   Current recipe stack: acacia_planks
+2025-10-25 16:42:35.685 [DEBUG]   Adding material: 1x acacia_logs
+2025-10-25 16:42:35.685 [DEBUG] Final totals for 1x acacia_planks: {'acacia_logs': 1}
+2025-10-25 16:42:35.685 [DEBUG] Requirements for 1x acacia_planks: {'acacia_logs': 1}
+2025-10-25 16:42:35.685 [DEBUG] Updated total for acacia_logs: 1
+2025-10-25 16:42:35.685 [DEBUG] Processing requirements for 1x blackstone_wall
+2025-10-25 16:42:35.685 [DEBUG] Calculating requirements for 1x blackstone_wall
+2025-10-25 16:42:35.685 [DEBUG] Processing: 1x blackstone_wall
+2025-10-25 16:42:35.686 [DEBUG] Current recipe stack: 
+2025-10-25 16:42:35.686 [DEBUG] Found recipe for blackstone_wall: {'blackstone': 6}
+2025-10-25 16:42:35.686 [DEBUG] Need 6x blackstone for 1x blackstone_wall
+2025-10-25 16:42:35.686 [DEBUG]   Processing: 6x blackstone
+2025-10-25 16:42:35.686 [DEBUG]   Current recipe stack: blackstone_wall
+2025-10-25 16:42:35.686 [DEBUG]   Adding material: 6x blackstone
+2025-10-25 16:42:35.686 [DEBUG] Final totals for 1x blackstone_wall: {'blackstone': 6}
+2025-10-25 16:42:35.686 [DEBUG] Requirements for 1x blackstone_wall: {'blackstone': 6}
+2025-10-25 16:42:35.686 [DEBUG] Updated total for blackstone: 6
+2025-10-25 16:42:35.686 [DEBUG] Processing requirements for 1x waxed_exposed_cut_copper_slab
+2025-10-25 16:42:35.686 [DEBUG] Calculating requirements for 1x waxed_exposed_cut_copper_slab
+2025-10-25 16:42:35.686 [DEBUG] Processing: 1x waxed_exposed_cut_copper_slab
+2025-10-25 16:42:35.686 [DEBUG] Current recipe stack: 
+2025-10-25 16:42:35.686 [DEBUG] Found recipe for waxed_exposed_cut_copper_slab: {'waxed_exposed_cut_copper': 3}
+2025-10-25 16:42:35.686 [DEBUG] Need 3x waxed_exposed_cut_copper for 1x waxed_exposed_cut_copper_slab
+2025-10-25 16:42:35.686 [DEBUG]   Processing: 3x waxed_exposed_cut_copper
+2025-10-25 16:42:35.687 [DEBUG]   Current recipe stack: waxed_exposed_cut_copper_slab
+2025-10-25 16:42:35.687 [DEBUG]   Found recipe for waxed_exposed_cut_copper: {'waxed_exposed_copper': 4}
+2025-10-25 16:42:35.687 [DEBUG]   Need 12x waxed_exposed_copper for 3x waxed_exposed_cut_copper
+2025-10-25 16:42:35.687 [DEBUG]     Processing: 12x waxed_exposed_copper
+2025-10-25 16:42:35.687 [DEBUG]     Current recipe stack: waxed_exposed_cut_copper_slab -> waxed_exposed_cut_copper
+2025-10-25 16:42:35.687 [DEBUG]     Found recipe for waxed_exposed_copper: {'exposed_copper': 1, 'honeycomb': 1}
+2025-10-25 16:42:35.687 [DEBUG]     Need 12x exposed_copper for 12x waxed_exposed_copper
+2025-10-25 16:42:35.687 [DEBUG]       Processing: 12x exposed_copper
+2025-10-25 16:42:35.687 [DEBUG]       Current recipe stack: waxed_exposed_cut_copper_slab -> waxed_exposed_cut_copper -> waxed_exposed_copper
+2025-10-25 16:42:35.687 [DEBUG]       Adding material: 12x exposed_copper
+2025-10-25 16:42:35.687 [DEBUG]     Need 12x honeycomb for 12x waxed_exposed_copper
+2025-10-25 16:42:35.687 [DEBUG]       Processing: 12x honeycomb
+2025-10-25 16:42:35.687 [DEBUG]       Current recipe stack: waxed_exposed_cut_copper_slab -> waxed_exposed_cut_copper -> waxed_exposed_copper
+2025-10-25 16:42:35.687 [DEBUG]       Adding material: 12x honeycomb
+2025-10-25 16:42:35.687 [DEBUG] Final totals for 1x waxed_exposed_cut_copper_slab: {'exposed_copper': 12, 'honeycomb': 12}
+2025-10-25 16:42:35.688 [DEBUG] Requirements for 1x waxed_exposed_cut_copper_slab: {'exposed_copper': 12, 'honeycomb': 12}
+2025-10-25 16:42:35.688 [DEBUG] Updated total for exposed_copper: 12
+2025-10-25 16:42:35.688 [DEBUG] Updated total for honeycomb: 12
+2025-10-25 16:42:35.688 [DEBUG] Processing requirements for 1x magenta_carpet
+2025-10-25 16:42:35.688 [DEBUG] Calculating requirements for 1x magenta_carpet
+2025-10-25 16:42:35.688 [DEBUG] Processing: 1x magenta_carpet
+2025-10-25 16:42:35.688 [DEBUG] Current recipe stack: 
+2025-10-25 16:42:35.688 [DEBUG] Found recipe for magenta_carpet: {'magenta_dye': 1}
+2025-10-25 16:42:35.688 [DEBUG] Need 1x magenta_dye for 1x magenta_carpet
+2025-10-25 16:42:35.688 [DEBUG]   Processing: 1x magenta_dye
+2025-10-25 16:42:35.688 [DEBUG]   Current recipe stack: magenta_carpet
+2025-10-25 16:42:35.688 [DEBUG]   Found recipe for magenta_dye: {'allium': 1}
+2025-10-25 16:42:35.688 [DEBUG]   Need 1x allium for 1x magenta_dye
+2025-10-25 16:42:35.688 [DEBUG]     Processing: 1x allium
+2025-10-25 16:42:35.688 [DEBUG]     Current recipe stack: magenta_carpet -> magenta_dye
+2025-10-25 16:42:35.688 [DEBUG]     Adding material: 1x allium
+2025-10-25 16:42:35.688 [DEBUG] Final totals for 1x magenta_carpet: {'allium': 1}
+2025-10-25 16:42:35.688 [DEBUG] Requirements for 1x magenta_carpet: {'allium': 1}
+2025-10-25 16:42:35.688 [DEBUG] Updated total for allium: 1
+2025-10-25 16:42:35.688 [INFO] Final aggregate totals: {'acacia_logs': 1, 'blackstone': 6, 'exposed_copper': 12, 'honeycomb': 12, 'allium': 1}
+2025-10-25 16:42:54.101 [INFO] Adding item: blue_candle
+2025-10-25 16:42:54.101 [INFO] Adding 1x blue_candle
+2025-10-25 16:42:54.102 [DEBUG] Current project items before add: {'acacia_planks': 1, 'blackstone_wall': 1, 'waxed_exposed_cut_copper_slab': 1, 'magenta_carpet': 1}
+2025-10-25 16:42:54.102 [DEBUG] Updated project items: {'acacia_planks': 1, 'blackstone_wall': 1, 'waxed_exposed_cut_copper_slab': 1, 'magenta_carpet': 1, 'blue_candle': 1}
+2025-10-25 16:42:54.102 [INFO] Calculating aggregate requirements for items: {'acacia_planks': 1, 'blackstone_wall': 1, 'waxed_exposed_cut_copper_slab': 1, 'magenta_carpet': 1, 'blue_candle': 1}
+2025-10-25 16:42:54.102 [DEBUG] Processing requirements for 1x acacia_planks
+2025-10-25 16:42:54.103 [DEBUG] Calculating requirements for 1x acacia_planks
+2025-10-25 16:42:54.103 [DEBUG] Processing: 1x acacia_planks
+2025-10-25 16:42:54.103 [DEBUG] Current recipe stack: 
+2025-10-25 16:42:54.103 [DEBUG] Found recipe for acacia_planks: {'acacia_logs': 1}
+2025-10-25 16:42:54.103 [DEBUG] Need 1x acacia_logs for 1x acacia_planks
+2025-10-25 16:42:54.104 [DEBUG]   Processing: 1x acacia_logs
+2025-10-25 16:42:54.104 [DEBUG]   Current recipe stack: acacia_planks
+2025-10-25 16:42:54.104 [DEBUG]   Adding material: 1x acacia_logs
+2025-10-25 16:42:54.104 [DEBUG] Final totals for 1x acacia_planks: {'acacia_logs': 1}
+2025-10-25 16:42:54.104 [DEBUG] Requirements for 1x acacia_planks: {'acacia_logs': 1}
+2025-10-25 16:42:54.104 [DEBUG] Updated total for acacia_logs: 1
+2025-10-25 16:42:54.104 [DEBUG] Processing requirements for 1x blackstone_wall
+2025-10-25 16:42:54.104 [DEBUG] Calculating requirements for 1x blackstone_wall
+2025-10-25 16:42:54.104 [DEBUG] Processing: 1x blackstone_wall
+2025-10-25 16:42:54.105 [DEBUG] Current recipe stack: 
+2025-10-25 16:42:54.105 [DEBUG] Found recipe for blackstone_wall: {'blackstone': 6}
+2025-10-25 16:42:54.105 [DEBUG] Need 6x blackstone for 1x blackstone_wall
+2025-10-25 16:42:54.105 [DEBUG]   Processing: 6x blackstone
+2025-10-25 16:42:54.105 [DEBUG]   Current recipe stack: blackstone_wall
+2025-10-25 16:42:54.105 [DEBUG]   Adding material: 6x blackstone
+2025-10-25 16:42:54.105 [DEBUG] Final totals for 1x blackstone_wall: {'blackstone': 6}
+2025-10-25 16:42:54.105 [DEBUG] Requirements for 1x blackstone_wall: {'blackstone': 6}
+2025-10-25 16:42:54.106 [DEBUG] Updated total for blackstone: 6
+2025-10-25 16:42:54.106 [DEBUG] Processing requirements for 1x waxed_exposed_cut_copper_slab
+2025-10-25 16:42:54.106 [DEBUG] Calculating requirements for 1x waxed_exposed_cut_copper_slab
+2025-10-25 16:42:54.106 [DEBUG] Processing: 1x waxed_exposed_cut_copper_slab
+2025-10-25 16:42:54.106 [DEBUG] Current recipe stack: 
+2025-10-25 16:42:54.106 [DEBUG] Found recipe for waxed_exposed_cut_copper_slab: {'waxed_exposed_cut_copper': 3}
+2025-10-25 16:42:54.106 [DEBUG] Need 3x waxed_exposed_cut_copper for 1x waxed_exposed_cut_copper_slab
+2025-10-25 16:42:54.106 [DEBUG]   Processing: 3x waxed_exposed_cut_copper
+2025-10-25 16:42:54.106 [DEBUG]   Current recipe stack: waxed_exposed_cut_copper_slab
+2025-10-25 16:42:54.106 [DEBUG]   Found recipe for waxed_exposed_cut_copper: {'waxed_exposed_copper': 4}
+2025-10-25 16:42:54.107 [DEBUG]   Need 12x waxed_exposed_copper for 3x waxed_exposed_cut_copper
+2025-10-25 16:42:54.107 [DEBUG]     Processing: 12x waxed_exposed_copper
+2025-10-25 16:42:54.107 [DEBUG]     Current recipe stack: waxed_exposed_cut_copper_slab -> waxed_exposed_cut_copper
+2025-10-25 16:42:54.107 [DEBUG]     Found recipe for waxed_exposed_copper: {'exposed_copper': 1, 'honeycomb': 1}
+2025-10-25 16:42:54.107 [DEBUG]     Need 12x exposed_copper for 12x waxed_exposed_copper
+2025-10-25 16:42:54.107 [DEBUG]       Processing: 12x exposed_copper
+2025-10-25 16:42:54.107 [DEBUG]       Current recipe stack: waxed_exposed_cut_copper_slab -> waxed_exposed_cut_copper -> waxed_exposed_copper
+2025-10-25 16:42:54.107 [DEBUG]       Adding material: 12x exposed_copper
+2025-10-25 16:42:54.107 [DEBUG]     Need 12x honeycomb for 12x waxed_exposed_copper
+2025-10-25 16:42:54.108 [DEBUG]       Processing: 12x honeycomb
+2025-10-25 16:42:54.108 [DEBUG]       Current recipe stack: waxed_exposed_cut_copper_slab -> waxed_exposed_cut_copper -> waxed_exposed_copper
+2025-10-25 16:42:54.108 [DEBUG]       Adding material: 12x honeycomb
+2025-10-25 16:42:54.108 [DEBUG] Final totals for 1x waxed_exposed_cut_copper_slab: {'exposed_copper': 12, 'honeycomb': 12}
+2025-10-25 16:42:54.108 [DEBUG] Requirements for 1x waxed_exposed_cut_copper_slab: {'exposed_copper': 12, 'honeycomb': 12}
+2025-10-25 16:42:54.108 [DEBUG] Updated total for exposed_copper: 12
+2025-10-25 16:42:54.108 [DEBUG] Updated total for honeycomb: 12
+2025-10-25 16:42:54.108 [DEBUG] Processing requirements for 1x magenta_carpet
+2025-10-25 16:42:54.108 [DEBUG] Calculating requirements for 1x magenta_carpet
+2025-10-25 16:42:54.108 [DEBUG] Processing: 1x magenta_carpet
+2025-10-25 16:42:54.109 [DEBUG] Current recipe stack: 
+2025-10-25 16:42:54.109 [DEBUG] Found recipe for magenta_carpet: {'magenta_dye': 1}
+2025-10-25 16:42:54.109 [DEBUG] Need 1x magenta_dye for 1x magenta_carpet
+2025-10-25 16:42:54.109 [DEBUG]   Processing: 1x magenta_dye
+2025-10-25 16:42:54.109 [DEBUG]   Current recipe stack: magenta_carpet
+2025-10-25 16:42:54.109 [DEBUG]   Found recipe for magenta_dye: {'allium': 1}
+2025-10-25 16:42:54.109 [DEBUG]   Need 1x allium for 1x magenta_dye
+2025-10-25 16:42:54.109 [DEBUG]     Processing: 1x allium
+2025-10-25 16:42:54.109 [DEBUG]     Current recipe stack: magenta_carpet -> magenta_dye
+2025-10-25 16:42:54.109 [DEBUG]     Adding material: 1x allium
+2025-10-25 16:42:54.110 [DEBUG] Final totals for 1x magenta_carpet: {'allium': 1}
+2025-10-25 16:42:54.110 [DEBUG] Requirements for 1x magenta_carpet: {'allium': 1}
+2025-10-25 16:42:54.110 [DEBUG] Updated total for allium: 1
+2025-10-25 16:42:54.110 [DEBUG] Processing requirements for 1x blue_candle
+2025-10-25 16:42:54.110 [DEBUG] Calculating requirements for 1x blue_candle
+2025-10-25 16:42:54.110 [DEBUG] Processing: 1x blue_candle
+2025-10-25 16:42:54.110 [DEBUG] Current recipe stack: 
+2025-10-25 16:42:54.110 [DEBUG] Found recipe for blue_candle: {'candle': 1, 'blue_dye': 1}
+2025-10-25 16:42:54.110 [DEBUG] Need 1x candle for 1x blue_candle
+2025-10-25 16:42:54.110 [DEBUG]   Processing: 1x candle
+2025-10-25 16:42:54.110 [DEBUG]   Current recipe stack: blue_candle
+2025-10-25 16:42:54.110 [DEBUG]   Found recipe for candle: {'honeycomb': 1, 'string': 1}
+2025-10-25 16:42:54.110 [DEBUG]   Need 1x honeycomb for 1x candle
+2025-10-25 16:42:54.110 [DEBUG]     Processing: 1x honeycomb
+2025-10-25 16:42:54.110 [DEBUG]     Current recipe stack: blue_candle -> candle
+2025-10-25 16:42:54.110 [DEBUG]     Adding material: 1x honeycomb
+2025-10-25 16:42:54.110 [DEBUG]   Need 1x string for 1x candle
+2025-10-25 16:42:54.111 [DEBUG]     Processing: 1x string
+2025-10-25 16:42:54.111 [DEBUG]     Current recipe stack: blue_candle -> candle
+2025-10-25 16:42:54.111 [DEBUG]     Adding material: 1x string
+2025-10-25 16:42:54.111 [DEBUG] Need 1x blue_dye for 1x blue_candle
+2025-10-25 16:42:54.111 [DEBUG]   Processing: 1x blue_dye
+2025-10-25 16:42:54.111 [DEBUG]   Current recipe stack: blue_candle
+2025-10-25 16:42:54.111 [DEBUG]   Found recipe for blue_dye: {'lapis_lazuli': 1}
+2025-10-25 16:42:54.111 [DEBUG]   Need 1x lapis_lazuli for 1x blue_dye
+2025-10-25 16:42:54.111 [DEBUG]     Processing: 1x lapis_lazuli
+2025-10-25 16:42:54.111 [DEBUG]     Current recipe stack: blue_candle -> blue_dye
+2025-10-25 16:42:54.111 [DEBUG]     Adding material: 1x lapis_lazuli
+2025-10-25 16:42:54.111 [DEBUG] Final totals for 1x blue_candle: {'honeycomb': 1, 'string': 1, 'lapis_lazuli': 1}
+2025-10-25 16:42:54.111 [DEBUG] Requirements for 1x blue_candle: {'honeycomb': 1, 'string': 1, 'lapis_lazuli': 1}
+2025-10-25 16:42:54.111 [DEBUG] Updated total for honeycomb: 13
+2025-10-25 16:42:54.111 [DEBUG] Updated total for string: 1
+2025-10-25 16:42:54.112 [DEBUG] Updated total for lapis_lazuli: 1
+2025-10-25 16:42:54.112 [INFO] Final aggregate totals: {'acacia_logs': 1, 'blackstone': 6, 'exposed_copper': 12, 'honeycomb': 13, 'allium': 1, 'string': 1, 'lapis_lazuli': 1}
+2025-10-25 16:42:59.599 [INFO] Adding item: mangrove_wood
+2025-10-25 16:42:59.599 [INFO] Adding 1x mangrove_wood
+2025-10-25 16:42:59.600 [DEBUG] Current project items before add: {'acacia_planks': 1, 'blackstone_wall': 1, 'waxed_exposed_cut_copper_slab': 1, 'magenta_carpet': 1, 'blue_candle': 1}
+2025-10-25 16:42:59.600 [DEBUG] Updated project items: {'acacia_planks': 1, 'blackstone_wall': 1, 'waxed_exposed_cut_copper_slab': 1, 'magenta_carpet': 1, 'blue_candle': 1, 'mangrove_wood': 1}
+2025-10-25 16:42:59.600 [INFO] Calculating aggregate requirements for items: {'acacia_planks': 1, 'blackstone_wall': 1, 'waxed_exposed_cut_copper_slab': 1, 'magenta_carpet': 1, 'blue_candle': 1, 'mangrove_wood': 1}
+2025-10-25 16:42:59.600 [DEBUG] Processing requirements for 1x acacia_planks
+2025-10-25 16:42:59.600 [DEBUG] Calculating requirements for 1x acacia_planks
+2025-10-25 16:42:59.600 [DEBUG] Processing: 1x acacia_planks
+2025-10-25 16:42:59.600 [DEBUG] Current recipe stack: 
+2025-10-25 16:42:59.601 [DEBUG] Found recipe for acacia_planks: {'acacia_logs': 1}
+2025-10-25 16:42:59.601 [DEBUG] Need 1x acacia_logs for 1x acacia_planks
+2025-10-25 16:42:59.601 [DEBUG]   Processing: 1x acacia_logs
+2025-10-25 16:42:59.601 [DEBUG]   Current recipe stack: acacia_planks
+2025-10-25 16:42:59.601 [DEBUG]   Adding material: 1x acacia_logs
+2025-10-25 16:42:59.601 [DEBUG] Final totals for 1x acacia_planks: {'acacia_logs': 1}
+2025-10-25 16:42:59.601 [DEBUG] Requirements for 1x acacia_planks: {'acacia_logs': 1}
+2025-10-25 16:42:59.601 [DEBUG] Updated total for acacia_logs: 1
+2025-10-25 16:42:59.602 [DEBUG] Processing requirements for 1x blackstone_wall
+2025-10-25 16:42:59.602 [DEBUG] Calculating requirements for 1x blackstone_wall
+2025-10-25 16:42:59.602 [DEBUG] Processing: 1x blackstone_wall
+2025-10-25 16:42:59.602 [DEBUG] Current recipe stack: 
+2025-10-25 16:42:59.602 [DEBUG] Found recipe for blackstone_wall: {'blackstone': 6}
+2025-10-25 16:42:59.602 [DEBUG] Need 6x blackstone for 1x blackstone_wall
+2025-10-25 16:42:59.602 [DEBUG]   Processing: 6x blackstone
+2025-10-25 16:42:59.602 [DEBUG]   Current recipe stack: blackstone_wall
+2025-10-25 16:42:59.602 [DEBUG]   Adding material: 6x blackstone
+2025-10-25 16:42:59.602 [DEBUG] Final totals for 1x blackstone_wall: {'blackstone': 6}
+2025-10-25 16:42:59.602 [DEBUG] Requirements for 1x blackstone_wall: {'blackstone': 6}
+2025-10-25 16:42:59.602 [DEBUG] Updated total for blackstone: 6
+2025-10-25 16:42:59.602 [DEBUG] Processing requirements for 1x waxed_exposed_cut_copper_slab
+2025-10-25 16:42:59.603 [DEBUG] Calculating requirements for 1x waxed_exposed_cut_copper_slab
+2025-10-25 16:42:59.603 [DEBUG] Processing: 1x waxed_exposed_cut_copper_slab
+2025-10-25 16:42:59.603 [DEBUG] Current recipe stack: 
+2025-10-25 16:42:59.603 [DEBUG] Found recipe for waxed_exposed_cut_copper_slab: {'waxed_exposed_cut_copper': 3}
+2025-10-25 16:42:59.603 [DEBUG] Need 3x waxed_exposed_cut_copper for 1x waxed_exposed_cut_copper_slab
+2025-10-25 16:42:59.603 [DEBUG]   Processing: 3x waxed_exposed_cut_copper
+2025-10-25 16:42:59.603 [DEBUG]   Current recipe stack: waxed_exposed_cut_copper_slab
+2025-10-25 16:42:59.603 [DEBUG]   Found recipe for waxed_exposed_cut_copper: {'waxed_exposed_copper': 4}
+2025-10-25 16:42:59.603 [DEBUG]   Need 12x waxed_exposed_copper for 3x waxed_exposed_cut_copper
+2025-10-25 16:42:59.603 [DEBUG]     Processing: 12x waxed_exposed_copper
+2025-10-25 16:42:59.603 [DEBUG]     Current recipe stack: waxed_exposed_cut_copper_slab -> waxed_exposed_cut_copper
+2025-10-25 16:42:59.603 [DEBUG]     Found recipe for waxed_exposed_copper: {'exposed_copper': 1, 'honeycomb': 1}
+2025-10-25 16:42:59.603 [DEBUG]     Need 12x exposed_copper for 12x waxed_exposed_copper
+2025-10-25 16:42:59.603 [DEBUG]       Processing: 12x exposed_copper
+2025-10-25 16:42:59.603 [DEBUG]       Current recipe stack: waxed_exposed_cut_copper_slab -> waxed_exposed_cut_copper -> waxed_exposed_copper
+2025-10-25 16:42:59.604 [DEBUG]       Adding material: 12x exposed_copper
+2025-10-25 16:42:59.604 [DEBUG]     Need 12x honeycomb for 12x waxed_exposed_copper
+2025-10-25 16:42:59.604 [DEBUG]       Processing: 12x honeycomb
+2025-10-25 16:42:59.604 [DEBUG]       Current recipe stack: waxed_exposed_cut_copper_slab -> waxed_exposed_cut_copper -> waxed_exposed_copper
+2025-10-25 16:42:59.604 [DEBUG]       Adding material: 12x honeycomb
+2025-10-25 16:42:59.604 [DEBUG] Final totals for 1x waxed_exposed_cut_copper_slab: {'exposed_copper': 12, 'honeycomb': 12}
+2025-10-25 16:42:59.604 [DEBUG] Requirements for 1x waxed_exposed_cut_copper_slab: {'exposed_copper': 12, 'honeycomb': 12}
+2025-10-25 16:42:59.604 [DEBUG] Updated total for exposed_copper: 12
+2025-10-25 16:42:59.604 [DEBUG] Updated total for honeycomb: 12
+2025-10-25 16:42:59.604 [DEBUG] Processing requirements for 1x magenta_carpet
+2025-10-25 16:42:59.604 [DEBUG] Calculating requirements for 1x magenta_carpet
+2025-10-25 16:42:59.604 [DEBUG] Processing: 1x magenta_carpet
+2025-10-25 16:42:59.604 [DEBUG] Current recipe stack: 
+2025-10-25 16:42:59.604 [DEBUG] Found recipe for magenta_carpet: {'magenta_dye': 1}
+2025-10-25 16:42:59.604 [DEBUG] Need 1x magenta_dye for 1x magenta_carpet
+2025-10-25 16:42:59.604 [DEBUG]   Processing: 1x magenta_dye
+2025-10-25 16:42:59.604 [DEBUG]   Current recipe stack: magenta_carpet
+2025-10-25 16:42:59.604 [DEBUG]   Found recipe for magenta_dye: {'allium': 1}
+2025-10-25 16:42:59.604 [DEBUG]   Need 1x allium for 1x magenta_dye
+2025-10-25 16:42:59.604 [DEBUG]     Processing: 1x allium
+2025-10-25 16:42:59.604 [DEBUG]     Current recipe stack: magenta_carpet -> magenta_dye
+2025-10-25 16:42:59.604 [DEBUG]     Adding material: 1x allium
+2025-10-25 16:42:59.605 [DEBUG] Final totals for 1x magenta_carpet: {'allium': 1}
+2025-10-25 16:42:59.605 [DEBUG] Requirements for 1x magenta_carpet: {'allium': 1}
+2025-10-25 16:42:59.605 [DEBUG] Updated total for allium: 1
+2025-10-25 16:42:59.605 [DEBUG] Processing requirements for 1x blue_candle
+2025-10-25 16:42:59.605 [DEBUG] Calculating requirements for 1x blue_candle
+2025-10-25 16:42:59.605 [DEBUG] Processing: 1x blue_candle
+2025-10-25 16:42:59.605 [DEBUG] Current recipe stack: 
+2025-10-25 16:42:59.605 [DEBUG] Found recipe for blue_candle: {'candle': 1, 'blue_dye': 1}
+2025-10-25 16:42:59.605 [DEBUG] Need 1x candle for 1x blue_candle
+2025-10-25 16:42:59.606 [DEBUG]   Processing: 1x candle
+2025-10-25 16:42:59.606 [DEBUG]   Current recipe stack: blue_candle
+2025-10-25 16:42:59.606 [DEBUG]   Found recipe for candle: {'honeycomb': 1, 'string': 1}
+2025-10-25 16:42:59.606 [DEBUG]   Need 1x honeycomb for 1x candle
+2025-10-25 16:42:59.606 [DEBUG]     Processing: 1x honeycomb
+2025-10-25 16:42:59.606 [DEBUG]     Current recipe stack: blue_candle -> candle
+2025-10-25 16:42:59.606 [DEBUG]     Adding material: 1x honeycomb
+2025-10-25 16:42:59.606 [DEBUG]   Need 1x string for 1x candle
+2025-10-25 16:42:59.606 [DEBUG]     Processing: 1x string
+2025-10-25 16:42:59.606 [DEBUG]     Current recipe stack: blue_candle -> candle
+2025-10-25 16:42:59.606 [DEBUG]     Adding material: 1x string
+2025-10-25 16:42:59.607 [DEBUG] Need 1x blue_dye for 1x blue_candle
+2025-10-25 16:42:59.607 [DEBUG]   Processing: 1x blue_dye
+2025-10-25 16:42:59.607 [DEBUG]   Current recipe stack: blue_candle
+2025-10-25 16:42:59.607 [DEBUG]   Found recipe for blue_dye: {'lapis_lazuli': 1}
+2025-10-25 16:42:59.607 [DEBUG]   Need 1x lapis_lazuli for 1x blue_dye
+2025-10-25 16:42:59.607 [DEBUG]     Processing: 1x lapis_lazuli
+2025-10-25 16:42:59.607 [DEBUG]     Current recipe stack: blue_candle -> blue_dye
+2025-10-25 16:42:59.607 [DEBUG]     Adding material: 1x lapis_lazuli
+2025-10-25 16:42:59.607 [DEBUG] Final totals for 1x blue_candle: {'honeycomb': 1, 'string': 1, 'lapis_lazuli': 1}
+2025-10-25 16:42:59.607 [DEBUG] Requirements for 1x blue_candle: {'honeycomb': 1, 'string': 1, 'lapis_lazuli': 1}
+2025-10-25 16:42:59.607 [DEBUG] Updated total for honeycomb: 13
+2025-10-25 16:42:59.607 [DEBUG] Updated total for string: 1
+2025-10-25 16:42:59.607 [DEBUG] Updated total for lapis_lazuli: 1
+2025-10-25 16:42:59.607 [DEBUG] Processing requirements for 1x mangrove_wood
+2025-10-25 16:42:59.607 [DEBUG] Calculating requirements for 1x mangrove_wood
+2025-10-25 16:42:59.607 [DEBUG] Processing: 1x mangrove_wood
+2025-10-25 16:42:59.607 [DEBUG] Current recipe stack: 
+2025-10-25 16:42:59.607 [DEBUG] Found recipe for mangrove_wood: {'mangrove_log': 4}
+2025-10-25 16:42:59.607 [DEBUG] Need 4x mangrove_log for 1x mangrove_wood
+2025-10-25 16:42:59.607 [DEBUG]   Processing: 4x mangrove_log
+2025-10-25 16:42:59.608 [DEBUG]   Current recipe stack: mangrove_wood
+2025-10-25 16:42:59.608 [DEBUG]   Adding material: 4x mangrove_log
+2025-10-25 16:42:59.608 [DEBUG] Final totals for 1x mangrove_wood: {'mangrove_log': 4}
+2025-10-25 16:42:59.608 [DEBUG] Requirements for 1x mangrove_wood: {'mangrove_log': 4}
+2025-10-25 16:42:59.608 [DEBUG] Updated total for mangrove_log: 4
+2025-10-25 16:42:59.608 [INFO] Final aggregate totals: {'acacia_logs': 1, 'blackstone': 6, 'exposed_copper': 12, 'honeycomb': 13, 'allium': 1, 'string': 1, 'lapis_lazuli': 1, 'mangrove_log': 4}
+2025-10-25 16:43:03.817 [INFO] Adding item: stone_pressure_plate
+2025-10-25 16:43:03.817 [INFO] Adding 1x stone_pressure_plate
+2025-10-25 16:43:03.817 [DEBUG] Current project items before add: {'acacia_planks': 1, 'blackstone_wall': 1, 'waxed_exposed_cut_copper_slab': 1, 'magenta_carpet': 1, 'blue_candle': 1, 'mangrove_wood': 1}
+2025-10-25 16:43:03.817 [DEBUG] Updated project items: {'acacia_planks': 1, 'blackstone_wall': 1, 'waxed_exposed_cut_copper_slab': 1, 'magenta_carpet': 1, 'blue_candle': 1, 'mangrove_wood': 1, 'stone_pressure_plate': 1}
+2025-10-25 16:43:03.817 [INFO] Calculating aggregate requirements for items: {'acacia_planks': 1, 'blackstone_wall': 1, 'waxed_exposed_cut_copper_slab': 1, 'magenta_carpet': 1, 'blue_candle': 1, 'mangrove_wood': 1, 'stone_pressure_plate': 1}
+2025-10-25 16:43:03.818 [DEBUG] Processing requirements for 1x acacia_planks
+2025-10-25 16:43:03.818 [DEBUG] Calculating requirements for 1x acacia_planks
+2025-10-25 16:43:03.818 [DEBUG] Processing: 1x acacia_planks
+2025-10-25 16:43:03.818 [DEBUG] Current recipe stack: 
+2025-10-25 16:43:03.818 [DEBUG] Found recipe for acacia_planks: {'acacia_logs': 1}
+2025-10-25 16:43:03.818 [DEBUG] Need 1x acacia_logs for 1x acacia_planks
+2025-10-25 16:43:03.818 [DEBUG]   Processing: 1x acacia_logs
+2025-10-25 16:43:03.818 [DEBUG]   Current recipe stack: acacia_planks
+2025-10-25 16:43:03.818 [DEBUG]   Adding material: 1x acacia_logs
+2025-10-25 16:43:03.818 [DEBUG] Final totals for 1x acacia_planks: {'acacia_logs': 1}
+2025-10-25 16:43:03.818 [DEBUG] Requirements for 1x acacia_planks: {'acacia_logs': 1}
+2025-10-25 16:43:03.819 [DEBUG] Updated total for acacia_logs: 1
+2025-10-25 16:43:03.819 [DEBUG] Processing requirements for 1x blackstone_wall
+2025-10-25 16:43:03.819 [DEBUG] Calculating requirements for 1x blackstone_wall
+2025-10-25 16:43:03.819 [DEBUG] Processing: 1x blackstone_wall
+2025-10-25 16:43:03.819 [DEBUG] Current recipe stack: 
+2025-10-25 16:43:03.819 [DEBUG] Found recipe for blackstone_wall: {'blackstone': 6}
+2025-10-25 16:43:03.819 [DEBUG] Need 6x blackstone for 1x blackstone_wall
+2025-10-25 16:43:03.819 [DEBUG]   Processing: 6x blackstone
+2025-10-25 16:43:03.819 [DEBUG]   Current recipe stack: blackstone_wall
+2025-10-25 16:43:03.819 [DEBUG]   Adding material: 6x blackstone
+2025-10-25 16:43:03.819 [DEBUG] Final totals for 1x blackstone_wall: {'blackstone': 6}
+2025-10-25 16:43:03.819 [DEBUG] Requirements for 1x blackstone_wall: {'blackstone': 6}
+2025-10-25 16:43:03.819 [DEBUG] Updated total for blackstone: 6
+2025-10-25 16:43:03.820 [DEBUG] Processing requirements for 1x waxed_exposed_cut_copper_slab
+2025-10-25 16:43:03.820 [DEBUG] Calculating requirements for 1x waxed_exposed_cut_copper_slab
+2025-10-25 16:43:03.820 [DEBUG] Processing: 1x waxed_exposed_cut_copper_slab
+2025-10-25 16:43:03.820 [DEBUG] Current recipe stack: 
+2025-10-25 16:43:03.820 [DEBUG] Found recipe for waxed_exposed_cut_copper_slab: {'waxed_exposed_cut_copper': 3}
+2025-10-25 16:43:03.820 [DEBUG] Need 3x waxed_exposed_cut_copper for 1x waxed_exposed_cut_copper_slab
+2025-10-25 16:43:03.820 [DEBUG]   Processing: 3x waxed_exposed_cut_copper
+2025-10-25 16:43:03.820 [DEBUG]   Current recipe stack: waxed_exposed_cut_copper_slab
+2025-10-25 16:43:03.820 [DEBUG]   Found recipe for waxed_exposed_cut_copper: {'waxed_exposed_copper': 4}
+2025-10-25 16:43:03.820 [DEBUG]   Need 12x waxed_exposed_copper for 3x waxed_exposed_cut_copper
+2025-10-25 16:43:03.820 [DEBUG]     Processing: 12x waxed_exposed_copper
+2025-10-25 16:43:03.820 [DEBUG]     Current recipe stack: waxed_exposed_cut_copper_slab -> waxed_exposed_cut_copper
+2025-10-25 16:43:03.820 [DEBUG]     Found recipe for waxed_exposed_copper: {'exposed_copper': 1, 'honeycomb': 1}
+2025-10-25 16:43:03.820 [DEBUG]     Need 12x exposed_copper for 12x waxed_exposed_copper
+2025-10-25 16:43:03.820 [DEBUG]       Processing: 12x exposed_copper
+2025-10-25 16:43:03.820 [DEBUG]       Current recipe stack: waxed_exposed_cut_copper_slab -> waxed_exposed_cut_copper -> waxed_exposed_copper
+2025-10-25 16:43:03.820 [DEBUG]       Adding material: 12x exposed_copper
+2025-10-25 16:43:03.821 [DEBUG]     Need 12x honeycomb for 12x waxed_exposed_copper
+2025-10-25 16:43:03.821 [DEBUG]       Processing: 12x honeycomb
+2025-10-25 16:43:03.821 [DEBUG]       Current recipe stack: waxed_exposed_cut_copper_slab -> waxed_exposed_cut_copper -> waxed_exposed_copper
+2025-10-25 16:43:03.821 [DEBUG]       Adding material: 12x honeycomb
+2025-10-25 16:43:03.821 [DEBUG] Final totals for 1x waxed_exposed_cut_copper_slab: {'exposed_copper': 12, 'honeycomb': 12}
+2025-10-25 16:43:03.821 [DEBUG] Requirements for 1x waxed_exposed_cut_copper_slab: {'exposed_copper': 12, 'honeycomb': 12}
+2025-10-25 16:43:03.821 [DEBUG] Updated total for exposed_copper: 12
+2025-10-25 16:43:03.821 [DEBUG] Updated total for honeycomb: 12
+2025-10-25 16:43:03.821 [DEBUG] Processing requirements for 1x magenta_carpet
+2025-10-25 16:43:03.821 [DEBUG] Calculating requirements for 1x magenta_carpet
+2025-10-25 16:43:03.821 [DEBUG] Processing: 1x magenta_carpet
+2025-10-25 16:43:03.821 [DEBUG] Current recipe stack: 
+2025-10-25 16:43:03.821 [DEBUG] Found recipe for magenta_carpet: {'magenta_dye': 1}
+2025-10-25 16:43:03.821 [DEBUG] Need 1x magenta_dye for 1x magenta_carpet
+2025-10-25 16:43:03.821 [DEBUG]   Processing: 1x magenta_dye
+2025-10-25 16:43:03.821 [DEBUG]   Current recipe stack: magenta_carpet
+2025-10-25 16:43:03.822 [DEBUG]   Found recipe for magenta_dye: {'allium': 1}
+2025-10-25 16:43:03.822 [DEBUG]   Need 1x allium for 1x magenta_dye
+2025-10-25 16:43:03.822 [DEBUG]     Processing: 1x allium
+2025-10-25 16:43:03.822 [DEBUG]     Current recipe stack: magenta_carpet -> magenta_dye
+2025-10-25 16:43:03.822 [DEBUG]     Adding material: 1x allium
+2025-10-25 16:43:03.822 [DEBUG] Final totals for 1x magenta_carpet: {'allium': 1}
+2025-10-25 16:43:03.822 [DEBUG] Requirements for 1x magenta_carpet: {'allium': 1}
+2025-10-25 16:43:03.822 [DEBUG] Updated total for allium: 1
+2025-10-25 16:43:03.822 [DEBUG] Processing requirements for 1x blue_candle
+2025-10-25 16:43:03.822 [DEBUG] Calculating requirements for 1x blue_candle
+2025-10-25 16:43:03.822 [DEBUG] Processing: 1x blue_candle
+2025-10-25 16:43:03.822 [DEBUG] Current recipe stack: 
+2025-10-25 16:43:03.822 [DEBUG] Found recipe for blue_candle: {'candle': 1, 'blue_dye': 1}
+2025-10-25 16:43:03.822 [DEBUG] Need 1x candle for 1x blue_candle
+2025-10-25 16:43:03.822 [DEBUG]   Processing: 1x candle
+2025-10-25 16:43:03.823 [DEBUG]   Current recipe stack: blue_candle
+2025-10-25 16:43:03.823 [DEBUG]   Found recipe for candle: {'honeycomb': 1, 'string': 1}
+2025-10-25 16:43:03.823 [DEBUG]   Need 1x honeycomb for 1x candle
+2025-10-25 16:43:03.823 [DEBUG]     Processing: 1x honeycomb
+2025-10-25 16:43:03.823 [DEBUG]     Current recipe stack: blue_candle -> candle
+2025-10-25 16:43:03.823 [DEBUG]     Adding material: 1x honeycomb
+2025-10-25 16:43:03.823 [DEBUG]   Need 1x string for 1x candle
+2025-10-25 16:43:03.823 [DEBUG]     Processing: 1x string
+2025-10-25 16:43:03.823 [DEBUG]     Current recipe stack: blue_candle -> candle
+2025-10-25 16:43:03.823 [DEBUG]     Adding material: 1x string
+2025-10-25 16:43:03.823 [DEBUG] Need 1x blue_dye for 1x blue_candle
+2025-10-25 16:43:03.823 [DEBUG]   Processing: 1x blue_dye
+2025-10-25 16:43:03.823 [DEBUG]   Current recipe stack: blue_candle
+2025-10-25 16:43:03.823 [DEBUG]   Found recipe for blue_dye: {'lapis_lazuli': 1}
+2025-10-25 16:43:03.823 [DEBUG]   Need 1x lapis_lazuli for 1x blue_dye
+2025-10-25 16:43:03.823 [DEBUG]     Processing: 1x lapis_lazuli
+2025-10-25 16:43:03.823 [DEBUG]     Current recipe stack: blue_candle -> blue_dye
+2025-10-25 16:43:03.823 [DEBUG]     Adding material: 1x lapis_lazuli
+2025-10-25 16:43:03.824 [DEBUG] Final totals for 1x blue_candle: {'honeycomb': 1, 'string': 1, 'lapis_lazuli': 1}
+2025-10-25 16:43:03.824 [DEBUG] Requirements for 1x blue_candle: {'honeycomb': 1, 'string': 1, 'lapis_lazuli': 1}
+2025-10-25 16:43:03.824 [DEBUG] Updated total for honeycomb: 13
+2025-10-25 16:43:03.824 [DEBUG] Updated total for string: 1
+2025-10-25 16:43:03.824 [DEBUG] Updated total for lapis_lazuli: 1
+2025-10-25 16:43:03.824 [DEBUG] Processing requirements for 1x mangrove_wood
+2025-10-25 16:43:03.824 [DEBUG] Calculating requirements for 1x mangrove_wood
+2025-10-25 16:43:03.824 [DEBUG] Processing: 1x mangrove_wood
+2025-10-25 16:43:03.824 [DEBUG] Current recipe stack: 
+2025-10-25 16:43:03.824 [DEBUG] Found recipe for mangrove_wood: {'mangrove_log': 4}
+2025-10-25 16:43:03.824 [DEBUG] Need 4x mangrove_log for 1x mangrove_wood
+2025-10-25 16:43:03.824 [DEBUG]   Processing: 4x mangrove_log
+2025-10-25 16:43:03.824 [DEBUG]   Current recipe stack: mangrove_wood
+2025-10-25 16:43:03.824 [DEBUG]   Adding material: 4x mangrove_log
+2025-10-25 16:43:03.825 [DEBUG] Final totals for 1x mangrove_wood: {'mangrove_log': 4}
+2025-10-25 16:43:03.825 [DEBUG] Requirements for 1x mangrove_wood: {'mangrove_log': 4}
+2025-10-25 16:43:03.825 [DEBUG] Updated total for mangrove_log: 4
+2025-10-25 16:43:03.825 [DEBUG] Processing requirements for 1x stone_pressure_plate
+2025-10-25 16:43:03.825 [DEBUG] Calculating requirements for 1x stone_pressure_plate
+2025-10-25 16:43:03.825 [DEBUG] Processing: 1x stone_pressure_plate
+2025-10-25 16:43:03.825 [DEBUG] Current recipe stack: 
+2025-10-25 16:43:03.825 [DEBUG] Found recipe for stone_pressure_plate: {'stone': 2}
+2025-10-25 16:43:03.825 [DEBUG] Need 2x stone for 1x stone_pressure_plate
+2025-10-25 16:43:03.825 [DEBUG]   Processing: 2x stone
+2025-10-25 16:43:03.825 [DEBUG]   Current recipe stack: stone_pressure_plate
+2025-10-25 16:43:03.825 [DEBUG]   Found recipe for stone: {'cobblestone': 1}
+2025-10-25 16:43:03.825 [DEBUG]   Need 2x cobblestone for 2x stone
+2025-10-25 16:43:03.826 [DEBUG]     Processing: 2x cobblestone
+2025-10-25 16:43:03.826 [DEBUG]     Current recipe stack: stone_pressure_plate -> stone
+2025-10-25 16:43:03.826 [DEBUG]     Adding material: 2x cobblestone
+2025-10-25 16:43:03.826 [DEBUG] Final totals for 1x stone_pressure_plate: {'cobblestone': 2}
+2025-10-25 16:43:03.826 [DEBUG] Requirements for 1x stone_pressure_plate: {'cobblestone': 2}
+2025-10-25 16:43:03.826 [DEBUG] Updated total for cobblestone: 2
+2025-10-25 16:43:03.826 [INFO] Final aggregate totals: {'acacia_logs': 1, 'blackstone': 6, 'exposed_copper': 12, 'honeycomb': 13, 'allium': 1, 'string': 1, 'lapis_lazuli': 1, 'mangrove_log': 4, 'cobblestone': 2}
+2025-10-25 16:43:09.407 [INFO] Adding item: silence_armor_trim_smithing_template
+2025-10-25 16:43:09.408 [INFO] Adding 1x silence_armor_trim_smithing_template
+2025-10-25 16:43:09.408 [DEBUG] Current project items before add: {'acacia_planks': 1, 'blackstone_wall': 1, 'waxed_exposed_cut_copper_slab': 1, 'magenta_carpet': 1, 'blue_candle': 1, 'mangrove_wood': 1, 'stone_pressure_plate': 1}
+2025-10-25 16:43:09.408 [DEBUG] Updated project items: {'acacia_planks': 1, 'blackstone_wall': 1, 'waxed_exposed_cut_copper_slab': 1, 'magenta_carpet': 1, 'blue_candle': 1, 'mangrove_wood': 1, 'stone_pressure_plate': 1, 'silence_armor_trim_smithing_template': 1}
+2025-10-25 16:43:09.408 [INFO] Calculating aggregate requirements for items: {'acacia_planks': 1, 'blackstone_wall': 1, 'waxed_exposed_cut_copper_slab': 1, 'magenta_carpet': 1, 'blue_candle': 1, 'mangrove_wood': 1, 'stone_pressure_plate': 1, 'silence_armor_trim_smithing_template': 1}
+2025-10-25 16:43:09.408 [DEBUG] Processing requirements for 1x acacia_planks
+2025-10-25 16:43:09.408 [DEBUG] Calculating requirements for 1x acacia_planks
+2025-10-25 16:43:09.409 [DEBUG] Processing: 1x acacia_planks
+2025-10-25 16:43:09.409 [DEBUG] Current recipe stack: 
+2025-10-25 16:43:09.409 [DEBUG] Found recipe for acacia_planks: {'acacia_logs': 1}
+2025-10-25 16:43:09.409 [DEBUG] Need 1x acacia_logs for 1x acacia_planks
+2025-10-25 16:43:09.409 [DEBUG]   Processing: 1x acacia_logs
+2025-10-25 16:43:09.409 [DEBUG]   Current recipe stack: acacia_planks
+2025-10-25 16:43:09.409 [DEBUG]   Adding material: 1x acacia_logs
+2025-10-25 16:43:09.409 [DEBUG] Final totals for 1x acacia_planks: {'acacia_logs': 1}
+2025-10-25 16:43:09.409 [DEBUG] Requirements for 1x acacia_planks: {'acacia_logs': 1}
+2025-10-25 16:43:09.409 [DEBUG] Updated total for acacia_logs: 1
+2025-10-25 16:43:09.409 [DEBUG] Processing requirements for 1x blackstone_wall
+2025-10-25 16:43:09.409 [DEBUG] Calculating requirements for 1x blackstone_wall
+2025-10-25 16:43:09.410 [DEBUG] Processing: 1x blackstone_wall
+2025-10-25 16:43:09.410 [DEBUG] Current recipe stack: 
+2025-10-25 16:43:09.410 [DEBUG] Found recipe for blackstone_wall: {'blackstone': 6}
+2025-10-25 16:43:09.410 [DEBUG] Need 6x blackstone for 1x blackstone_wall
+2025-10-25 16:43:09.410 [DEBUG]   Processing: 6x blackstone
+2025-10-25 16:43:09.410 [DEBUG]   Current recipe stack: blackstone_wall
+2025-10-25 16:43:09.410 [DEBUG]   Adding material: 6x blackstone
+2025-10-25 16:43:09.410 [DEBUG] Final totals for 1x blackstone_wall: {'blackstone': 6}
+2025-10-25 16:43:09.410 [DEBUG] Requirements for 1x blackstone_wall: {'blackstone': 6}
+2025-10-25 16:43:09.410 [DEBUG] Updated total for blackstone: 6
+2025-10-25 16:43:09.410 [DEBUG] Processing requirements for 1x waxed_exposed_cut_copper_slab
+2025-10-25 16:43:09.410 [DEBUG] Calculating requirements for 1x waxed_exposed_cut_copper_slab
+2025-10-25 16:43:09.410 [DEBUG] Processing: 1x waxed_exposed_cut_copper_slab
+2025-10-25 16:43:09.410 [DEBUG] Current recipe stack: 
+2025-10-25 16:43:09.410 [DEBUG] Found recipe for waxed_exposed_cut_copper_slab: {'waxed_exposed_cut_copper': 3}
+2025-10-25 16:43:09.410 [DEBUG] Need 3x waxed_exposed_cut_copper for 1x waxed_exposed_cut_copper_slab
+2025-10-25 16:43:09.410 [DEBUG]   Processing: 3x waxed_exposed_cut_copper
+2025-10-25 16:43:09.410 [DEBUG]   Current recipe stack: waxed_exposed_cut_copper_slab
+2025-10-25 16:43:09.411 [DEBUG]   Found recipe for waxed_exposed_cut_copper: {'waxed_exposed_copper': 4}
+2025-10-25 16:43:09.411 [DEBUG]   Need 12x waxed_exposed_copper for 3x waxed_exposed_cut_copper
+2025-10-25 16:43:09.411 [DEBUG]     Processing: 12x waxed_exposed_copper
+2025-10-25 16:43:09.411 [DEBUG]     Current recipe stack: waxed_exposed_cut_copper_slab -> waxed_exposed_cut_copper
+2025-10-25 16:43:09.411 [DEBUG]     Found recipe for waxed_exposed_copper: {'exposed_copper': 1, 'honeycomb': 1}
+2025-10-25 16:43:09.411 [DEBUG]     Need 12x exposed_copper for 12x waxed_exposed_copper
+2025-10-25 16:43:09.411 [DEBUG]       Processing: 12x exposed_copper
+2025-10-25 16:43:09.411 [DEBUG]       Current recipe stack: waxed_exposed_cut_copper_slab -> waxed_exposed_cut_copper -> waxed_exposed_copper
+2025-10-25 16:43:09.411 [DEBUG]       Adding material: 12x exposed_copper
+2025-10-25 16:43:09.411 [DEBUG]     Need 12x honeycomb for 12x waxed_exposed_copper
+2025-10-25 16:43:09.411 [DEBUG]       Processing: 12x honeycomb
+2025-10-25 16:43:09.411 [DEBUG]       Current recipe stack: waxed_exposed_cut_copper_slab -> waxed_exposed_cut_copper -> waxed_exposed_copper
+2025-10-25 16:43:09.411 [DEBUG]       Adding material: 12x honeycomb
+2025-10-25 16:43:09.411 [DEBUG] Final totals for 1x waxed_exposed_cut_copper_slab: {'exposed_copper': 12, 'honeycomb': 12}
+2025-10-25 16:43:09.411 [DEBUG] Requirements for 1x waxed_exposed_cut_copper_slab: {'exposed_copper': 12, 'honeycomb': 12}
+2025-10-25 16:43:09.411 [DEBUG] Updated total for exposed_copper: 12
+2025-10-25 16:43:09.411 [DEBUG] Updated total for honeycomb: 12
+2025-10-25 16:43:09.412 [DEBUG] Processing requirements for 1x magenta_carpet
+2025-10-25 16:43:09.412 [DEBUG] Calculating requirements for 1x magenta_carpet
+2025-10-25 16:43:09.412 [DEBUG] Processing: 1x magenta_carpet
+2025-10-25 16:43:09.412 [DEBUG] Current recipe stack: 
+2025-10-25 16:43:09.412 [DEBUG] Found recipe for magenta_carpet: {'magenta_dye': 1}
+2025-10-25 16:43:09.412 [DEBUG] Need 1x magenta_dye for 1x magenta_carpet
+2025-10-25 16:43:09.412 [DEBUG]   Processing: 1x magenta_dye
+2025-10-25 16:43:09.412 [DEBUG]   Current recipe stack: magenta_carpet
+2025-10-25 16:43:09.412 [DEBUG]   Found recipe for magenta_dye: {'allium': 1}
+2025-10-25 16:43:09.412 [DEBUG]   Need 1x allium for 1x magenta_dye
+2025-10-25 16:43:09.412 [DEBUG]     Processing: 1x allium
+2025-10-25 16:43:09.412 [DEBUG]     Current recipe stack: magenta_carpet -> magenta_dye
+2025-10-25 16:43:09.412 [DEBUG]     Adding material: 1x allium
+2025-10-25 16:43:09.412 [DEBUG] Final totals for 1x magenta_carpet: {'allium': 1}
+2025-10-25 16:43:09.412 [DEBUG] Requirements for 1x magenta_carpet: {'allium': 1}
+2025-10-25 16:43:09.413 [DEBUG] Updated total for allium: 1
+2025-10-25 16:43:09.413 [DEBUG] Processing requirements for 1x blue_candle
+2025-10-25 16:43:09.413 [DEBUG] Calculating requirements for 1x blue_candle
+2025-10-25 16:43:09.413 [DEBUG] Processing: 1x blue_candle
+2025-10-25 16:43:09.413 [DEBUG] Current recipe stack: 
+2025-10-25 16:43:09.413 [DEBUG] Found recipe for blue_candle: {'candle': 1, 'blue_dye': 1}
+2025-10-25 16:43:09.413 [DEBUG] Need 1x candle for 1x blue_candle
+2025-10-25 16:43:09.413 [DEBUG]   Processing: 1x candle
+2025-10-25 16:43:09.413 [DEBUG]   Current recipe stack: blue_candle
+2025-10-25 16:43:09.413 [DEBUG]   Found recipe for candle: {'honeycomb': 1, 'string': 1}
+2025-10-25 16:43:09.414 [DEBUG]   Need 1x honeycomb for 1x candle
+2025-10-25 16:43:09.414 [DEBUG]     Processing: 1x honeycomb
+2025-10-25 16:43:09.414 [DEBUG]     Current recipe stack: blue_candle -> candle
+2025-10-25 16:43:09.414 [DEBUG]     Adding material: 1x honeycomb
+2025-10-25 16:43:09.414 [DEBUG]   Need 1x string for 1x candle
+2025-10-25 16:43:09.414 [DEBUG]     Processing: 1x string
+2025-10-25 16:43:09.414 [DEBUG]     Current recipe stack: blue_candle -> candle
+2025-10-25 16:43:09.414 [DEBUG]     Adding material: 1x string
+2025-10-25 16:43:09.414 [DEBUG] Need 1x blue_dye for 1x blue_candle
+2025-10-25 16:43:09.414 [DEBUG]   Processing: 1x blue_dye
+2025-10-25 16:43:09.414 [DEBUG]   Current recipe stack: blue_candle
+2025-10-25 16:43:09.414 [DEBUG]   Found recipe for blue_dye: {'lapis_lazuli': 1}
+2025-10-25 16:43:09.414 [DEBUG]   Need 1x lapis_lazuli for 1x blue_dye
+2025-10-25 16:43:09.414 [DEBUG]     Processing: 1x lapis_lazuli
+2025-10-25 16:43:09.415 [DEBUG]     Current recipe stack: blue_candle -> blue_dye
+2025-10-25 16:43:09.415 [DEBUG]     Adding material: 1x lapis_lazuli
+2025-10-25 16:43:09.415 [DEBUG] Final totals for 1x blue_candle: {'honeycomb': 1, 'string': 1, 'lapis_lazuli': 1}
+2025-10-25 16:43:09.415 [DEBUG] Requirements for 1x blue_candle: {'honeycomb': 1, 'string': 1, 'lapis_lazuli': 1}
+2025-10-25 16:43:09.415 [DEBUG] Updated total for honeycomb: 13
+2025-10-25 16:43:09.415 [DEBUG] Updated total for string: 1
+2025-10-25 16:43:09.415 [DEBUG] Updated total for lapis_lazuli: 1
+2025-10-25 16:43:09.415 [DEBUG] Processing requirements for 1x mangrove_wood
+2025-10-25 16:43:09.415 [DEBUG] Calculating requirements for 1x mangrove_wood
+2025-10-25 16:43:09.415 [DEBUG] Processing: 1x mangrove_wood
+2025-10-25 16:43:09.415 [DEBUG] Current recipe stack: 
+2025-10-25 16:43:09.415 [DEBUG] Found recipe for mangrove_wood: {'mangrove_log': 4}
+2025-10-25 16:43:09.415 [DEBUG] Need 4x mangrove_log for 1x mangrove_wood
+2025-10-25 16:43:09.416 [DEBUG]   Processing: 4x mangrove_log
+2025-10-25 16:43:09.416 [DEBUG]   Current recipe stack: mangrove_wood
+2025-10-25 16:43:09.416 [DEBUG]   Adding material: 4x mangrove_log
+2025-10-25 16:43:09.416 [DEBUG] Final totals for 1x mangrove_wood: {'mangrove_log': 4}
+2025-10-25 16:43:09.416 [DEBUG] Requirements for 1x mangrove_wood: {'mangrove_log': 4}
+2025-10-25 16:43:09.416 [DEBUG] Updated total for mangrove_log: 4
+2025-10-25 16:43:09.416 [DEBUG] Processing requirements for 1x stone_pressure_plate
+2025-10-25 16:43:09.416 [DEBUG] Calculating requirements for 1x stone_pressure_plate
+2025-10-25 16:43:09.416 [DEBUG] Processing: 1x stone_pressure_plate
+2025-10-25 16:43:09.416 [DEBUG] Current recipe stack: 
+2025-10-25 16:43:09.416 [DEBUG] Found recipe for stone_pressure_plate: {'stone': 2}
+2025-10-25 16:43:09.416 [DEBUG] Need 2x stone for 1x stone_pressure_plate
+2025-10-25 16:43:09.416 [DEBUG]   Processing: 2x stone
+2025-10-25 16:43:09.416 [DEBUG]   Current recipe stack: stone_pressure_plate
+2025-10-25 16:43:09.417 [DEBUG]   Found recipe for stone: {'cobblestone': 1}
+2025-10-25 16:43:09.417 [DEBUG]   Need 2x cobblestone for 2x stone
+2025-10-25 16:43:09.417 [DEBUG]     Processing: 2x cobblestone
+2025-10-25 16:43:09.417 [DEBUG]     Current recipe stack: stone_pressure_plate -> stone
+2025-10-25 16:43:09.417 [DEBUG]     Adding material: 2x cobblestone
+2025-10-25 16:43:09.417 [DEBUG] Final totals for 1x stone_pressure_plate: {'cobblestone': 2}
+2025-10-25 16:43:09.417 [DEBUG] Requirements for 1x stone_pressure_plate: {'cobblestone': 2}
+2025-10-25 16:43:09.417 [DEBUG] Updated total for cobblestone: 2
+2025-10-25 16:43:09.417 [DEBUG] Processing requirements for 1x silence_armor_trim_smithing_template
+2025-10-25 16:43:09.417 [DEBUG] Calculating requirements for 1x silence_armor_trim_smithing_template
+2025-10-25 16:43:09.417 [DEBUG] Processing: 1x silence_armor_trim_smithing_template
+2025-10-25 16:43:09.417 [DEBUG] Current recipe stack: 
+2025-10-25 16:43:09.417 [DEBUG] Found recipe for silence_armor_trim_smithing_template: {'diamond': 7, 'cobbled_deepslate': 1}
+2025-10-25 16:43:09.417 [DEBUG] Need 7x diamond for 1x silence_armor_trim_smithing_template
+2025-10-25 16:43:09.418 [DEBUG]   Processing: 7x diamond
+2025-10-25 16:43:09.418 [DEBUG]   Current recipe stack: silence_armor_trim_smithing_template
+2025-10-25 16:43:09.418 [DEBUG]   Adding material: 7x diamond
+2025-10-25 16:43:09.418 [DEBUG] Need 1x cobbled_deepslate for 1x silence_armor_trim_smithing_template
+2025-10-25 16:43:09.418 [DEBUG]   Processing: 1x cobbled_deepslate
+2025-10-25 16:43:09.418 [DEBUG]   Current recipe stack: silence_armor_trim_smithing_template
+2025-10-25 16:43:09.418 [DEBUG]   Adding material: 1x cobbled_deepslate
+2025-10-25 16:43:09.418 [DEBUG] Final totals for 1x silence_armor_trim_smithing_template: {'diamond': 7, 'cobbled_deepslate': 1}
+2025-10-25 16:43:09.418 [DEBUG] Requirements for 1x silence_armor_trim_smithing_template: {'diamond': 7, 'cobbled_deepslate': 1}
+2025-10-25 16:43:09.418 [DEBUG] Updated total for diamond: 7
+2025-10-25 16:43:09.418 [DEBUG] Updated total for cobbled_deepslate: 1
+2025-10-25 16:43:09.418 [INFO] Final aggregate totals: {'acacia_logs': 1, 'blackstone': 6, 'exposed_copper': 12, 'honeycomb': 13, 'allium': 1, 'string': 1, 'lapis_lazuli': 1, 'mangrove_log': 4, 'cobblestone': 2, 'diamond': 7, 'cobbled_deepslate': 1}

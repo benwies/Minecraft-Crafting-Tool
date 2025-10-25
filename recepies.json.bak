@@ -1,0 +1,4 @@
+{
+	"redstone_torch": { "stick": 1, "redstone": 1 },
+	"piston": { "plank": 3, "cobblestone": 3, "iron_ingot": 1, "redstone": 1 }
+}
