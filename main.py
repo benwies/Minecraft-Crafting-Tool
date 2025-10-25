@@ -415,6 +415,12 @@ def on_add_item():
     current_project.items[itm] = current_project.items.get(itm, 0) + q
     logging.debug(f"Updated project items: {current_project.items}")
     update_views()
+    
+    # Clear inputs after successful add
+    entry_item.delete(0, "end")  # Clear item field
+    entry_qty.delete(0, "end")   # Clear quantity field (leave empty)
+    entry_item.focus_set()       # Set focus back to item field
+    _hide_suggestions()          # Hide the suggestion popup if visible
 
 
 def on_remove_item():
