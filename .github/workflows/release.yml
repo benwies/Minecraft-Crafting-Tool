@@ -13,6 +13,19 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
 
+      - name: Extract version from tag
+        if: startsWith(github.ref, 'refs/tags/')
+        shell: pwsh
+        run: |
+          $ver = $env:GITHUB_REF -replace '^refs/tags/v',''
+          echo "VERSION=$ver" | Out-File -FilePath $env:GITHUB_ENV -Append -Encoding utf8
+
+      - name: Set default version for manual runs
+        if: ${{ !startsWith(github.ref, 'refs/tags/') }}
+        shell: pwsh
+        run: |
+          if (-not $env:VERSION) { echo "VERSION=0.0.0" | Out-File -FilePath $env:GITHUB_ENV -Append -Encoding utf8 }
+
       - name: Setup Python
         uses: actions/setup-python@v5
         with:
@@ -31,7 +44,9 @@ jobs:
         shell: pwsh
         run: |
           Set-Location dist
-          Compress-Archive -Path 'MinecraftFarmCalc/*' -DestinationPath 'MinecraftFarmCalc-Portable.zip'
+          $zipName = "MinecraftFarmCalc-Portable-v$env:VERSION.zip"
+          if (Test-Path $zipName) { Remove-Item -Force $zipName }
+          Compress-Archive -Path 'MinecraftFarmCalc/*' -DestinationPath $zipName
 
       - name: Install Inno Setup
         shell: pwsh
@@ -40,7 +55,12 @@ jobs:
       - name: Build Installer (Inno Setup)
         shell: pwsh
         run: |
-          & 'C:\Program Files (x86)\Inno Setup 6\ISCC.exe' tools\build\installer.iss
+          $iscc = 'C:\\Program Files (x86)\\Inno Setup 6\\ISCC.exe'
+          if (-not (Test-Path $iscc)) { $iscc = 'C:\\Program Files\\Inno Setup 6\\ISCC.exe' }
+          & $iscc /DMyAppVersion=$env:VERSION /DMyAppPublisher="Benedikt Wiesner" tools\build\installer.iss
+          $src = 'dist/installer/MinecraftFarmCalculator-Setup.exe'
+          $dst = "dist/installer/MinecraftFarmCalculator-Setup-v$env:VERSION.exe"
+          Copy-Item $src $dst -Force
 
       - name: Upload Release (tagged)
         if: ${{ startsWith(github.ref, 'refs/tags/') }}
@@ -48,10 +68,11 @@ jobs:
         with:
           files: |
             dist/MinecraftFarmCalc/MinecraftFarmCalc.exe
-            dist/MinecraftFarmCalc-Portable.zip
-            dist/installer/MinecraftFarmCalculator-Setup.exe
+            dist/MinecraftFarmCalc-Portable-v*.zip
+            dist/installer/MinecraftFarmCalculator-Setup-v*.exe
           draft: false
           prerelease: false
+          generate_release_notes: true
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
@@ -62,5 +83,5 @@ jobs:
           name: windows-build
           path: |
             dist/MinecraftFarmCalc/**
-            dist/MinecraftFarmCalc-Portable.zip
-            dist/installer/MinecraftFarmCalculator-Setup.exe
+            dist/MinecraftFarmCalc-Portable-v*.zip
+            dist/installer/MinecraftFarmCalculator-Setup-v*.exe
