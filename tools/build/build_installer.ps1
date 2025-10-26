@@ -97,4 +97,23 @@ Write-Host "Building installer with Inno Setup..."
 & $iscc @isccArgs
 if ($LASTEXITCODE -ne 0) { throw "Inno Setup failed with code $LASTEXITCODE" }
 
+Write-Host "Installer compiled: dist\\installer\\MCCraftingCalculator-Setup.exe"
+
+# Post-sign the installer executable if signing parameters were provided
+if ($SignPfxPath -and (Test-Path $SignPfxPath)) {
+  $setupPath = Join-Path $outDir 'MCCraftingCalculator-Setup.exe'
+  if (Test-Path $setupPath) {
+    Write-Host "Signing installer $setupPath ..."
+    $sigArgs = @('sign', '/fd', 'SHA256', '/f', $SignPfxPath)
+    if ($SignPfxPassword) { $sigArgs += @('/p', $SignPfxPassword) }
+    if ($TimestampUrl)    { $sigArgs += @('/tr', $TimestampUrl, '/td', 'SHA256') }
+    $sigArgs += $setupPath
+    & signtool @sigArgs
+    if ($LASTEXITCODE -ne 0) { throw "signtool failed to sign installer with code $LASTEXITCODE" }
+    Write-Host "Signed: $setupPath"
+  } else {
+    Write-Warning "Expected installer not found at $setupPath; skipping signing."
+  }
+}
+
 Write-Host "Installer complete: dist\\installer\\MCCraftingCalculator-Setup.exe"

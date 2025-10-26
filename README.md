@@ -9,7 +9,7 @@ A fast, friendly Windows tool to plan MC builds by calculating all required raw 
 
 Latest release: https://github.com/benwies/mc/releases/latest
 
-Windows SmartScreen: Because this app isn’t code‑signed, Windows may warn on first run. Click “More info” → “Run anyway”.
+Windows SmartScreen: Artifacts are code‑signed for integrity, but with a self‑signed certificate SmartScreen may still warn on first run. Click “More info” → “Run anyway” if you trust it. See `docs/code-signing.md` for details.
 
 ## Key features
 
@@ -54,7 +54,7 @@ These locations don’t require admin rights and are created automatically.
 - Missing or wrong item image:
 	- Place a PNG named like the material (e.g., `oak_planks.png`) in `%LOCALAPPDATA%\MC Crafting Calculator\pic\`.
 - SmartScreen/AV warning:
-	- The app is unsigned; use “More info” → “Run anyway”, or use the portable ZIP.
+	- Builds use a self‑signed certificate; SmartScreen may still warn. Use “More info” → “Run anyway” if you trust it, or see `docs/code-signing.md` for details.
 - Logs:
 	- Check `%LOCALAPPDATA%\MC Crafting Calculator\minecraft_calculator.log` for details.
 

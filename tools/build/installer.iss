@@ -21,6 +21,8 @@
 	#define TimestampUrl "http://timestamp.digicert.com"
 #endif
 
+; (Signing of the setup exe is performed post-compile by the build script when signing parameters are provided.)
+
 [Setup]
 AppId={{A8C84F6E-44B6-4F46-80E9-2E3C7D9B1C49}
 AppName={#MyAppName}
@@ -42,11 +44,7 @@ LicenseFile={#SourcePath}\..\..\LICENSE
 #ifdef MyAppIcon
 SetupIconFile={#MyAppIcon}
 #endif
-#ifdef SignPfxPath
-; Enable signing of installer and uninstaller when PFX is supplied
-SignTool=SignToolCmd
-SignedUninstaller=yes
-#endif
+; (No built-in signing here; uninstaller signing is skipped in this configuration.)
 
 [Languages]
 Name: "english"; MessagesFile: "compiler:Default.isl"
@@ -65,7 +63,4 @@ Name: "desktopicon"; Description: "Create a &desktop shortcut"; GroupDescription
 [Run]
 Filename: "{app}\{#MyAppExeName}"; Description: "Launch {#MyAppName}"; Flags: nowait postinstall skipifsilent
 
-#ifdef SignPfxPath
-[SignTools]
-Name: "SignToolCmd"; Command: "signtool sign /fd SHA256 /f \"{#SignPfxPath}\" /p \"{#SignPfxPassword}\" /tr \"{#TimestampUrl}\" /td SHA256 $f"
-#endif
+

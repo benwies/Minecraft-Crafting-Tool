@@ -81,7 +81,6 @@ except Exception:
 
 ALL_MATERIAL_SUGGESTIONS = []
 
-# Store projects in a user-writable location
 PROJECTS_DIR = USER_DIR / "projects"
 try:
     PROJECTS_DIR.mkdir(parents=True, exist_ok=True)
@@ -377,16 +376,14 @@ def list_project_files():
 
 root = tk.Tk()
 
-# Window title and icon (use JPEG from tools/build)
 root.title("MC Crafting Calculator - Projects")
 
-# Prefer JPEG icon; include it as PyInstaller data.
 _ICON_IMG = None
 try:
     base_dir = Path(sys.executable).parent if getattr(sys, "frozen", False) else BASE
     candidates = [
-        base_dir / "16x16-minecraft-icon-19.jpg",  # packaged (added as data)
-        BASE / "tools" / "build" / "16x16-minecraft-icon-19.jpg",  # dev tree
+        base_dir / "16x16-minecraft-icon-19.jpg",
+        BASE / "tools" / "build" / "16x16-minecraft-icon-19.jpg",
     ]
     for img_path in candidates:
         if img_path.exists():
