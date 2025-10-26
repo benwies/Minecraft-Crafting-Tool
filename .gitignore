@@ -1,0 +1,36 @@
+# Ignore code signing private keys and other local secrets
+# Keep the PFX out of source control.
+*.pfx
+*.p12
+*.pvk
+*.snk
+*.key
+*.pem
+*.crt
+*.csr
+
+# Ignore everything under tools/signing except public certs (.cer) and docs
+/tools/signing/*
+!/tools/signing/*.cer
+!/tools/signing/*.md
+
+# Keep local build outputs clean
+/dist/
+/build/
+/__pycache__/
+*.log
+
+# Python virtual envs and caches
+/.venv/
+/venv/
+/.pytest_cache/
+/.mypy_cache/
+/.coverage
+/.ruff_cache/
+
+# OS/editor cruft
+Thumbs.db
+Desktop.ini
+.DS_Store
+.vscode/*
+!.vscode/extensions.json
