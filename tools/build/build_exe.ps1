@@ -1,3 +1,9 @@
+param(
+  [string]$SignPfxPath,
+  [string]$SignPfxPassword,
+  [string]$TimestampUrl = 'http://timestamp.digicert.com'
+)
+
 $ErrorActionPreference = 'Stop'
 
 # Resolve repo root from this script location (tools/build)
@@ -97,3 +103,22 @@ if ($LASTEXITCODE -ne 0) {
 }
 
 Write-Host "Build complete: dist\$appName\$appName.exe"
+
+# Optional code signing for the portable EXE
+if ($SignPfxPath -and (Test-Path $SignPfxPath)) {
+  $exePath = Join-Path $repoRoot "dist\$appName\$appName.exe"
+  if (Test-Path $exePath) {
+    Write-Host "Signing $exePath ..."
+    $sigArgs = @('sign','/fd','SHA256','/f', $SignPfxPath)
+    if ($SignPfxPassword) { $sigArgs += @('/p', $SignPfxPassword) }
+    if ($TimestampUrl) { $sigArgs += @('/tr', $TimestampUrl, '/td', 'SHA256') }
+    $sigArgs += $exePath
+    & signtool @sigArgs
+    if ($LASTEXITCODE -ne 0) { throw "signtool failed signing portable EXE ($LASTEXITCODE)" }
+    Write-Host "Signed: $exePath"
+  } else {
+    Write-Warning "Portable EXE not found for signing: $exePath"
+  }
+} else {
+  Write-Host "Skipping EXE signing (no PFX provided)."
+}

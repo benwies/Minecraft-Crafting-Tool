@@ -1,6 +1,9 @@
 param(
   [string]$Version,
-  [string]$Publisher
+  [string]$Publisher,
+  [string]$SignPfxPath,
+  [string]$SignPfxPassword,
+  [string]$TimestampUrl = 'http://timestamp.digicert.com'
 )
 
 $ErrorActionPreference = 'Stop'
@@ -13,7 +16,7 @@ Write-Host "Repo root: $repoRoot"
 
 # 1) Build the one-folder app
 Write-Host "Step 1/3: Building EXE with PyInstaller..."
-. "$PSScriptRoot\build_exe.ps1"
+. "$PSScriptRoot\build_exe.ps1" -SignPfxPath $SignPfxPath -SignPfxPassword $SignPfxPassword -TimestampUrl $TimestampUrl
 
 $oneFolderDir = Join-Path $repoRoot 'dist\MCCraftingCalculator'
 if (-not (Test-Path $oneFolderDir)) {
@@ -30,7 +33,7 @@ Write-Host "Portable ZIP: $zipPath"
 # 3) Build the installer (if ISCC is available)
 Write-Host "Step 3/3: Building installer (if Inno Setup is installed)..."
 try {
-  . "$PSScriptRoot\build_installer.ps1" -Version $Version -Publisher $Publisher
+  . "$PSScriptRoot\build_installer.ps1" -Version $Version -Publisher $Publisher -SignPfxPath $SignPfxPath -SignPfxPassword $SignPfxPassword -TimestampUrl $TimestampUrl
 } catch {
   Write-Warning "Skipping installer step: $($_.Exception.Message)"
   Write-Host "Install Inno Setup with: winget install Jrsoftware.InnoSetup"

@@ -1,6 +1,9 @@
 param(
   [string]$Version,
-  [string]$Publisher
+  [string]$Publisher,
+  [string]$SignPfxPath,
+  [string]$SignPfxPassword,
+  [string]$TimestampUrl = 'http://timestamp.digicert.com'
 )
 
 $ErrorActionPreference = 'Stop'
@@ -80,6 +83,10 @@ if (-not (Test-Path $outDir)) { New-Item -ItemType Directory -Path $outDir | Out
 $isccArgs = @()
 if ($Version) { $isccArgs += "/DMyAppVersion=$Version" }
 if ($Publisher) { $isccArgs += "/DMyAppPublisher=$Publisher" }
+# Optional signing defines for Inno Setup
+if ($SignPfxPath)    { $isccArgs += "/DSignPfxPath=$SignPfxPath" }
+if ($SignPfxPassword){ $isccArgs += "/DSignPfxPassword=$SignPfxPassword" }
+if ($TimestampUrl)   { $isccArgs += "/DTimestampUrl=$TimestampUrl" }
 # If an app icon exists, pass it so the installer UI uses it
 $appIco = Join-Path $repoRoot 'tools\build\app.ico'
 if (Test-Path $appIco) { $isccArgs += "/DMyAppIcon=$appIco" }
